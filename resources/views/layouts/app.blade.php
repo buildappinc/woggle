@@ -18,6 +18,34 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+
+    .footer{
+        margin-top: 15%;
+        background: #06042d;
+        height: 200px;
+        position: relative;
+    }       
+
+     .footer-bottom{
+        background: #020026;
+        width: 100%;
+        height: 50px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        padding-top: 20px;
+    }
+
+    .nav{
+       
+    }
+    
+
+    </style>
 </head>
 <body>
     <div id="app">
@@ -32,8 +60,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/study" class="nav-link">Study</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/mycourses" class="nav-link">My Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">Contact</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -77,6 +116,16 @@
         </main>
 
         <!-- footer -->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section about"></div>
+                <div class="footer-section links"></div>
+                <div class="footer-section contact forms"></div>
+            </div>
+            <div class="footer-bottom">
+                 <small>Copyright &copy; BuildApp</small>
+            </div>
+        </div>
     </div>
 </body>
 </html>
