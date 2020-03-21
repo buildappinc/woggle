@@ -1,7 +1,15 @@
 
 <style>
-    .container{
-        background-image: url("../../");
+      .container-fluid{
+        margin-top: -23;
+        padding: 0px;
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('{{asset('images/image.jpg')}}');
     }
 
     .input input, label{
@@ -57,6 +65,11 @@
         letter-spacing: 3px;
         color: blue
     }
+
+    .text{
+        color: white;
+        padding:  7%
+    }
     
 </style>
 
@@ -65,6 +78,13 @@
 @section('title', 'Register ')
 
 @section('content')
+<div class="container-fluid">
+    <div class="container">
+        <div class="text">
+            <p>You are here:  <a href="/">Home</a> / Register</p>
+        </div>
+    </div>
+</div>
     <div class="container">
 
         <div class="row">

@@ -4,7 +4,7 @@
         background-color: red;
         padding-top: 0;
         margin-top: -23;
-        height: 70vh
+        height: 100vh
     }
 
     .text{

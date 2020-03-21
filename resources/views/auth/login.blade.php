@@ -1,7 +1,15 @@
 
 <style>
-    .container{
-        background-image: url("../../");
+    .container-fluid{
+        margin-top: -23;
+        padding: 0px;
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('{{asset('images/image.jpg')}}');
     }
 
     .input input, label{
@@ -44,7 +52,7 @@
     }
 
     .reg_header{
-        margin-top: 7%
+        margin-top: 5%
     }
 
     .image{
@@ -74,6 +82,11 @@
         transition: ease-in 1s;
 
     }
+
+    .text{
+        color: white;
+        padding:  7%
+    }
     
 </style>
 @extends('layouts.app')
@@ -81,6 +94,13 @@
 @section('title', 'Login')
 
 @section('content')
+<div class="container-fluid">
+    <div class="container">
+        <div class="text">
+            <p>You are here: <a href="/">Home</a> / Login</p>
+        </div>
+    </div>
+</div>
 <div class="container">
 
         <div class="row">
