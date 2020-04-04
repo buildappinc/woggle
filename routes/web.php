@@ -17,17 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/mycourses', function(){
-    return view('mycourses');
-})->middleware('auth');
-
+// contact
 Route::get('/contact', 'ContactController@create');
 Route::post('/contact', 'ContactController@store');
 
-Route::get('/study', function(){
-    return view('study');
-});
+//course 
+Route::get('/study', 'CourseController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/mycourses', 'HomeController@index')->name('home');

@@ -33,14 +33,19 @@
     }
 
     .address{
-        padding: 12%;
-        width: 100%;
-        height: 97%;
-        display: flex;
-        justify-content: center;
+        padding-top: 15%;
+        height: 89%;
+        background: #fff;
         border: 1px solid #d8f5ff;
+        padding-left: 25%;
     }
 
+    .subAddress {
+        padding-top: 10%;
+        display: flex;
+        justify-content: space-between;
+    }
+   
     .input input, .input textarea{
         border-radius: 0%;
         border-color: #d8f5ff;
@@ -48,6 +53,7 @@
 
     .right_side_contact_info{
         font-size: 25px;
+      
     }
 
     
@@ -153,16 +159,33 @@
                     <button type="submit" class="btn btn-primary btn-md">Send Message</button>
                 </div>
             </div>
-        
-        <div class="col-3">
-            <div class="address">
-                <div class="row">
-                    <div class="right_side_contact_info">
-                        Contact Info
+
+            <div class="col-3">
+                <div class="address">
+                    <div class="row subAddress">
+                       <p class="right_side_contact_info">Contact Info</p> 
+                    </div>
+                    <div>
+                        <div class="row subAddress">
+                            Addresss: <br>
+                        </div>
+                        <div>Lorem ipsum dolor sit amet,scsdsdvadfsv adsvasfv</div>
+                    </div>
+                    <div>
+                        <div class="row subAddress">
+                            Phone: <br>
+                        </div>
+                        +233 *** *** ***
+                    </div>
+                    <div>
+                        <div class="row subAddress">
+                            Email: <br>
+                        </div>
+                        test@test.com
                     </div>
                 </div>
-                
             </div>
+        
         </div>
         </form>
     </div>

@@ -63,7 +63,7 @@
 
     .explore{
         letter-spacing: 3px;
-        color: blue
+        color:  rgba(255, 0, 64, 0.986)
     }
     .forgot{
         margin-left: 30%;
