@@ -1,20 +1,20 @@
 <style>
-    .container-fluid{
+    .left_side{
+        width: 20%;
+        background-color: red;
+        padding-top: 0;
         margin-top: -23;
-        padding: 0px;
-        height: 200px;
-        width: 100%;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url('{{asset('images/image.jpg')}}');
+        height: 100vh
     }
 
     .text{
-        color: white;
-        padding:  7%
-    }   
+        font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
+        font-weight: 300px;
+        line-height: 25px;
+        font-size: 14px
+    }
+
+
 </style>
 
 @extends('layouts.app')
@@ -22,12 +22,15 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="container">
-        <div class="text">
-            <p>You are here: <a href="/">Home</a> / My courses</p>
+    <div class="row">
+        <div class="left_side">
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
+           <span class="text"> Welcome Mr. {{ Auth::user()->lname }} </span>
         </div>
     </div>
 </div>
-
-
 @endsection
