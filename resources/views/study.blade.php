@@ -14,7 +14,6 @@
 
     .text{
         color: white;
-        padding-left: 4%;
         padding-top: 2.5%
     }   
 
@@ -70,7 +69,7 @@
 
 @section('content')
 <div class="container-fluid header">
-    <div >
+    <div class="container">
         <div class="text">
             <p style="font-size: 30px;">Study</p>
             <p>Explore courses that are organised into difficult levels</p>
@@ -78,21 +77,15 @@
     </div>
 </div>
 
-<div class="container-fluid ">
-    <div class="row body_section">
-        <div class="col-3">
-            <ul>
-                <li class="course_header">Courses</li>
-                @foreach($course as $courses)
-                 <li class="course"><a href="/study/{{$courses->id}}" class="a" >{{$courses->name}}</a></li>
-                @endforeach
-            </ul>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+        dasdasdsd
         </div>
-
-        <div class="col-9">
-             
+        <div class="col-4">
+        dadadad
         </div>
-    </div>
+   </div>
 </div>
 
 
