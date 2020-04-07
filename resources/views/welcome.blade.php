@@ -84,8 +84,8 @@
         position: relative;
     }       
 
-     .footer-bottom{
-        background: #020026;
+    .footer-bottom{
+        background:  rgba(255, 0, 64, 0.986);
         width: 100%;
         height: 50px;
         color: white;
@@ -95,24 +95,119 @@
         left: 0px;
         padding-top: 20px;
     }
-    
+
+    li{
+        padding: 5px 20px
+    }
+
+    .nav-link{
+        font-size: 15px;
+        font-family: montserratregular;
+        font-weight: 400px;
+        font-style: normal;
+        color: #f05a66;
+
+    }
 
     .nav-link:hover{
-      border: 0;
-      border-bottom: 1px solid blue;
-      transition: all ease-in .7s;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 0, 64, 0.986);
+    color: blue;
+    transition: all ease-in .7s;
     }
 
     .footer-content{
         padding: 3%;    
     }
-    
+
+    .preHeader{
+        padding-top: .8%; 
+        padding-bottom: .8%;
+        width: 100%;
+        color: #fff;
+        background: #020026
+    }
+
+    .preHeader-2{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: 4;
+        margin-left: 60%;
+        width: 40%;
+        padding-left: 10%;
+        box-shadow: 0 25px 30px black;
+    }
+
+    .preHeader-2:before {
+        content: '';
+        line-height: 0;
+        font-size: 0;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid rgba(255, 0, 64, 0.986);
+        border-left: 50px solid transparent;
+        border-right: 0px solid rgba(255, 0, 64, 0.986);
+        position: absolute;
+        top: -50px;
+        left: -50px;
+     }
+
+    .nav{
+        height: 11%;
+    }
+
 
     </style>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div id="app"><div class="preHeader">
+            <div class=" container">
+                 
+                        Any Questions? +233 *** *** ***
+                 
+            </div>
+        </div>
+        <nav class="preHeader-2 navbar-expand-md navbar-dark bg-dark shadow-sm">
+                
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Authentication Links -->
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li> 
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                              Welcome  {{ Auth::user()->fname }} <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <nav class="nav navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('Woggle', 'Woggle') }}
@@ -124,6 +219,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav mr-auto">
+                       
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="/" class="nav-link">Home</a>
                         </li>
@@ -136,37 +236,6 @@
                         <li class="nav-item">
                             <a href="/contact" class="nav-link">Contact</a>
                         </li>
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                        <div>
-                            @if (Route::has('login'))
-                                        <div class="top-right links">
-                                            @auth
-                                                <a href="{{ url('/study') }}">Study</a>
-                                            @else
-                                                <a href="{{ route('login') }}">Login</a>
-
-                                                @if (Route::has('register'))
-                                                    <a href="{{ route('register') }}">Register</a>
-                                                @endif
-                                            @endauth
-                                        </div>
-                                    @endif
-                        </div>
-                        @endguest
                     </ul>
                 </div>
             </div>

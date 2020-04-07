@@ -14,7 +14,6 @@
 
     .text{
         color: white;
-        padding-left: 4%;
         padding-top: 2.5%
     }   
 
@@ -60,6 +59,15 @@
         color:#06042d;
     }
 
+    .quickNav{
+        padding-top: 10%
+    }
+
+    img{
+        background-size: cover;
+        width: 90%; 
+        height: 100%;
+    }
      
 </style>
 
@@ -70,29 +78,57 @@
 
 @section('content')
 <div class="container-fluid header">
-    <div >
-        <div class="text">
-            <p style="font-size: 30px;">Study</p>
-            <p>Explore courses that are organised into difficult levels</p>
+    <div class="container">
+        <div class="text row">
+            <div class="col-8">
+                <p style="font-size: 30px;">Study</p>
+                <p>Explore courses that are organised into difficult levels</p>
+            </div>
+            <div class="col-4">
+                <div class="quickNav">
+                    <p>You are here: <a href="/">Home</a> / Study</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="container-fluid ">
-    <div class="row body_section">
-        <div class="col-3">
-            <ul>
-                <li class="course_header">Courses</li>
-                @foreach($course as $courses)
-                 <li class="course"><a href="/study/{{$courses->id}}" class="a" >{{$courses->name}}</a></li>
-                @endforeach
-            </ul>
-        </div>
-
-        <div class="col-9">
-             
-        </div>
+<div class="container">
+    <div>
+        bfgdf
     </div>
+    <div class="row">
+        <div class="col-8">
+            @foreach($course as $courses)
+                <div style="height: 350px; margin-bottom: 10px" class="row">
+                    <div class="col-7">
+                        <img src="{{ asset('images/image.jpg')}}" alt="">
+                    </div>
+                    <div class="col-5">
+                        <div>
+                            {{$courses->name}}
+                        </div>
+                        <hr>
+                        <div>
+                            {{$courses->description}}
+                        </div><br>
+                        <div>
+                            <div>Select difficulty</div>
+                            @foreach($courses->difficulties as $difficulty)
+                                {{$difficulty->name}}
+                            @endforeach
+                        </div><br>
+                        <div>
+                            <button class="btn btn-primary btn-sm">View Course</button>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <div class="col-4">
+        dadadad
+        </div>
+   </div>
 </div>
 
 

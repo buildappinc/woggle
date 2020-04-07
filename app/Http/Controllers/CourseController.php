@@ -16,11 +16,5 @@ class CourseController extends Controller
             return view('study', compact('course'));
     }
 
-    public function show($difficulty){
-
-        $difficulty = Course::findOrFail($difficulty);
-
-        return view ('study', compact('difficulty'));
-    }
 
 }

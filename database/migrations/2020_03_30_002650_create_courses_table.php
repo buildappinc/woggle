@@ -17,7 +17,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('subcourses');
+            $table->string('description');
         });
     }
 

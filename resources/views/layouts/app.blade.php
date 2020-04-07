@@ -55,7 +55,7 @@
 
     .nav-link:hover{
       border: 0;
-      border-bottom: 1px solid blue;
+      border-bottom: 1px solid rgba(255, 0, 64, 0.986);
       color: blue;
       transition: all ease-in .7s;
     }
@@ -73,7 +73,6 @@
     }
 
     .preHeader-2{
-        clip-path: polygon(3% 0, 100% 0, 100% 100%, 0% 100%);
         position: absolute;
         top: 10px;
         left: 0;
@@ -82,6 +81,21 @@
         width: 40%;
         padding-left: 10%;
     }
+
+    .preHeader-2:before {
+        content: '';
+        line-height: 0;
+        font-size: 0;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid rgba(255, 0, 64, 0.986);
+        border-left: 50px solid transparent;
+        border-right: 0px solid rgba(255, 0, 64, 0.986);
+        position: absolute;
+        top: -50px;
+        left: -50px;
+     }
 
     .nav{
         height: 11%;
