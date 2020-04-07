@@ -145,14 +145,14 @@
         font-size: 0;
         width: 0;
         height: 0;
-        border-top: 50% solid transparent;
-        border-bottom: 50% solid rgba(255, 0, 64, 0.986);
-        border-left: 50% solid transparent;
-        border-right: 0% solid rgba(255, 0, 64, 0.986);
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid rgba(255, 0, 64, 0.986);
+        border-left: 50px solid transparent;
+        border-right: 0px solid rgba(255, 0, 64, 0.986);
         position: absolute;
-        top: -50%;
-        left: -50%;
-    }
+        top: -50px;
+        left: -50px;
+     }
 
     .nav{
         height: 11%;
@@ -169,41 +169,44 @@
                  
             </div>
         </div>
-            <nav class="preHeader-2 navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav class="preHeader-2 navbar-expand-md navbar-dark bg-dark shadow-sm">
                 
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
-                            <!-- Authentication Links -->
-                            @guest
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                                @if (Route::has('register'))
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                    </li>
-                                @endif
-                            @else
-                            <div>
-                                @if (Route::has('login'))
-                                            <div class="top-right links">
-                                                @auth
-                                                    <a href="{{ url('/study') }}">Study</a>
-                                                @else
-                                                    <a href="{{ route('login') }}">Login</a>
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Authentication Links -->
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li> 
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                              Welcome  {{ Auth::user()->fname }} <span class="caret"></span>
+                            </a>
 
-                                                    @if (Route::has('register'))
-                                                        <a href="{{ route('register') }}">Register</a>
-                                                    @endif
-                                                @endauth
-                                            </div>
-                                        @endif
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </div>
-                            @endguest
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+                        </li>
+                    @endguest
+                </ul>
+            </div>
+        </div>
+    </nav>
+
         <nav class="nav navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">

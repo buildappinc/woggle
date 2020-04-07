@@ -20,9 +20,6 @@ class CreateCourseDifficultyTable extends Migration
             $table->timestamps();
 
             $table->unique(['course_id', 'difficulty_id']);
-
-            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
-            $table->foreign('difficulty_id')->references('id')->on('difficulties')->onDelete('cascade');
         });
     }
 
