@@ -115,7 +115,7 @@
                         <div>
                             <div>Select difficulty</div>
                             @foreach($courses->difficulties as $difficulty)
-                                {{$difficulty->name}}
+                               <button>{{$difficulty->name}}</button> 
                             @endforeach
                         </div><br>
                         <div>

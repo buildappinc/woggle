@@ -78,7 +78,6 @@
     <style>
 
     .footer{
-        margin-top: 15%;
         background: #06042d;
         height: 350px;
         position: relative;
@@ -158,6 +157,94 @@
         height: 11%;
     }
 
+    .carousel{
+        margin-top: -25px;
+        height: 660px;
+    }
+
+    .carousel-inner{
+        height: 660px;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        right: 15%;
+        bottom: 450px;
+        left: 15%;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: center;
+    }
+    .main_section{
+        position: relative
+    }
+
+    .about{
+        position: absolute;
+        top: -25px;
+        left: 0;
+        clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+        width: 50%;
+        height: 100px;
+        background-color:  #fb0040;
+        color: #fff;
+    }
+
+    .content{
+        margin-top: 10%;
+        background-color: whitesmoke;
+        height: 400px; 
+        width: 100%;
+    }
+
+   
+
+    .text_1{
+        margin-top: 15%;
+    }
+
+    .text_header{
+        font-size: 40px;
+        font-weight: bolder;
+        margin-left: 25%;
+        padding-top: 2%;
+    }
+
+    .svg_image{
+        margin-top: 10%;
+    }
+    
+    .sec_section{
+       margin-top: 10%;
+       text-align: center
+    }
+
+    .section_header{
+        font-family: Montserrat, sans-serif;
+        font-size: 44px;
+    }
+
+    .quick{
+        -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        padding-bottom: 20%;
+        margin-top: 6%;
+        height: 200px; 
+        width: 100%;
+    }
+
+    .details{
+        padding-top: 7%;
+        padding-left: 5%;
+    }
+
+    .status_text{
+        font-weight: bold;
+        font-size: 25px;
+    }
 
     </style>
 </head>
@@ -242,9 +329,119 @@
         </nav>
 
         <main class="py-4">
-            <br><br><br><br><br><br><br><br><br>
+            <div class="carousel">
+                <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{asset('images/image2.jpg')}}" class="d-block w-100" style="max-height: 100%; background-size: cover" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{asset('images/image3.jpg')}}" class="d-block w-100" style="max-height: 100%; background-size: cover" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{asset('images/image.jpg')}}" class="d-block w-100" style="max-height: 100%; background-size: cover" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- quick review -->
+            <div class="container quick">
+                <div class="row details">
+                    <div class="col-4 row">
+                        <div class="col-4">
+                            <img src="{{ asset('images/book.svg') }}"  style="max-height: 100%; max-width: 100%; " alt="">
+                        </div>
+                        <div class="col-8 status_text">
+                                Enjoy Online <br> Studies
+                        </div>
+                    </div>
+                    <div class="col-4 row">
+                        <div class="col-4">
+                                <img src="{{ asset('images/exam.svg') }}"  style="max-height: 100%; max-width: 100%; " alt="">
+                            </div>
+                            <div class="col-8 status_text">
+                                Take Quizes <br> Online
+                            </div>
+                        </div>
+                    <div class="col-4 row">
+                        <div class="col-4">
+                            <img src="{{ asset('images/goal.svg') }}"  style="max-height: 100%; max-width: 100%; " alt="">
+                        </div>
+                        <div class="col-8 status_text">
+                            Check your <br> Progress
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- popular courses -->
+            <br>
+            <div class="container">
+                <div class="sec_section">
+                    <div class="section_header">
+                       Our Featured Courses
+                        
+                    </div>
+                </div>
+            </div>
+        
         </main>
 
+        <!-- pre footer -->
+        <div class="main_section">
+                <div class="about">
+                    <div class="container">
+                        <div class="row">
+                           <div class="col-4"></div>
+                           <div class="col-4"><p classf="text_header">Why Woggle?</p></div>
+                           <div class="col-4"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-9">
+                                <p class="text_1">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quam eius ratione excepturi. Quis quia ipsum vitae unde ad illum, sunt, placeat esse laboriosam harum a. Harum nemo iusto commodi?
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, modi molestiae similique veritatis incidunt placeat praesentium enim ad omnis. Non sapiente tempora mollitia, voluptatibus consequatur dolorum quam voluptatem sit vitae.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In debitis recusandae sint aperiam dolore nostrum hic necessitatibus, quidem ex odio, eaque qui incidunt doloribus cumque aliquam laboriosam blanditiis atque distinctio.lorem
+                                </p>
+                            </div>
+                            <div class="col-3 svg_image">
+                                <img src="{{ asset('images/question4.svg') }}" style="width: 400px; background-size: cover" class="image" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <!-- footer -->
         <div class="footer ">
             <div class="container footer-content row">
