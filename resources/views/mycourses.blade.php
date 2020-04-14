@@ -29,7 +29,7 @@
                     {{ session('status') }}
                 </div>
             @endif
-           <span class="text"> Welcome Mr. {{ Auth::user()->lname }} </span>
+           <span class="text"> Welcome {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }} </span>
         </div>
     </div>
 </div>
