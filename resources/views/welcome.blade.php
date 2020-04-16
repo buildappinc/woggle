@@ -232,7 +232,7 @@
         box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         padding-bottom: 20%;
         margin-top: 6%;
-        height: 200px; 
+        height: 180px; 
         width: 100%;
     }
 
