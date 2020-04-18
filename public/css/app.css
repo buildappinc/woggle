@@ -738,13 +738,18 @@ pre code {
 .col-6,
 .col-5,
 .col-4,
-.col-3,
 .col-2,
 .col-1 {
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+
+.col-3{
+  position: relative;
+  width: 100%;
 }
 
 .col {

@@ -6,7 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-    public function difficulties(){
-        return $this->belongsToMany(Difficulty::class);
-    }
+    //
 }

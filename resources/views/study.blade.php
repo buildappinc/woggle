@@ -112,19 +112,13 @@
                         <div>
                             {{$courses->description}}
                         </div><br>
-                        <div>
-                            <div>Select difficulty</div>
-                            @foreach($courses->difficulties as $difficulty)
-                               <button>{{$difficulty->name}}</button> 
-                            @endforeach
-                        </div><br>
-                        <div>
-                            <button class="btn btn-primary btn-sm">View Course</button>
-                        </div>
+                        
                     </div>
                 </div>
             @endforeach
         </div>
+
+        
         <div class="col-4">
         dadadad
         </div>

@@ -199,17 +199,14 @@
         width: 100%;
     }
 
-   
-
     .text_1{
         margin-top: 15%;
     }
 
     .text_header{
-        font-size: 40px;
-        font-weight: bolder;
+        font-size: 30px;
         margin-left: 25%;
-        padding-top: 2%;
+        padding-top: 6%;
     }
 
     .svg_image{
@@ -217,13 +214,13 @@
     }
     
     .sec_section{
-       margin-top: 10%;
+       margin-top: 7%;
        text-align: center
     }
 
     .section_header{
         font-family: Montserrat, sans-serif;
-        font-size: 44px;
+        font-size: 42px;
     }
 
     .quick{
@@ -232,7 +229,7 @@
         box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         padding-bottom: 20%;
         margin-top: 6%;
-        height: 200px; 
+        height: 180px; 
         width: 100%;
     }
 
@@ -245,6 +242,30 @@
         font-weight: bold;
         font-size: 25px;
     }
+
+    .img{
+        background-size: cover;
+        width: 100%; 
+    }
+
+    .ind_courses{
+        margin-left: 2%;
+        border-bottom: 3px solid #fb0040;
+        -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        box-shadow: 0 3px 5px rgba(0,0,0,.2);
+        height: 470px;
+    }
+
+    .ind_courses:hover{
+        -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        transition: .4s ease-in-out ;
+    }
+
 
     </style>
 </head>
@@ -402,11 +423,41 @@
 
             <!-- popular courses -->
             <br>
-            <div class="container">
-                <div class="sec_section">
-                    <div class="section_header">
-                       Our Featured Courses
-                        
+            <div style="background:#f9f9ff; padding-bottom: 5%;">
+                <div class="container">
+                    <div class="sec_section">
+                        <div class="section_header">
+                            Our Featured Courses
+                        </div>
+                        <div>
+                            <p>Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</p>
+                        </div>
+                        <div class="row mt-5">
+                            @foreach($courses as $course)
+                                        
+                                    <div class="col-3  ind_courses">
+                                            <div style="margin: 0px">
+                                                <img src="{{ asset('images/image.jpg')}}" class="img" alt="">
+                                            </div>
+                                            <div style="padding: 9%">
+                                                <div>
+                                                    {{$course->name}}
+                                                </div>
+                                                <div>
+                                                        {{$course->description}}
+                                                </div>
+                                            </div>
+                                    </div>
+                                    
+                            @endforeach
+                            <div class="col-2" style="padding-top: 18%;">
+                                <a href="/study" style="text-decoration: none; color: #000">
+                                    <div style="border: 1px solid #020026; height: 55px; width: 220px; border-radius: 3px;">
+                                       <p style="text-align: center; padding-top: 6%;">VIEW ALL COURSES</p> 
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -418,9 +469,9 @@
                 <div class="about">
                     <div class="container">
                         <div class="row">
-                           <div class="col-4"></div>
-                           <div class="col-4"><p classf="text_header">Why Woggle?</p></div>
-                           <div class="col-4"></div>
+                           <div class="col-3"></div>
+                           <div class="col-6"><p class="text_header">WHY WOGGLE?</p></div>
+                           <div class="col-3"></div>
                         </div>
                     </div>
                 </div>
@@ -436,7 +487,7 @@
                                 </p>
                             </div>
                             <div class="col-3 svg_image">
-                                <img src="{{ asset('images/question4.svg') }}" style="width: 400px; background-size: cover" class="image" alt="">
+                                <img src="{{ asset('images/question4.svg') }}" style="width: 350px; background-size: cover" class="image" alt="">
                             </div>
                         </div>
                     </div>
