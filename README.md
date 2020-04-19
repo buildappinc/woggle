@@ -1,3 +1,29 @@
+# Screenshots of the projects 
+
+## Home page 
+![Screenshot (126)](https://user-images.githubusercontent.com/39276273/79692980-5e8e3400-8225-11ea-9977-bb2b8ab34d58.png)
+
+![Screenshot (127)](https://user-images.githubusercontent.com/39276273/79692949-46b6b000-8225-11ea-9477-2848221c67ad.png)
+
+![Screenshot (128)](https://user-images.githubusercontent.com/39276273/79692954-4fa78180-8225-11ea-92b4-795503b1a99f.png)
+
+![Screenshot (129)](https://user-images.githubusercontent.com/39276273/79692955-5209db80-8225-11ea-9540-9e0dad1baee7.png)
+
+## Study page 
+![Screenshot (130)](https://user-images.githubusercontent.com/39276273/79692956-52a27200-8225-11ea-9d63-7c2be9de6189.png)
+
+![Screenshot (131)](https://user-images.githubusercontent.com/39276273/79692964-559d6280-8225-11ea-9a40-0716787e30a9.png)
+
+## Login
+![Screenshot (132)](https://user-images.githubusercontent.com/39276273/79692972-5930e980-8225-11ea-8af7-925173d298a6.png)
+
+## Sign up 
+![Screenshot (133)](https://user-images.githubusercontent.com/39276273/79692977-5a621680-8225-11ea-9f0c-b280969bad71.png)
+
+## Contact
+![Screenshot (134)](https://user-images.githubusercontent.com/39276273/79692978-5cc47080-8225-11ea-845f-acaec9252ce7.png)
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
