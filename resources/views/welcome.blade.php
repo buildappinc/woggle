@@ -509,7 +509,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                 <small>Copyright &copy; BuildApp</small>
+                 <small>Copyright &copy; Woggle</small>
             </div>
         </div>
     </div>

@@ -12,8 +12,15 @@ class CourseController extends Controller
 
           
             $course = Course::all();
+            return view('Study.index', compact('course'));
+    }
 
-            return view('study', compact('course'));
+    public function show($course){
+
+        $courses = Course::all();
+        $course = Course::find($course);
+
+        return view('Study.show', compact('course', 'courses'));
     }
 
 

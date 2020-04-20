@@ -20,6 +20,7 @@
     .body_section{
         padding-top: 2.5%;
         padding-left: 1%;
+        
     }
 
     ul, li{
@@ -110,9 +111,13 @@
                         </div>
                         <hr>
                         <div>
-                            {{$courses->description}}
+                            {{$courses->avg_decription}}
                         </div><br>
-                        
+                        <a href="/study/{{$courses->id}}" style="text-decoration: none; color: #000">
+                          <div style="border: 1px solid #020026; height: 40px; width: 150px; border-radius: 3px;">
+                                <p style="text-align: center; padding-top: 6%; text-transform: uppercase">{{$courses->button}}</p> 
+                          </div>
+                        </a>
                     </div>
                 </div>
             @endforeach
