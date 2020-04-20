@@ -21,9 +21,10 @@ Route::post('/contact', 'ContactController@store');
 
 //course 
 Route::get('/study', 'CourseController@index');
+Route::get('/study/{course}', 'CourseController@show');
 
 Auth::routes();
 
 Route::get('/mycourses', 'HomeController@index')->name('home');
 
-Route::get('/study/course', 'ModalController@index');
+
