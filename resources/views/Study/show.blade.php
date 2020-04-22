@@ -37,6 +37,20 @@
         height: 40%;
     }
 
+    .button{
+        border: 1px solid #020026; 
+        height: 50px; 
+        width: 100%; 
+        border-radius: 3px ;
+    }
+
+    .button:hover{
+        transition: all 1s ease-in-out 0s;
+        border: none;
+        color: #fff;
+        background: #fb0040;
+    }
+
      
 </style>
 @extends('layouts.app')
@@ -74,8 +88,8 @@
             <p style="line-height: 38px;">{{$course->long_decription}}</p>
             <hr>
             <a href="" style="text-decoration: none; color: #000">
-                 <div style="border: 1px solid #020026; height: 50px; width: 100%; border-radius: 3px;">
-                        <p style="text-align: center; padding-top: 2%; text-transform: uppercase">Enrol Now</p> 
+                 <div class="button">
+                        <p style="text-align: center; padding-top: 2%; text-transform: uppercase">Enroll Now</p> 
                 </div>
             </a>
         </div>
