@@ -266,6 +266,21 @@
         transition: .4s ease-in-out ;
     }
 
+    .button{
+        border: 1px solid #020026; 
+        height: 50px; 
+        width: 100%; 
+        border-radius: 3px ;
+    }
+
+    .button:hover{
+        transition: all 1s ease-in-out 0s;
+        border: none;
+        color: #fff;
+        background: #fb0040;
+    }
+
+
 
     </style>
 </head>
@@ -452,8 +467,8 @@
                             @endforeach
                             <div class="col-2" style="padding-top: 18%;">
                                 <a href="/study" style="text-decoration: none; color: #000">
-                                    <div style="border: 1px solid #020026; height: 55px; width: 220px; border-radius: 3px;">
-                                       <p style="text-align: center; padding-top: 6%;">VIEW ALL COURSES</p> 
+                                    <div class="button">
+                                       <p style="text-align: center; padding-top: 7%;">VIEW ALL COURSES</p> 
                                     </div>
                                 </a>
                             </div>
