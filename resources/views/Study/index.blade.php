@@ -84,6 +84,7 @@
         background: #fb0040;
     }
 
+
      
 </style>
 
@@ -118,15 +119,15 @@
             @foreach($course as $courses)
                 <div style="height: 350px; margin-bottom: 10px" class="row">
                     <div class="col-7">
-                        <img src="{{ asset('images/image.jpg')}}" alt="">
+                        <img src="/storage/{{$courses->image}}" class="img" alt="">
                     </div>
                     <div class="col-5">
                         <div>
                             {{$courses->name}}
                         </div>
                         <hr>
-                        <div>
-                            {{$courses->avg_decription}}
+                        <div class="text_elipsis">
+                            {{$courses->introduction}}
                         </div><br>
                         <a href="/study/{{$courses->id}}" style="text-decoration: none; color: #000">
                           <div style="border: 1px solid #020026; height: 40px; width: 150px; border-radius: 3px;">

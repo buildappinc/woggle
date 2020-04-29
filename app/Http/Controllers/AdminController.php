@@ -2,7 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Admin;
+use App\User;
+use App\Course;
+use App\Topic;
+use App\Section;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
+
 
 class AdminController extends Controller
 {
@@ -21,8 +28,98 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function viewAdmin()
     {
-        return view('Admin.admin');
+        $Admin = Admin::all()->take(1);
+        return view('Admin.admin', compact('Admin'));
+    }
+
+    public function index(){
+
+        $registeredStudents = User::all();
+
+        return view('Admin.index', compact('registeredStudents'));
+    }
+
+    public function show(Course $course){
+
+        return view('Admin.showForm', compact('course'));
+    }
+
+    public function store(Request $request){
+        // validation for the courses
+        $data = $request->validate([
+            'name' => 'required', 
+            'price' => 'required', 
+            'introduction' => 'required', 
+            'image' => 'required | image |mimes:jpeg,png,jpg',
+            'description' => 'required | max:1000'
+        ]);
+
+       $imagePath = $request->image->store('uploads', 'public');
+
+       $Image = Image::make(public_path("storage/{$imagePath}"))->fit(109, 80);
+       $Image->save();
+
+        Course::create([
+            'name' => $data['name'],
+            'price' => $data['price'], 
+            'introduction' => $data['introduction'], 
+            'image' => $imagePath, 
+            'description' => $data['description']
+        ]);
+
+        return redirect()->route('course.view')->with('message', "Course added successfuly");
+
+    }
+
+    public function viewCourses(){
+
+        $course = Course::all();
+
+        return view('Admin.viewCourse', compact('course'));
+    }
+
+    public function showCourse(Course $course){
+        
+        return view('Admin.showCourse', compact('course') );
+    }
+
+    public function editCourse(Course $course){
+         
+        return view('Admin.editCourse', compact('course'));
+    }
+
+    public function updateCourse(Course $course){
+            // validation for the courses
+        $data = request()->validate([
+            'name' => 'required', 
+            'price' => 'required', 
+            'introduction' => 'required', 
+            'image' => 'required | image |mimes:jpeg,png,jpg',
+            'description' => 'required | max:1000'
+        ]);
+
+
+        $imagePath = request()->image->store('uploads', 'public');
+
+        $Image = Image::make(public_path("storage/{$imagePath}"))->fit(109, 80);
+        $Image->save();
+ 
+         $course->update([
+             'name' => $data['name'],
+             'price' => $data['price'], 
+             'introduction' => $data['introduction'], 
+             'image' => $imagePath, 
+             'description' => $data['description']
+         ]);
+        return redirect('/admin/courses/'. $course->id)->with('message', "Course has been updated");
+    }
+
+    public function destroyCourse(Course $course){
+
+        $course->delete();
+
+        return redirect()->route('course.view')->with("message", "Course Delete");
     }
 }

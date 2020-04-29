@@ -14,23 +14,54 @@
         font-size: 14px
     }
 
+    .body{
+        margin-top: 10%;
+        margin-left: 4%;
+
+    }
+
+    .data{
+        margin-top:3%;
+        height: 150px; 
+        width: 100%;
+        margin-left:3%;
+        background: red;
+    }
+
 
 </style>
 
-@extends('layouts.app')
+@extends('Admin.app')
 
 
 @section('content')
-<div class="container-fluid">
-    <div class="row">
-        <div class="left_side">
-            @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
+<div>
+    <div class="container">
+       <div>
+            @foreach($Admin as $admins)
+              <h4>Welcome Mr {{$admins->name}} </h4>
+            @endforeach
+       </div>
+       <div class="body">
+            <!-- first row of data -->
+            <div class="row">
+                <div class="col-5 data">
+                   <a href="{{ route('admin.details')}}">View All Students</a>
                 </div>
-            @endif
-           <span class="text"> Welcome Admin </span>
-        </div>
+                <div class="col-5 data">
+                    <a href="{{ route('admin.show') }}">Add New Course</a>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-5 data">
+                    <a href="{{ route('admin.register')}}">Register New Admin</a>
+               </div>
+                <div class="col-5 data">
+                    <a href="{{ route('course.view') }}">View Courses</a>
+                </div>
+            </div>
+       </div>
+
     </div>
 </div>
 @endsection
