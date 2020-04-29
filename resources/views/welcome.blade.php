@@ -452,7 +452,7 @@
                                         
                                     <div class="col-3  ind_courses">
                                             <div style="margin: 0px">
-                                                <img src="{{ asset('images/image.jpg')}}" class="img" alt="">
+                                                <img src="/storage/{{$course->image}}" class="img" alt="">
                                             </div>
                                             <div style="padding: 9%">
                                                 <div>
