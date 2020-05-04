@@ -169,16 +169,16 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav-l navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Home</a>
+                            <a href="/admin" class="nav-link">Admin Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/study" class="nav-link">Study</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/mycourses" class="nav-link">My Courses</a>
+                            <a href="{{ route('admin.details') }}" class="nav-link">Students</a>
                         </li>
                         <li class="nav-item">
                             <a href="/contact" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/courses" class="nav-link">Courses</a>
                         </li>
                     </ul>
                 </div>

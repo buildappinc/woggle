@@ -3,24 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Course;
-use App\Difficulty;
+use App\User;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    public function index(Request $request){
 
-          
-            $course = Course::all();
-            return view('Study.index', compact('course'));
+    public function __construct(){
+        $this->middleware('auth');
     }
 
-    public function show($course){
+    public function addCourse(Course $course)
+    {
+        $user = \Auth::user();
+        
+        $user->courses()->attach($course);
 
-        $courses = Course::all();
-        $course = Course::find($course);
-
-        return view('Study.show', compact('course', 'courses'));
+        return view('Study.lesson', compact('course'));
     }
 
 

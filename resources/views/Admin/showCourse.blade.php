@@ -31,6 +31,11 @@
                     {{$course->description}}
                 </p>
 
+                <div class="pt-2"><strong>Course price</strong></div>
+                <p>
+                   GHc {{$course->price}}
+                </p>
+
                 <div>
                    <strong>Course was added {{$course->created_at->diffForHumans()}}</strong> 
                 </div>
@@ -61,10 +66,10 @@
                     {{$item->name}}
                     <hr>
                     <div class="row ml-0 mt-2">
-                        <a href="">Edit Topic</a>
+                        <a href="/admin/topic/{{$item->id}}/edit">Edit Topic</a>
 
                         <div class="pl-3">
-                            <form action="" method="post">
+                            <form action="/admin/topic/{{$item->id}}" method="post">
                                 @method('DELETE')
                                 @csrf
                                 <button type="submit">Delete topic</button>
@@ -87,6 +92,18 @@
                     <p>
                         {{$section->content}}
                     </p>
+                    <div class="row ml-0 mt-2">
+                        <a href="/admin/topics/section/{{$section->id}}/edit">Edit Section</a>
+
+                        <div class="pl-3">
+                            <form action="/admin/topics/section/{{$section->id}}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit">Delete Section</button>
+                            </form>
+                        </div>
+                        
+                    </div>
                     
                 @endforeach
             </div>

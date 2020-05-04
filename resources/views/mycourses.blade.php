@@ -31,6 +31,11 @@
             @endif
            <span class="text"> Welcome {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }} </span>
         </div>
+        <div>
+            @foreach (Auth::user()->courses as $course)
+                {{$course->name}}
+            @endforeach
+        </div>
     </div>
 </div>
 @endsection

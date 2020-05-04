@@ -85,13 +85,12 @@
         </div>
         <div class="col-6">
             <hr>
-            <p style="line-height: 38px;">{{$course->long_decription}}</p>
+            <p style="line-height: 38px;">{{$course->description}}</p>
             <hr>
-            <a href="" style="text-decoration: none; color: #000">
-                 <div class="button">
-                        <p style="text-align: center; padding-top: 2%; text-transform: uppercase">Enroll Now</p> 
-                </div>
-            </a>
+                <form action="/study/{{$course->id}}" method="post">
+                    @csrf
+                   <button type="submit">Enroll now</button>
+                </form>
         </div>
         <div style="padding-left: 20px"  class="col-3">
            <div style="background: #06042d; height:50px; color: #fff; font-size: 20px; text-align: center; padding-top: 3%">
