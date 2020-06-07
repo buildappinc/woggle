@@ -56,10 +56,12 @@ class AdminController extends Controller
             'description' => 'required | max:1000'
         ]);
 
-       $imagePath = $request->image->store('uploads', 'public');
+       if ($request->hasfile('image')) {
+            $imagePath = request()->image->store('uploads', 'public');
 
-       $Image = Image::make(public_path("storage/{$imagePath}"))->fit(109, 80);
-       $Image->save();
+            $Image = Image::make(public_path("storage/{$imagePath}"))->resize(109, 80);
+            $Image->save(80);
+       }
 
         Course::create([
             'name' => $data['name'],
@@ -69,7 +71,7 @@ class AdminController extends Controller
             'description' => $data['description']
         ]);
 
-        return redirect()->route('course.view')->with('message', "Course added successfuly");
+        return redirect()->route('topic.form')->with('message', "Course added successfuly. Add new topic based on course");
 
     }
 
@@ -103,8 +105,8 @@ class AdminController extends Controller
 
         $imagePath = request()->image->store('uploads', 'public');
 
-        $Image = Image::make(public_path("storage/{$imagePath}"))->fit(109, 80);
-        $Image->save();
+        $Image = Image::make(public_path("storage/{$imagePath}"))->resize(109, 80);
+        $Image->save(80);
  
          $course->update([
              'name' => $data['name'],
@@ -122,4 +124,7 @@ class AdminController extends Controller
 
         return redirect()->route('course.view')->with("message", "Course Delete");
     }
+
+
+   
 }

@@ -1,6 +1,6 @@
 
 <style>
-      .container-fluid{
+      .container-fluids{
         margin-top: -23;
         padding: 0px;
         height: 200px;
@@ -78,7 +78,7 @@
 @section('title', 'Register ')
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluids">
     <div class="container">
         <div class="text">
             <p>You are here:  <a href="/">Home</a> / Register</p>

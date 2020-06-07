@@ -9,10 +9,10 @@ use App\Course;
 
 class TopicController extends Controller
 {
-    public function topicForm(){
+    public function topicForm(Topic $topic){
         $course = Course::all();
 
-        return view('Topics.topicForm', compact('course'));
+        return view('Topics.topicForm', compact('course', 'topic'));
     }
 
     public function store(Request $request){
@@ -25,7 +25,30 @@ class TopicController extends Controller
 
         Topic::create($data);
 
-        return redirect('/admin');
+        return redirect()->route('section.form')->with('message', 'Topic Added. Add new section for particular topic');
        
+    }
+
+    public function editTopic(Topic $topic){
+        $course = Course::all();
+
+        return view('Topics.editTopic', compact('course', 'topic'));
+    }
+
+    public function updateTopic(Topic $topic){
+        $data =  request()->validate([
+            'name' => 'required',
+            'course_id' => 'required'
+        ]);
+
+        $topic->update($data);
+
+        return redirect('/admin/courses');
+    }
+
+    public function destroyTopic(Topic $topic){
+
+        $topic->delete();
+        return redirect('/admin/courses');
     }
 }

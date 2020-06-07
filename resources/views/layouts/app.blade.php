@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/jquery-3.5.0.min.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> 
 
     <style>
 
@@ -28,17 +30,6 @@
         position: relative;
     }       
 
-     .footer-bottom{
-        background:  rgba(255, 0, 64, 0.986);
-        width: 100%;
-        height: 50px;
-        color: white;
-        text-align: center;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        padding-top: 20px;
-    }
 
     li{
         padding: 5px 20px
@@ -46,11 +37,10 @@
 
     .nav-link{
         font-size: 15px;
-        font-family: montserratregular;
+        font-family: 'PT Sans', sans-serif;
         font-weight: 400px;
         font-style: normal;
-        color: #f05a66;
-
+        color: #000 !important;
     }
 
     .nav-link:hover{
@@ -82,23 +72,19 @@
         padding-left: 10%;
     }
 
-    .preHeader-2:before {
-        content: '';
-        line-height: 0;
-        font-size: 0;
-        width: 0;
-        height: 0;
-        border-top: 50px solid transparent;
-        border-bottom: 50px solid rgba(255, 0, 64, 0.986);
-        border-left: 50px solid transparent;
-        border-right: 0px solid rgba(255, 0, 64, 0.986);
-        position: absolute;
-        top: -50px;
-        left: -50px;
-     }
-
     .nav{
-        height: 11%;
+        height: 9%;
+    }
+
+    .bg-white.fixed{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 20;
+        -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -o-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
     }
     
 
@@ -106,55 +92,17 @@
 </head>
 <body>
     <div id="app">
-        <div class="preHeader">
-            <div class=" container">
-                 
-                        Any Questions? +233 *** *** ***
-                 
-            </div>
-        </div>
-            <nav class="preHeader-2 navbar-expand-md navbar-dark bg-dark shadow-sm">
-                
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
-                            <!-- Authentication Links -->
-                            @guest
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li> 
-                                @if (Route::has('register'))
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                    </li>
-                                @endif
-                            @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->fname }} <span class="caret"></span>
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
         <nav class="nav navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('Woggle', 'Woggle') }}
+                    <div class="grid grid-cols-3 gap-4">
+                        <div>
+                            <img src="{{asset('svg/logo1.svg')}}" style="object-fit: cover; height: 60px; margin-left: 40px">
+                        </div>
+                        <div>
+                            <img src="{{asset('svg/logo2.svg')}}" style="height: 40px; margin-left: -40px; margin-top: 8px">
+                        </div>
+                    </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -172,14 +120,41 @@
                             <a href="/" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/study" class="nav-link">Study</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/mycourses" class="nav-link">My Courses</a>
+                            <a href="/study" class="nav-link">Courses</a>
                         </li>
                         <li class="nav-item">
                             <a href="/contact" class="nav-link">Contact</a>
                         </li>
+
+                         <!-- Authentication Links -->
+                         @guest
+                         <li class="nav-item">
+                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                         </li> 
+                         @if (Route::has('register'))
+                             <li class="nav-item">
+                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                             </li>
+                         @endif
+                     @else
+                         <li class="nav-item dropdown">
+                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                 {{ Auth::user()->fname }} <span class="caret"></span>
+                             </a>
+
+                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                 <a class="dropdown-item" href="{{ route('logout') }}"
+                                 onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                     {{ __('Logout') }}
+                                 </a>
+
+                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                     @csrf
+                                 </form>
+                             </div>
+                         </li>
+                     @endguest
                     </ul>
                 </div>
             </div>
@@ -209,5 +184,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+         $(window).scroll(function(){
+            $('nav').toggleClass('fixed', $(this).scrollTop() > 0)
+        });
+    </script>
 </body>
 </html>

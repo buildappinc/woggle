@@ -1,27 +1,23 @@
 @extends('Admin.app')
 
 @section('content')
-    
-<form action="{{ route('topic.form.submit') }}" method="post">
-    @csrf
 
-    <div class="form-group">
-        <label for="topic_name">Topic Name</label>
-        <input type="text" class="form-control" name="name">
-    </div>
+<div>
+    @if (session()->has('message'))
+        <div class="alert alert-success" role="alert">
+            <strong>Success</strong> {{ session()->get('message') }}
+        </div>
+    @endif
+</div>
 
-    <div class="form-group">
-        <select name="course_id" id="course_id">
-            @foreach ($course as $courses)
-                <option value="{{ $courses->id}} ">{{ $courses->name}}</option>
-            @endforeach
-        </select>
-    </div>
+<div class="container">   
+    <form action="{{ route('topic.form.submit') }}" method="post">
+        @include('Topics.include.form')
 
+        <button type="submit">Add</button>
 
-    <button type="submit">Add</button>
-
-</form>  
+    </form>  
+</div>
 
 
 @endsection
