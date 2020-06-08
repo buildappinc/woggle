@@ -67,11 +67,17 @@
    
 
     <div class="row ml-4 btns">
-       
+        <div class="btn">
+            <a style="text-decoration: none; color: #000" href="{{ route('admin.show') }}">
+                <div class="button">
+                    <p style="text-align: center; padding-top: 7%;">ADD NEW COURSE</p> 
+                 </div>
+            </a>
+        </div>
         <div class="btn">
             <a style="text-decoration: none; color: #000" href="{{ route('topic.form')}}">
                 <div class="button">
-                    <p style="text-align: center; padding-top: 7%;">ADD NEW COURSE</p> 
+                    <p style="text-align: center; padding-top: 7%;">ADD NEW TOPIC</p> 
                  </div>
             </a> 
         </div>
@@ -82,6 +88,7 @@
                  </div>
             </a>
         </div>
+       
     </div>
 
 </div>

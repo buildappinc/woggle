@@ -25,6 +25,8 @@ Route::get('/study/{course}', 'StudyController@show');
 
 // course
 Route::post('/study/{course}', 'CourseController@addCourse');
+Route::get('/study/lesson/{course}', 'CourseController@showIndividualCourse');
+Route::get('/study/lesson/content/{course}/{topic}', 'CourseController@lessonContent')->name('course.content');
 
 
 Auth::routes();
@@ -36,11 +38,13 @@ Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('adm
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 
 Route::get('/admin/register', 'Auth\AdminRegisterController@showRegisterForm')->name('admin.register');
+Route::post('/admin/register', 'Auth\AdminRegisterController@register')->name('admin.register.submit');
 
 
 Route::get('/admin', "AdminController@viewAdmin")->name('admin.dashboard');
 Route::get('/admin/details', "AdminController@index")->name('admin.details');
 Route::get('/admin/add', "AdminController@show")->name('admin.show');
+Route::post('/admin/save', "AdminController@save")->name('admin.save');
 Route::post('/admin/add', "AdminController@store")->name('admin.store');
 
 //topics 

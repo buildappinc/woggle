@@ -1,15 +1,6 @@
 <style>
     .header{
-        margin-top: -20 ;
-        padding: 0px;
-        height: 150px;
-        width: 100%;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background: #06042d;
-        background-image: url('{{asset('images/football-no-lines.png')}}');
+        
     }
 
     .text{
@@ -64,7 +55,7 @@
         padding-top: 10%
     }
 
-    img{
+    .img{
         background-size: cover;
         width: 90%; 
         height: 100%;
@@ -95,54 +86,49 @@
 
 @section('content')
 <div class="container-fluid header">
-    <div class="container">
-        <div class="text row">
-            <div class="col-8">
-                <p style="font-size: 30px;">Study</p>
-                <p>Explore courses that are organised into difficult levels</p>
-            </div>
-            <div class="col-4">
-                <div class="quickNav">
-                    <p>You are here: <a href="/">Home</a> / Study</p>
-                </div>
-            </div>
-        </div>
+    <div class="flex justify-center text-4xl tracking-wider" >
+        Courses
+    </div>
+    <div class="flex justify-center">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto delectus perspiciatis voluptatum similique
     </div>
 </div>
 
-<div class="container">
-    <div>
-        bfgdf
-    </div>
-    <div class="row">
-        <div class="col-8">
+<div class="container p-5">
+        <div style="margin-left: 5%">
             @foreach($course as $courses)
-                <div style="height: 350px; margin-bottom: 10px" class="row">
-                    <div class="col-7">
-                        <img src="/storage/{{$courses->image}}" class="img" alt="">
-                    </div>
-                    <div class="col-5">
-                        <div>
-                            {{$courses->name}}
+                <div class="flex m-5 rounded-sm shadow-md ">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="col-span-1 ...">
+                            <img src="/storage/{{$courses->image}}" class="img object-cover shadow-inner" alt="">
                         </div>
-                        <hr>
-                        <div class="text_elipsis">
-                            {{$courses->introduction}}
-                        </div><br>
-                        <a href="/study/{{$courses->id}}" style="text-decoration: none; color: #000">
-                          <div style="border: 1px solid #020026; height: 40px; width: 150px; border-radius: 3px;">
-                                <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Details</p> 
-                          </div>
-                        </a>
+                        <div class="col-span-2 ...">
+                            <div class="h-64 grid grid-rows-3 grid-flow-col gap-4">
+                                <div class="text-4xl">
+                                    {{$courses->name}}
+                                </div>
+                                <div class="">
+                                    {{$courses->introduction}}
+                                </div>
+                                <div class="flex justify-between">
+                                   <div>
+                                    <a href="/study/{{$courses->id}}" style="text-decoration: none; color: #000">
+                                        <div style="background-color: #f7b728; height: 40px; width: 150px; border-radius: 3px;">
+                                              <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Details</p> 
+                                        </div>
+                                      </a>
+                                   </div>
+                                   <div class="px-4 py-2 m-2">
+                                       Learners: 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                   
                 </div>
             @endforeach
-        </div>
-
-        
-        <div class="col-4">
-        dadadad
-        </div>
+        </div> 
    </div>
 </div>
 

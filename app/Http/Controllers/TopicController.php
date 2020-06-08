@@ -25,7 +25,7 @@ class TopicController extends Controller
 
         Topic::create($data);
 
-        return redirect('/admin');
+        return redirect()->route('section.form')->with('message', 'Topic Added. Add new section for particular topic');
        
     }
 

@@ -26,7 +26,7 @@ class SectionController extends Controller
 
         Section::create($data);
 
-        dd($request->all());
+        return redirect('/admin/courses');
 
     }
 

@@ -1,60 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Woggle</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-        </style>
-    </head>
-
-    <!doctype html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -63,13 +7,16 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
+    <title>Woggle</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdn.boomcdn.com/libs/animate-css/3.7.0/animate.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
@@ -78,22 +25,10 @@
     <style>
 
     .footer{
-        background: #06042d;
-        height: 350px;
+        background: #3f3f3f;
+        height: 40vh;
         position: relative;
     }       
-
-    .footer-bottom{
-        background:  rgba(255, 0, 64, 0.986);
-        width: 100%;
-        height: 50px;
-        color: white;
-        text-align: center;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        padding-top: 20px;
-    }
 
     li{
         padding: 5px 20px
@@ -101,11 +36,13 @@
 
     .nav-link{
         font-size: 15px;
-        font-family: montserratregular;
+        font-family: 'PT Sans', sans-serif;
         font-weight: 400px;
         font-style: normal;
-        color: #f05a66;
-
+        color: #fff !important;
+    }
+    .nav-link.nav-text-color{
+        color: #000 !important;
     }
 
     .nav-link:hover{
@@ -117,53 +54,21 @@
 
     .footer-content{
         padding: 3%;    
+        padding-left: 14%;
     }
-
-    .preHeader{
-        padding-top: .8%; 
-        padding-bottom: .8%;
-        width: 100%;
-        color: #fff;
-        background: #020026
-    }
-
-    .preHeader-2{
-        position: absolute;
-        top: 10px;
-        left: 0;
-        z-index: 4;
-        margin-left: 60%;
-        width: 40%;
-        padding-left: 10%;
-        box-shadow: 0 25px 30px black;
-    }
-
-    .preHeader-2:before {
-        content: '';
-        line-height: 0;
-        font-size: 0;
-        width: 0;
-        height: 0;
-        border-top: 50px solid transparent;
-        border-bottom: 50px solid rgba(255, 0, 64, 0.986);
-        border-left: 50px solid transparent;
-        border-right: 0px solid rgba(255, 0, 64, 0.986);
-        position: absolute;
-        top: -50px;
-        left: -50px;
-     }
 
     .nav{
-        height: 11%;
+        height: 9%;
+        width: 100%;
+        background-color: red;
     }
 
-    .carousel{
-        margin-top: -25px;
-        height: 660px;
+    /* .carousel{
+        height: 724px;
     }
 
     .carousel-inner{
-        height: 660px;
+        height: 724px;
     }
 
     .carousel-caption {
@@ -176,12 +81,12 @@
         padding-bottom: 20px;
         color: #fff;
         text-align: center;
-    }
+    } */
     .main_section{
         position: relative
     }
 
-    .about{
+    /* .about{
         position: absolute;
         top: -25px;
         left: 0;
@@ -197,7 +102,7 @@
         background-color: whitesmoke;
         height: 400px; 
         width: 100%;
-    }
+    } */
 
     .text_1{
         margin-top: 15%;
@@ -227,25 +132,29 @@
         -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
-        padding-bottom: 20%;
-        margin-top: 6%;
-        height: 180px; 
-        width: 100%;
-    }
-
-    .details{
-        padding-top: 7%;
-        padding-left: 5%;
+        margin-top: 3.5%;
+        padding: 4%;
+        padding-left: 10%;
     }
 
     .status_text{
-        font-weight: bold;
-        font-size: 25px;
+        margin-top: 4%;
+        font-weight: lighter;
+        font-size: 2.5vh;
     }
 
     .img{
-        background-size: cover;
+        background-size: cover; 
         width: 100%; 
+        object-fit: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .course{
+        background-size: cover;
+        width: 100%
     }
 
     .ind_courses{
@@ -280,92 +189,98 @@
         background: #fb0040;
     }
 
+    .bg-light{
+        background: transparent !important;
+        -moz-transition: 0.7s ease-in-out;
+        -o-transition: 0.7s ease-in-out;
+        -webkit-transition: 0.7s ease-in-out;
+    }
+    .bg-light.scrolled{
+        background: #ffffff !important;
+        -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -o-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+    }
+
 
 
     </style>
 </head>
 <body>
-    <div id="app"><div class="preHeader">
-            <div class=" container">
-                 
-                        Any Questions? +233 *** *** ***
-                 
-            </div>
-        </div>
-        <nav class="preHeader-2 navbar-expand-md navbar-dark bg-dark shadow-sm">
-                
-                <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li> 
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                              Welcome  {{ Auth::user()->fname }} <span class="caret"></span>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
+    <div id="app">
+        <div>
+            <nav class="nav navbar navbar-expand-md navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand animated fadeInLeft slow-4s" href="{{ url('/') }}">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div>
+                                <img src="{{asset('svg/logo1.svg')}}" style="object-fit: cover; height: 60px; margin-left: 40px">
                             </div>
-                        </li>
-                    @endguest
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-        <nav class="nav navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('Woggle', 'Woggle') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav mr-auto">
-                       
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/study" class="nav-link">Study</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/mycourses" class="nav-link">My Courses</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/contact" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
+                            <div>
+                                <img src="{{asset('svg/logo2.svg')}}" style="height: 40px; margin-left: -40px; margin-top: 8px">
+                            </div>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="nav navbar-nav mr-auto">
+                            
+                        </ul>
+    
+                        <!-- Right Side Of Navbar -->
+                        <ul class="nav-l navbar-nav ml-auto animated fadeInRight slow-4s">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/study" class="nav-link">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/contact" class="nav-link">Contact</a>
+                            </li>
+    
+                             <!-- Authentication Links -->
+                             @guest
+                             <li class="nav-item">
+                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                             </li> 
+                             @if (Route::has('register'))
+                                 <li class="nav-item">
+                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                 </li>
+                             @endif
+                         @else
+                             <li class="nav-item dropdown">
+                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                     {{ Auth::user()->fname }} <span class="caret"></span>
+                                 </a>
+    
+                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                     <a class="dropdown-item" href="{{ route('logout') }}"
+                                     onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                         {{ __('Logout') }}
+                                     </a>
+    
+                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                         @csrf
+                                     </form>
+                                 </div>
+                             </li>
+                         @endguest
+                        </ul>
+                    </div>
                 </div>
+            </nav>
+            <div>
+                <img class="object-contain sm:object-cover md:object-fill lg:object-none xl:object-scale-down .bg-fixed" src="{{ asset('images/image4.jpg')}}" class="img">
             </div>
-        </nav>
-
-        <main class="py-4">
-            <div class="carousel">
+            {{-- <div class="carousel">
                 <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -405,32 +320,42 @@
                     </a>
                 </div>
             </div>
+        </div> --}}
+
+        <main class="py-4">
+            
 
             <!-- quick review -->
             <div class="container quick">
-                <div class="row details">
-                    <div class="col-4 row">
-                        <div class="col-4">
-                            <img src="{{ asset('images/book.svg') }}"  style="max-height: 100%; max-width: 100%; " alt="">
-                        </div>
-                        <div class="col-8 status_text">
-                                Enjoy Online <br> Studies
+                <div class="grid grid-cols-3 gap-4">
+                    <div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="">
+                                <img src="{{ asset('images/book.svg') }}"  style="width: 18vh" alt="">
+                            </div>
+                            <div class="status_text">
+                                    Study Online
+                            </div>
                         </div>
                     </div>
-                    <div class="col-4 row">
-                        <div class="col-4">
-                                <img src="{{ asset('images/exam.svg') }}"  style="max-height: 100%; max-width: 100%; " alt="">
-                            </div>
-                            <div class="col-8 status_text">
-                                Take Quizes <br> Online
+                    <div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="">
+                                    <img src="{{ asset('images/exam.svg') }}"  style="width: 18h " alt="">
+                                </div>
+                                <div class="status_text">
+                                    Take Quizes 
+                                </div>
                             </div>
                         </div>
-                    <div class="col-4 row">
-                        <div class="col-4">
-                            <img src="{{ asset('images/goal.svg') }}"  style="max-height: 100%; max-width: 100%; " alt="">
-                        </div>
-                        <div class="col-8 status_text">
-                            Check your <br> Progress
+                    <div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="">
+                                <img src="{{ asset('images/goal.svg') }}"  style="width: 16vh" alt="">
+                            </div>
+                            <div class="status_text">
+                                Check Progress
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -452,14 +377,14 @@
                                         
                                     <div class="col-3  ind_courses">
                                             <div style="margin: 0px">
-                                                <img src="/storage/{{$course->image}}" class="img" alt="">
+                                                <img src="/storage/{{$course->image}}" class="course" alt="">
                                             </div>
                                             <div style="padding: 9%">
                                                 <div>
                                                     {{$course->name}}
                                                 </div>
                                                 <div>
-                                                        {{$course->description}}
+                                                        {{$course->introduction}}
                                                 </div>
                                             </div>
                                     </div>
@@ -480,7 +405,7 @@
         </main>
 
         <!-- pre footer -->
-        <div class="main_section">
+        {{-- <div class="main_section">
                 <div class="about">
                     <div class="container">
                         <div class="row">
@@ -507,27 +432,51 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         <!-- footer -->
         <div class="footer ">
-            <div class="container footer-content row">
-                <div class="col-4"></div>
-                <div class="col-3 footer-section">
-                    <p style="color: white">About</p> 
+            <div class="container footer-content">
+                <div class="row">
+                    <div class="col-4 footer-section">
+                        <img src="{{asset('svg/logo1.svg')}}" style="height: 20px; width: 20">
+                        <img src="{{asset('svg/logo2.svg')}}" style="height: 20px; width: 20">
+                        <p style="color: white">About</p> 
+                    </div>
+                    <div class="col-4 footer-section">
+                        <p style="color: white">Links</p> 
+                    </div>
+                    <div class="col-4 footer-section">
+                        <p style="color: white">Contact</p> 
+                    </div>
                 </div>
-                <div class="col-3 footer-section">
-                   <p style="color: white">Links</p> 
-                </div>
-                <div class="col-2 footer-section">
-                   <p style="color: white">Contact</p> 
-                   <p style="color: white">Sub Contact</p> 
-                </div>
-            </div>
-            <div class="footer-bottom">
-                 <small>Copyright &copy; Woggle</small>
             </div>
         </div>
+
     </div>
+
+    {{----------------------------- script ---------------------------------------------------}}
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function(){
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 500)
+
+            $('.nav-link').toggleClass('nav-text-color', $(this).scrollTop() > 500)
+        });
+
+
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var posTop = $(document).scrollTop()
+                console.log(posTop)
+
+                if (posTop > 200) {
+                    $('.quick').addClass('animated bounceIn slower 4s')
+                } 
+            })
+        })
+
+
+    </script>
 </body>
 
 </html>

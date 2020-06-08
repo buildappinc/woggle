@@ -33,7 +33,7 @@
         </div>
         <div>
             @foreach (Auth::user()->courses as $course)
-                {{$course->name}}
+                <a href="/study/lesson/{{$course->id}}">{{$course->name}}</a> 
             @endforeach
         </div>
     </div>
