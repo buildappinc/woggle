@@ -250,7 +250,7 @@
                                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                              </li> 
                              @if (Route::has('register'))
-                                 <li class="nav-item">
+                                 <li class="nav-item register animated tada delay-5s animate__repeat-2">
                                      <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                  </li>
                              @endif
@@ -383,9 +383,6 @@
                                                 <div>
                                                     {{$course->name}}
                                                 </div>
-                                                <div>
-                                                        {{$course->introduction}}
-                                                </div>
                                             </div>
                                     </div>
                                     
@@ -435,18 +432,31 @@
             </div> --}}
         <!-- footer -->
         <div class="footer ">
-            <div class="container footer-content">
-                <div class="row">
-                    <div class="col-4 footer-section">
-                        <img src="{{asset('svg/logo1.svg')}}" style="height: 20px; width: 20">
-                        <img src="{{asset('svg/logo2.svg')}}" style="height: 20px; width: 20">
-                        <p style="color: white">About</p> 
+            <div class="container-fluid footer-content">
+                <div class="grid grid-cols-3 gap-4">
+                    <div style="margin-top: -6px">
+                        <img src="{{asset('svg/logo1.svg')}}" class="" style="height: 12rem; width: 10rem">
+                        <img src="{{asset('svg/logo2.svg')}}" class="" style="height: 2.5rem; width: 10rem">
                     </div>
-                    <div class="col-4 footer-section">
-                        <p style="color: white">Links</p> 
+                    <div class="leading-2" style="margin-top: -6px">
+                        <div>
+                            <p>Related Links</p>
+                        </div>
+                        <div>
+                            <div>Related Links</div>
+                            <div>Related Links</div>
+                            <div>Related Links</div>
+                        </div>
                     </div>
-                    <div class="col-4 footer-section">
-                        <p style="color: white">Contact</p> 
+                    <div class="leading-2"  style="margin-top: -6px">
+                        <div>
+                            <p>Related Links</p>
+                        </div>
+                        <div>
+                            <div>Related Links</div>
+                            <div>Related Links</div>
+                            <div>Related Links</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -461,6 +471,7 @@
             $('nav').toggleClass('scrolled', $(this).scrollTop() > 500)
 
             $('.nav-link').toggleClass('nav-text-color', $(this).scrollTop() > 500)
+
         });
 
 

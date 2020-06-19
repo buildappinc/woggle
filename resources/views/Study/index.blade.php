@@ -94,8 +94,8 @@
     </div>
 </div>
 
-<div class="container p-5">
-        <div style="margin-left: 5%">
+<div class="container pt-5">
+        <div>
             @foreach($course as $courses)
                 <div class="flex m-5 rounded-sm shadow-md ">
                     <div class="grid grid-cols-3 gap-4">
@@ -107,6 +107,7 @@
                                 <div class="text-4xl">
                                     {{$courses->name}}
                                 </div>
+                                  
                                 <div class="">
                                     {{$courses->introduction}}
                                 </div>

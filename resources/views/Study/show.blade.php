@@ -89,23 +89,10 @@
 
 @section('content')
 
-<div class="container-fluid header">
-    <div class="container">
-        <div class="text row">
-            <div class="col-8">
-                <p style="font-size: 45px;">{{$course->name}}</p>
-            </div>
-            <div class="col-4">
-                <div class="quickNav">
-                    <p>You are here: <a href="/">Home</a> \ Study</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container">
-    <div style="margin-top: 5%" class="row">
+    
+    {{-- <div style="margin-top: 5%" class="row">
         <div class="col-3">
             <div>
                 <img class="img" src="/storage/{{$course->image}}" alt="">
@@ -114,7 +101,7 @@
                 <div><strong>Course Price</strong></div>
                 <p>GHc {{$course->price}}</p>
             </div>
-            {{-- add payment method --}}
+            add payment method
             <div class="mt-4">
                 <div>Add payment method</div> 
                 <a href="#">
@@ -149,6 +136,6 @@
                @endforeach
            </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 @endsection
