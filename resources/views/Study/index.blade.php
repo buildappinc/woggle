@@ -102,7 +102,7 @@
                         <div class="col-span-1 ...">
                             <img src="/storage/{{$courses->image}}" class="img object-cover shadow-inner" alt="">
                         </div>
-                        <div class="col-span-2 ...">
+                        <div class="col-span-2 ... pl-5 pr-4 p-3">
                             <div class="h-64 grid grid-rows-3 grid-flow-col gap-4">
                                 <div class="text-4xl">
                                     {{$courses->name}}
