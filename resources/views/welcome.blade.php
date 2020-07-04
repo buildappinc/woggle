@@ -119,7 +119,7 @@
     }
     
     .sec_section{
-       margin-top: 7%;
+       margin-top: 4%;
        text-align: center
     }
 
@@ -152,18 +152,11 @@
         background-repeat: no-repeat;
     }
 
-    .course{
-        background-size: cover;
-        width: 100%
-    }
-
     .ind_courses{
-        margin-left: 2%;
-        border-bottom: 3px solid #fb0040;
+        border-bottom: 3px solid red;
         -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         box-shadow: 0 3px 5px rgba(0,0,0,.2);
-        height: 470px;
     }
 
     .ind_courses:hover{
@@ -363,7 +356,38 @@
 
             <!-- popular courses -->
             <br>
-            <div style="background:#f9f9ff; padding-bottom: 5%;">
+
+            <div class="pb-3">
+                <div class="container">
+                    <div class="sec_section">
+                        <div class="text-5xl">
+                            Our Featured Courses
+                        </div>
+                        <div>
+                            <p>Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</p>
+                        </div>
+                    </div>
+                    {{-- course display --}}
+                    <div class="m-5">
+                        <div class="flex flex-wrap">
+                           @foreach ($courses as $course)
+                           <div class="w-2/6 p-2 mt-3">
+                                <div class="ind_courses">
+                                    <div class="h-full w-full">
+                                        <img src="/storage/{{$course->image}}" class="course max-h-full w-full max-w-full" style="height:20rem" alt="">
+                                    </div>
+                                    <div class="text-center text-3xl mt-3 pb-3">
+                                        {{$course->name}}
+                                    </div>
+                                </div>   
+                            </div>
+                           @endforeach 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- <div style="background:#f9f9ff; padding-bottom: 5%;">
                 <div class="container">
                     <div class="sec_section">
                         <div class="section_header">
@@ -374,7 +398,6 @@
                         </div>
                         <div class="row mt-5">
                             @foreach($courses as $course)
-                                        
                                     <div class="col-3  ind_courses">
                                             <div style="margin: 0px">
                                                 <img src="/storage/{{$course->image}}" class="course" alt="">
@@ -385,7 +408,6 @@
                                                 </div>
                                             </div>
                                     </div>
-                                    
                             @endforeach
                             <div class="col-2" style="padding-top: 18%;">
                                 <a href="/study" style="text-decoration: none; color: #000">
@@ -397,7 +419,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         
         </main>
 
