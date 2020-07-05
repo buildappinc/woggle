@@ -387,39 +387,7 @@
                 </div>
             </div>
 
-            {{-- <div style="background:#f9f9ff; padding-bottom: 5%;">
-                <div class="container">
-                    <div class="sec_section">
-                        <div class="section_header">
-                            Our Featured Courses
-                        </div>
-                        <div>
-                            <p>Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</p>
-                        </div>
-                        <div class="row mt-5">
-                            @foreach($courses as $course)
-                                    <div class="col-3  ind_courses">
-                                            <div style="margin: 0px">
-                                                <img src="/storage/{{$course->image}}" class="course" alt="">
-                                            </div>
-                                            <div style="padding: 9%">
-                                                <div>
-                                                    {{$course->name}}
-                                                </div>
-                                            </div>
-                                    </div>
-                            @endforeach
-                            <div class="col-2" style="padding-top: 18%;">
-                                <a href="/study" style="text-decoration: none; color: #000">
-                                    <div class="button">
-                                       <p style="text-align: center; padding-top: 7%;">VIEW ALL COURSES</p> 
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
+            
         
         </main>
 
