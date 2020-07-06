@@ -33,7 +33,7 @@
                     
                     {{-- button --}}
                     <div class="mt-3">
-                        <a href="#" style="text-decoration: none; color: #000">
+                        <a href="{{ route('edit')}}" style="text-decoration: none; color: #000">
                             <div style="background-color: #f7b728; height: 40px; width: 150px; border-radius: 3px;">
                                   <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Edit Account</p> 
                             </div>
@@ -46,22 +46,33 @@
                 <div class="text-3xl font-bold">
                     Subscribed Courses
                 </div>
-                <div class="flex flex-wrap mt-4 pt-3">
-                @foreach (Auth::user()->courses as $course)
-                        <div class="w-2/5 pl-4 pt-4">
-                            <div class="h-48 w-48 shadow-md">
-                                <img class="rounded-lg h-48 max-w-full shadow-inner" src="/storage/{{$course->image}}" alt="">
-                            </div>
-                            <div class="text-center">
-                                <a href="/study/lesson/{{$course->id}}" class="text-3xl">{{$course->name}}</a> 
-                            </div>
+
+                @if (Auth::user()->courses->count() <= 0 )
+                    <div>
+                        <div class="mt-12 flex justify-center">
+                            <img src="{{asset('images/undraw_online_learning_ao11.svg')}}" class="h-48 w-48" alt="">
                         </div>
-                @endforeach
-                 </div>
+                        <div class="text-center text-xl">Opps No Subscribed Course!!! <a href="/study" style="color: #f7b728">Check Out Available Courses</a> </div>
+                    </div>
+                @else
+                    <div class="flex flex-wrap mt-4 pt-3">
+                        @foreach (Auth::user()->courses as $course)
+                            <div class="w-2/5 pl-4 pt-4">
+                                <div class="h-48 w-48 shadow-md">
+                                    <img class="rounded-lg h-48 max-w-full shadow-inner" src="/storage/{{$course->image}}" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <a href="/study/lesson/{{$course->id}}" class="text-3xl">{{$course->name}}</a> 
+                                </div>
+                            </div>
+                       @endforeach
+                     </div>
+                @endif
             </div>
         </div>
+        {{-- statistics --}}
         <div>
-            dasdas
+            User statistics
         </div>
     </div>
 </div>

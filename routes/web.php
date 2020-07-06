@@ -32,6 +32,7 @@ Route::get('/study/lesson/content/{course}/{topic}', 'CourseController@lessonCon
 Auth::routes();
 
 Route::get('/mycourses', 'HomeController@index')->name('home');
+Route::get('/mycourses/editProfile', 'HomeController@edit')->name('edit');
 
 // admin section
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

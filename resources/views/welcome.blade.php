@@ -40,6 +40,8 @@
         font-weight: 400px;
         font-style: normal;
         color: #fff !important;
+        float: right;
+        text-align: center;
     }
     .nav-link.nav-text-color{
         color: #000 !important;
@@ -50,6 +52,7 @@
     border-bottom: 1px solid rgba(255, 0, 64, 0.986);
     color: blue;
     transition: all ease-in .7s;
+    
     }
 
     .footer-content{
@@ -195,9 +198,43 @@
         -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
     }
+    .homeImage{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-attachment: fixed;
+        background-image: url('{{asset('images/man-in-yellow-crew-neck-t-shirt-while-using-tablet-4144096.jpg')}}');
+        background-size: cover;
+    }
 
+    .color_overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right top, #595b06, #573d0d, #452515, #281514, #000000);
+        opacity: .7;
+    }
 
+    .wavy{
+        position: absolute;
+        width: 100%;
+        height: 193px;
+        left: 0;
+        bottom: 0;
+        background: url('{{asset('images/2.png')}}');
+        animation: animate 70s linear infinite;
+    }
 
+    @keyframes animate{
+        0%{
+            background-position: 0;
+        }
+        100%{
+            background-position: 1360px;
+        }
+
+    }
+   
     </style>
 </head>
 <body>
@@ -270,9 +307,13 @@
                     </div>
                 </div>
             </nav>
-            <div>
-                <img class="object-contain sm:object-cover md:object-fill lg:object-none xl:object-scale-down .bg-fixed" src="{{ asset('images/image4.jpg')}}" class="img">
+            <div class="homeImage animate__fadeInLeft">
+                <div class="color_overlay"></div>
+                <div class="wavy"></div>
             </div>
+            {{-- <div class="startImage">
+                <img class="imageas object-contain sm:object-cover md:object-fill lg:object-none xl:object-scale-down .bg-fixed" src="{{ asset('images/image4.jpg')}}" class="img">
+            </div> --}}
             {{-- <div class="carousel">
                 <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators">

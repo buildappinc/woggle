@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Course;
 use Illuminate\Http\Request;
-
 
 class HomeController extends Controller
 {
@@ -25,9 +25,12 @@ class HomeController extends Controller
      */
     public function index(Course $course)
     {
-       
-
         return view('mycourses');
+    }
+
+    public function edit(User $user)
+    {
+        return view('User_Dashboard.edit');
     }
 
     
