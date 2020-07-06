@@ -7,7 +7,7 @@
 
 
 <div class="container-fluid">
-       
+
     <div class="px-32 py-10">
         <div class="grid grid-cols-4 gap-4">
             <div class="col-span-3 ... ">
@@ -33,7 +33,7 @@
                                         <h2>
                                             {{$course->name}}
                                         </h2>
-                                        <div> <p style="line-height: 38px;">{{$course->description}}</p></div>
+                                        <div> <p style="line-height: 38px;" class="text-justify">{{$course->description}}</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                             <div>dad</div>
                             <div class="mx-16">Sir John</div>
                         </div>
-                        <div class="pr-4 pt-3">
+                        <div class="pr-4 pt-3 text-justify">
                             Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto in magnam animi molestias, doloremque odio, soluta, aliquam placeat illo dignissimos quae ab tenetur perferendis fuga ipsa maiores commodi vitae dolores. consectetur adipisicing elit. Dolores explicabo blanditiis sunt placeat sapiente. Quos autem officia quae illo incidunt perspiciatis consectetur unde, eum commodi sunt nesciunt, reiciendis neque dolore!
                         </div>
                     </div>
