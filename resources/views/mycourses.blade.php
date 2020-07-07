@@ -18,8 +18,8 @@
         <div>
             <div class="grid grid-cols-3">
                 {{-- image --}}
-                <div class=" col-span-1 rounded-full h-32 w-32 mt-2">
-                     <img src="{{asset('images/noPhoto.png')}}" class="h-32 w-32" alt="">
+                <div class=" col-span-1 h-32 w-32 mt-2">
+                     <img src="/storage/{{Auth::user()->image}}" class="h-32 w-32 rounded-full object-cover" alt="">
                 </div>
                 {{-- name and others --}}
                 <div class="col-span-2">
@@ -33,7 +33,7 @@
                     
                     {{-- button --}}
                     <div class="mt-3">
-                        <a href="{{ route('edit')}}" style="text-decoration: none; color: #000">
+                        <a href="{{ route('profile.edit', [Auth::user()->id])}}" style="text-decoration: none; color: #000">
                             <div style="background-color: #f7b728; height: 40px; width: 150px; border-radius: 3px;">
                                   <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Edit Account</p> 
                             </div>
