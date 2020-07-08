@@ -26,6 +26,7 @@
                                             @csrf
                                            <button type="submit" class="button mt-3" style="background-color: #f7b728">Enroll now</button>
                                         </form>
+                                        <a href="{{ route('payment.index')}}">pay</a>
                                     </div>
                                 </div>
                                 <div class="col-span-3 ...">

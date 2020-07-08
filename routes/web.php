@@ -70,4 +70,7 @@ Route::get('/admin/topics/section/{section}/edit', "SectionController@editSectio
 Route::patch('/admin/topics/section/{section}', "SectionController@updateSection");
 Route::delete('/admin/topics/section/{section}', "SectionController@destroySection");
 
+// payment 
+Route::get('/payment', 'PaymentController@index')->name('payment.index');
+
 

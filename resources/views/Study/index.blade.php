@@ -97,10 +97,10 @@
 <div class="container pt-5">
         <div>
             @foreach($course as $courses)
-                <div class="flex m-5 rounded-sm shadow-md ">
+                <div class="flex m-5 rounded-lg shadow-md ">
                     <div class="grid grid-cols-3 gap-4">
                         <div class="col-span-1 ...">
-                            <img src="/storage/{{$courses->image}}" class="img object-cover shadow-inner" alt="">
+                            <img src="/storage/{{$courses->image}}" class="img object-cover rounded-lg shadow-inner" alt="">
                         </div>
                         <div class="col-span-2 ... pl-5 pr-4 p-3">
                             <div class="h-64 grid grid-rows-3 grid-flow-col gap-4">
@@ -108,7 +108,7 @@
                                     {{$courses->name}}
                                 </div>
                                   
-                                <div class="">
+                                <div class="text-justify">
                                     {{$courses->introduction}}
                                 </div>
                                 <div class="flex justify-between">

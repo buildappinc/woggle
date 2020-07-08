@@ -227,11 +227,7 @@
                     </button>
     
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="nav navbar-nav mr-auto">
-                            
-                        </ul>
-    
+                        
                         <!-- Right Side Of Navbar -->
                         <ul class="nav-l navbar-nav ml-auto animated fadeIn  slow-4s">
                             <li class="nav-item">

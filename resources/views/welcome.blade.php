@@ -242,26 +242,27 @@
         <div>
             <nav class="nav navbar navbar-expand-md navbar-light bg-light fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand animated fadeInLeft slow-4s" href="{{ url('/') }}">
-                        <div class="grid grid-cols-3 gap-4">
-                            <div>
-                                <img src="{{asset('svg/logo1.svg')}}" style="object-fit: cover; height: 60px; margin-left: 40px">
-                            </div>
-                            <div>
-                                <img src="{{asset('svg/logo2.svg')}}" style="height: 40px; margin-left: -40px; margin-top: 8px">
-                            </div>
+                    <div class="flex flex-row ">
+                        <div class="">
+                            <a class="navbar-brand animated fadeInLeft slow-4s" href="{{ url('/') }}">
+                                <div class="flex flex-row -mt-6 -ml-16 lg:mt-2 md:mt-2  ">
+                                    <div class="px-3 py-2 m-2">
+                                        <img src="{{asset('svg/logo1.svg')}}" style="object-fit: cover; height: 60px; margin-left: 40px">
+                                    </div>
+                                    <div class="px-3 py-2 m-2">
+                                        <img src="{{asset('svg/logo2.svg')}}" style="height: 40px; margin-left: -40px; margin-top: 8px">
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                        <div class="mt-2 ml-5 md:ml-56 sm:ml-56">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </div>
     
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="nav navbar-nav mr-auto">
-                            
-                        </ul>
-    
                         <!-- Right Side Of Navbar -->
                         <ul class="nav-l navbar-nav ml-auto animated fadeInRight slow-4s">
                             <li class="nav-item">
@@ -361,11 +362,11 @@
 
             <!-- quick review -->
             <div class="container quick">
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-3 gap-4 ">
                     <div>
-                        <div class="grid grid-cols-3 gap-4">
+                        <div class="grid grid-cols-3 gap-4 flex flex-row sm:flex-col">
                             <div class="">
-                                <img src="{{ asset('images/book.svg') }}"  style="width: 18vh" alt="">
+                                <img src="{{ asset('images/book.svg') }}" class="h-full w-full"  alt="">
                             </div>
                             <div class="status_text">
                                     Study Online
@@ -375,17 +376,17 @@
                     <div>
                         <div class="grid grid-cols-3 gap-4">
                             <div class="">
-                                    <img src="{{ asset('images/exam.svg') }}"  style="width: 18h " alt="">
-                                </div>
-                                <div class="status_text">
-                                    Take Quizes 
-                                </div>
+                                <img src="{{ asset('images/exam.svg') }}" class="h-full w-full" style="width: 18h " alt="">
                             </div>
-                        </div>
+                            <div class="status_text">
+                                Take Quizes 
+                            </div>
+                         </div>
+                    </div>
                     <div>
                         <div class="grid grid-cols-3 gap-4">
                             <div class="">
-                                <img src="{{ asset('images/goal.svg') }}"  style="width: 16vh" alt="">
+                                <img src="{{ asset('images/goal.svg') }}" class="h-full w-full" style="width: 16vh" alt="">
                             </div>
                             <div class="status_text">
                                 Check Progress
@@ -410,7 +411,7 @@
                     </div>
                     {{-- course display --}}
                     <div class="m-5">
-                        <div class="flex flex-wrap">
+                        <div class="flex flex-wrap ">
                            @foreach ($courses as $course)
                            <div class="w-2/6 p-2 mt-3">
                                 <div class="ind_courses">
