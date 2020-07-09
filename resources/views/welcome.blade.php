@@ -60,11 +60,6 @@
         padding-left: 14%;
     }
 
-    .nav{
-        height: 9%;
-        width: 100%;
-        background-color: red;
-    }
 
     /* .carousel{
         height: 724px;
@@ -240,7 +235,73 @@
 <body>
     <div id="app">
         <div>
-            <nav class="nav navbar navbar-expand-md navbar-light bg-light fixed-top">
+            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light fixed-top ">
+                <a href="/" class="inline-flex flex-row items-center -ml-12 animated fadeInLeft slow-4s">
+                        <div>
+                            <img src="{{asset('svg/logo1.svg')}}">
+                        </div>
+                        <div>
+                            <img src="{{asset('svg/logo2.svg')}}" class="-ml-12 h-12">
+                        </div>
+                </a>
+                <button
+                    class="text-white inline-flex p-3 hover:bg-gray-900 bg-gray-400 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+                    data-target="#navigation"
+                >
+                    <i class="material-icons">menu</i>
+                </button>
+                <div
+                    class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
+                    id="navigation"
+                >
+                    <div
+                    class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto animated fadeInRight slow-4s"
+                    >
+                    <a
+                        href="/"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                    >
+                        <span>Home</span>
+                    </a>
+                    <a
+                        href="/study"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                    >
+                        <span>Courses</span>
+                    </a>
+                    <a
+                        href="/contact"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                    >
+                        <span>Contact</span>
+                    </a>
+                    @guest
+                        <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    @if (Route::has('register'))
+                            <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    @endif
+                    @else
+                        <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->fname }} <span class="caret"></span>
+                        </a>
+    
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+    
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    @endguest
+                    
+                    </div>
+                </div>
+        </nav>
+            {{-- <nav class="nav navbar navbar-expand-md navbar-light bg-light fixed-top">
                 <div class="container-fluid">
                     <div class="flex flex-row ">
                         <div class="">
@@ -307,56 +368,12 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> --}}
             <div class="homeImage animate__fadeInLeft">
                 <div class="color_overlay"></div>
                 <div class="wavy"></div>
             </div>
-            {{-- <div class="startImage">
-                <img class="imageas object-contain sm:object-cover md:object-fill lg:object-none xl:object-scale-down .bg-fixed" src="{{ asset('images/image4.jpg')}}" class="img">
-            </div> --}}
-            {{-- <div class="carousel">
-                <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{{asset('images/image2.jpg')}}" class="d-block w-100" style="max-height: 100%; background-size: cover" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{asset('images/image3.jpg')}}" class="d-block w-100" style="max-height: 100%; background-size: cover" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{asset('images/image.jpg')}}" class="d-block w-100" style="max-height: 100%; background-size: cover" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div> --}}
-
+           
         <main class="py-4">
             
 
@@ -517,6 +534,17 @@
                 } 
             })
         })
+
+        $(document).ready(function () {
+        $(".nav-toggler").each(function (_, navToggler) {
+            var target = $(navToggler).data("target");
+            $(navToggler).on("click", function () {
+            $(target).animate({
+                height: "toggle",
+            });
+            });
+        });
+        });
 
 
     </script>

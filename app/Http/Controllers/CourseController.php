@@ -23,15 +23,23 @@ class CourseController extends Controller
         return redirect('/study/lesson/'. $course->id);
     }
 
-    public function showIndividualCourse(Course $course){
-        return view('Study.lesson', compact('course'));
-    }
+    // public function showIndividualCourse(Course $course){
+    //     return view('Study.lesson', compact('course'));
+    // }
 
-    public function lessonContent(Course $course, Topic $topic){
+    // public function lessonContent(Course $course, Topic $topic){
         
-        return view('Study.courseContent', compact('course', 'topic'));
+    //     return view('Study.courseContent', compact('course', 'topic'));
+    // }
+
+    public function Topics(Course $course){
+        return view('lessons.index', compact('course'));
+
     }
 
+    public function LessonContent(Course $course, Topic $topic){
+        return view('lessons.showLessons', compact('course', 'topic'));
+    }
 
 
 

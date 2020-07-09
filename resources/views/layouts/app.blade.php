@@ -210,7 +210,73 @@
 <body>
     <div id="app">
         <div>
-            <nav class="nav navbar navbar-expand-md navbar-light bg-light shadow-md">
+            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-md">
+                <a href="/" class="inline-flex flex-row items-center -ml-12 animated fadeIn slow-4s">
+                        <div>
+                            <img src="{{asset('svg/logo1.svg')}}">
+                        </div>
+                        <div>
+                            <img src="{{asset('svg/logo2.svg')}}" class="-ml-12 h-12">
+                        </div>
+                </a>
+                <button
+                    class="text-white inline-flex p-3 hover:bg-gray-900 bg-gray-400 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+                    data-target="#navigation"
+                >
+                    <i class="material-icons">menu</i>
+                </button>
+                <div
+                    class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
+                    id="navigation"
+                >
+                    <div
+                    class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto animated fadeIn slow-4s"
+                    >
+                    <a
+                        href="/"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                    >
+                        <span>Home</span>
+                    </a>
+                    <a
+                        href="/study"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                    >
+                        <span>Courses</span>
+                    </a>
+                    <a
+                        href="/contact"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                    >
+                        <span>Contact</span>
+                    </a>
+                    @guest
+                        <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    @if (Route::has('register'))
+                            <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    @endif
+                    @else
+                        <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->fname }} <span class="caret"></span>
+                        </a>
+    
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+    
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    @endguest
+                    
+                    </div>
+                </div>
+        </nav>
+            {{-- <nav class="nav navbar navbar-expand-md navbar-light bg-light shadow-md">
                 <div class="container-fluid">
                     <a class="navbar-brand animated fadeIn slow-4s" href="{{ url('/') }}">
                         <div class="grid grid-cols-3 gap-4">
@@ -273,7 +339,7 @@
                     </div>
                 </div>
             </nav>
-            
+             --}}
         <main class="py-4">
             @yield('content')
         </main>
@@ -315,9 +381,7 @@
     {{----------------------------- script ---------------------------------------------------}}
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
-        $(window).scroll(function(){
-           $('nav').toggleClass('fixed', $(this).scrollTop() > 0)
-       });
+       
    </script>
 </body>
 

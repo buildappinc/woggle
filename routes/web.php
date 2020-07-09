@@ -25,8 +25,9 @@ Route::get('/study/{course}', 'StudyController@show');
 
 // course
 Route::post('/study/{course}', 'CourseController@addCourse');
-Route::get('/study/lesson/{course}', 'CourseController@showIndividualCourse');
-Route::get('/study/lesson/content/{course}/{topic}', 'CourseController@lessonContent')->name('course.content');
+// Route::get('/study/lesson/{course}', 'CourseController@showIndividualCourse');
+Route::get('/study/lesson/{course}', 'CourseController@Topics')->name('course.content');
+Route::get('/study/lesson/content/{course}/{topic}', 'CourseController@LessonContent')->name('lesson.content');
 
 
 Auth::routes();
