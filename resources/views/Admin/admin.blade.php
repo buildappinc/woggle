@@ -96,7 +96,7 @@
                             <div class="text-xs">Recently Added</div>
                         </div>
                        <a href="{{ route('admin.show') }}">
-                            <div class="bg-gray-200 h-10 w-40 flex flex-row items-center justify-around rounded-full py-2 px-4 hover:">
+                            <div class="bg-gray-200 h-10 w-40 flex flex-row items-center justify-around rounded-full py-2 px-4 hover:shadow-lg">
                                 <div>
                                     <span class="material-icons md-18">
                                         add
@@ -113,23 +113,25 @@
                     </div>
                     <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
                         <a href="">
-                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-between p-4">
+                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-evenly p-4">
                                 <div>hello</div>
-                                <div>hey there</div>
+                                <div>Register New Admin</div>
                             </div>
                         </a>
                     </div>
                     <div class="w-full  p-4 flex flex-col justify-around col-gap-6 ">
                         <a href="">
-                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg">
-                                hello
+                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-evenly p-4">
+                                <div>hello</div>
+                                <div>View All Students</div>
                             </div>
                         </a>
                     </div>
                     <div class="w-full  p-4 flex flex-col justify-around col-gap-6 ">
                         <a href="">
-                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg">
-                                hello
+                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-evenly p-4">
+                                <div>hello</div>
+                                <div>Register New Admin</div>
                             </div>
                         </a>
                     </div>
