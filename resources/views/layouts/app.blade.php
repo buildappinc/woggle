@@ -346,24 +346,29 @@
                         <img src="{{asset('svg/logo1.svg')}}" class="" style="height: 11rem; width: 10rem">
                         <img src="{{asset('svg/logo2.svg')}}" class="" style="height: 2.2rem; width: 10rem">
                     </div>
-                    <div class="leading-2">
-                        <div class="border-b-2">
-                            Related Links
-                        </div>
-                        <div>
-                            <div>Related Links</div>
-                            <div>Related Links</div>
-                            <div>Related Links</div>
+                    
+                    <div class="leading-2 flex items-baseline mt-4">
+                        <div class="">
+                            <div class="border-b text-lg text-white font-bold">
+                                Related Links
+                            </div>
+                            <div>
+                                <div class="py-1 font-thin text-white">Related Links</div>
+                                <div class="py-1 font-thin text-white">Related Links</div>
+                                <div class="py-1 font-thin text-white">Related Links</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="leading-2">
-                        <div class="border-b-2 text-xl">
-                            Contact
-                        </div>
+                    <div class="leading-2 flex items-baseline mt-4">
                         <div>
-                            <div>Related Links</div>
-                            <div>Related Links</div>
-                            <div>Related Links</div>
+                            <div class="border-b text-lg text-white font-bold">
+                                Contact
+                            </div>
+                            <div>
+                                <div class="py-1 font-thin text-white">Related Links</div>
+                                <div class="py-1 font-thin text-white">Related Links</div>
+                                <div class="py-1 font-thin text-white">Related Links</div>
+                            </div>
                         </div>
                     </div>
                 </div>
