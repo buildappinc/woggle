@@ -45,12 +45,6 @@
         color: #000 !important;
     }
 
-    .nav-link:hover{
-    border: 0;
-    border-bottom: 1px solid rgba(255, 0, 64, 0.986);
-    color: blue;
-    transition: all ease-in .7s;
-    }
 
     .footer-content{
         padding: 3%;    
@@ -234,29 +228,29 @@
                     >
                     <a
                         href="/"
-                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center "
                     >
                         <span>Home</span>
                     </a>
                     <a
                         href="/study"
-                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center "
                     >
                         <span>Courses</span>
                     </a>
                     <a
                         href="/contact"
-                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center "
                     >
                         <span>Contact</span>
                     </a>
                     @guest
-                        <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center " href="{{ route('login') }}">{{ __('Login') }}</a>
                     @if (Route::has('register'))
-                            <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center  animated tada delay-5s animate__repeat-2" href="{{ route('register') }}">{{ __('Register') }}</a>
                     @endif
                     @else
-                        <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->fname }} <span class="caret"></span>
                         </a>
     
@@ -381,6 +375,17 @@
     {{----------------------------- script ---------------------------------------------------}}
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
+
+    $(document).ready(function () {
+            $(".nav-toggler").each(function (_, navToggler) {
+                var target = $(navToggler).data("target");
+                $(navToggler).on("click", function () {
+                $(target).animate({
+                    height: "toggle",
+                });
+                });
+            });
+        });
        
    </script>
 </body>

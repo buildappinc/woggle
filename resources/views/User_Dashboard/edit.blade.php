@@ -103,7 +103,7 @@
              {{-- button  --}}
              <div class="form-group row mb-0 ml-0 mr-0 mt-8">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary h-12 w-full">
+                    <button type="submit" style="background: linear-gradient(190.57deg, #96FFC6 3.26%, #21A659 100%);" class="btn btn-primary h-12 w-full">
                         {{ __('Login') }}
                     </button>
                 </div>

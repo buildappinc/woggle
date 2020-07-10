@@ -47,14 +47,6 @@
         color: #000 !important;
     }
 
-    .nav-link:hover{
-    border: 0;
-    border-bottom: 1px solid rgba(255, 0, 64, 0.986);
-    color: blue;
-    transition: all ease-in .7s;
-    
-    }
-
     .footer-content{
         padding: 3%;    
         padding-left: 14%;
@@ -259,29 +251,29 @@
                     >
                     <a
                         href="/"
-                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center "
                     >
                         <span>Home</span>
                     </a>
                     <a
                         href="/study"
-                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center "
                     >
                         <span>Courses</span>
                     </a>
                     <a
                         href="/contact"
-                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center "
                     >
                         <span>Contact</span>
                     </a>
                     @guest
-                        <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center " href="{{ route('login') }}">{{ __('Login') }}</a>
                     @if (Route::has('register'))
-                            <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center  animated tada delay-5s animate__repeat-2" href="{{ route('register') }}">{{ __('Register') }}</a>
                     @endif
                     @else
-                        <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->fname }} <span class="caret"></span>
                         </a>
     
@@ -428,6 +420,22 @@
                     </div>
                     {{-- course display --}}
                     <div class="m-5">
+                        <div class="flex flex-no-wrap flex-col sm:flex-no-wrap sm:flex-col md:flex-wrap md:flex-row lg:flex-wrap lg:flex-row Xl:flex-wrap xl:flex-row">
+                            @foreach ($courses as $course)
+                            <div class="w-full sm:w-full md:w-2/6 lg:w-2/6 xl:w-2/6 p-2 mt-3">
+                                 <div class="ind_courses">
+                                     <div class="h-full w-full">
+                                         <img src="/storage/{{$course->image}}" class="course max-h-full w-full max-w-full" style="height:20rem" alt="">
+                                     </div>
+                                     <div class="text-center text-3xl mt-3 pb-3">
+                                         {{$course->name}}
+                                     </div>
+                                 </div>   
+                             </div>
+                            @endforeach 
+                        </div>
+                    </div>
+                    {{-- <div class="m-5">
                         <div class="flex flex-wrap ">
                            @foreach ($courses as $course)
                            <div class="w-2/6 p-2 mt-3">
@@ -442,7 +450,7 @@
                             </div>
                            @endforeach 
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 

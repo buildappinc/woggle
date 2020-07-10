@@ -68,7 +68,7 @@
 
 </style>
 
-@extends('layouts.app')
+@extends('lessons.app')
 
 @section('title', 'Login')
 

@@ -9,7 +9,7 @@
 @extends('lessons.app')
 
 @section('content')
-<div class="" style="background-color: #f2f2f2">
+<div style="background-color: #f2f2f2">
     <div class="header w-full h-20 items-center  -mt-6 flex justify-center">
         <div class="text-2xl text-white">
             {{$topic->name}}

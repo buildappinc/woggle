@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    {{-- <div class="row">
         <div>
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
@@ -12,7 +12,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
     <div class="mt-5 grid grid-cols-2 gap-1">
         <div>
@@ -55,7 +55,7 @@
                         <div class="text-center text-xl">Opps No Subscribed Course!!! <a href="/study" style="color: #f7b728">Check Out Available Courses</a> </div>
                     </div>
                 @else
-                    <div class="flex flex-wrap mt-4 pt-3">
+                    <div class="flex flex-no-wrap flex-col lg:flex-wrap lg:flex-row md:flex-wrap md:flex-row mt-4 pt-3">
                         @foreach (Auth::user()->courses as $course)
                             <div class="w-2/5 pl-4 pt-4">
                                 <div class="h-48 w-48 shadow-md">

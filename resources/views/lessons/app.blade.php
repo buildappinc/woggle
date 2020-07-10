@@ -35,7 +35,6 @@
         width: 100%;
         height: 60px;
         color: white;
-        text-align: center;
         position: fixed;
         bottom: 0px;
         left: 0px;
@@ -56,14 +55,6 @@
     .nav-link.nav-text-color{
         color: #000 !important;
     }
-
-    .nav-link:hover{
-    border: 0;
-    border-bottom: 1px solid rgba(255, 0, 64, 0.986);
-    color: blue;
-    transition: all ease-in .7s;
-    }
-
     .footer-content{
         padding: 3%;    
         padding-left: 14%;
@@ -185,7 +176,7 @@
 <body>
     <div id="app">
         <div>
-            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-lg">
+            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-lg z-0">
             <a href="/" class="inline-flex flex-row items-center -ml-12">
                     <div>
                         <img src="{{asset('svg/logo1.svg')}}">
@@ -209,29 +200,29 @@
                 >
                 <a
                     href="/"
-                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                    class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center"
                 >
                     <span>Home</span>
                 </a>
                 <a
                     href="/study"
-                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                    class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center"
                 >
                     <span>Courses</span>
                 </a>
                 <a
                     href="/contact"
-                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white"
+                    class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center"
                 >
                     <span>Contact</span>
                 </a>
                 @guest
-                    <a class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center" href="{{ route('login') }}">{{ __('Login') }}</a>
                 @if (Route::has('register'))
-                        <a class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center" href="{{ route('register') }}">{{ __('Register') }}</a>
                 @endif
                 @else
-                    <a id="navbarDropdown" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center hover:bg-gray-900 hover:text-white dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->fname }} <span class="caret"></span>
                     </a>
 
@@ -259,11 +250,26 @@
 
         <!-- footer -->
         <div class="footer ">
-            
-                <div class="footer-bottom">
-                    <small>Copyright &copy; Woggle</small>
+                <div class="footer-bottom px-8 flex flex-row justify-between ">
+                    <div class="flex flex-row">
+                        <div class="flex items-center">
+                            <div>
+                                <img src="{{asset('svg/logo2.svg')}}" class="h-12 w-12 -mt-4">
+                            </div>
+                            <div>
+                                <img src="{{asset('svg/logo1.svg')}}" class="-mt-3 -ml-10 h-12">
+                            </div>
+                        </div>
+                        <div class="items-center -ml-12">
+                            <div>
+                                Help & Feedback
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        hello
+                    </div>
                 </div>
-            
         </div>
 
     </div>
