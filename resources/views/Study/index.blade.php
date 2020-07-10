@@ -96,11 +96,10 @@
 
 <div class="container pt-5">
         <div>
-           
             @foreach ($course as $courses)
                 <div class="flex flex-col md:flex-row lg:flex-row xl:flex-row m-5 rounded-lg shadow-md border border-gray-200">
                     <div class="md:w-2/5 lg:w-2/5 md:h-64">
-                        <img src="/storage/{{$courses->image}}" class="lg:h-full md:h-full md:w-11/12 md:object-cover sm:w-full sm:object-cover lg:w-11/12 lg:object-cover"  alt="">
+                        <img src="/storage/{{$courses->image}}" class="lg:h-full md:h-full md:w-11/12 md:object-cover sm:w-full sm:object-cover rounded-lg lg:w-11/12 lg:object-cover"  alt="">
                     </div>
                     <div class="p-4 md:w-1/2 flex flex-col justify-between">
                         <div class="text-4xl">
@@ -123,8 +122,7 @@
                          </div>
                     </div>
                 </div>
-            @endforeach
-           
+            @endforeach  
         </div> 
    </div>
 </div>

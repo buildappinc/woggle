@@ -34,7 +34,7 @@
                                         <h2>
                                             {{$course->name}}
                                         </h2>
-                                        <div> <p style="line-height: 38px;" class="text-justify">{{$course->description}}</p></div>
+                                        <div> <p style="line-height: 30px;" class="text-justify">{{$course->description}}</p></div>
                                     </div>
                                 </div>
                             </div>

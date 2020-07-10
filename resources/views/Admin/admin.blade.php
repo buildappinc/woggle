@@ -112,26 +112,26 @@
                         Activity
                     </div>
                     <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
-                        <a href="">
-                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-evenly p-4">
+                        <a href="{{ route('admin.register')}}">
+                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-evenly p-4 hover:shadow-lg">
                                 <div>hello</div>
                                 <div>Register New Admin</div>
                             </div>
                         </a>
                     </div>
                     <div class="w-full  p-4 flex flex-col justify-around col-gap-6 ">
-                        <a href="">
-                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-evenly p-4">
+                        <a href="{{ route('admin.details')}}">
+                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-evenly p-4 hover:shadow-lg">
                                 <div>hello</div>
                                 <div>View All Students</div>
                             </div>
                         </a>
                     </div>
                     <div class="w-full  p-4 flex flex-col justify-around col-gap-6 ">
-                        <a href="">
-                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-evenly p-4">
+                        <a href="{{ route('course.view') }}">
+                            <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-evenly p-4 hover:shadow-lg">
                                 <div>hello</div>
-                                <div>Register New Admin</div>
+                                <div>View All Courses</div>
                             </div>
                         </a>
                     </div>

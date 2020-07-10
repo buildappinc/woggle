@@ -492,8 +492,8 @@
             <div class="container-fluid footer-content">
                 <div class="grid grid-cols-3 gap-4">
                     <div style="margin-top: -6px">
-                        <img src="{{asset('svg/logo1.svg')}}" class="" style="height: 12rem; width: 10rem">
-                        <img src="{{asset('svg/logo2.svg')}}" class="" style="height: 2.5rem; width: 10rem">
+                        <img src="{{asset('svg/logo1.svg')}}" class="" style="height: 11rem; width: 10rem">
+                        <img src="{{asset('svg/logo2.svg')}}" class="" style="height: 2.2rem; width: 10rem">
                     </div>
                     <div class="leading-2" style="margin-top: -6px">
                         <div>
@@ -518,7 +518,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     {{----------------------------- script ---------------------------------------------------}}
