@@ -425,7 +425,7 @@
                             <div class="w-full sm:w-full md:w-2/6 lg:w-2/6 xl:w-2/6 p-2 mt-3">
                                  <div class="ind_courses">
                                      <div class="h-full w-full">
-                                         <img src="/storage/{{$course->image}}" class="course max-h-full w-full max-w-full" style="height:20rem" alt="">
+                                         <img src="/storage/{{$course->image}}" class="course max-h-full w-full max-w-full object-cover" style="height:20rem" alt="">
                                      </div>
                                      <div class="text-center text-3xl mt-3 pb-3">
                                          {{$course->name}}

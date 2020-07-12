@@ -56,7 +56,7 @@
 
 @section('content')
 
-<div class="p-16">
+<div class="lg:p-16 md:p-16 xl:p-16">
     <div>
        
             <div class="m-5 rounded-lg shadow-md border border-gray-200 p-4">
@@ -93,7 +93,7 @@
                                 <img src="{{asset("/images/line1.png")}}" style="height: 24rem" class="bg-gray-300" alt="">
                             </div>
                             <div class="p-3 lg:col-span-10 ...">
-                                <div class="text-5xl -ml-10 md:ml-0 lg:ml-0 xl:ml-0 font-bold italic py-2">
+                                <div class="text-5xl font-bold italic py-2">
                                     Contact Us
                                 </div>
                                 <div class="py-2 font-bold italic">

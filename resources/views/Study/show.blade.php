@@ -19,7 +19,7 @@
                             <div class="grid grid-cols-4 gap-4">
                                 <div class="col-span-1 ...">
                                     <div class="h-48">
-                                        <img class="rounded-lg h-48 max-h-full shadow-inner" src="/storage/{{$course->image}}" alt="">
+                                        <img class="rounded-lg h-48 max-h-full shadow-inner object-cover" src="/storage/{{$course->image}}" alt="">
                                     </div>
                                     <div>
                                         <form action="{{route('course.content', ['course'=>$course->id])}}" method="post">
