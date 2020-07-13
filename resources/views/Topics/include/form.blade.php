@@ -14,15 +14,19 @@
         </div>
             
     </div>
+{{-- 
+    <div>
+        <label for="topics"> confirm course </label>
+
+        <div>{{$course->name}}</div>
+    </div> --}}
 
     <div class="form-group">
-        <label for="topics">{{ __('Select Course') }}</label>
+        <label for="topics">{{ __('Confirm Course') }}</label>
 
         <div class="col-md-12 input">
             <select name="course_id" class="form-control" id="course_id">
-                @foreach ($course as $courses)
-                    <option value="{{ $courses->id}} ">{{ $courses->name}}</option>
-                @endforeach
+                    <option value="{{ $course->id}} ">{{ $course->name}}</option>
             </select>
         </div>
     </div>

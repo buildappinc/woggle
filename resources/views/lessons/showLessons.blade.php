@@ -9,13 +9,13 @@
 @extends('lessons.app')
 
 @section('content')
-<div style="background-color: #f2f2f2">
-    <div class="header w-full h-20 items-center  -mt-6 flex justify-center">
+<div class=" w-full h-full" style="background-color: #f2f2f2">
+    <div class="header w-full h-20 items-center -mt-6 flex justify-center">
         <div class="text-2xl text-white">
             {{$topic->name}}
         </div>
     </div>
-    <div class="container shadow-md py-32 px-20 mx-20">
+    <div class="container shadow-md py-32 px-20 mx-20  w-full h-full">
         @foreach ($topic->sections as $item)
             <h2>{{$item->header}}</h2>
             <p>{{$item->content}}</p>

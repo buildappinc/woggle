@@ -176,8 +176,8 @@
 <body>
     <div id="app">
         <div>
-            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-lg z-0">
-            <a href="/" class="inline-flex flex-row items-center -ml-12">
+            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-lg" style="position: relative; z-index: 1">
+              <a href="/" class="inline-flex flex-row items-center -ml-12">
                     <div>
                         <img src="{{asset('svg/logo1.svg')}}">
                     </div>

@@ -11,7 +11,7 @@
 </div>
 
 <div class="container">   
-    <form action="{{ route('topic.form.submit') }}" method="post">
+    <form action="{{ route('Course.topic.submit', ['course' => $course]) }}" method="post">
         @include('Topics.include.form')
 
         <button type="submit">Add</button>

@@ -9,25 +9,25 @@ use App\Course;
 
 class TopicController extends Controller
 {
-    public function topicForm(Topic $topic){
-        $course = Course::all();
+    // public function topicForm(Topic $topic){
+    //     $course = Course::all();
 
-        return view('Topics.topicForm', compact('course', 'topic'));
-    }
+    //     return view('Topics.topicForm', compact('course', 'topic'));
+    // }
 
-    public function store(Request $request){
-        //validation for the topics 
+    // public function store(Request $request){
+    //     //validation for the topics 
        
-       $data =  $request->validate([
-            'name' => 'required',
-            'course_id' => 'required'
-        ]);
+    //    $data =  $request->validate([
+    //         'name' => 'required',
+    //         'course_id' => 'required'
+    //     ]);
 
-        Topic::create($data);
+    //     Topic::create($data);
 
-        return redirect()->route('section.form')->with('message', 'Topic Added. Add new section for particular topic');
+    //     return redirect()->route('section.form')->with('message', 'Topic Added. Add new section for particular topic');
        
-    }
+    // }
 
     public function editTopic(Topic $topic){
         $course = Course::all();
@@ -50,5 +50,21 @@ class TopicController extends Controller
 
         $topic->delete();
         return redirect('/admin/courses');
+    }
+
+    public function playground(Request $request, Course $course, Topic $topic){
+
+        return view('Topics.topicForm', compact('course', 'topic'));
+    }
+
+    public function playgroundStore(Request $request, Course $course){
+        $data =  $request->validate([
+            'name' => 'required',
+            'course_id' => 'required'
+        ]);
+
+        Topic::create($data);
+
+        return redirect()->route('section.form')->with('message', 'Topic Added. Add new section for particular topic');
     }
 }

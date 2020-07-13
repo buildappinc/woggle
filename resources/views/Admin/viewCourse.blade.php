@@ -76,7 +76,7 @@
                     <div class="flex flex-row justify-between">
                         <div>Price: <span class="text-lg font-bold">  GHc {{$courses->price}}.00</span> </div>
                         <div>
-                            <a href="">Click to edit</a>
+                            <a href="/admin/courses/{{$courses->id}}/edit">Click to edit</a>
                         </div>
                      </div>                   
                 </div>
