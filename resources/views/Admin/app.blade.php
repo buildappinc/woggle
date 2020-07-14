@@ -179,7 +179,7 @@
 <body>
     <div id="app">
         <div>
-            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-md ">
+            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-md " style="position: relative; z-index: 1;">
             <a href="/" class="inline-flex flex-row items-center -ml-12">
                     <div>
                         <img src="{{asset('svg/logo1.svg')}}">
@@ -217,7 +217,9 @@
                     href="/contact"
                     class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center "
                 >
-                    <span>Contact</span>
+                    <span>
+                        <img src="{{asset('/images/Vector (Stroke).png')}}" class="h-4 w-4" alt="">
+                    </span>
                 </a>
                 @guest
                     <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center " href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -225,11 +227,17 @@
                         <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center " href="{{ route('register') }}">{{ __('Register') }}</a>
                 @endif
                 @else
-                    <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
+                    {{-- <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <img src="{{asset('/images/user.svg')}}" class="h-4 w-4" alt=""> <span class="caret"></span>
+                    </a> --}}
+                    <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center  dropdown-toggle"  href="#" role="button" data-toggle="dropdown">
+                        <img src="{{asset('/images/user.svg')}}" class="h-4 w-4" alt="">
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="">
+                            {{ Auth::user()->name }}
+                        </a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">

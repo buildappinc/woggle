@@ -28,6 +28,14 @@
         background: red;
     }
 
+    .material-icons.white{
+        color: #fff
+    }
+
+    .material-icons.md-36{
+        font-size: 36px;
+    }
+
 
 </style>
 
@@ -51,9 +59,9 @@
                 <div class="h-48 shadow-md rounded-lg border border-grap-100 p-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-2">
                     <div class="col-span-1 ... flex items-center justify-center">
                         <div class="h-16 w-16 rounded-circle flex items-center justify-center" style="background-color: #4A89F9">
-                            <span class="material-icons white">
-                                access_time
-                            </span>
+                            <div>
+                                <img src="{{asset('/images/users.png')}}" alt="" class="h-8 w-8 ">
+                            </div>
                         </div>
                     </div>
                     <div class="col-span-2 ... mt-2">
@@ -64,7 +72,7 @@
                 <div class="h-48 shadow-md rounded-lg border border-grap-100 p-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-2">
                     <div class="col-span-1 ... flex items-center justify-center">
                         <div class="h-16 w-16 rounded-circle flex items-center justify-center" style="background-color: #FFB547">
-                            <span class="material-icons white">
+                            <span class="material-icons white md-36">
                                 access_time
                             </span>
                         </div>
@@ -77,13 +85,13 @@
                 <div class="h-48 shadow-md rounded-lg border border-grap-100 p-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-2">
                     <div class="col-span-1 ... flex items-center justify-center">
                         <div class="h-16 w-16 rounded-circle flex items-center justify-center" style="background-color: #04D00C">
-                            <span class="material-icons white">
-                                access_time
-                            </span>
+                            <div>
+                                <img src="{{asset('/images/vector.png')}}" alt="" class="h-8 w-8 ">
+                            </div>
                         </div>
                     </div>
                     <div class="col-span-2 ... mt-2">
-                        <div class="text-3xl">Number</div>
+                        <div class="text-3xl">{{$course->count()}}</div>
                         <div class="text-xs">Available Courses</div>
                     </div>
                 </div>

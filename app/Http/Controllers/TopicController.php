@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Topic;
 use App\Course;
+use App\Section;
 
 class TopicController extends Controller
 {
@@ -65,6 +66,6 @@ class TopicController extends Controller
 
         Topic::create($data);
 
-        return redirect()->route('section.form')->with('message', 'Topic Added. Add new section for particular topic');
+        return redirect('/admin/courses/'. $course->id .'/edit')->with('message', 'Topic Added. Add new section for particular topic');
     }
 }

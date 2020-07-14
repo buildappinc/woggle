@@ -10,11 +10,13 @@
     @endif
 </div>
 
-<div class="container">
-    <form action="{{ route('section.form.submit') }}" method="post">
-    
-        @include('Section.include.form')
-        <button type="submit">Add section</button>
-    </form>
+<div class="hello w-full h-screen -mt-6" style="background: #383838;">
+    <div class="container bg-white w-full h-screen shadow-md p-3">
+        <form action="{{ route('Topic.section.submit', ['course' => $course->id, 'topic' => $topic->id])}}" method="post">
+        
+            @include('Section.include.form')
+            <button type="submit">Add section</button>
+        </form>
+    </div>
 </div>
 @endsection

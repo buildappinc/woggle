@@ -64,9 +64,9 @@
                                     @method('DELETE')
                                     @csrf
                                     <div class="flex flex-row w-full p-2 px-3 justify-between" style="background: linear-gradient(199.33deg, #BD001D 0%, #FF3756 100%); border-radius: 5px;">
-                                        <span class="material-icons orange600">
-                                            delete
-                                        </span>
+                                        <div>
+                                            <img src="{{asset('images/delete.png')}}" alt="">
+                                        </div>
                                         <button type="submit" class="text-white">Delete</button>
                                     </div>
                                 </form>    

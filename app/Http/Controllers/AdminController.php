@@ -28,10 +28,10 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function viewAdmin()
+    public function viewAdmin(Course $course)
     {
         $Admin = Admin::all()->take(1);
-        return view('Admin.admin', compact('Admin'));
+        return view('Admin.admin', compact('Admin', 'course'));
     }
 
     public function index(){
