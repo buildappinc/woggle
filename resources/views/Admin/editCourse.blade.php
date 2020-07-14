@@ -160,18 +160,20 @@ h2 {
                       </div>
                       <div class="selected flex flex-row justify-between">
                         <div>
-                            Section: {{$topic->name}}
+                            Section:{{$topic->id}} {{$topic->name}}
                         </div>
                         <div class="mr-4 flex flex-row">
                             <div>
                               <a href="{{ route('Course.topic.edit', ['course'=>$course->id , 'topic'=>$topic->id])}}"><img src="{{asset('images/edit.png')}}" alt=""></a>
                             </div>
                             <div class="px-4">
-                              <form action="{{route('Course.topic.delete', ['course'=>$course->id, 'topic'=>$topic->id])}}" method="post">
+                              <input type="hidden" class="delete_value" value="{{$topic->id}}">
+                              {{-- <form action="{{route('Course.topic.delete', ['course'=>$course->id, 'topic'=>$topic->id])}}" method="post">
                                 @method('DELETE')
                                 @csrf
                                     <button type="submit" class="text-white"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
-                              </form>   
+                              </form>    --}}
+                              <button type="submit" class="text-white deleteSection"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
                             </div>
                         </div>
                       </div>
@@ -198,6 +200,8 @@ h2 {
 
    
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
     const selectedAll = document.querySelectorAll(".selected");
@@ -219,5 +223,53 @@ h2 {
         });
         });
     })
+
+    $(document).ready(function(){
+
+          $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+          });
+          $('.deleteSection').click(function(e){
+              e.preventDefault()
+
+              var delete_val = $(this).closest("div").find(".delete_value").val();
+              // console.log(delete_val)
+
+              swal({
+              title: "Delete!!!",
+              text: "Note: This action cannot be reversed",
+              // icon: "warning",
+              buttons: ["Cancel", "Delete Anyway"],
+              dangerMode: true,
+              })
+              .then((willDelete) => {
+              if (willDelete) {
+
+                  var data = {
+                      "_token": $('input[name=_token').val(),
+                      "id": delete_val,
+                  }
+
+                  $.ajax({
+                      type: "DELETE",
+                      url: "/admin/topic/" + delete_val, 
+                      data: data, 
+                      success: function(response){
+                          swal(response.status, {
+                                icon: "success",
+                          })
+                          .then((result) =>{
+                              location.reload()
+                          })
+                      }
+                  })
+              } else {
+                  swal("Section Deletion aborted");
+              }
+              });
+          })
+      })
 </script>
 @endsection

@@ -86,8 +86,9 @@ class TopicController extends Controller
         return redirect('/admin/courses');
     }
 
-    public function destroyPlaygroundTopic(Course $course, Topic $topic ){
+    public function destroyPlaygroundTopic(Topic $topic ){
         $topic->delete();
-        return redirect('/admin/courses');
+        // return redirect('/admin/courses');
+        return response()->json(['status'=> 'Section deleted successfully']);
     }
 }

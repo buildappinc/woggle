@@ -122,7 +122,8 @@ class AdminController extends Controller
 
         $course->delete();
 
-        return redirect()->route('course.view')->with("message", "Course Delete");
+        // return redirect()->route('course.view')->with("message", "Course Delete");
+        return response()->json(['status'=> 'course deleted successfully']);
     }
 
 
