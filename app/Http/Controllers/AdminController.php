@@ -71,7 +71,7 @@ class AdminController extends Controller
             'description' => $data['description']
         ]);
 
-        return redirect()->route('topic.form')->with('message', "Course added successfuly. Add new topic based on course");
+        return redirect('/admin/courses')->with('message', "Course added successfuly. Add new topic based on course");
 
     }
 
@@ -115,7 +115,7 @@ class AdminController extends Controller
              'image' => $imagePath, 
              'description' => $data['description']
          ]);
-        return redirect('/admin/courses/'. $course->id)->with('message', "Course has been updated");
+        return redirect('/admin/courses/'. $course->id.'/edit')->with('message', "Course has been updated");
     }
 
     public function destroyCourse(Course $course){

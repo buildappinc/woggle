@@ -15,11 +15,13 @@
             {{$topic->name}}
         </div>
     </div>
-    <div class="container shadow-md py-32 px-20 mx-20  w-full h-full">
-        @foreach ($topic->sections as $item)
-            <h2>{{$item->header}}</h2>
-            <p>{{$item->content}}</p>
-        @endforeach
+    <div class="container shadow-md py-24 h-full">
+        <div class="mx-32">
+            @foreach ($topic->sections as $item)
+                <h2>{{$item->header}}</h2>
+                <p>{{$item->content}}</p>
+            @endforeach
+        </div>
     </div>
     
 </div>

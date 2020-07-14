@@ -122,7 +122,7 @@
 
    
 
-    <div class="row ml-4 btns">
+    {{-- <div class="row ml-4 btns">
         <div class="btn">
             <a style="text-decoration: none; color: #000" href="{{ route('admin.show') }}">
                 <div class="button">
@@ -144,7 +144,7 @@
                  </div>
             </a>
         </div>
-       
+        --}}
     </div>
 
 </div>

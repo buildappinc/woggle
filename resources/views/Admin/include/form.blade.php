@@ -1,15 +1,20 @@
 @csrf
 <div>
-    <div class="">
+    <div class="relative">
         <div class="">
-            <img src="{{$course->courseImage()}}" class="object-cover" style=" height: 280px; width:100%; cursor: pointer" onclick="triggerImage()" id="imageDisplay" alt="">
+            <img src="{{$course->courseImage()}}" class="object-cover" style=" height: 350px; width:100%; cursor: pointer" onclick="triggerImage()" id="imageDisplay" alt="">
             <div>
                 <input id="image" type="file" class="hidden  @error('image') is-invalid @enderror" name="image" value="{{ old('image') ??  $course->image }}" required autocomplete="image" autofocus>
             </div>
         </div>
         {{-- number of enrolled students --}}
-        <div>
-
+        <div class="absolute" style="top: 20vh; left: 3vw;">
+            <div class="mx-40">
+                <img src="{{asset('images/camera.png')}}" class="h-10 w-10" alt="">
+            </div>
+            <div class="text-4xl text-white">
+                Click to add/change image
+            </div>
         </div>
     </div>
 

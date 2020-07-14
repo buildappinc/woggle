@@ -67,7 +67,7 @@ Route::delete('/admin/{course}/topic/{topic}', 'TopicController@destroyPlaygroun
 Route::get('/admin/courses', 'AdminController@viewCourses')->name('course.view');
 Route::get('/admin/courses/{course}', 'AdminController@showCourse');
 Route::get('/admin/courses/{course}/edit', 'AdminController@editCourse')->name('course.edit');
-Route::patch('/admin/courses/{course}', 'AdminController@updateCourse');
+Route::patch('/admin/courses/{course}', 'AdminController@updateCourse')->name('course.edit.submit');
 Route::delete('/admin/courses/{course}', 'AdminController@destroyCourse');
 
 //sections for the topics

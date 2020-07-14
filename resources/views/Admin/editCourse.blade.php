@@ -111,15 +111,15 @@ h2 {
 
 <div class="" style="margin-top: -23px;">
 
-<form action="/admin/courses/{{$course->id}}" method="post" enctype="multipart/form-data">
-    
-    @method('PATCH')
-    @include('Admin.include.form')
+  <form action="{{route('course.edit.submit', ['course'=>$course->id])}}" method="post" enctype="multipart/form-data">
+      
+      @method('PATCH')
+      @include('Admin.include.form')
 
-    <div  class="container w-11/12 mx-10 py-6 ">
-        <button type="submit" class="btn btn-primary h-12  ml-3" style="width: 97%">Save Course</button>
-    </div>
-    
+      <div  class="container w-11/12 mx-10 py-6 ">
+          <button type="submit" class="btn btn-primary h-12  ml-3" style="width: 97%">Save Course</button>
+      </div>
+  </form> 
     <div class="container">
         <div class="text-2xl font-bold mx-3">
             Course content
@@ -196,7 +196,7 @@ h2 {
         </div>
     </div>
 
-</form>    
+   
 </div>
 
 <script>

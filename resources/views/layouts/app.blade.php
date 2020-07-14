@@ -368,6 +368,12 @@
                                 <div class="py-1 font-thin text-white">Related Links</div>
                                 <div class="py-1 font-thin text-white">Related Links</div>
                                 <div class="py-1 font-thin text-white">Related Links</div>
+                                <div class="flex flex-row mt-3 -ml-2">
+                                    <div><img class="h-5 w-5 mx-2" src="{{asset('images/linkedIn.png')}}" alt=""></div>
+                                    <div><img class="h-5 w-5 mx-2" src="{{asset('images/instagram.png')}}" alt=""></div>
+                                    <div><img class="h-5 w-5 mx-2" src="{{asset('images/twitter.png')}}" alt=""></div>
+                                    <div><img class="h-5 w-5 mx-2" src="{{asset('images/facebook.png')}}" alt=""></div>
+                                </div>
                             </div>
                         </div>
                     </div>

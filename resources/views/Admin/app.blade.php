@@ -231,7 +231,9 @@
                         <img src="{{asset('/images/user.svg')}}" class="h-4 w-4" alt=""> <span class="caret"></span>
                     </a> --}}
                     <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center  dropdown-toggle"  href="#" role="button" data-toggle="dropdown">
-                        <img src="{{asset('/images/user.svg')}}" class="h-4 w-4" alt="">
+                        <div class="flex justify-center items-center h-6 w-6 rounded-full" style="background-color: #F5EFEF">
+                            <img src="{{asset('/images/user.png')}}" class="h-4 w-4" alt="">
+                        </div> 
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -277,8 +279,11 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        hello
+                    <div class="flex flex-row">
+                        <div><img class="h-5 w-5 mx-2" src="{{asset('images/linkedIn.png')}}" alt=""></div>
+                        <div><img class="h-5 w-5 mx-2" src="{{asset('images/instagram.png')}}" alt=""></div>
+                        <div><img class="h-5 w-5 mx-2" src="{{asset('images/twitter.png')}}" alt=""></div>
+                        <div><img class="h-5 w-5 mx-2" src="{{asset('images/facebook.png')}}" alt=""></div>
                     </div>
                 </div>
         </div>
