@@ -4,9 +4,9 @@
 @extends('lessons.app')
 
 @section('content')
-        <div class="hello w-full h-full -mt-6" style="background: #383838;">
+        <div class="hello w-full -mt-6" style="background: #383838;">
             
-            <div class="container bg-white w-full h-full">
+            <div class="container bg-white w-full">
                 {{-- header --}}
                 <div class="flex justify-center text-4xl font-bold pt-3">
                     {{$course->name}}

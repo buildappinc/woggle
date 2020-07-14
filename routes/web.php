@@ -59,6 +59,9 @@ Route::delete('/admin/topic/{topic}', 'TopicController@destroyTopic');
 
 Route::get('/admin/{course}/topic', 'TopicController@playground')->name('Course.topic');
 Route::post('/admin/{course}/topic', 'TopicController@playgroundStore')->name('Course.topic.submit');
+Route::get('/admin/{course}/topic/{topic}/edit', 'TopicController@editTopicPlayground')->name('Course.topic.edit');
+Route::patch('/admin/{course}/topic/{topic}', 'TopicController@editTopicPlaygroundUpdate')->name('Course.topic.edit.submit');
+Route::delete('/admin/{course}/topic/{topic}', 'TopicController@destroyPlaygroundTopic')->name('Course.topic.delete');
 
 //courses for admin 
 Route::get('/admin/courses', 'AdminController@viewCourses')->name('course.view');

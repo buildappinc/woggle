@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
 use App\Topic;
 use App\Course;
@@ -30,22 +29,22 @@ class TopicController extends Controller
        
     // }
 
-    public function editTopic(Topic $topic){
-        $course = Course::all();
+    // public function editTopic(Topic $topic){
+    //     $course = Course::all();
 
-        return view('Topics.editTopic', compact('course', 'topic'));
-    }
+    //     return view('Topics.editTopic', compact('course', 'topic'));
+    // }
 
-    public function updateTopic(Topic $topic){
-        $data =  request()->validate([
-            'name' => 'required',
-            'course_id' => 'required'
-        ]);
+    // public function updateTopic(Topic $topic){
+    //     $data =  request()->validate([
+    //         'name' => 'required',
+    //         'course_id' => 'required'
+    //     ]);
 
-        $topic->update($data);
+    //     $topic->update($data);
 
-        return redirect('/admin/courses');
-    }
+    //     return redirect('/admin/courses');
+    // }
 
     public function destroyTopic(Topic $topic){
 
@@ -67,5 +66,28 @@ class TopicController extends Controller
         Topic::create($data);
 
         return redirect('/admin/courses/'. $course->id .'/edit')->with('message', 'Topic Added. Add new section for particular topic');
+    }
+
+    public function editTopicPlayground(Course $course, Topic $topic){
+
+        return view('Topics.editTopic', compact('course', 'topic'));
+    }
+
+    public function editTopicPlaygroundUpdate(Course $course, Topic $topic){
+
+        $data =  request()->validate([
+            'name' => 'required',
+            'course_id' => 'required'
+        ]);
+
+
+        $topic->update($data);
+
+        return redirect('/admin/courses');
+    }
+
+    public function destroyPlaygroundTopic(Course $course, Topic $topic ){
+        $topic->delete();
+        return redirect('/admin/courses');
     }
 }

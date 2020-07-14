@@ -3,7 +3,7 @@
 @section('content')
     
 <div class="container">   
-    <form action="/admin/topic/{{$topic->id}}" method="post">
+    <form action="{{route('Course.topic.edit.submit', ['course'=> $course->id, 'topic'=>$topic->id])}}" method="post">
 
         @method('PATCH')
         @include('Topics.include.form')

@@ -164,10 +164,14 @@ h2 {
                         </div>
                         <div class="mr-4 flex flex-row">
                             <div>
-                                <a href=""><img src="{{asset('images/edit.png')}}" alt=""></a>
+                              <a href="{{ route('Course.topic.edit', ['course'=>$course->id , 'topic'=>$topic->id])}}"><img src="{{asset('images/edit.png')}}" alt=""></a>
                             </div>
                             <div class="px-4">
-                                <a href=""><img src="{{asset('images/bdelte.png')}}" alt=""></a>
+                              <form action="{{route('Course.topic.delete', ['course'=>$course->id, 'topic'=>$topic->id])}}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                    <button type="submit" class="text-white"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
+                              </form>   
                             </div>
                         </div>
                       </div>
