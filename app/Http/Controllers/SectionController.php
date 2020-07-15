@@ -72,5 +72,28 @@ class SectionController extends Controller
 
         return redirect('/admin/courses');
     }
+
+    public function EditLessonForm(Topic $topic, Section $section){
+
+        return view('Section.editSection', compact('topic', 'section'));
+    }
+
+    public function EditLesson(Topic $topic, Section $section){
+        $data = request()->validate([
+            'header' => '',
+            'content' => 'required',
+            'topic_id' => 'required'
+        ]);
+
+       $section->update($data);   
+
+       return redirect('/admin/courses');
+    }
+
+    public function DeleteLesson(Section $section){
+        $section->delete();
+
+        return response()->json(['status'=> 'Section deleted successfully']);
+    }
     
 }

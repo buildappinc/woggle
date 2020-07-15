@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="w-full px-3">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="course_name">
+            <label class="block tracking-wide text-black text-sm mb-2" for="course_name">
                 {{ __('Course Name') }}
             </label>
             <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500  @error('name') is-invalid @enderror" id="Course_name" type="text" placeholder="HTML" name="name" value="{{ old('name') ?? $course->name  }}" required autocomplete="name" autofocus>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="w-full px-3">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="course_name">
+            <label class="block tracking-wide text-black text-sm mb-2" for="course_name">
                 {{ __('Course Decription') }}
             </label>
             <textarea name="description" id="description" cols="30" rows="10" class="form-control @error('description') is-invalid @enderror"  required autocomplete="description" autofocus>{{ old('description') ??  $course->description }}</textarea>
@@ -61,7 +61,7 @@
         </div>
 
         <div class="w-full px-3 py-3">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="course_name">
+            <label class="block tracking-wide text-black text-sm mb-2" for="course_name">
                 {{ __('Course Introduction') }}
             </label>
             <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500  @error('introduction') is-invalid @enderror" id="introduction" type="text" placeholder="Lorem hello just a brief text" name="introduction" value="{{ old('introduction') ?? $course->introduction  }}" required autocomplete="introduction" autofocus>
@@ -74,7 +74,7 @@
         </div>
 
         <div class="w-full px-3">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="course_name">
+            <label class="block tracking-wide text-black text-sm mb-2" for="course_name">
                 {{ __('Course Price') }}
             </label>
             <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500  @error('price') is-invalid @enderror" id="price" type="text" placeholder="200" name="price" value="{{ old('price') ?? $course->price  }}" required autocomplete="price" autofocus>

@@ -85,7 +85,7 @@ h2 {
 }
 
 .select-box .options-container::-webkit-scrollbar-thumb {
-  background: #525861;
+  /* background: #525861; */
   border-radius: 0 8px 8px 0;
 }
 
@@ -141,24 +141,26 @@ h2 {
                           <input type="radio" class="radio" id="automobiles" name="category"/>
                           <label for="automobiles">
                             @foreach ($topic->sections as $section)
-                                <li><a href="#">{{$section->header}}</a></li>
+                                <div class="flex flex-col p-2 ml-3">
+                                  <a href="{{route('Topic.section.edit', ['topic'=>$topic->id, 'section'=>$section->id])}}" class="text-black"><span class="font-bold">Lesson: </span> {{$section->header}}</a>
+                                </div>
                             @endforeach
-                            <div class="mt-6">
-                                <a href="{{ route('Topic.section', ['course' => $course->id, 'topic' => $topic->id])}}">
-                                    <div class=" h-10 mx-3 py-6 flex flex-row items-center border-dashed border-2 rounded-md" style=" background: #F7F7F7; width:97%; border-color: #2b2b2b">
-                                        <div>
-                                            <span class="material-icons md-18">
-                                                add
-                                            </span>
-                                        </div> 
-                                        <div>Add lesson</div> 
-                                    </div>
-                                </a>
-                            </div>
                           </label>
+                          <div class="mt-6">
+                            <a class="text-black" href="{{ route('Topic.section', ['course' => $course->id, 'topic' => $topic->id])}}">
+                                <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style="width: 97%; border:1px dashed #000000" >
+                                    <div class="pl-2">
+                                        <span class="material-icons md-18">
+                                            add
+                                        </span>
+                                    </div> 
+                                    <div class="pl-3">Add lesson</div> 
+                                </div>
+                            </a>
+                        </div>
                         </div>
                       </div>
-                      <div class="selected flex flex-row justify-between">
+                      <div class="selected bg-gray-200 flex flex-row justify-between">
                         <div>
                             Section:{{$topic->id}} {{$topic->name}}
                         </div>
@@ -184,14 +186,14 @@ h2 {
 
             {{-- section input  --}}
             <div class="mt-6">
-                <a href="{{ route('Course.topic', ['course' => $course->id])}}">
-                    <div class=" h-10 mx-3 py-6 flex flex-row items-center border-dashed border-2 rounded-md" style=" background: #F7F7F7; width:97%; border-color: #2b2b2b">
-                        <div>
+                <a class="text-black" href="{{ route('Course.topic', ['course' => $course->id])}}">
+                    <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style=" background: #F7F7F7; width:97%; border:1px dashed #000000">
+                        <div class="pl-2">
                             <span class="material-icons md-18">
                                 add
                             </span>
                         </div> 
-                        <div>Add New Section</div> 
+                        <div class="pl-3">Add New Section</div> 
                     </div>
                 </a>
             </div>

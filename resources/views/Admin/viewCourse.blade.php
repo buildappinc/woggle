@@ -26,7 +26,7 @@
     @endif
 </div>
 
-<div class="container">
+<div class="container py-4">
         <div class="flex flex-row justify-between border-l-8" style="border-color: #F9B629">
             <div class="p-2 ml-3 text-xl font-bold">
                 Published Courses

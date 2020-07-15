@@ -79,6 +79,9 @@ Route::delete('/admin/topics/section/{section}', "SectionController@destroySecti
 
 Route::get('/admin/course/{course}/topic/{topic}/section', 'SectionController@GetLesson')->name('Topic.section');
 Route::post('/admin/course/{course}/topic/{topic}/section', 'SectionController@PostLesson')->name('Topic.section.submit');
+Route::get('/admin/topic/{topic}/section/{section}/edit', 'SectionController@EditLessonForm')->name('Topic.section.edit');
+Route::patch('/admin/topic/{topic}/section/{section}', 'SectionController@EditLesson')->name('Topic.section.edit.submit');
+Route::delete('/admin/topics/section/{section}', "SectionController@DeleteLesson");
 
 // payment 
 Route::get('/payment', 'PaymentController@index')->name('payment.index');

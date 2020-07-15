@@ -10,12 +10,11 @@
     @endif
 </div>
 
-<div class="container">   
+<div class="container h-64">   
     <form action="{{ route('Course.topic.submit', ['course' => $course]) }}" method="post">
         @include('Topics.include.form')
 
         <button type="submit">Add</button>
-
     </form>  
 </div>
 
