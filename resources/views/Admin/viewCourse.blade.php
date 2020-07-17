@@ -31,7 +31,7 @@
             <div class="p-2 ml-3 text-xl font-bold">
                 Published Courses
             </div>
-            <a href="{{ route('admin.show') }}">
+            <a class="text-black" href="{{ route('admin.show') }}">
                 <div class="bg-gray-200 h-10 w-40 flex flex-row items-center justify-around rounded-full py-2 px-4 hover:shadow-lg">
                     <div>
                         <span class="material-icons md-18">
@@ -85,7 +85,7 @@
                     <div class="flex flex-row justify-between">
                         <div>Price: <span class="text-lg font-bold">  GHc {{$courses->price}}.00</span> </div>
                         <div>
-                            <a href="/admin/courses/{{$courses->id}}/edit">Click to edit</a>
+                            <a style="color: #717171;" href="/admin/courses/{{$courses->id}}/edit">Click to edit</a>
                         </div>
                      </div>                   
                 </div>

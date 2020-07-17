@@ -85,5 +85,6 @@ Route::delete('/admin/topics/section/{section}', "SectionController@DeleteLesson
 
 // payment 
 Route::get('/payment', 'PaymentController@index')->name('payment.index');
+Route::post('/payment', 'PaymentController@create')->name('payment.create');
 
 

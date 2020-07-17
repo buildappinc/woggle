@@ -10,6 +10,11 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function userImage(){
+        $imagepath = ($this->image) ? '/storage/' .$this->image : 'http://127.0.0.1:8000/images/noPhoto.png';
+        return $imagepath;
+    }
+
     /**
      * The attributes that are mass assignable.
      *

@@ -19,7 +19,7 @@
             <div class="grid grid-cols-3">
                 {{-- image --}}
                 <div class=" col-span-1 h-32 w-32 mt-2">
-                     <img src="/storage/{{Auth::user()->image}}" class="h-32 w-32 rounded-full object-cover" alt="">
+                     <img src="{{Auth::user()->userImage()}}" class="h-32 w-32 rounded-full object-cover" alt="">
                 </div>
                 {{-- name and others --}}
                 <div class="col-span-2">

@@ -54,10 +54,16 @@
         background-color: #e9e9e9;
     }
 
-    .tabContainer .tabPanel{
+    .tabContainer .tabPanel {
         max-height: 100%;
         color: #000;
         text-align: center;
+        box-sizing: border-box;
+        display: none;
+    }
+    .ImageContainer .imgDisplay{
+        max-height: 100%;
+        color: #000;    
         box-sizing: border-box;
         display: none;
     }
@@ -86,25 +92,41 @@
                 <button onclick="showPanel(1, '#e9e9e9')">Cardless Payment</button>
             </div>
             <div class="tabPanel">
-                <form class="w-full max-w-6xl mt-16 px-12">
+                <form class="w-full max-w-6xl mt-16 px-12" method="POST" action="{{route('payment.create')}}">
+                    @csrf
                      <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                                     Card Number
                                 </label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="02902183203203">
+                                <input name="card_number" class="@error('card_number') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="02902183203203">
+                                @error('card_number')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                             <div class="w-full md:w-1/4 px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                                     Expiry Date
                                 </label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="09/12/****" placeholder="Doe">
+                                <input name="expiry_date" class="@error('expiry_date') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="date" placeholder="09/12/****">
+                                @error('expiry_date')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="w-full md:w-1/4 px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                                     Security Code
                                 </label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="0***********">
+                                <input name="security_code" class="@error('security_code') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="0***********">
+                                @error('security_code')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                       </div>
                       <div class="flex flex-wrap -mx-3 mb-6">
@@ -112,7 +134,12 @@
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                     Card Holder Name
                                 </label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="Jason Statham">
+                                <input name="name" class="@error('name') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-name" type="text" placeholder="Jason Statham">
+                                @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                       </div>
                       <div class="flex flex-wrap -mx-3 mb-2">
@@ -120,13 +147,23 @@
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                                     Address
                                 </label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
+                                <input name="address" class="@error('address') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
+                                @error('address')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                                     Phone Number
                                 </label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="0234*****">
+                                <input name="phone_Number" class="@error('phone_Number') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="0234*****">
+                                @error('phone_Number')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
                             </div>
                       </div>
                       <div class="flex flex-wrap -mx-3 mb-2 py-16">
@@ -150,18 +187,18 @@
                 <div class="ImageContainer">
                     <div class="ImageSelect flex flex-row mt-6 justify-center">
                         <div class="px-2">
-                            <a href=""><img src="{{asset('images/1f636a94a1254e1896cb1aabcd926aa1.jpeg')}}" class="h-32 w-32 rounded-full" alt=""></a>
+                            <button onclick="showText(0)"><img src="{{asset('images/1f636a94a1254e1896cb1aabcd926aa1.jpeg')}}" class="h-32 w-32 rounded-full" alt=""></button>
                         </div>
                         <div class="px-2">
-                            <a href=""><img src="{{asset('images/2018_AP_2018_075_hero_1.jpg')}}" class="h-32 w-32 rounded-full" alt=""></a>
+                            <button onclick="showText(1)"><img src="{{asset('images/2018_AP_2018_075_hero_1.jpg')}}" class="h-32 w-32 rounded-full" alt=""></button>
                         </div>
                         <div class="px-2">
-                            <a href=""><img src="{{asset('images/068dcf665c0043618f4adb6e440d3014.jpeg')}}" class="h-32 w-32 rounded-full" alt=""></a>
+                            <button onclick="showText(2)"><img src="{{asset('images/068dcf665c0043618f4adb6e440d3014.jpeg')}}" class="h-32 w-32 rounded-full" alt=""></button>
                         </div>
                     </div>
-                    <div class="imgDisplay">Airtel-Tigo</div>
-                    <div class="imgDisplay">Vodafone</div>
-                    <div class="imgDisplay">MTN</div>
+                    <div class="imgDisplay mt-4 text-2xl font-bold">Airtel-Tigo</div>
+                    <div class="imgDisplay mt-4 text-2xl font-bold">Vodafone</div>
+                    <div class="imgDisplay mt-4 text-2xl font-bold">MTN</div>
                 </div>
                 <div>
                     <form action="" class="w-full max-w-6xl mt-8 px-12">
@@ -196,7 +233,16 @@
     var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
     var tabPanels=document.querySelectorAll(".tabContainer  .tabPanel");
 
-    
+    var imageButtons=document.querySelectorAll(".ImageContainer .ImageSelect button");
+    var imgDisplay=document.querySelectorAll(".ImageContainer  .imgDisplay");
+
+    function showText(panelIndex,colorCode) {
+        imgDisplay.forEach(function(node){
+            node.style.display="none";
+        });
+        imgDisplay[panelIndex].style.display="block";
+    }
+    showText(0, "#e6e6e6");
 
     function showPanel(panelIndex,colorCode) {
         tabButtons.forEach(function(node){
