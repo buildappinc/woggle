@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-span-2">
                     <input type="hidden" class="delete_value" value="{{$section->id}}">
-                    <button class="deleteSec h-12 w-32" style="background: linear-gradient(199.81deg, #FF8094 0%, #FF3756 100%);">Delete Lesson</button>
+                    <button class="deleteSec h-12 w-32 rounded-md" style="background: linear-gradient(199.81deg, #FF8094 0%, #FF3756 100%);">Delete Lesson</button>
                 </div>
             </div>
         @endif

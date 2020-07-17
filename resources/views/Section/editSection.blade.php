@@ -37,7 +37,7 @@
             // console.log(delete_val)
 
             swal({
-            title: "Section Deletion!!!",
+            title: "Lesson Deletion!!!",
             text: "Note: This action cannot be reversed",
             // icon: "warning",
             buttons: ["Cancel", "Delete Anyway"],
@@ -65,7 +65,7 @@
                     }
                 })
             } else {
-                swal("Section Deletion aborted");
+                swal("Deletion aborted");
             }
             });
         })

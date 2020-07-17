@@ -15,7 +15,7 @@ class PaymentController extends Controller
         // checking for form validation 
        $data = $request->validate([
            'card_number' => 'required | Numeric ', 
-           'expiry_date' => 'required', 
+           'expiry_date' => 'required | date', 
            'security_code' => 'required', 
            'name' => 'required', 
            'address' => 'required', 

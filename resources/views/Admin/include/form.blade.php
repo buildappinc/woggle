@@ -7,7 +7,7 @@
                 <input id="image" type="file" class="hidden  @error('image') is-invalid @enderror" name="image" value="{{ old('image') ??  $course->image }}" required autocomplete="image" autofocus>
             </div>
         </div>
-        {{-- number of enrolled students --}}
+      
         <div class="absolute" style="top: 20vh; left: 3vw;">
             <div class="mx-40">
                 <img src="{{asset('images/camera.png')}}" class="h-10 w-10" alt="">
@@ -16,9 +16,15 @@
                 Click to add/change image
             </div>
         </div>
+          {{-- number of enrolled students --}}
+        <div class="absolute" style="top: 35vh; left: 80vw">
+            <div class="bg-red-400 h-40 w-40 rounded-full flex justify-center items-center text-white text-4xl font-bold" style="background: linear-gradient(225deg, #666666 0%, #151522 100%);">
+                dlf;sdlfd
+            </div>
+        </div>
     </div>
 
-    {{-- form  --}}
+    {{-- form --}}
     <div class="container mt-10">
         <div class="px-3">
             @if ($course->name == null)
