@@ -22,7 +22,7 @@
                                         <img class="rounded-lg h-48 max-h-full shadow-inner object-cover" src="/storage/{{$course->image}}" alt="">
                                     </div>
                                     <div>
-                                        <form action="{{route('course.content', ['course'=>$course->id])}}" method="post">
+                                        <form action="{{route('course.get', ['course'=>$course->id])}}" method="post">
                                             @csrf
                                            <button type="submit" class="button mt-3" style="background-color: #f7b728">Enroll now</button>
                                         </form>

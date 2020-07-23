@@ -24,7 +24,7 @@ Route::get('/study', 'StudyController@index');
 Route::get('/study/{course}', 'StudyController@show');
 
 // course
-Route::post('/study/{course}', 'CourseController@addCourse');
+Route::post('/study/{course}', 'CourseController@addCourse')->name('course.get');
 // Route::get('/study/lesson/{course}', 'CourseController@showIndividualCourse');
 Route::get('/study/lesson/{course}', 'CourseController@Topics')->name('course.content');
 Route::get('/study/lesson/content/{course}/{topic}', 'CourseController@LessonContent')->name('lesson.content');
@@ -39,7 +39,6 @@ Route::patch('/mycourses/{user}', 'HomeController@updateCourse')->name('profile.
 // admin section
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-
 Route::get('/admin/register', 'Auth\AdminRegisterController@showRegisterForm')->name('admin.register');
 Route::post('/admin/register', 'Auth\AdminRegisterController@register')->name('admin.register.submit');
 
@@ -50,12 +49,12 @@ Route::get('/admin/add', "AdminController@show")->name('admin.show');
 Route::post('/admin/save', "AdminController@save")->name('admin.save');
 Route::post('/admin/add', "AdminController@store")->name('admin.store');
 
-//topics 
-Route::get('/admin/topic', 'TopicController@topicForm')->name('topic.form');
-Route::post('/admin/topic', 'TopicController@store')->name('topic.form.submit');
-Route::get('/admin/topic/{topic}/edit', 'TopicController@editTopic');
-Route::patch('/admin/topic/{topic}', 'TopicController@updateTopic');
-Route::delete('/admin/topic/{topic}', 'TopicController@destroyTopic');
+// //topics 
+// Route::get('/admin/topic', 'TopicController@topicForm')->name('topic.form');
+// Route::post('/admin/topic', 'TopicController@store')->name('topic.form.submit');
+// Route::get('/admin/topic/{topic}/edit', 'TopicController@editTopic');
+// Route::patch('/admin/topic/{topic}', 'TopicController@updateTopic');
+// Route::delete('/admin/topic/{topic}', 'TopicController@destroyTopic');
 
 Route::get('/admin/{course}/topic', 'TopicController@playground')->name('Course.topic');
 Route::post('/admin/{course}/topic', 'TopicController@playgroundStore')->name('Course.topic.submit');
@@ -70,12 +69,12 @@ Route::get('/admin/courses/{course}/edit', 'AdminController@editCourse')->name('
 Route::patch('/admin/courses/{course}', 'AdminController@updateCourse')->name('course.edit.submit');
 Route::delete('/admin/courses/{course}', 'AdminController@destroyCourse');
 
-//sections for the topics
-Route::get('/admin/topics/section', 'SectionController@sectionForm')->name('section.form');
-Route::post('/admin/topics/section', "SectionController@store")->name('section.form.submit');
-Route::get('/admin/topics/section/{section}/edit', "SectionController@editSection");
-Route::patch('/admin/topics/section/{section}', "SectionController@updateSection");
-Route::delete('/admin/topics/section/{section}', "SectionController@destroySection");
+// //sections for the topics
+// Route::get('/admin/topics/section', 'SectionController@sectionForm')->name('section.form');
+// Route::post('/admin/topics/section', "SectionController@store")->name('section.form.submit');
+// Route::get('/admin/topics/section/{section}/edit', "SectionController@editSection");
+// Route::patch('/admin/topics/section/{section}', "SectionController@updateSection");
+// Route::delete('/admin/topics/section/{section}', "SectionController@destroySection");
 
 Route::get('/admin/course/{course}/topic/{topic}/section', 'SectionController@GetLesson')->name('Topic.section');
 Route::post('/admin/course/{course}/topic/{topic}/section', 'SectionController@PostLesson')->name('Topic.section.submit');
@@ -85,6 +84,11 @@ Route::delete('/admin/topics/section/{section}', "SectionController@DeleteLesson
 
 // payment 
 Route::get('/payment', 'PaymentController@index')->name('payment.index');
-Route::post('/payment', 'PaymentController@create')->name('payment.create');
+// Route::post('/payment', 'PaymentController@create')->name('payment.create');
+// Route::post('/payment', 'PaymentController@makePayment')->name('payment.pay');
+// Route::get('/payment/callback', 'PaymentController@handleGatewayCallback')->name('payment.callback');
+
+Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
 

@@ -92,50 +92,47 @@
                 <button onclick="showPanel(1, '#e9e9e9')">Cardless Payment</button>
             </div>
             <div class="tabPanel">
-                <form class="w-full max-w-6xl mt-16 px-12" method="POST" action="{{route('payment.create')}}">
+                <form class="w-full max-w-6xl mt-16 px-12" method="POST" action="{{route('pay')}}">
                     @csrf
-                     <div class="flex flex-wrap -mx-3 mb-6">
-                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                                    Card Number
-                                </label>
-                                <input name="card_number" class="@error('card_number') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="02902183203203">
-                                @error('card_number')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
-                            </div>
-                            <div class="w-full md:w-1/4 px-3">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                                    Expiry Date
-                                </label>
-                                <input name="expiry_date" class="@error('expiry_date') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="date" placeholder="09/12/****">
-                                @error('expiry_date')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <div class="w-full md:w-1/4 px-3">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                                    Security Code
-                                </label>
-                                <input name="security_code" class="@error('security_code') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="0***********">
-                                @error('security_code')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                @enderror
-                            </div>
-                      </div>
+                    @if (Session::has('error'))
+                        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                            <strong class="font-bold">
+                                {{Session::get('error')}}
+                            </strong>
+                            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                                <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                            </span>
+                        </div>
+                    @endif
                       <div class="flex flex-wrap -mx-3 mb-6">
-                            <div class="w-full px-3">
+                            <div class="w-full md:w-1/5 px-3 mb-6 md:mb-0 px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                                    Card Holder Name
+                                    User ID
                                 </label>
-                                <input name="name" class="@error('name') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-name" type="text" placeholder="Jason Statham">
-                                @error('name')
+                                <input name="id" value="{{Auth::user()->id}}" class="@error('id') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-id" type="text" placeholder="Jason Statham">
+                                @error('id')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
+                            </div>
+                            <div class="w-full md:w-2/5 px-3 mb-6 md:mb-0 px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                                    First Name
+                                </label>
+                                <input name="first_name" value="{{Auth::user()->fname}}" class="@error('first_name') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first_name" type="text" placeholder="Jason Statham">
+                                @error('first_name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                @enderror
+                            </div>
+                            <div class="w-full md:w-2/5 px-3 mb-6 md:mb-0 px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                                    Last Name
+                                </label>
+                                <input name="last_name" value="{{Auth::user()->lname}}" class="@error('last_name') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last_name" type="text" placeholder="Jason Statham">
+                                @error('last_name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -145,10 +142,10 @@
                       <div class="flex flex-wrap -mx-3 mb-2">
                             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                                    Address
+                                    Email Address
                                 </label>
-                                <input name="address" class="@error('address') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
-                                @error('address')
+                                <input name="email" value="{{Auth::user()->email}}" class="@error('email') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="email" placeholder="Albuquerque">
+                                @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -158,25 +155,33 @@
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                                     Phone Number
                                 </label>
-                                <input name="phone_Number" class="@error('phone_Number') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="0234*****">
-                                @error('phone_Number')
+                                <input name="phone" class="@error('phone') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="0234*****">
+                                @error('phone')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                 @enderror
                             </div>
+                             <input type="hidden" name="quantity" value="100">
+                            <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
+                            <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
                       </div>
                       <div class="flex flex-wrap -mx-3 mb-2 py-16">
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                             <div class="text-lg font-bold">
-                                Total Cost: <span class="text-3xl font-bolder">GHC</span>
+                                Amount: <span class="text-xl font-bolder">GHC</span> <input class="border pl-2" name="amount" type="text">
                             </div>
                         </div>
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0 ">
                             <button type="submit" class="btn btn-primary h-12 w-full">
-                                {{ __('Make Payment') }}
+                                {{ __('Check Payment') }}
                             </button>
                         </div>
+                        <div class="flex justify-center w-full text-3xl py-12 gap-2">
+                            Total amount for {{Auth::user()->courses->count()}} courses is GHC
+                             <span class="font-bold"> {{Auth::user()->courses->sum('price')}}</span>
+                        </div>
+                        
                   </div>
                 </form>
             </div>

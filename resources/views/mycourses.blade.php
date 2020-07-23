@@ -4,17 +4,18 @@
 
 @section('content')
 <div class="container">
-    {{-- <div class="row">
+    <div class="row">
         <div>
-            @if (session('status'))
+            @if (session('success'))
                 <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
+                    {{ session('success') }}
                 </div>
             @endif
         </div>
-    </div> --}}
+    </div>
 
     <div class="mt-5 grid grid-cols-2 gap-1">
+       
         <div>
             <div class="grid grid-cols-3">
                 {{-- image --}}
@@ -32,10 +33,15 @@
                     </div>
                     
                     {{-- button --}}
-                    <div class="mt-3">
+                    <div class="mt-3 flex flex-row gap-3">
                         <a href="{{ route('profile.edit', [Auth::user()->id])}}" style="text-decoration: none; color: #000">
                             <div style="background-color: #f7b728; height: 40px; width: 150px; border-radius: 3px;">
                                   <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Edit Account</p> 
+                            </div>
+                        </a>
+                        <a href="{{ route('payment.index')}}" style="text-decoration: none; color: #000">
+                            <div style="background: linear-gradient(190.57deg, #96FFC6 3.26%, #21A659 100%); height: 40px; width: 150px; border-radius: 3px;">
+                                  <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Payment</p> 
                             </div>
                         </a>
                     </div>

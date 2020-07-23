@@ -9,6 +9,17 @@ use App\Section;
 
 class TopicController extends Controller
 {
+    
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+    
     // public function topicForm(Topic $topic){
     //     $course = Course::all();
 
