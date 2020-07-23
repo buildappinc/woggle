@@ -14,10 +14,10 @@
         </div>
     </div>
 
-    <div class="mt-5 grid grid-cols-2 gap-1">
+    <div class="mt-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-1">
        
         <div>
-            <div class="grid grid-cols-3">
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
                 {{-- image --}}
                 <div class=" col-span-1 h-32 w-32 mt-2">
                      <img src="{{Auth::user()->userImage()}}" class="h-32 w-32 rounded-full object-cover" alt="">
@@ -77,8 +77,13 @@
             </div>
         </div>
         {{-- statistics --}}
-        <div>
-            User statistics
+        <div class="hidden sm:hidden md:block lg:block xl:block">
+            <div class="font-bold text-3xl">
+                User statistics
+            </div>
+            <div>
+                <p class="italic">Payment History</p>
+            </div>
         </div>
     </div>
 </div>
