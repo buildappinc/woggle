@@ -422,16 +422,18 @@
                     <div class="m-5">
                         <div class="flex flex-no-wrap flex-col sm:flex-no-wrap sm:flex-col md:flex-wrap md:flex-row lg:flex-wrap lg:flex-row Xl:flex-wrap xl:flex-row">
                             @foreach ($courses as $course)
-                            <div class="w-full sm:w-full md:w-2/6 lg:w-2/6 xl:w-2/6 p-2 mt-3">
-                                 <div class="ind_courses">
-                                     <div class="h-full w-full">
-                                         <img src="/storage/{{$course->image}}" class="course max-h-full w-full max-w-full object-cover" style="height:20rem" alt="">
-                                     </div>
-                                     <div class="text-center text-3xl mt-3 pb-3">
-                                         {{$course->name}}
-                                     </div>
-                                 </div>   
-                             </div>
+                                @if ($course->status == 1 )
+                                    <div class="w-full sm:w-full md:w-2/6 lg:w-2/6 xl:w-2/6 p-2 mt-3">
+                                        <div class="ind_courses">
+                                            <div class="h-full w-full">
+                                                <img src="/storage/{{$course->image}}" class="course max-h-full w-full max-w-full object-cover" style="height:20rem" alt="">
+                                            </div>
+                                            <div class="text-center text-3xl mt-3 pb-3">
+                                                {{$course->name}}
+                                            </div>
+                                        </div>   
+                                    </div>
+                                @endif
                             @endforeach 
                         </div>
                     </div>

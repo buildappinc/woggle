@@ -131,7 +131,17 @@ h2 {
             <div>
                 
                 <div class="container">
-                    
+                  
+              @if (Session::has('success'))
+                    <div class="alert alert-success">
+                      {{Session::get('success')}}
+                    </div>
+              @endif
+              @if (Session::has('message'))
+                    <div class="alert alert-success">
+                      {{Session::get('message')}}
+                    </div>
+              @endif
                 
                @foreach ($course->topics as $topic)
 

@@ -70,7 +70,7 @@ class SectionController extends Controller
         return view("Section.sectionForm", compact('topic', 'section', 'course'));
     }
 
-    public function PostLesson(Request $request){
+    public function PostLesson(Request $request, Course $course){
         $data = $request->validate([
             'header' => '',
             'content' => 'required',
@@ -79,7 +79,7 @@ class SectionController extends Controller
 
         Section::create($data);
 
-        return redirect('/admin/courses');
+        return redirect('/admin/courses/'. $course->id .'/edit')->with('success', "Lesson has been added successfully");
     }
 
     public function EditLessonForm(Topic $topic, Section $section){

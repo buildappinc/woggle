@@ -58,20 +58,19 @@
                             <div> Enrolled Student</div> 
                         </div>
                         <div>
-                            <div class="w-full p-2 px-3 text-white mb-3" style="background: linear-gradient(199.04deg, #666666 0%, #151522 100%); border-radius: 5px;">
-                               <button class=""> Deactivate</button>
+                            <div class="w-full px-3 text-white mb-3" style="background: linear-gradient(199.04deg, #666666 0%, #151522 100%); border-radius: 5px;">
+                                <form action="/admin/c/{{$courses->id}}" method="post">
+                                    @csrf
+                                    @method('PATCH')
+                                        <button class="">
+                                            <div class="pt-2 pb-2">
+                                                {{$courses->status == 1 ? 'Deactivate' : 'Activate'}}
+                                            </div>
+                                        </button>                                    
+                                </form>
                             </div> 
                             <div>
-                                {{-- <form action="/admin/courses/{{$courses->id}}" method="post">
-                                    @method('DELETE')
-                                    @csrf
-                                    <div class="flex flex-row w-full p-2 px-3 justify-between" style="background: linear-gradient(199.33deg, #BD001D 0%, #FF3756 100%); border-radius: 5px;">
-                                        <div>
-                                            <img src="{{asset('images/delete.png')}}" alt="">
-                                        </div>
-                                        <button type="submit" class="text-white deleteBtn">Delete</button>
-                                    </div>
-                                </form>     --}}
+                               
                                 <div class="flex flex-row w-full p-2 px-3 justify-between" style="background: linear-gradient(199.33deg, #BD001D 0%, #FF3756 100%); border-radius: 5px;">
                                     <input type="hidden" class="deletevalue" value="{{$courses->id}}">
                                     <div>
@@ -110,7 +109,7 @@
             e.preventDefault()
 
             var delete_val = $(this).closest("div").find(".deletevalue").val();
-            // alert(delete_val)
+            alert(delete_val)
 
             swal({
             title: "Are you sure?",
@@ -145,7 +144,9 @@
             }
             });
         })
+
     })
+
 </script>
 @endsection
 

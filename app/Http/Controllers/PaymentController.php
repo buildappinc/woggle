@@ -31,6 +31,21 @@ class PaymentController extends Controller
     public function handleGatewayCallback()
     {
         $paymentDetails = Paystack::getPaymentData();
+        $database_details  = $paymentDetails['data']['customer'];
+        // dd($database_details);
+
+        // Auth::user()->id;
+        // dd(\Auth::user()->fname);
+        $authUser = \Auth::user()->id;
+
+        $userData = new Payment();
+        $userData->user_id = $authUser;
+        $userData->customer_id = $database_details['id'];
+        $userData->email = $database_details['email'];
+        $userData->customer_code = $database_details['customer_code'];
+
+        // saving the details into the database
+        $userData->save();
 
         
         // checking if the status is either true or false

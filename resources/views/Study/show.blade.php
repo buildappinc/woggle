@@ -26,7 +26,6 @@
                                             @csrf
                                            <button type="submit" class="button mt-3" style="background-color: #f7b728">Enroll now</button>
                                         </form>
-                                        <a href="{{ route('payment.index')}}">pay</a>
                                     </div>
                                 </div>
                                 <div class="col-span-3 ...">
@@ -72,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-span-1 ...">
+            <div class="col-span-1 hidden sm:hidden md-block lg:block xl:block">
                 <div class="shadow-md rounded-md max-h-full animated fadeInRight">
                     <div>
                         <div class="pl-4 pt-2 text-2xl">Course Author</div> 

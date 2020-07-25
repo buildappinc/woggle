@@ -228,10 +228,7 @@
                         <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center " href="{{ route('register') }}">{{ __('Register') }}</a>
                 @endif
                 @else
-                    {{-- <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <img src="{{asset('/images/user.svg')}}" class="h-4 w-4" alt=""> <span class="caret"></span>
-                    </a> --}}
-                    <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center  dropdown-toggle"  href="#" role="button" data-toggle="dropdown">
+                    <a id="navbarDropdown" class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         <div class="flex justify-center items-center h-6 w-6 rounded-full" style="background-color: #F5EFEF">
                             <img src="{{asset('/images/user.png')}}" class="h-4 w-4" alt="">
                         </div> 

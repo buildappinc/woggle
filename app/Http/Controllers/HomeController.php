@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Paystack;
+use App\Payment;
+
 use App\User;
 use App\Course;
 use Illuminate\Http\Request;
@@ -24,9 +30,44 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Course $course)
+    public function index(Course $course, Payment $payment)
     {
+
+        // $paymentUser_id = $payment->user_id;
+        // $authUser = \Auth::user()->id;
+        // $customer_code = $payment->customer_id;
+
+        // // $hello =  Paystack::fetchTransaction($customer_code);
+        // // dd($hello);
+
+        // $curl = curl_init();        
+  
+        // curl_setopt_array($curl, array(
+        //   CURLOPT_URL => "https://api.paystack.co/transaction/26873282",
+        //   CURLOPT_RETURNTRANSFER => true,
+        //   CURLOPT_ENCODING => "",
+        //   CURLOPT_MAXREDIRS => 10,
+        //   CURLOPT_TIMEOUT => 30,
+        //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //   CURLOPT_CUSTOMREQUEST => "GET",
+        //   CURLOPT_HTTPHEADER => array(
+        //     "Authorization: Bearer sk_test_1c10736e255f69efc685e426aecbf894c355a2bd",
+        //     "Cache-Control: no-cache",
+        //   ),
+        // ));
+        
+        // $response = curl_exec($curl);
+        // $err = curl_error($curl);
+        // curl_close($curl);
+
+        // if ($err) {
+        //   echo "cURL Error #:" . $err;
+        // } else {
+        //   echo $response;
+        // }
+       
         return view('mycourses');
+       
     }
 
     public function edit(User $user)
@@ -65,6 +106,8 @@ class HomeController extends Controller
 
         return redirect('/mycourses/');
     }
+
+
 
     
 }

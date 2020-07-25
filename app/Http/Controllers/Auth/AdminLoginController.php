@@ -28,7 +28,7 @@ class AdminLoginController extends Controller
             return redirect()->intended(route('admin.dashboard'));
         }
 
-        return back();
+        return back()->withErrors(['email'=>'wrong or invalid email address'], ['password', 'password do not match our records']);
     }
 
     

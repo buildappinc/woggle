@@ -126,6 +126,23 @@ class AdminController extends Controller
         return response()->json(['status'=> 'course deleted successfully']);
     }
 
+    public function changeStatus(Course $course){
+        if ($course->status == true) {
+
+            $course->status = false;
+            $course->update(['status'=> $course->status]);
+
+            return redirect()->back();
+        } else {
+
+            $course->status = true;
+            $course->update(['status'=> $course->status]);
+
+            return redirect()->back();
+        }
+       
+    }
+
 
    
 }

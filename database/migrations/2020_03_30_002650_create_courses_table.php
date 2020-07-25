@@ -21,6 +21,9 @@ class CreateCoursesTable extends Migration
             $table->string('introduction');
             $table->string('image');
             $table->string('description', 1000);
+            $table->integer('is_paid')->default("0");
+            $table->integer('status')->default(true);
+            $table->integer('is_complete')->default("0");
         });
     }
 
