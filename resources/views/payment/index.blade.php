@@ -92,7 +92,7 @@
                 <button onclick="showPanel(1, '#e9e9e9')">Cardless Payment</button>
             </div>
             <div class="tabPanel">
-                <form class="w-full max-w-6xl mt-16 px-12" method="POST" action="{{route('pay')}}">
+                <form class="w-full max-w-6xl mt-16 px-12" method="POST" action="{{route('pay', ['course'=>$course->id])}}">
                     @csrf
                     @if (Session::has('error'))
                         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">

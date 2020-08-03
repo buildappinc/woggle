@@ -11,6 +11,12 @@
                 <div class="flex justify-center text-4xl font-bold pt-3">
                     {{$course->name}}
                 </div>
+
+                {{-- <div>
+                    <a href="{{ route('lesson.content', ['course'=>$course->id, 'topic'=>$topic->id])}}">
+                        start course
+                    </a>
+                </div> --}}
                 
                 <div class="p-5 flex flex-no-wrap flex-col sm:flex-no-wrap sm:flex-row md:flex-wrap md:flex-row lg:flex-wrap lg:flex-row xl:flex-wrap xl:flex-row">
                     @foreach ($course->topics as $topic)

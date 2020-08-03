@@ -8,19 +8,28 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Paystack;
 use App\Payment;
+use App\Course;
 
 class PaymentController extends Controller
 {
-    public function index(){
-        return view('payment.index');
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
+    public function index(Course $course){
+        return view('payment.index', compact('course'));
     }
 
      /**
      * Redirect the User to Paystack Payment Page
      * @return Url
      */
-    public function redirectToGateway()
-    {
+    public function redirectToGateway(Course $course)
+    {        
+        $user = \Auth::user();
+        $user->courses()->attach($course);
+
         return Paystack::getAuthorizationUrl()->redirectNow();
     }
 
@@ -31,12 +40,15 @@ class PaymentController extends Controller
     public function handleGatewayCallback()
     {
         $paymentDetails = Paystack::getPaymentData();
+
+        dd($paymentDetails);
+
         $database_details  = $paymentDetails['data']['customer'];
         // dd($database_details);
 
         // Auth::user()->id;
         // dd(\Auth::user()->fname);
-        $authUser = \Auth::user()->id;
+        $authUser = $user->id;
 
         $userData = new Payment();
         $userData->user_id = $authUser;

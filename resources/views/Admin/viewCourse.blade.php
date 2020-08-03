@@ -55,11 +55,16 @@
                     <div class="flex flex-row justify-between">
                         <div>
                             <div class="text-4xl font-bold">{{$courses->name}}</div> 
-                            <div> Enrolled Student</div> 
+                            <div> 
+                                <span class="font-bold">
+                                    {{$courses->users()->count()}}
+                                </span>
+                                Enrolled Student 
+                            </div> 
                         </div>
                         <div>
                             <div class="w-full px-3 text-white mb-3" style="background: linear-gradient(199.04deg, #666666 0%, #151522 100%); border-radius: 5px;">
-                                <form action="/admin/c/{{$courses->id}}" method="post">
+                                <form action="/admin/c/{{$courses->id}}" method="post"> 
                                     @csrf
                                     @method('PATCH')
                                         <button class="">

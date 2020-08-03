@@ -49,13 +49,6 @@ Route::get('/admin/add', "AdminController@show")->name('admin.show');
 Route::post('/admin/save', "AdminController@save")->name('admin.save');
 Route::post('/admin/add', "AdminController@store")->name('admin.store');
 
-// //topics 
-// Route::get('/admin/topic', 'TopicController@topicForm')->name('topic.form');
-// Route::post('/admin/topic', 'TopicController@store')->name('topic.form.submit');
-// Route::get('/admin/topic/{topic}/edit', 'TopicController@editTopic');
-// Route::patch('/admin/topic/{topic}', 'TopicController@updateTopic');
-// Route::delete('/admin/topic/{topic}', 'TopicController@destroyTopic');
-
 Route::get('/admin/{course}/topic', 'TopicController@playground')->name('Course.topic');
 Route::post('/admin/{course}/topic', 'TopicController@playgroundStore')->name('Course.topic.submit');
 Route::get('/admin/{course}/topic/{topic}/edit', 'TopicController@editTopicPlayground')->name('Course.topic.edit');
@@ -70,13 +63,6 @@ Route::patch('/admin/courses/{course}', 'AdminController@updateCourse')->name('c
 Route::delete('/admin/courses/{course}', 'AdminController@destroyCourse');
 Route::patch('/admin/c/{course}', 'AdminController@changeStatus')->name('course.status');
 
-// //sections for the topics
-// Route::get('/admin/topics/section', 'SectionController@sectionForm')->name('section.form');
-// Route::post('/admin/topics/section', "SectionController@store")->name('section.form.submit');
-// Route::get('/admin/topics/section/{section}/edit', "SectionController@editSection");
-// Route::patch('/admin/topics/section/{section}', "SectionController@updateSection");
-// Route::delete('/admin/topics/section/{section}', "SectionController@destroySection");
-
 Route::get('/admin/course/{course}/topic/{topic}/section', 'SectionController@GetLesson')->name('Topic.section');
 Route::post('/admin/course/{course}/topic/{topic}/section', 'SectionController@PostLesson')->name('Topic.section.submit');
 Route::get('/admin/topic/{topic}/section/{section}/edit', 'SectionController@EditLessonForm')->name('Topic.section.edit');
@@ -84,12 +70,9 @@ Route::patch('/admin/topic/{topic}/section/{section}', 'SectionController@EditLe
 Route::delete('/admin/topics/section/{section}', "SectionController@DeleteLesson");
 
 // payment 
-Route::get('/payment', 'PaymentController@index')->name('payment.index');
-// Route::post('/payment', 'PaymentController@create')->name('payment.create');
-// Route::post('/payment', 'PaymentController@makePayment')->name('payment.pay');
-// Route::get('/payment/callback', 'PaymentController@handleGatewayCallback')->name('payment.callback');
+Route::get('/payment/{course}', 'PaymentController@index')->name('payment.index');
 
-Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+Route::post('/pay/{course}', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 
 

@@ -21,11 +21,17 @@
                                     <div class="h-48">
                                         <img class="rounded-lg h-48 max-h-full shadow-inner object-cover" src="/storage/{{$course->image}}" alt="">
                                     </div>
+                                    {{-- {{route('course.get', ['course'=>$course->id])}} --}}
                                     <div>
-                                        <form action="{{route('course.get', ['course'=>$course->id])}}" method="post">
+                                        <a href="{{ route('payment.index', ['course'=>$course->id])}}" style="text-decoration: none; color: #000">
+                                            <div style="background: linear-gradient(190.57deg, #96FFC6 3.26%, #21A659 100%); height: 40px; width: 150px; border-radius: 3px;">
+                                                  <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Payment</p> 
+                                            </div>
+                                        </a>
+                                        {{-- <form action="{{route('course.get', ['course'=>$course->id])}}" method="post">
                                             @csrf
                                            <button type="submit" class="button mt-3" style="background-color: #f7b728">Enroll now</button>
-                                        </form>
+                                        </form> --}}
                                     </div>
                                 </div>
                                 <div class="col-span-3 ...">

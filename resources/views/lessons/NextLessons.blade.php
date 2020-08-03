@@ -23,7 +23,7 @@
             @endforeach
         </div>
         <div>
-            <a href="{{ route('lesson.content', ['course'=>$course->id, 'topic'=>$topic->id])}}">Next</a>
+            <a href="{{ route('next.content', ['course'=>$course->id, 'result'=>$result->id])}}">Next</a>
         </div>
     </div>
     
