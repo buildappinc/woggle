@@ -19,9 +19,7 @@
           {{-- number of enrolled students --}}
         <div class="absolute" style="top: 35vh; left: 80vw">
             <div class="bg-red-400 h-40 w-40 rounded-full flex justify-center items-center text-white text-4xl font-bold" style="background: linear-gradient(225deg, #666666 0%, #151522 100%);">
-                @foreach ($course->users as $user)
-                {{$user->count()}}
-            @endforeach
+                {{$course->users()->count()}}
             </div>
         </div>
     </div>

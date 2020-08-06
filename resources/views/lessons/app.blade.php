@@ -35,7 +35,7 @@
         width: 100%;
         height: 60px;
         color: white;
-        position: fixed;
+        /* position: fixed; */
         bottom: 0px;
         left: 0px;
         padding-top: 20px;
@@ -244,7 +244,7 @@
     </nav>
 
    
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
 
