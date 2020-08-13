@@ -212,6 +212,12 @@
                     <span>Courses</span>
                 </a>
                 <a
+                    href="{{route('home')}}"
+                    class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center "
+                >
+                    <span>My Course</span>
+                </a>
+                <a
                     href="/contact"
                     class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center"
                 >

@@ -6,10 +6,10 @@
     }
 
     .box2{
-        box-shadow: 0 20px 25px -20px rgba(49, 2, 2, 0.205), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+        box-shadow: 0 20px 25px -20px rgba(22, 3, 73, 0.205), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
         width: 47.5%;
         border-radius: 10px;
-        border: 1px solid rgb(238, 238, 238)
+        border: 1px solid rgb(219, 192, 192)
     }
 
     .box:hover{        
@@ -102,7 +102,7 @@
                 <p class="italic">Payment History</p>
                 <div class="flex flex-wrap gap-6">
                     @foreach ($payment_user as $item)
-                       <div class="box2 P-4 bg-red-100">
+                       <div class="box2 P-4 bg-yellow-100">
                             {{$item->currency}}
                             {{$item->amount *.01 }}
                             {{$item->channel}}

@@ -36,12 +36,11 @@
 
     .nav-link{
         font-size: 15px;
-        font-family: 'PT Sans', sans-serif;
-        font-weight: 400px;
+        font-family: Open Sans;
+        font-weight: 600px;
+        line-height: 25px;
         font-style: normal;
         color: #fff !important;
-        float: right;
-        text-align: center;
     }
     .nav-link.nav-text-color{
         color: #000 !important;
@@ -260,6 +259,12 @@
                         class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center "
                     >
                         <span>Courses</span>
+                    </a>
+                    <a
+                        href="{{route('home')}}"
+                        class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center "
+                    >
+                        <span>My Course</span>
                     </a>
                     <a
                         href="/contact"
