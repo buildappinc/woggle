@@ -1,6 +1,6 @@
 <style>
     
-</style>
+</style> 
 @extends('lessons.app')
 
 @section('content')

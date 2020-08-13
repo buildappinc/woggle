@@ -1,6 +1,5 @@
 <style>
-    .body{
-        margin-top: -23px;   
+    .body{  
         padding: 0;
         height: 950px;
         position: relative; 
@@ -178,8 +177,8 @@
                             </button>
                         </div>
                         <div class="flex justify-center w-full text-3xl py-12 gap-2">
-                            Total amount for {{Auth::user()->courses->count()}} courses is GHC
-                             <span class="font-bold"> {{Auth::user()->courses->sum('price')}}</span>
+                            {{$course->name}} costs  GHC
+                             <span class="font-bold"> {{$course->price}}</span>
                         </div>
                         
                   </div>

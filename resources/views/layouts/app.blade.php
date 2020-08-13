@@ -36,8 +36,9 @@
 
     .nav-link{
         font-size: 15px;
-        font-family: 'PT Sans', sans-serif;
-        font-weight: 400px;
+        font-family: Open Sans;
+        font-weight: 600px;
+        line-height: 25px;
         font-style: normal;
         color: #000 !important;
     }

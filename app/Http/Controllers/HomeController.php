@@ -7,7 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Paystack;
 use App\Payment;
-
+use App\Progress;
 use App\User;
 use App\Course;
 use Illuminate\Http\Request;
@@ -30,16 +30,35 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Course $course, Payment $payment)
+    public function index(Course $course)
     {
+        $authUser = auth()->user()->id;    
+        // todo
+        // get all the courses the user has subscribed for 
+        // find the total number of topics in a course
+        // divide 100 by the total number of topics 
 
-        // $paymentUser_id = $payment->user_id;
-        // $authUser = \Auth::user()->id;
-        // $customer_code = $payment->customer_id;
+        // assign the divided cost to an individual course in he sections part {i'll bab}
 
-       
-       
-        return view('mycourses');
+        // first try fetching the sections the user has visited
+
+        //working on the payment stuff
+        //getting payment user
+        $payment_user = Payment::where('user_id', $authUser)->get()->all();
+
+        foreach ($payment_user as $key => $value) {
+            $hello = Paystack::fetchTransaction($value->customer_id);
+            
+        }
+
+        $courses = auth()->user()->courses->all();
+        
+
+       foreach (auth()->user()->courses as $key => $value) {
+        $CheckUserSection = Progress::where('user_id', $authUser)->where('course_id', $value->id)->get()->all();
+       }
+
+        return view('mycourses', compact('payment_id', 'CheckUserSection', 'courses', 'payment_user'));
        
     }
 

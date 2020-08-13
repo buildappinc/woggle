@@ -1,6 +1,23 @@
+<style>
+    .box{
+        box-shadow: 0 20px 25px -20px rgba(49, 2, 2, 0.205), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+        border-radius: 0px 0px 34px 0px;
+        border: 1px solid rgb(238, 238, 238)
+    }
+
+    .box2{
+        box-shadow: 0 20px 25px -20px rgba(49, 2, 2, 0.205), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+        width: 47.5%;
+        border-radius: 10px;
+        border: 1px solid rgb(238, 238, 238)
+    }
+
+    .box:hover{        
+       
+    }
+</style>
 
 @extends('layouts.app')
-
 
 @section('content')
 <div class="container">
@@ -79,10 +96,43 @@
         {{-- statistics --}}
         <div class="hidden sm:hidden md:block lg:block xl:block">
             <div class="font-bold text-3xl">
-                User statistics
+                {{Auth::user()->fname}}'s statistics
             </div>
             <div>
                 <p class="italic">Payment History</p>
+                <div class="flex flex-wrap gap-6">
+                    @foreach ($payment_user as $item)
+                       <div class="box2 P-4 bg-red-100">
+                            {{$item->currency}}
+                            {{$item->amount *.01 }}
+                            {{$item->channel}}
+                            {{$item->status}}
+                            {{$item->reference}}
+                            {{$item->created_at->diffForHumans()}}
+                       </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="mt-4">
+                <p class="italic">Course progress</p>
+                <div class="grid grid-rows-2 grid-flow-col gap-6">
+                    @foreach ($courses as $item)
+                            <div class=" box hover:shadow-lg"> 
+                                <div class="p-3">
+                                    <div>
+                                        {{$item->name}}
+                                    </div>
+                                    <div class="flex flex-wrap">
+                                        @foreach ($item->topics as $items)                                             
+                                            <div class="p-2" style="width: 24%">
+                                                <div class="text-center text-xs bg-gray-300 p-1 shadow-sm capitalize" style="border-radius: 10px 30px;">{{$items->name}}</div>
+                                            </div>                                            
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>                        
+                     @endforeach
+                </div>
             </div>
         </div>
     </div>

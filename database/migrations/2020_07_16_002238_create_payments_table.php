@@ -17,6 +17,11 @@ class CreatePaymentsTable extends Migration
             $table->id();
             $table->unsignedInteger('user_id');
             $table->integer('customer_id');
+            $table->string('reference');
+            $table->integer('amount');
+            $table->string('channel');
+            $table->string('status');
+            $table->string('currency');
             $table->string('email');
             $table->string('customer_code');
             $table->timestamps();

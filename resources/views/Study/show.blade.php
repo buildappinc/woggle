@@ -25,7 +25,7 @@
                                     <div>
                                         <a href="{{ route('payment.index', ['course'=>$course->id])}}" style="text-decoration: none; color: #000">
                                             <div style="background: linear-gradient(190.57deg, #96FFC6 3.26%, #21A659 100%); height: 40px; width: 150px; border-radius: 3px;">
-                                                  <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Payment</p> 
+                                                  <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Enroll now</p> 
                                             </div>
                                         </a>
                                         {{-- <form action="{{route('course.get', ['course'=>$course->id])}}" method="post">
