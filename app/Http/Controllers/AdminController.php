@@ -31,7 +31,8 @@ class AdminController extends Controller
     public function viewAdmin(Course $course)
     {
         $Admin = Admin::all()->take(1);
-        return view('Admin.admin', compact('Admin', 'course'));
+        $courses = Course::all()->take(3);
+        return view('Admin.admin', compact('Admin', 'course', 'courses'));
     }
 
     public function index(){

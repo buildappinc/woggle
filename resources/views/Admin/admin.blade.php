@@ -103,7 +103,7 @@
                             <div class="text-xl font-bold">Courses</div>
                             <div class="text-xs">Recently Added</div>
                         </div>
-                       <a href="{{ route('admin.show') }}">
+                       <a class="text-black" href="{{ route('admin.show') }}">
                             <div class="bg-gray-200 h-10 w-40 flex flex-row items-center justify-around rounded-full py-2 px-4 hover:shadow-lg">
                                 <div>
                                     <span class="material-icons md-18">
@@ -114,13 +114,24 @@
                             </div>
                         </a>  
                     </div>
+                    @foreach ($courses as $item)
+                        <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
+                            <a class="text-black" href="{{ route('admin.register')}}">
+                                <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-between px-4 p-4 hover:shadow-lg">
+                                    <div>{{$item->name}}</div>
+                                    <div>{{$item->price}}</div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                    
                 </div>
                 <div class="h-auto shadow-md rounded-lg border border-grap-100">
                     <div class="p-4 text-2xl font-bold">
                         Activity
                     </div>
                     <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
-                        <a href="{{ route('admin.register')}}">
+                        <a class="text-black" href="{{ route('admin.register')}}">
                             <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-between px-4 p-4 hover:shadow-lg">
                                 <div>hello</div>
                                 <div>Register New Admin</div>
@@ -128,7 +139,7 @@
                         </a>
                     </div>
                     <div class="w-full  p-4 flex flex-col justify-around col-gap-6 ">
-                        <a href="{{ route('admin.details')}}">
+                        <a class="text-black" href="{{ route('admin.details')}}">
                             <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-between px-4 p-4 hover:shadow-lg">
                                 <div>hello</div>
                                 <div>View All Students</div>
@@ -136,7 +147,7 @@
                         </a>
                     </div>
                     <div class="w-full  p-4 flex flex-col justify-around col-gap-6 ">
-                        <a href="{{ route('course.view') }}">
+                        <a class="text-black" href="{{ route('course.view') }}">
                             <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-between px-4 p-4 hover:shadow-lg">
                                 <div>hello</div>
                                 <div>View All Courses</div>
@@ -150,7 +161,7 @@
             <!-- first row of data -->
             <div class="row">
                 <div class="col-5 data">
-                   <a href="{{ route('admin.details')}}">View All Students</a>
+                   <a class="text-black" href="{{ route('admin.details')}}">View All Students</a>
                 </div>
                 <div class="col-5 data">
                     <a href="{{ route('admin.show') }}">Add New Course</a>

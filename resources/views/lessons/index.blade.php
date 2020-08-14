@@ -13,6 +13,25 @@
                 </div>
                 
                 <div class="p-5 flex flex-no-wrap flex-col sm:flex-no-wrap sm:flex-row md:flex-wrap md:flex-row lg:flex-wrap lg:flex-row xl:flex-wrap xl:flex-row">
+                    <div>
+                        {{-- @foreach ($course->topics as $topic)
+                           @foreach ($user_progress as $item)
+                               @if ($topic->id == $item->id)
+                                    {{$topic->name}}   
+                               @endif 
+                           @endforeach
+                            {{$topic->name}}
+                        @endforeach --}}
+                        
+                        {{-- @foreach ($user_progress as $item)
+                            @foreach ($course->topics as $topic)
+                                @if ($topic->id == $item->id)
+                                    {{$topic->name}}   
+                                @endif 
+                            @endforeach
+                            {{$topic->name}}
+                        @endforeach --}}
+                    </div>
                     @foreach ($course->topics as $topic)
                         <div class="h-48 shadow-md rounded-lg m-2 border border-gray-200 p-3 flex flex-col justify-between" style="width: 31%; background: #E1E1E1">
                             <div class="flex flex-row justify-between">
@@ -30,7 +49,7 @@
                                     <a href="{{ route('lesson.content', ['course'=>$course->id, 'topic'=>$topic->id])}}" class="text-white">Locked</a>
                                 </div>
                                 <div class="items-baseline mt-2">
-                                    {{$topic->sections()->count()}} Items 
+                                    {{$topic->sections()->count()}} lessons 
                                 </div>
                             </div>
                         </div>

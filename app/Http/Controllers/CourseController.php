@@ -25,8 +25,12 @@ class CourseController extends Controller
     }
 
     public function Topics(Course $course, Topic $topic){
+
+        $authUser = auth()->user()->id; 
+
+        $user_progress = Progress::where('user_id', $authUser)->where('course_id', $course->id)->get()->all();    
         
-        return view('lessons.index', compact('course'));
+        return view('lessons.index', compact('course', 'user_progress'));
 
     }
 
