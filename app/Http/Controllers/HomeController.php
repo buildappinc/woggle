@@ -40,7 +40,7 @@ class HomeController extends Controller
 
         $progress = Progress::where('user_id', $authUser)->pluck('course_id')->all();
 
-        return view('mycourses', compact('payment_id', 'progress', 'courses', 'payment_user'));
+        return view('mycourses', compact('progress', 'courses', 'payment_user'));
        
     }
 
