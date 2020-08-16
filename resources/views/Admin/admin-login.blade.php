@@ -200,7 +200,7 @@
                     <div class="col-12">
                        <div class="form-group">
                             <div class="col-md-6">
-                               Don't have an account? <a href="">Sign in</a>
+                                Don't have an account? <a href="{{route('admin.register')}}">Sign in</a>
                             </div>
                         </div> 
                     </div>
