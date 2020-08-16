@@ -1,4 +1,6 @@
-@extends('Admin.app')
+@extends('layouts.app')
+
+@section('title', 'Register')
 
 @section('content')
 <form action="{{ route('admin.register.submit')}}" method="post">

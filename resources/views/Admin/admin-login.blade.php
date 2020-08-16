@@ -1,83 +1,3 @@
-{{-- 
-<style>
-    
-    .input input, label{
-       transition: all 0.2s;
-       touch-action: manipulation
-    }
-
-    .input{
-        display: flex;
-        flex-flow: column-reverse;
-        margin-bottom: 1em;
-        
-    }
-
-    .input input{
-        font-size:  1,5em;
-        border: 0;
-        box-shadow: none;
-        border-bottom: 1px solid #ccc;
-        font-family: inherit;
-        -webkit-appearance: none;
-        border-radius: 0;
-        padding: 0;
-        cursor: text
-    }
-
-    .input select{
-        border: 0;
-        box-shadow: none;
-        border-bottom: 1px solid #ccc;
-        border-radius: 0;
-    }
-
-    
-    .input input:focus{
-        outline: 0;
-        box-shadow: none;
-        border-bottom: 1px solid red;
-        transition: ease-in 1s;
-    }
-
-    .reg_header{
-        margin-top: 5%
-    }
-
-    .image{
-        background-size: cover; 
-        width:  100%;
-        height: 155%;
-    }
-
-    .explore{
-        letter-spacing: 3px;
-        color:  rgba(255, 0, 64, 0.986)
-    }
-    .forgot{
-        margin-left: 30%;
-        color: red
-    }
-    .btn btn-link{
-        color: red
-    }
-
-    #forgot{
-        color: red;
-    }
-
-    #forgot:hover{
-        color: blue;
-        transition: ease-in 1s;
-
-    }
-
-    .text{
-        color: white;
-        padding:  7%
-    }
-    
-</style> --}}
 
 <style>
     .body{
@@ -205,10 +125,6 @@
                         </div> 
                     </div>
                 </div>
-
-                
-                
-
 
             </div>
 
