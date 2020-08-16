@@ -27,6 +27,9 @@ class PaymentController extends Controller
      */
     public function redirectToGateway(Course $course)
     {        
+
+        
+
         $user = \Auth::user();
         $user->courses()->attach($course);
 
