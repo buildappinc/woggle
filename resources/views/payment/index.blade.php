@@ -184,7 +184,7 @@
                   </div>
                 </form>
             </div>
-            <div class="tabPanel mt-10">
+            {{-- <div class="tabPanel mt-10">
                 <div class="text-xl">
                     Select Mobile Carrier
                 </div>
@@ -227,7 +227,7 @@
                             </div>
                     </form>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 
