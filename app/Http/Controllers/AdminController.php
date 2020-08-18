@@ -65,8 +65,7 @@ class AdminController extends Controller
         // } 
 
        if ($request->hasfile('image')) {
-            $file_name = time() . '.' . $image->getClientOriginalExtension();
-            $image = request()->image->file_name;
+            $image = request()->image;
             $imagePath = $image->store('uploads', 'public');
 
             $Image = Image::make(public_path("storage/{$imagePath}"))->resize(109, 80);
