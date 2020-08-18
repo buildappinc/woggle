@@ -61,16 +61,13 @@ class AdminController extends Controller
         //     $image = $request->file('image');
         //     $file_name = time() . '.' . $image->getClientOriginalExtension();
         //     $location = public_path('images/courses/'.$file_name);
-        //     Image::make($image)->resize(109, 80)->save($location);
-        // }
+        //     Image::make($image)->resize(800,400)->save($location);
+        // } 
 
        if ($request->hasfile('image')) {
-            $image = $request->file('image');
             $file_name = time() . '.' . $image->getClientOriginalExtension();
-            $imagePath = $file_name->store('uploads', 'public');
-            // $location = public_path('images/courses/'.$file_name);
-            // Image::make($image)->resize(109, 80)->save($location);
-            // $imagePath = request()->image->store('uploads', 'public');
+            $image = request()->image->file_name;
+            $imagePath = $image->store('uploads', 'public');
 
             $Image = Image::make(public_path("storage/{$imagePath}"))->resize(109, 80);
             $Image->save(80);
@@ -80,7 +77,7 @@ class AdminController extends Controller
             'name' => $data['name'],
             'price' => $data['price'], 
             'introduction' => $data['introduction'], 
-            'image' =>  $file_name, 
+            'image' => $imagePath, 
             'description' => $data['description']
         ]);
 
