@@ -65,6 +65,8 @@ class HomeController extends Controller
             // specifying image path
         $imagePath = $request->image->store('profile', 'public');
 
+        dd('storage/'. $imagePath);
+
         $Image = Image::make(public_path("storage/{$imagePath}"))->resize(70, 70);
         $Image->save(80);
         
