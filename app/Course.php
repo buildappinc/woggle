@@ -9,7 +9,7 @@ class Course extends Model
     protected $guarded = [];
 
     public function courseImage(){
-        $imagepath = ($this->image) ? '/storage/' .$this->image : 'http://127.0.0.1:8000/images/imageplaceholder.png';
+        $imagepath = ($this->image) ? '/storage/' .$this->image : 'http://woogle-env.eba-5fphmdmm.us-east-2.elasticbeanstalk.com/images/imageplaceholder.png';
         return $imagepath;
     }
 
