@@ -67,12 +67,13 @@ class AdminController extends Controller
        if ($request->hasfile('image')) {
             $image = $request->file('image');
             $file_name = time() . '.' . $image->getClientOriginalExtension();
-            $location = public_path('images/courses/'.$file_name);
-            Image::make($image)->resize(109, 80)->save($location);
+            $imagePath = $file_name->store('uploads', 'public');
+            // $location = public_path('images/courses/'.$file_name);
+            // Image::make($image)->resize(109, 80)->save($location);
             // $imagePath = request()->image->store('uploads', 'public');
 
-            // $Image = Image::make(public_path("storage/{$imagePath}"))->resize(109, 80);
-            // $Image->save(80);
+            $Image = Image::make(public_path("storage/{$imagePath}"))->resize(109, 80);
+            $Image->save(80);
        }
 
         Course::create([
