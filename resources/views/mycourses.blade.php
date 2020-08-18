@@ -43,7 +43,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
                 {{-- image --}}
                 <div class=" col-span-1 h-32 w-32 mt-2">
-                     <img src="{{Auth::user()->userImage()}}" class="h-32 w-32 rounded-full object-cover" alt="">
+                     <img src="{{dd(Auth::user()->userImage())}}" class="h-32 w-32 rounded-full object-cover" alt="">
                 </div>
                 {{-- name and others --}}
                 <div class="col-span-2">
