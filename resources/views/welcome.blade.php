@@ -423,6 +423,7 @@
                             <p>Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</p>
                         </div>
                     </div>
+                    
                     {{-- course display --}}
                     <div class="m-5">
                         <div class="flex flex-no-wrap flex-col sm:flex-no-wrap sm:flex-col md:flex-wrap md:flex-row lg:flex-wrap lg:flex-row Xl:flex-wrap xl:flex-row">
