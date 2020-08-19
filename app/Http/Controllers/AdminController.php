@@ -112,12 +112,12 @@ class AdminController extends Controller
             'description' => 'required | max:1000'
         ]);
 
-        if ($request->hasFile('image')){
-            $image = $request->file('image');
+        if (request()->hasFile('image')){
+            $image = request()->file('image');
             $file_name = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/courses/'.$file_name);
             
-            Image::make($image)->resize(109, 80)->save($location, 80);
+            Image::make($location)->resize(109, 80)->save(80);
         } 
 
         // $imagePath = request()->image->store('uploads', 'public');
