@@ -62,7 +62,7 @@ class AdminController extends Controller
             $file_name = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/courses/'.$file_name);
             
-            Image::make($location)->resize(109, 80)->save(80);
+            Image::make($image)->resize(800,400)->save($location, 80);
         } 
 
     //    if ($request->hasfile('image')) {
@@ -117,7 +117,7 @@ class AdminController extends Controller
             $file_name = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/courses/'.$file_name);
             
-            Image::make($location)->resize(109, 80)->save(80);
+            Image::make($image)->resize(800,400)->save($location, 80);
         } 
 
         // $imagePath = request()->image->store('uploads', 'public');
