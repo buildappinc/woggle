@@ -60,7 +60,8 @@ class AdminController extends Controller
         if ($request->hasFile('image')){
             $image = $request->file('image');
             $file_name = time() . '.' . $image->getClientOriginalExtension();
-            $location = public_path('images/Courses/'.$file_name);
+            $location = public_path('images/courses/'.$file_name);
+            dd($location);
             Image::make($image)->resize(109, 80)->save($location);
         } 
 
