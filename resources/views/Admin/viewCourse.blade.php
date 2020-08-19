@@ -49,7 +49,7 @@
             <div class="flex flex-col md:flex-row lg:flex-row xl:flex-row mt-5 rounded-lg shadow-md border border-gray-200">
                 
                 <div class="md:w-2/6 lg:w-2/6 md:h-64">
-                    <img src="/storage/{{$courses->image}}" class="lg:h-full md:h-full md:w-11/12 md:object-cover sm:w-full sm:object-cover rounded-lg lg:w-11/12 lg:object-cover"  alt="">
+                    <img src="/images/Courses/{{$courses->image}}" class="lg:h-full md:h-full md:w-11/12 md:object-cover sm:w-full sm:object-cover rounded-lg lg:w-11/12 lg:object-cover"  alt="">
                 </div>
                 <div class="md:w-4/6 m-3 flex flex-col justify-between">
                     <div class="flex flex-row justify-between">
