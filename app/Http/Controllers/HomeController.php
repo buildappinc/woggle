@@ -61,12 +61,15 @@ class HomeController extends Controller
             'gender' => 'required',
             'image' => 'image | mimes:jpeg,png,jgp'
         ]);
-        
-            // specifying image path
-        $imagePath = $request->image->store('profile', 'public');
+    
 
-        $Image = Image::make(public_path("storage/{$imagePath}"))->resize(70, 70);
-        $Image->save(80);
+        if ($request->hasFile('image')){
+            $image = $request->file('image');
+            $file_name = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/profile/'.$file_name);
+            
+            Image::make($image)->resize(70,70)->save($location, 80);
+        } 
         
 
         $user->update([
@@ -75,7 +78,7 @@ class HomeController extends Controller
             'oname' => $data['oname'], 
             'email' => $data['email'], 
             'gender' => $data['gender'], 
-            'image' => $imagePath
+            'image' => $file_name
         ]);
 
         return redirect('/mycourses/');
