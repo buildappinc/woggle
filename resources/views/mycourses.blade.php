@@ -89,7 +89,7 @@
                         @foreach (Auth::user()->courses as $course)
                             <div class="w-2/5 pl-4 pt-4">
                                 <div class="h-48 w-48 shadow-md">
-                                    <img class="rounded-lg h-48 max-w-full shadow-inner object-cover" src="/storage/{{$course->image}}" alt="">
+                                    <img class="rounded-lg h-48 max-w-full shadow-inner object-cover" src="images/courses/{{$course->image}}" alt="">
                                 </div>
                                 <div class="text-center">
                                     <a href="/study/lesson/{{$course->id}}" class="hello text-3xl text-black">{{$course->name}}</a> 
