@@ -11,7 +11,7 @@
 
         <div class="mx-24">
             <div class="h-32 w-32 mt-2 mb-8 w-full flex justify-center">
-                <img src="{{Auth::user()->userImage()}}" class="h-32 w-32 rounded-full object-cover" alt="">
+                <img src="{{Auth::user()->userImage()}}" class="h-32 w-32 rounded-full object-cover" onclick="triggerImage()" id="imageDisplay" alt="">
             </div>
             <div class="flex flex-wrap -mx-3 mb-2">
                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -126,3 +126,29 @@
 </div>
     
 @endsection
+
+<script>
+    function triggerImage(){
+        document.querySelector("#image").click()
+    }
+
+    const image = document.querySelector("#image")
+
+    image.addEventListener("change", function(){
+        const file = this.files[0]
+
+        console.log(file)
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.addEventListener("load", function(){
+                console.log(this)
+                document.querySelector("#imageDisplay").setAttribute("src", this.result);
+            })
+
+            reader.readAsDataURL(file);
+        }
+    })
+
+</script>
