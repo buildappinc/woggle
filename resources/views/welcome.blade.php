@@ -435,7 +435,7 @@
                                                 <img src="{{asset('images/courses/'.$course->image)}}" class="course max-h-full w-full max-w-full object-cover" style="height:20rem" alt="">
                                             </div>
                                             <div class="text-center text-3xl mt-3 pb-3">
-                                                {{$course->name}}
+                                               <a href="/study/{{$courses->id}}" class="text-black">{{$course->name}}</a>
                                             </div>
                                         </div>   
                                     </div>

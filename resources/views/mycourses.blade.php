@@ -55,6 +55,7 @@
                         Experience
                     </div>
                     
+                    
                     {{-- button --}}
                     <div class="mt-3 flex flex-row gap-3">
                         <a href="{{ route('profile.edit', [Auth::user()->id])}}" style="text-decoration: none; color: #000">
