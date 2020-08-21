@@ -68,7 +68,7 @@ class HomeController extends Controller
             $file_name = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/profile/'.$file_name);
             
-            Image::make($image)->resize(70,70)->save($location, 80);
+            Image::make($image)->fit(128,128)->save($location, 80);
         } 
         
 
