@@ -59,7 +59,7 @@ class HomeController extends Controller
             'oname' => '', 
             'email' => 'email | required', 
             'gender' => 'required',
-            'image' => 'image | mimes:jpeg,png,jgp'
+            'image' => 'required | image |mimes:jpeg,png,jpg'
         ]);
     
 

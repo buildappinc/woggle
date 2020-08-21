@@ -11,7 +11,7 @@ class User extends Authenticatable
     use Notifiable;
 
     public function userImage(){
-        $imagepath = ($this->image) ? '/storage/' .$this->image : 'http://woogle-env.eba-5fphmdmm.us-east-2.elasticbeanstalk.com/images/noPhoto.png';
+        $imagepath = ($this->image) ? '/images/profile' .$this->image : 'http://woogle-env.eba-5fphmdmm.us-east-2.elasticbeanstalk.com/images/noPhoto.png';
         return $imagepath;
     }
 
