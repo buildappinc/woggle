@@ -31,6 +31,6 @@ class AdminRegisterController extends Controller
             'password' => Hash::make($data['password'])
         ]);
 
-        return redirect()->route('admin.dashboard');
+        return redirect()->intended(route('admin.dashboard'));
     }
 }
