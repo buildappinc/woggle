@@ -38,9 +38,9 @@ class PaymentController extends Controller
      * Obtain Paystack payment information
      * @return void
      */
-    public function handleGatewayCallback(Course $course)
+    public function handleGatewayCallback($course)
     {
-        dd($course);
+        dd(Course::find($course));
         $paymentDetails = Paystack::getPaymentData();
         
         $database_details  = $paymentDetails['data'];
