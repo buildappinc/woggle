@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 class AdminRegisterController extends Controller
 {
 
-    // public function __construct(){
-    //     $this->middleware('guest:admin');
-    // }
+    public function __construct(){
+        $this->middleware('guest:admin');
+    }
 
     public function showRegisterForm(){
         return view('Admin.admin-register');

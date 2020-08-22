@@ -88,7 +88,6 @@
         <div class="tabContainer">
             <div class="buttonContainer">
                 <button onclick="showPanel(0, '#e9e9e9')">Credit & Debit Cards</button>
-                <button onclick="showPanel(1, '#e9e9e9')">Cardless Payment</button>
             </div>
             <div class="tabPanel">
                 <form class="w-full max-w-6xl mt-16 px-12" method="POST" action="{{route('pay', ['course'=>$course->id])}}">
@@ -172,6 +171,11 @@
                                 Amount: <span class="text-xl font-bolder">GHC</span> <input class="border pl-2" name="amount" type="text">
                             </div>
                         </div>
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <div class="text-lg font-bold">
+                                currency: <span class="text-xl font-bolder">GHC</span> <input class="border pl-2" name="currency" type="text">
+                            </div>
+                        </div>
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0 ">
                             <button type="submit" class="btn btn-primary h-12 w-full">
                                 {{ __('Check Payment') }}
@@ -234,7 +238,7 @@
 
 </div>
 {{-- script --}}
-<script>
+{{-- <script>
     var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
     var tabPanels=document.querySelectorAll(".tabContainer  .tabPanel");
 
@@ -262,7 +266,7 @@
         tabPanels[panelIndex].style.display="block";
     }
     showPanel(0, "#e6e6e6");
-</script>
+</script> --}}
 @endsection
 
 
