@@ -86,7 +86,7 @@
                     <div class="col-span-1 ... flex items-center justify-center">
                         <div class="h-16 w-16 rounded-circle flex items-center justify-center" style="background-color: #04D00C">
                             <div>
-                                <img src="{{asset('/images/vector.png')}}" alt="" class="h-8 w-8 ">
+                                <img src="{{asset('/images/Vector.png')}}" alt="" class="h-8 w-8 ">
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                     </div>
                     @foreach ($courses as $item)
                         <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
-                            <a class="text-black" href="{{ route('admin.register')}}">
+                            <a class="text-black" href="/admin/courses/{{$courses->id}}/edit">
                                 <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-between px-4 p-4 hover:shadow-lg">
                                     <div>{{$item->name}}</div>
                                     <div>{{$item->price}}</div>
