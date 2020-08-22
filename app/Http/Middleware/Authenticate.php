@@ -20,7 +20,7 @@ class Authenticate extends Middleware
                 dd($request->pathinfo);
                 return route('admin.login');
             }
-            dd($request->pathinfo);
+            dd($request);
             return route('login');
         }
     }
