@@ -30,14 +30,18 @@ class PaymentController extends Controller
         // checking if the user already has a course
         $user = \Auth::user();
         $course_check = $user->courses;
-       
-        dd($course_check->where('id', $course->id)->first());
-        // if (request()->amount < $course->price) {
-        //     return redirect()->back()->with('error', "Amount entered is less than the price of the course");
-        // }
+        $course_user_check =  $course_check->where('id', $course->id)->first();
         
-        // $user->courses()->attach($course);
-        return Paystack::getAuthorizationUrl()->redirectNow();
+        if (!$course_user_check) {
+            if (request()->amount < $course->price) {
+                return redirect()->back()->with('error', "Amount entered is less than the price of the course");
+            }
+            
+            $user->courses()->attach($course);
+            return Paystack::getAuthorizationUrl()->redirectNow();
+        }
+        return redirect()->route('home')->with("warning", "Course has already been registered for");
+        
     }
 
     /**
