@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 
 class Authenticate extends Middleware
@@ -12,15 +13,10 @@ class Authenticate extends Middleware
      * @param  \Illuminate\Http\Request  $request
      * @return string|null
      */
-    protected function redirectTo($request)
+    protected function redirectTo($request, AuthorizationException $exception)
     {
-        if (! $request->expectsJson()) {
-
-            if ($request->pathinfo == 'admin' ) {
-                dd($request->pathinfo);
-                return route('admin.login');
-            }
-            dd($request);
+        dd($exception);
+        if (!$request->expectsJson()) {
             return route('login');
         }
     }
