@@ -31,7 +31,7 @@ class PaymentController extends Controller
         $user = \Auth::user();
         $course_check = $user->courses;
        
-        dd($course_check->where('id', $course->id));
+        dd($course_check->where('id', $course->id)->first());
         // if (request()->amount < $course->price) {
         //     return redirect()->back()->with('error', "Amount entered is less than the price of the course");
         // }
