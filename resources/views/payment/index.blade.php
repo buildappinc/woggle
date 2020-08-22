@@ -164,7 +164,7 @@
                             <input type="hidden" name="quantity" value="100">
                             <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
                             <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
-                            <input class="border pl-2" name="currency" type="text" value="GHS">
+                            <input type="hidden" name="currency" type="text" value="GHS">
                       </div>
                       <div class="flex flex-wrap -mx-3 mb-2 py-16">
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -172,8 +172,7 @@
                                 Amount: <span class="text-xl font-bolder">GHC</span> <input class="border pl-2" name="amount" type="text">
                             </div>
                         </div>
-                        
-                        </div>
+                                                
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0 ">
                             <button type="submit" class="btn btn-primary h-12 w-full">
                                 {{ __('Check Payment') }}
