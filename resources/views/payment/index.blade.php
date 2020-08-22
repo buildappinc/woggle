@@ -58,7 +58,7 @@
         color: #000;
         text-align: center;
         box-sizing: border-box;
-        display: none;
+        
     }
     .ImageContainer .imgDisplay{
         max-height: 100%;
