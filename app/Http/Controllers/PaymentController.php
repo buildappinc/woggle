@@ -28,8 +28,8 @@ class PaymentController extends Controller
     public function redirectToGateway(Course $course)
     {        
 
-        // $user = \Auth::user();
-        // $user->courses()->attach($course);
+        $user = \Auth::user();
+        $user->courses()->attach($course);
 
         return Paystack::getAuthorizationUrl()->redirectNow();
     }
@@ -39,8 +39,7 @@ class PaymentController extends Controller
      * @return void
      */
     public function handleGatewayCallback($course)
-    {
-        dd(Course::find($course));
+    {        
         $paymentDetails = Paystack::getPaymentData();
         
         $database_details  = $paymentDetails['data'];

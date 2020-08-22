@@ -87,7 +87,7 @@
     <div class="box-2 rounded-md shadow-sm p-3">
         <div class="tabContainer">
             <div class="buttonContainer">
-                <button onclick="showPanel(0, '#e9e9e9')">Credit & Debit Cards</button>
+                <div class="text-3xl justify-center items-center">Credit & Debit Cards</div> 
             </div>
             <div class="tabPanel">
                 <form class="w-full max-w-6xl mt-16 px-12" method="POST" action="{{route('pay', ['course'=>$course->id])}}">
