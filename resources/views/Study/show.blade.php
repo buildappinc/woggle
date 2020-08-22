@@ -22,9 +22,9 @@
                                         <img class="rounded-lg h-48 max-h-full shadow-inner object-cover" src="{{asset('images/courses/'.$course->image)}}" alt="">
                                     </div>
                                     {{-- {{route('course.get', ['course'=>$course->id])}} --}}
-                                    <div class="mt-5">
+                                    <div class="mt-3">
                                         <a href="{{ route('payment.index', ['course'=>$course->id])}}" style="text-decoration: none; color: #000">
-                                            <div style="background-color: #f7b728; height: 40px; width: 180px; border-radius: 3px;">
+                                            <div style="background-color: #f7b728; height: 40px; width: 100%; border-radius: 3px;">
                                                   <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Enroll now</p> 
                                             </div>
                                         </a>
