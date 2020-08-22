@@ -27,11 +27,11 @@ class PaymentController extends Controller
      */
     public function redirectToGateway(Course $course)
     {        
-        dd(request()->amount);
-
-        // $user = \Auth::user();
-        // $user->courses()->attach($course);
-
+        if (request()->amount < $course->price) {
+            return redirect()->back()->with('error', "Amount entered is less than the price of the course");
+        }
+        $user = \Auth::user();
+        $user->courses()->attach($course);
         return Paystack::getAuthorizationUrl()->redirectNow();
     }
 
