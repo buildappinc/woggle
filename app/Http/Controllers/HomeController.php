@@ -37,6 +37,7 @@ class HomeController extends Controller
         $payment_user = Payment::where('user_id', $authUser)->get()->all();
 
         $courses = auth()->user()->courses->all();
+        dd($courses);
 
         $progress = Progress::where('user_id', $authUser)->pluck('course_id')->all();
 
