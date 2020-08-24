@@ -18,6 +18,7 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Raleway:ital,wght@0,300;0,400;1,455&family=Recursive:wght@500;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -51,47 +52,10 @@
         padding-left: 14%;
     }
 
-
-    /* .carousel{
-        height: 724px;
-    }
-
-    .carousel-inner{
-        height: 724px;
-    }
-
-    .carousel-caption {
-        position: absolute;
-        right: 15%;
-        bottom: 450px;
-        left: 15%;
-        z-index: 10;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: #fff;
-        text-align: center;
-    } */
     .main_section{
         position: relative
     }
 
-    /* .about{
-        position: absolute;
-        top: -25px;
-        left: 0;
-        clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
-        width: 50%;
-        height: 100px;
-        background-color:  #fb0040;
-        color: #fff;
-    }
-
-    .content{
-        margin-top: 10%;
-        background-color: whitesmoke;
-        height: 400px; 
-        width: 100%;
-    } */
 
     .text_1{
         margin-top: 15%;
@@ -201,6 +165,12 @@
         opacity: .7;
     }
 
+    .font{
+        font-family: 'Baloo Tamma 2', cursive;
+        font-family: 'Raleway', sans-serif;
+        font-family: 'Recursive', sans-serif;
+    }
+
     .wavy{
         position: absolute;
         width: 100%;
@@ -298,74 +268,7 @@
                     </div>
                 </div>
         </nav>
-            {{-- <nav class="nav navbar navbar-expand-md navbar-light bg-light fixed-top">
-                <div class="container-fluid">
-                    <div class="flex flex-row ">
-                        <div class="">
-                            <a class="navbar-brand animated fadeInLeft slow-4s" href="{{ url('/') }}">
-                                <div class="flex flex-row -mt-6 -ml-16 lg:mt-2 md:mt-2  ">
-                                    <div class="px-3 py-2 m-2">
-                                        <img src="{{asset('svg/logo1.svg')}}" style="object-fit: cover; height: 60px; margin-left: 40px">
-                                    </div>
-                                    <div class="px-3 py-2 m-2">
-                                        <img src="{{asset('svg/logo2.svg')}}" style="height: 40px; margin-left: -40px; margin-top: 8px">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="mt-2 ml-5 md:ml-56 sm:ml-56">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
-                    </div>
-    
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Right Side Of Navbar -->
-                        <ul class="nav-l navbar-nav ml-auto animated fadeInRight slow-4s">
-                            <li class="nav-item">
-                                <a href="/" class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/study" class="nav-link">Courses</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/contact" class="nav-link">Contact</a>
-                            </li>
-    
-                             <!-- Authentication Links -->
-                             @guest
-                             <li class="nav-item">
-                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                             </li> 
-                             @if (Route::has('register'))
-                                 <li class="nav-item register animated tada delay-5s animate__repeat-2">
-                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                 </li>
-                             @endif
-                         @else
-                             <li class="nav-item dropdown">
-                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                     {{ Auth::user()->fname }} <span class="caret"></span>
-                                 </a>
-    
-                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                     onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                         {{ __('Logout') }}
-                                     </a>
-    
-                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                         @csrf
-                                     </form>
-                                 </div>
-                             </li>
-                         @endguest
-                        </ul>
-                    </div>
-                </div>
-            </nav> --}}
+           
             <div class="homeImage animate__fadeInLeft">
                 <div class="color_overlay"></div>
                 <div class="wavy"></div>
@@ -416,11 +319,11 @@
             <div class="pb-3">
                 <div class="container">
                     <div class="sec_section">
-                        <div class="text-5xl">
+                        <div class="font text-5xl">
                             Our Featured Courses
                         </div>
                         <div>
-                            <p>Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</p>
+                            <p class="font">Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</p>
                         </div>
                     </div>
                     
@@ -443,22 +346,7 @@
                             @endforeach 
                         </div>
                     </div>
-                    {{-- <div class="m-5">
-                        <div class="flex flex-wrap ">
-                           @foreach ($courses as $course)
-                           <div class="w-2/6 p-2 mt-3">
-                                <div class="ind_courses">
-                                    <div class="h-full w-full">
-                                        <img src="/storage/{{$course->image}}" class="course max-h-full w-full max-w-full" style="height:20rem" alt="">
-                                    </div>
-                                    <div class="text-center text-3xl mt-3 pb-3">
-                                        {{$course->name}}
-                                    </div>
-                                </div>   
-                            </div>
-                           @endforeach 
-                        </div>
-                    </div> --}}
+                   
                 </div>
             </div>
 
