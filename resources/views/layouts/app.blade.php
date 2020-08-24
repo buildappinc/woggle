@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Recursive:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Raleway&family=Recursive:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Raleway:ital,wght@0,400;1,455&family=Recursive:wght@500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Comfortaa:wght@300&family=Raleway:ital,wght@0,300;0,400;1,455&family=Recursive:wght@500;600&family=Tajawal:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Comfortaa:wght@300&family=Raleway:ital,wght@0,300;0,400;1,455&family=Recursive:wght@500;600&family=Tajawal&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
