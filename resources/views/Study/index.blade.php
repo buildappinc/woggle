@@ -18,6 +18,7 @@
         font-family: 'Comfortaa', cursive;
         font-family: 'Raleway', sans-serif;
         font-family: 'Recursive', sans-serif;
+        font-family: 'Tajawal', sans-serif;
     }
 
     .font{
