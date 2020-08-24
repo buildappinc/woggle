@@ -39,7 +39,7 @@
                                     <div class="mt-3">
                                         <a href="{{ route('payment.index', ['course'=>$course->id])}}" style="text-decoration: none; color: #000">
                                             <div style="background-color: #f7b728; height: 40px; width: 100%; border-radius: 3px;">
-                                                  <p style="font text-align: center; padding-top: 6%; text-transform: uppercase">Enroll now</p> 
+                                                  <p style="text-align: center; padding-top: 6%; text-transform: uppercase" class="font">Enroll now</p> 
                                             </div>
                                         </a>
                                         {{-- <form action="{{route('course.get', ['course'=>$course->id])}}" method="post">
@@ -102,7 +102,7 @@
                             <div class="font">dad</div>
                             <div class="font mx-16">Sir John</div>
                         </div>
-                        <div class="font pr-4 pt-3 text-justify">
+                        <div class="text_font pr-4 pt-3 text-justify">
                             Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto in magnam animi molestias, doloremque odio, soluta, aliquam placeat illo dignissimos quae ab tenetur perferendis fuga ipsa maiores commodi vitae dolores. consectetur adipisicing elit. Dolores explicabo blanditiis sunt placeat sapiente. Quos autem officia quae illo incidunt perspiciatis consectetur unde, eum commodi sunt nesciunt, reiciendis neque dolore!
                         </div>
                     </div>
