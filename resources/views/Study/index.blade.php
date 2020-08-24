@@ -11,7 +11,19 @@
     .body_section{
         padding-top: 2.5%;
         padding-left: 1%;
-        
+    }
+
+    .text_font{
+        font-family: 'Baloo Tamma 2', cursive;
+        font-family: 'Comfortaa', cursive;
+        font-family: 'Raleway', sans-serif;
+        font-family: 'Recursive', sans-serif;
+    }
+
+    .font{
+        font-family: 'Baloo Tamma 2', cursive;
+        font-family: 'Raleway', sans-serif;
+        font-family: 'Recursive', sans-serif;
     }
 
     ul, li{
@@ -86,10 +98,10 @@
 
 @section('content')
 <div class="container-fluid header">
-    <div class="flex justify-center text-4xl tracking-wider" >
+    <div class="font flex justify-center text-4xl tracking-wider" >
         Courses
     </div>
-    <div class="flex justify-center">
+    <div class="font flex justify-center">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto delectus perspiciatis voluptatum similique
     </div>
 </div>
@@ -103,22 +115,22 @@
                         <img src="{{asset('images/courses/'.$courses->image)}}" class="lg:h-full md:h-full md:w-11/12 md:object-cover sm:w-full sm:object-cover rounded-lg lg:w-11/12 lg:object-cover"  alt="">
                     </div>
                     <div class="md:w-4/6 m-3 flex flex-col justify-between">
-                        <div class="text-4xl">
+                        <div class="font text-4xl">
                             {{$courses->name}}
                         </div>
-                        <div class="text-justify">
+                        <div class="text_font text-justify">
                             {{$courses->introduction}}
                         </div>
                         <div class="flex justify-between">
                             <div>
                              <a href="/study/{{$courses->id}}" style="text-decoration: none; color: #000">
                                  <div style="background-color: #f7b728; height: 40px; width: 150px; border-radius: 3px;">
-                                       <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Details</p> 
+                                       <p style="text-align: center; padding-top: 6%; text-transform: uppercase" class="font">Details</p> 
                                  </div>
                                </a>
                             </div>
                             
-                            <div class="px-4 py-2 m-2">
+                            <div class="font px-4 py-2 m-2">
                                 Learners: {{$courses->users()->count()}}
                              </div>
                          </div>
