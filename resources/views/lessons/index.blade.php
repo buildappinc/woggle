@@ -44,7 +44,7 @@
                                     <a href="{{ route('lesson.content', ['course'=>$course->id, 'topic'=>$topic->id])}}" class="font text-white">Begin</a>
                                 </div>
                                 <div class="text_font items-baseline mt-2">
-                                    @if ($topic->sections()->count() < 1)
+                                    @if ($topic->sections()->count() <= 1)
                                         {{$topic->sections()->count()}} lesson
                                     @else
                                         {{$topic->sections()->count()}} lessons 
