@@ -165,7 +165,7 @@
                                         </div>
                                         <div class="hello uppercase font-bold">
                                             
-                                                {{$userCourse->name}}
+                                                {{dd($userCourse->name)}}
                                            
                                         </div> 
                                     </div>
