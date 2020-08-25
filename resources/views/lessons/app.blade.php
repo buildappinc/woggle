@@ -24,6 +24,8 @@
       integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY="
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Raleway:ital,wght@0,400;1,455&family=Recursive:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Comfortaa:wght@300&family=Raleway:ital,wght@0,300;0,400;1,455&family=Recursive:wght@500;600&family=Tajawal&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
