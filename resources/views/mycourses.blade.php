@@ -161,7 +161,11 @@
                                         <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
                                             Course 
                                         </div>
-                                        <div class="hello uppercase font-bold">HTML</div> 
+                                        <div class="hello uppercase font-bold">
+                                            @foreach (Auth::user()->courses as $userCourse)
+                                                {{$userCourse->name}}
+                                            @endforeach
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
