@@ -121,7 +121,6 @@
                     @endforeach --}}
                 </div>
                 <div class="flex flex-wrap gap-4">
-                    @foreach (Auth::user()->courses as $userCourse)
                     @foreach ($payment_user as $item)
                        <div class="box2 p-4 grid grid-row-2 grid-flow-row">
                             <div>
@@ -145,7 +144,6 @@
                                         {{$item->reference}}
                                     </div>
                                 </div><br>
-                                
                                 <div class="flex justify-between">
                                     <div class="text-xs">
                                         <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
@@ -164,15 +162,12 @@
                                             Course 
                                         </div>
                                         <div class="hello uppercase font-bold">
-                                            
-                                                {{dd($userCourse->name)}}
-                                           
+                                           HTML
                                         </div> 
                                     </div>
                                 </div>
                             </div>
                        </div>
-                    @endforeach
                     @endforeach
                 </div>
             </div>
