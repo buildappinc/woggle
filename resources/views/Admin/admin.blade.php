@@ -116,7 +116,7 @@
                     </div>
                     @foreach ($courses as $item)
                         <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
-                            <a class="text-black">
+                            <a class="text-black" href="/admin/courses/{{$item->id}}/edit">
                                 <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-between px-4 p-4 hover:shadow-lg">
                                     <div>{{$item->name}}</div>
                                     <div>{{$item->price}}</div>
