@@ -50,9 +50,7 @@ class PaymentController extends Controller
      */
     public function handleGatewayCallback()
     {        
-        $paymentDetails = Paystack::getPaymentData();
-
-        dd($paymentDetails);
+        $paymentDetails = Paystack::getPaymentData();        
         
         $database_details  = $paymentDetails['data'];
         $hello = $database_details['customer'];
@@ -71,6 +69,7 @@ class PaymentController extends Controller
         $userData->status = $database_details['status'];
         $userData->currency = $database_details['currency'];
         $userData->email = $hello['email'];
+        $userData->course = $database_details['metadata'][0]['course_user'];
         $userData->customer_code = $hello['customer_code'];
 
         // saving the details into the database
