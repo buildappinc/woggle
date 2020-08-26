@@ -162,7 +162,7 @@
                                             Course 
                                         </div>
                                         <div class="hello uppercase font-bold">
-                                           HTML
+                                           {{$item->course}}
                                         </div> 
                                     </div>
                                 </div>
