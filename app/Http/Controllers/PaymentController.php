@@ -56,6 +56,7 @@ class PaymentController extends Controller
         $hello = $database_details['customer'];
         $transaction_id = $paymentDetails['data']['id'];
 
+
         // Auth::user()->id;
         // dd(\Auth::user()->fname);
         $authUser = auth()->user()->id;        
@@ -69,7 +70,7 @@ class PaymentController extends Controller
         $userData->status = $database_details['status'];
         $userData->currency = $database_details['currency'];
         $userData->email = $hello['email'];
-        $userData->course = $database_details['metadata'][0]['course_user'];
+        $userData->course = $database_details['metadata']['course_user'];
         $userData->customer_code = $hello['customer_code'];
 
         // saving the details into the database

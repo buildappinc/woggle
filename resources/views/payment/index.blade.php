@@ -161,6 +161,7 @@
                                         </span>
                                 @enderror
                             </div>
+                            
                             <input type="hidden" name="quantity" value="100">
                             <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
                             <input type="hidden" name="metadata" value="{{ json_encode($array = ['course_user' => $course->name]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
