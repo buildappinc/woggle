@@ -56,9 +56,6 @@ class PaymentController extends Controller
         $hello = $database_details['customer'];
         $transaction_id = $paymentDetails['data']['id'];
 
-
-        // Auth::user()->id;
-        // dd(\Auth::user()->fname);
         $authUser = auth()->user()->id;        
 
         $userData = new Payment();
