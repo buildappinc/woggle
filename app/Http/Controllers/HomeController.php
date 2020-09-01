@@ -84,6 +84,10 @@ class HomeController extends Controller
         return redirect('/mycourses/');
     }
 
+    public function deleteCourse(User $user){
+        dd($user);
+    }
+
 
 
     

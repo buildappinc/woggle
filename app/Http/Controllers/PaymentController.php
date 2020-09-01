@@ -56,6 +56,10 @@ class PaymentController extends Controller
         $hello = $database_details['customer'];
         $transaction_id = $paymentDetails['data']['id'];
 
+         // get course based on the id 
+        $course = Course::findOrFail($database_details['metadata']['course_user']);
+        dd($course);
+
         $authUser = auth()->user()->id;        
 
         $userData = new Payment();
