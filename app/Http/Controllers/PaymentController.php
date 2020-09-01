@@ -37,7 +37,7 @@ class PaymentController extends Controller
                 return redirect()->back()->with('error', "Amount entered is less than the price of the course");
             }
             
-            $user->courses()->attach($course);
+            // $user->courses()->attach($course);
             return Paystack::getAuthorizationUrl()->redirectNow();
         }
         return redirect()->route('home')->with("warning", "Course has already been registered for");
