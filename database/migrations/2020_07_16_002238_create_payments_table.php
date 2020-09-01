@@ -23,7 +23,7 @@ class CreatePaymentsTable extends Migration
             $table->string('status');
             $table->string('currency');
             $table->string('email');
-            $table->integer('course');
+            $table->string('course');
             $table->string('customer_code');
             $table->timestamps();
         });

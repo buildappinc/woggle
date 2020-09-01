@@ -37,7 +37,6 @@ class PaymentController extends Controller
                 return redirect()->back()->with('error', "Amount entered is less than the price of the course");
             }
             
-            // $user->courses()->attach($course);
             return Paystack::getAuthorizationUrl()->redirectNow();
         }
         return redirect()->route('home')->with("warning", "Course has already been registered for");
@@ -58,7 +57,6 @@ class PaymentController extends Controller
 
          // get course based on the id 
         $course = Course::findOrFail($database_details['metadata']['course_user']);
-        dd($course);
 
         $authUser = auth()->user()->id;        
 
@@ -71,18 +69,19 @@ class PaymentController extends Controller
         $userData->status = $database_details['status'];
         $userData->currency = $database_details['currency'];
         $userData->email = $hello['email'];
-        $userData->course = $database_details['metadata']['course_user'];
+        $userData->course = $course->name;
         $userData->customer_code = $hello['customer_code'];
 
         // saving the details into the database
         $userData->save();
-
         
         // checking if the status is either true or false
         if ($paymentDetails['status'] === false) {
             return redirect()->back()->with('error', $paymentDetails['message']);
         } else {
-            return redirect("/mycourses")->with('success', $paymentDetails['message']);
+            $user = \Auth::user();
+            $user->courses()->attach($course);
+            return redirect("/mycourses")->with('success', $paymentDetails['message'] . " You have successfully enrolled for a course ");
         }
 
         // dd($paymentDetails);
