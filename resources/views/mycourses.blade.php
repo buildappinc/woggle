@@ -167,12 +167,12 @@
                 </div>
             </div>
             <div class="mt-4">
-                <p class="italic hello">Course progress</p>
+                <p class="italic hello">Course details</p>
                 <div class="grid grid-rows-2 gap-6">
                     @foreach ($courses as $item)        
                             <div class=" box hover:shadow-lg"> 
                                 <div class="p-3">
-                                    <div>
+                                    <div class="hello text-xl">
                                         {{$item->name}}
                                     </div>
                                     <div class="flex flex-wrap">
@@ -185,10 +185,10 @@
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <div class="pr-2">
-                                        <p class="font text-center capitalize text-sm bg-blue-300 rounded p-2">course completion</p>
+                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem">course completion</p>
                                     </div>
                                     <div class="pl-2">
-                                        <p class="font text-center capitalize text-sm bg-blue-300 rounded p-2">Request for exam date</p>
+                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem">Request for exam date</p>
                                     </div>
                                 </div>
                             </div>    
