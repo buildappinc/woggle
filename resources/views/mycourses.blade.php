@@ -21,6 +21,11 @@
         font-family: 'Recursive', sans-serif;
     }
 
+    .font{
+        font-family: 'Baloo Tamma 2', cursive; 
+        font-family: 'Recursive', sans-serif;
+    }
+
 </style>
 
 @extends('layouts.app')
@@ -63,7 +68,6 @@
                         Experience
                     </div>
                     
-                    
                     {{-- button --}}
                     <div class="mt-3 flex flex-row gap-3">
                         <a href="{{ route('profile.edit', [Auth::user()->id])}}" style="text-decoration: none; color: #000">
@@ -72,7 +76,7 @@
                             </div>
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
             
@@ -111,11 +115,6 @@
             </div>
             <div>
                 <p class="italic hello">Payment History</p>
-                <div>
-                    {{-- @foreach ( dd($CheckUserSection) as $item)
-                        {{$item}}
-                    @endforeach --}}
-                </div>
                 <div class="flex flex-wrap gap-4">
                     @foreach ($payment_user as $item)
                        <div class="box2 p-4 grid grid-row-2 grid-flow-row">
@@ -179,12 +178,22 @@
                                     <div class="flex flex-wrap">
                                         @foreach ($item->topics as $items)                                             
                                             <div class="pl-1 pt-3" style="width: 24%">
-                                                <div class="text-center text-xs bg-blue-100 p-1 shadow-sm capitalize" style="border-radius: 10px 30px; font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">{{$items->name}}</div>
+                                                <div class="font text-center text-xs bg-blue-100 p-1 shadow-sm capitalize" style="border-radius: 10px 30px;">{{$items->name}}</div>
                                             </div>                                            
                                         @endforeach
                                     </div>
                                 </div>
-                            </div>                        
+                                <div class="p-3 flex items-center justify-center">
+                                    <div>
+                                        <p class="font text-center capitalize text-xs bg-blue-100 p-1">course completion</p>
+                                    </div>
+                                    <div>
+                                        <p class="font text-center capitalize text-xs bg-blue-100 p-1">Request for exam date</p>
+                                    </div>
+                                </div>
+                            </div>    
+                            
+
                      @endforeach
                 </div>
             </div>
