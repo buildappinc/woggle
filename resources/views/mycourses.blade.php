@@ -185,10 +185,10 @@
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <div class="pr-2">
-                                        <p class="font text-center capitalize text-xs bg-blue-300 p-3">course completion</p>
+                                        <p class="font text-center capitalize text-sm bg-blue-300 rounded p-2">course completion</p>
                                     </div>
                                     <div class="pl-2">
-                                        <p class="font text-center capitalize text-xs bg-blue-300 p-3">Request for exam date</p>
+                                        <p class="font text-center capitalize text-sm bg-blue-300 rounded p-2">Request for exam date</p>
                                     </div>
                                 </div>
                             </div>    
