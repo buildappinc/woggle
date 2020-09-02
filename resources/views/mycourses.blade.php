@@ -183,12 +183,12 @@
                                         @endforeach
                                     </div>
                                 </div>
-                                <div class="p-3 flex items-center justify-center">
-                                    <div>
-                                        <p class="font text-center capitalize text-xs bg-blue-100 p-1">course completion</p>
+                                <div class="flex items-center justify-center">
+                                    <div class="pr-2">
+                                        <p class="font text-center capitalize text-xs bg-blue-300 p-3">course completion</p>
                                     </div>
-                                    <div>
-                                        <p class="font text-center capitalize text-xs bg-blue-100 p-1">Request for exam date</p>
+                                    <div class="pl-2">
+                                        <p class="font text-center capitalize text-xs bg-blue-300 p-3">Request for exam date</p>
                                     </div>
                                 </div>
                             </div>    
