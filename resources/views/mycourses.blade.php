@@ -177,11 +177,11 @@
                                     </div>
                                     <div class="flex flex-wrap">
                                         @foreach ($item->topics as $items)                                             
-                                            <a href="{{ route('lesson.content', ['course'=>$item->id, 'topic'=>$items->id]) }}">
-                                                <div class="pl-1 pt-3" style="width: 24%">
+                                            <div class="pl-1 pt-3" style="width: 24%">
+                                                <a href="{{ route('lesson.content', ['course'=>$item->id, 'topic'=>$items->id]) }}">
                                                     <div class="font text-center text-xs bg-blue-100 p-1 shadow-sm capitalize" style="border-radius: 10px 30px;">{{$items->name}}</div>
-                                                </div>     
-                                            </a>                                                                   
+                                                </a>                                                                   
+                                            </div>     
                                         @endforeach
                                     </div>
                                 </div>
