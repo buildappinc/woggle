@@ -120,7 +120,7 @@
                        <div class="box2 p-4 grid grid-row-2 grid-flow-row">
                             <div>
                                 <div class="flex justify-between items-baseline">
-                                    <div class="font-extrabold text-2xl">
+                                    <div class="font font-extrabold text-2xl">
                                         {{$item->currency}}
                                         {{$item->amount *.01 }}
                                     </div>
@@ -185,7 +185,7 @@
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <div class="pr-2">
-                                        <p class="font text-center capitalize bg-blue-300 rounded p-2 text-white" style="font-size: 0.82rem; background-color: #406AB4">course completion</p>
+                                        <p class="font text-center capitalize bg-blue-300 rounded p-2 text-white" id="course_completion" style="font-size: 0.82rem; background-color: #406AB4">course completion</p>
                                     </div>
                                     <div class="pl-2">
                                         <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background-color: #f7b728">Request for exam date</p>
@@ -198,4 +198,38 @@
         </div>
     </div>
 </div>
+
+{{-- scriping section  --}}
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $("course_completion").click(function(e){
+            e.preventDefault()
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this imaginary file!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+                })
+                .then((willDelete) => {
+                if (willDelete) {
+                    swal("Poof! Your imaginary file has been deleted!", {
+                    icon: "success",
+                    });
+                } else {
+                    swal("Your imaginary file is safe!");
+                }
+            });
+        })
+    })
+</script>
 @endsection
