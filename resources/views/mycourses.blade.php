@@ -214,8 +214,8 @@
         $("#course_completion").click(function(e){
             e.preventDefault()
             swal({
-                title: "Are you sure?",
-                text: "Once deleted, you will not be able to recover this imaginary file!",
+                title: "Take note",
+                text: "Are you very certain you have completed every aspect of this course. \n NB: confirming this would unlock the exam request section",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,
