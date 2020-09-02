@@ -168,36 +168,32 @@
             </div>
             <div class="mt-4">
                 <p class="italic hello">Course details</p>
-                @if (Auth::user()->courses->is_completed == false)
-                    <div class="grid grid-rows-2 gap-6">
-                        @foreach ($courses as $item)        
-                                <div class=" box hover:shadow-lg"> 
-                                    <div class="p-3">
-                                        <div class="hello text-xl">
-                                            {{$item->name}}
-                                        </div>
-                                        <div class="flex flex-wrap">
-                                            @foreach ($item->topics as $items)                                             
-                                                <div class="pl-1 pt-3" style="width: 24%">
-                                                    <div class="font text-center text-xs bg-blue-100 p-1 shadow-sm capitalize" style="border-radius: 10px 30px;">{{$items->name}}</div>
-                                                </div>                                            
-                                            @endforeach
-                                        </div>
+                <div class="grid grid-rows-2 gap-6">
+                    @foreach ($courses as $item)        
+                            <div class=" box hover:shadow-lg"> 
+                                <div class="p-3">
+                                    <div class="hello text-xl">
+                                        {{$item->name}}
                                     </div>
-                                    <div class="flex items-center justify-center">
-                                        <div class="pr-2">
-                                            <p class="font text-center capitalize bg-blue-300 rounded p-2 text-white" id="course_completion" style="font-size: 0.82rem; background-color: #406AB4; cursor: pointer">course completion</p>
-                                        </div>
-                                        <div class="pl-2">
-                                            <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background-color: #f7b728">Request for exam date</p>
-                                        </div>
+                                    <div class="flex flex-wrap">
+                                        @foreach ($item->topics as $items)                                             
+                                            <div class="pl-1 pt-3" style="width: 24%">
+                                                <div class="font text-center text-xs bg-blue-100 p-1 shadow-sm capitalize" style="border-radius: 10px 30px;">{{$items->name}}</div>
+                                            </div>                                            
+                                        @endforeach
                                     </div>
-                                </div>    
-                        @endforeach
-                    </div>
-                @else
-                    <h1>hey there</h1>
-                @endif
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <div class="pr-2">
+                                        <p class="font text-center capitalize bg-blue-300 rounded p-2 text-white" id="course_completion" style="font-size: 0.82rem; background-color: #406AB4; cursor: pointer">course completion</p>
+                                    </div>
+                                    <div class="pl-2">
+                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background-color: #f7b728">Request for exam date</p>
+                                    </div>
+                                </div>
+                            </div>    
+                     @endforeach
+                </div>
             </div>
         </div>
     </div>
