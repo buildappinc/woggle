@@ -208,9 +208,9 @@ h2 {
                 </a>
             </div>
         </div>
-        <div class="text-2xl font-bold mx-3">
-          Course content
-      </div>
+        <div class="text-2xl font-bold mx-3 mt-10">
+          Course Exam Questions
+        </div>
 
       {{-- adding section and lessons for courses  --}}
       <div>
@@ -251,7 +251,7 @@ h2 {
                                           add
                                       </span>
                                   </div> 
-                                  <div class="pl-3">Add lesson</div> 
+                                  <div class="pl-3">Add Options</div> 
                               </div>
                           </a>
                       </div>
@@ -267,11 +267,7 @@ h2 {
                           </div>
                           <div class="px-4">
                             <input type="hidden" class="delete_value" value="{{$topic->id}}">
-                            {{-- <form action="{{route('Course.topic.delete', ['course'=>$course->id, 'topic'=>$topic->id])}}" method="post">
-                              @method('DELETE')
-                              @csrf
-                                  <button type="submit" class="text-white"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
-                            </form>    --}}
+                           
                             <button type="submit" class="text-white deleteSection"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
                           </div>
                       </div>
@@ -290,7 +286,7 @@ h2 {
                               add
                           </span>
                       </div> 
-                      <div class="pl-3">Add New Section</div> 
+                      <div class="pl-3">Add New Question</div> 
                   </div>
               </a>
           </div>
