@@ -209,7 +209,7 @@ h2 {
             </div>
         </div>
         <div class="text-2xl font-bold mx-3 mt-10">
-          Course Exam Questions
+          Course Exam Questions 
         </div>
 
       {{-- adding section and lessons for courses  --}}
@@ -230,7 +230,7 @@ h2 {
                   </div>
             @endif
               
-             @foreach ($course->topics as $topic)
+             {{-- @foreach ($course->topics as $topic)
 
                   <div class="select-box mt-4">
                     <div class="options-container -mt-3">  
@@ -273,7 +273,7 @@ h2 {
                       </div>
                     </div>
                   </div>
-             @endforeach
+             @endforeach --}}
           </div>
           </div>
 
