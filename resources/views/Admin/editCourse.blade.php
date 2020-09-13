@@ -279,7 +279,7 @@ h2 {
 
           {{-- section input  --}}
           <div class="mt-6">
-              <a class="text-black" href="{{ route('Course.topic', ['course' => $course->id])}}">
+              <a class="text-black" href="{{ route('Course.topic', ['course' => $course->id])}}" data-toggle="modal" data-target="#exampleModalCenter">
                   <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style=" background: #F7F7F7; width:97%; border:1px dashed #000000">
                       <div class="pl-2">
                           <span class="material-icons md-18">
@@ -289,6 +289,26 @@ h2 {
                       <div class="pl-3">Add New Question</div> 
                   </div>
               </a>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
           </div>
       </div>
     </div>
