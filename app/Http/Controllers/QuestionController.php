@@ -11,8 +11,7 @@ class QuestionController extends Controller
     //
 
     public function create(Request $request, Course $course)
-    {
-        dd($request->all());
+    {        
 
         $data = $request->validate([
             'question' => ["required"], 
