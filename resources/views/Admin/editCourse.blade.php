@@ -291,7 +291,7 @@ h2 {
               </a>
           </div>
           <!-- Modal -->
-          <form action="{{route('question.create', $course->id)}}">
+          <form action="{{route('question.create', $course->id)}}" method="POST">
             <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                   <div class="modal-content">
