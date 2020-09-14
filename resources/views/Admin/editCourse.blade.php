@@ -290,6 +290,17 @@ h2 {
                                   </span>
                           @enderror
                       </div>
+                      <div class="w-full px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                            Accurate Answer
+                        </label>
+                        <textarea name="answer" id="answer" cols="16" rows="3" class="form-control @error('answer') is-invalid @enderror" required autocomplete="answer" autofocus></textarea>
+                        @error('answer')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                        @enderror
+                    </div>
                     </div>    
                     <div class="modal-footer">
                       <button type="submit" class="btn btn-primary">Save changes</button>
