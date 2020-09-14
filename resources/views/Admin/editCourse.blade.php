@@ -292,8 +292,8 @@ h2 {
           </div>
           <!-- Modal -->
           <form action="">
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLongTitle">Quiz Question</h5>
@@ -306,7 +306,7 @@ h2 {
                           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                               Question
                           </label>
-                          <textarea name="question" id="question" cols="10" rows="18" class="form-control @error('question') is-invalid @enderror" required autocomplete="question" autofocus></textarea>
+                          <textarea name="question" id="question" cols="18" rows="15" class="form-control @error('question') is-invalid @enderror" required autocomplete="question" autofocus></textarea>
                           @error('question')
                                   <span class="invalid-feedback" role="alert">
                                       <strong>{{ $message }}</strong>
