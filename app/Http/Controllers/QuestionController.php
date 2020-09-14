@@ -18,8 +18,6 @@ class QuestionController extends Controller
         $question->name = $request->name;
         $question->save();
 
-        dd($course);
-
         return redirect('/admin/courses/'. $course->id .'/edit')->with("message", "Question Added");
 
     }
