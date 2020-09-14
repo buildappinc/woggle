@@ -302,7 +302,7 @@ h2 {
                     </button>
                   </div>
                   <div class="modal-body">
-                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    {{-- <div class="w-full px-3 mb-6 md:mb-0">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                             Question
                         </label>
@@ -312,6 +312,10 @@ h2 {
                                     <strong>{{ $message }}</strong>
                                 </span>
                         @enderror
+                    </div> --}}
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Recipient:</label>
+                      <input type="text" class="form-control" id="recipient-name">
                     </div>
                   </div>
                   <div class="modal-footer">
