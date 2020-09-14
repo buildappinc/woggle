@@ -157,7 +157,7 @@ h2 {
                             @endforeach --}}
                           </label>
                           <div class="mt-6">
-                            <a class="text-black" href="{{ route('Topic.section', ['course' => $course->id, 'topic' => $topic->id])}}">
+                            <a class="text-black">
                                 <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style="width: 97%; border:1px dashed #000000" >
                                     <div class="pl-2">
                                         <span class="material-icons md-18">
@@ -172,14 +172,14 @@ h2 {
                       </div>
                       <div class="selected bg-gray-200 flex flex-row justify-between">
                         <div>
-                            Section:{{$topic->id}} {{$topic->name}}
+                            Section:
                         </div>
                         <div class="mr-4 flex flex-row">
                             <div>
-                              <a href="{{ route('Course.topic.edit', ['course'=>$course->id , 'topic'=>$topic->id])}}"><img src="{{asset('images/edit.png')}}" alt=""></a>
+                              <a><img src="{{asset('images/edit.png')}}" alt=""></a>
                             </div>
                             <div class="px-4">
-                              <input type="hidden" class="delete_value" value="{{$topic->id}}">
+                              <input type="hidden" class="delete_value" >
                               <button type="submit" class="text-white deleteSection"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
                             </div>
                         </div>
