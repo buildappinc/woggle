@@ -219,17 +219,6 @@ h2 {
               
               <div class="container">
                 
-            @if (Session::has('success'))
-                  <div class="alert alert-success">
-                    {{Session::get('success')}}
-                  </div>
-            @endif
-            @if (Session::has('message'))
-                  <div class="alert alert-success">
-                    {{Session::get('message')}}
-                  </div>
-            @endif
-              
              {{-- @foreach ($course->topics as $topic)
 
                   <div class="select-box mt-4">
