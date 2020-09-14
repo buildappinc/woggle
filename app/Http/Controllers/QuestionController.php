@@ -18,7 +18,10 @@ class QuestionController extends Controller
             'course_id' => ["required"]
         ]);
 
-        Question::create($data);
+        $question = new Question(); 
+        $question->course_id = $course->id;
+        $question->question = $request->question;
+        $question->save();
 
         return redirect()->back()->with("message", "Question Added");
 

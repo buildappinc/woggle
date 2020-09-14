@@ -248,7 +248,7 @@ h2 {
                     </div>
                     <div class="selected bg-gray-200 flex flex-row justify-between">
                       <div>
-                          Section:{{$question->id}} {{$question->question}}
+                          Question: {{$question->question}}
                       </div>
                       <div class="mr-4 flex flex-row">
                           <div>
