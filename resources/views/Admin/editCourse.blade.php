@@ -248,7 +248,7 @@ h2 {
                     </div>
                     <div class="selected bg-gray-200 flex flex-row justify-between">
                       <div>
-                          Question: {{$question->question}}
+                          Question: {{$question->name}}
                       </div>
                       <div class="mr-4 flex flex-row">
                           <div>
@@ -266,6 +266,38 @@ h2 {
           </div>
           </div>
 
+           <!-- Modal -->
+           <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Quiz Question</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <form action="{{route('question.create', ['course'=>$course->id])}}" method="POST">
+                    @csrf
+                    <div class="modal-body">
+                      <div class="w-full px-3 mb-6 md:mb-0">
+                          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                              Question
+                          </label>
+                          <textarea name="name" id="name" cols="16" rows="8" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus></textarea>
+                          @error('name')
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message }}</strong>
+                                  </span>
+                          @enderror
+                      </div>
+                    </div>    
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+          </div>
           {{-- section input  --}}
           <div class="mt-6">
               <a class="text-black" href="{{ route('Course.topic', ['course' => $course->id])}}" data-toggle="modal" data-target="#exampleModalCenter">
@@ -279,38 +311,7 @@ h2 {
                   </div>
               </a>
           </div>
-          <!-- Modal -->
-            <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Quiz Question</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <form action="{{route('question.create', ['course'=>$course->id])}}" method="POST">
-                      @csrf
-                      <div class="modal-body">
-                        <div class="w-full px-3 mb-6 md:mb-0">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                                Question
-                            </label>
-                            <textarea name="question" id="question" cols="16" rows="8" class="form-control @error('question') is-invalid @enderror" required autocomplete="question" autofocus></textarea>
-                            @error('question')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                            @enderror
-                        </div>
-                      </div>    
-                      <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                      </div>
-                  </form>
-                  </div>
-              </div>
-            </div>
+         
       </div>
     </div>
 

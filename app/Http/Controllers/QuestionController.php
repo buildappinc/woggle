@@ -14,13 +14,13 @@ class QuestionController extends Controller
     {        
 
         $data = $request->validate([
-            'question' => ["required"], 
+            'name' => ["required"], 
             'course_id' => ["required"]
         ]);
 
         $question = new Question(); 
         $question->course_id = $course->id;
-        $question->question = $request->question;
+        $question->name = $request->name;
         $question->save();
 
         return redirect('/admin/courses/'. $course->id .'/edit')->with("message", "Question Added");
