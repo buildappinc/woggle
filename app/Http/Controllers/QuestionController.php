@@ -13,13 +13,15 @@ class QuestionController extends Controller
     public function create(Request $request, Course $course)
     {
 
-        $data = $request->validate([
-            'question' => "required", 
-            'course_id' => 'required'
-        ]);
+        dd($request->all());
 
-        dd($data);
+        // $data = $request->validate([
+        //     'question' => "required", 
+        //     'course_id' => 'required'
+        // ]);
 
-        dd(Question::create($data));
+        // dd($data);
+
+        // dd(Question::create($data));
     }
 }
