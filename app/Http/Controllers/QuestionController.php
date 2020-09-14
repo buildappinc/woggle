@@ -23,15 +23,7 @@ class QuestionController extends Controller
         $question->question = $request->question;
         $question->save();
 
-        return redirect()->back()->with("message", "Question Added");
+        return redirect('/admin/courses/'. $course->id .'/edit')->with("message", "Question Added");
 
-        // $data = $request->validate([
-        //     'question' => "required", 
-        //     'course_id' => 'required'
-        // ]);
-
-        // dd($data);
-
-        // dd(Question::create($data));
     }
 }

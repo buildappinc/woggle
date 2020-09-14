@@ -280,8 +280,6 @@ h2 {
               </a>
           </div>
           <!-- Modal -->
-          <form action="{{route('question.create', ['course'=>$course->id])}}" method="POST">
-            @csrf
             <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                   <div class="modal-content">
@@ -291,26 +289,28 @@ h2 {
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                    <div class="modal-body">
-                      <div class="w-full px-3 mb-6 md:mb-0">
-                          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                              Question
-                          </label>
-                          <textarea name="question" id="question" cols="16" rows="8" class="form-control @error('question') is-invalid @enderror" required autocomplete="question" autofocus></textarea>
-                          @error('question')
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong>{{ $message }}</strong>
-                                  </span>
-                          @enderror
+                    <form action="{{route('question.create', ['course'=>$course->id])}}" method="POST">
+                      @csrf
+                      <div class="modal-body">
+                        <div class="w-full px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                                Question
+                            </label>
+                            <textarea name="question" id="question" cols="16" rows="8" class="form-control @error('question') is-invalid @enderror" required autocomplete="question" autofocus></textarea>
+                            @error('question')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                      </div>    
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Save changes</button>
                       </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
+                  </form>
                   </div>
               </div>
             </div>
-          </form>
       </div>
     </div>
 
