@@ -187,50 +187,7 @@
                   </div>
                 </form>
             </div>
-            {{-- <div class="tabPanel mt-10">
-                <div class="text-xl">
-                    Select Mobile Carrier
-                </div>
-                <div class="ImageContainer">
-                    <div class="ImageSelect flex flex-row mt-6 justify-center">
-                        <div class="px-2">
-                            <button onclick="showText(0)"><img src="{{asset('images/1f636a94a1254e1896cb1aabcd926aa1.jpeg')}}" class="h-32 w-32 rounded-full" alt=""></button>
-                        </div>
-                        <div class="px-2">
-                            <button onclick="showText(1)"><img src="{{asset('images/2018_AP_2018_075_hero_1.jpg')}}" class="h-32 w-32 rounded-full" alt=""></button>
-                        </div>
-                        <div class="px-2">
-                            <button onclick="showText(2)"><img src="{{asset('images/068dcf665c0043618f4adb6e440d3014.jpeg')}}" class="h-32 w-32 rounded-full" alt=""></button>
-                        </div>
-                    </div>
-                    <div class="imgDisplay mt-4 text-2xl font-bold">Airtel-Tigo</div>
-                    <div class="imgDisplay mt-4 text-2xl font-bold">Vodafone</div>
-                    <div class="imgDisplay mt-4 text-2xl font-bold">MTN</div>
-                </div>
-                <div>
-                    <form action="" class="w-full max-w-6xl mt-8 px-12">
-                        <div class="flex flex-wrap -mx-3 mb-6 justify-center">
-                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                                    Phone Number
-                                </label>
-                                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="023*******">
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap -mx-3 mb-2 py-2">
-                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                                <div class="text-lg font-bold">
-                                    Total Cost: <span class="text-3xl font-bolder">GHC</span>
-                                </div>
-                            </div>
-                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0 ">
-                                <button type="submit" class="btn btn-primary h-12 w-full">
-                                    {{ __('Make Payment') }}
-                                </button>
-                            </div>
-                    </form>
-                </div>
-            </div> --}}
+          
         </div>
     </div>
 

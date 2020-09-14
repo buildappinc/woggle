@@ -17,7 +17,6 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->unsignedInteger('course_id');
             $table->string('question'); 
-            
             $table->timestamps();
         });
     }
