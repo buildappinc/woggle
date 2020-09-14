@@ -306,7 +306,7 @@ h2 {
                           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                               Question
                           </label>
-                          <input name="question" class="@error('question') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="0234*****">
+                          <textarea name="question" id="question" cols="10" rows="18" class="form-control @error('question') is-invalid @enderror" required autocomplete="question" autofocus></textarea>
                           @error('question')
                                   <span class="invalid-feedback" role="alert">
                                       <strong>{{ $message }}</strong>
