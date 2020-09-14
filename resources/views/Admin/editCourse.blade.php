@@ -233,7 +233,39 @@ h2 {
                           @endforeach --}}
                         </label>
                         <div class="mt-6">
-                          <a class="text-black">
+                          {{-- modal for answers --}}
+                          <div class="modal fade bd-example-modal-lg" id="exampleModalCenter_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Quiz Question Solutions</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <form action="{{route('question.create', ['course'=>$course->id])}}" method="POST">
+                                    @csrf
+                                    <div class="modal-body">
+                                      <div class="w-full px-3 mb-6 md:mb-0">
+                                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                                            Accurate Answer
+                                        </label>
+                                        <textarea name="answer" id="answer" cols="16" rows="3" class="form-control @error('answer') is-invalid @enderror" required autocomplete="answer" autofocus></textarea>
+                                        @error('answer')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                        @enderror
+                                    </div>
+                                    </div>    
+                                    <div class="modal-footer">
+                                      <button type="submit" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                          </div>
+                          <a data-toggle="modal" data-target="#exampleModalCenter_1" class="text-black">
                               <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style="width: 97%; border:1px dashed #000000" >
                                   <div class="pl-2">
                                       <span class="material-icons md-18">
