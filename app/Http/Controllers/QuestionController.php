@@ -12,12 +12,13 @@ class QuestionController extends Controller
 
     public function create(Request $request, Course $course)
     {        
-        dd($course);
 
         $data = $request->validate([
             'name' => ["required"], 
             'course_id' => ["required"]
         ]);
+
+        dd($course);
 
         $question = new Question(); 
         $question->course_id = $course->id;
