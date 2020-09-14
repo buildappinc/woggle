@@ -143,18 +143,18 @@ h2 {
                     </div>
               @endif
                 
-               @foreach ($course->topics as $topic)
+               @foreach ($course->questions as $question)
 
                     <div class="select-box mt-4">
                       <div class="options-container -mt-3">  
                         <div class="option">
                           <input type="radio" class="radio" id="automobiles" name="category"/>
                           <label for="automobiles">
-                            @foreach ($topic->sections as $section)
+                            {{-- @foreach ($topic->sections as $section)
                                 <div class="flex flex-col p-2 ml-3">
                                   <a href="{{route('Topic.section.edit', ['topic'=>$topic->id, 'section'=>$section->id])}}" class="text-black"><span class="font-bold">Lesson: </span> {{$section->header}}</a>
                                 </div>
-                            @endforeach
+                            @endforeach --}}
                           </label>
                           <div class="mt-6">
                             <a class="text-black" href="{{ route('Topic.section', ['course' => $course->id, 'topic' => $topic->id])}}">
@@ -180,11 +180,6 @@ h2 {
                             </div>
                             <div class="px-4">
                               <input type="hidden" class="delete_value" value="{{$topic->id}}">
-                              {{-- <form action="{{route('Course.topic.delete', ['course'=>$course->id, 'topic'=>$topic->id])}}" method="post">
-                                @method('DELETE')
-                                @csrf
-                                    <button type="submit" class="text-white"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
-                              </form>    --}}
                               <button type="submit" class="text-white deleteSection"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
                             </div>
                         </div>
@@ -219,7 +214,7 @@ h2 {
               
               <div class="container">
                 
-             {{-- @foreach ($course->topics as $topic)
+             @foreach ($course->topics as $topic)
 
                   <div class="select-box mt-4">
                     <div class="options-container -mt-3">  
@@ -262,7 +257,7 @@ h2 {
                       </div>
                     </div>
                   </div>
-             @endforeach --}}
+             @endforeach
           </div>
           </div>
 
