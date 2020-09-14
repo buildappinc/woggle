@@ -306,7 +306,7 @@ h2 {
                           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                               Question
                           </label>
-                          <textarea name="question" id="question" cols="18" rows="15" class="form-control @error('question') is-invalid @enderror" required autocomplete="question" autofocus></textarea>
+                          <textarea name="question" id="question" cols="16" rows="8" class="form-control @error('question') is-invalid @enderror" required autocomplete="question" autofocus></textarea>
                           @error('question')
                                   <span class="invalid-feedback" role="alert">
                                       <strong>{{ $message }}</strong>
