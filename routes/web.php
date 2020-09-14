@@ -76,4 +76,5 @@ Route::get('/payment/{course}', 'PaymentController@index')->name('payment.index'
 Route::post('/pay/{course}', 'PaymentController@redirectToGateway')->name('pay');
 Route::get('/payment/callback/{course}', 'PaymentController@handleGatewayCallback');
 
-
+// questions
+Route::post('/admin/{course}/question', 'QuestionController@create')->name('question.create');
