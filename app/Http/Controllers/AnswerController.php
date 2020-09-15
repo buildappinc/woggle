@@ -14,6 +14,7 @@ class AnswerController extends Controller
     public function create(Request $request, Course $course, Question $question)
     {
         $answer = new Answer();
+        $answer->question_id = $question->id;
         $answer->option = $request->option;
 
         $answer->save(); 
