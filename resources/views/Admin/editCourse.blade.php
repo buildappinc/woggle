@@ -262,29 +262,25 @@ h2 {
                       </div>
                     </div>
                   </div>
-             @endforeach
-          </div>
-          </div>
-
-           {{-- modal for answers --}}
+                   {{-- modal for answers --}}
            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Answer</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <form>
+                <form action="{{route('answer.create', ['course'=>$course->id, 'question'=>$question->id])}}">
                   @csrf
                   <div class="modal-body">
                       <div class="w-full px-3 mb-6 md:mb-0">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                            Question
+                            Option 1
                         </label>
-                        <textarea name="name" id="name" cols="15" rows="3" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus></textarea>
-                        @error('name')
+                        <textarea name="option_1" id="option_1" cols="15" rows="2" class="form-control @error('option_1') is-invalid @enderror" required autocomplete="option_1" autofocus></textarea>
+                        @error('option_1')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -292,10 +288,10 @@ h2 {
                     </div>
                     <div class="w-full px-3 mb-6 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                          Question
+                          Option 2
                       </label>
-                      <textarea name="name" id="name" cols="15" rows="3" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus></textarea>
-                      @error('name')
+                      <textarea name="option_2" id="option_2" cols="15" rows="2" class="form-control @error('option_2') is-invalid @enderror" required autocomplete="option_2" autofocus></textarea>
+                      @error('option_2')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
@@ -303,10 +299,10 @@ h2 {
                     </div>
                     <div class="w-full px-3 mb-6 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                          Question
+                          Option 3
                       </label>
-                      <textarea name="name" id="name" cols="15" rows="3" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus></textarea>
-                      @error('name')
+                      <textarea name="option_3" id="option_3" cols="15" rows="2" class="form-control @error('option_3') is-invalid @enderror" required autocomplete="option_3" autofocus></textarea>
+                      @error('option_3')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
@@ -314,10 +310,10 @@ h2 {
                     </div>
                     <div class="w-full px-3 mb-6 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                          Question
+                          Option 4
                       </label>
-                      <textarea name="name" id="name" cols="15" rows="3" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus></textarea>
-                      @error('name')
+                      <textarea name="option_4" id="option_4" cols="15" rows="2" class="form-control @error('option_4') is-invalid @enderror" required autocomplete="option_4" autofocus></textarea>
+                      @error('option_4')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
@@ -325,11 +321,14 @@ h2 {
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Send message</button>
+                    <button type="submit" class="btn btn-primary">Send message</button>
                   </div>
                 </form>
               </div>
             </div>
+          </div>
+             @endforeach
+          </div>
           </div>
            <!-- Modal -->
            <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
