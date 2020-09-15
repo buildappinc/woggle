@@ -47,7 +47,7 @@ class CourseController extends Controller
             $progress->save();
         }
 
-        dd($check_section_id);
+        dd($check_section_id->status);
         $next = Topic::where('id', '>', $topic->id)->min("id");
         // if ($check_section_id->status == false) {
         //     $check_section_id->status = true;
