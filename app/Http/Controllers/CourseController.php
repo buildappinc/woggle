@@ -44,8 +44,7 @@ class CourseController extends Controller
             $progress->user_id = auth()->user()->id;
             $progress->course_id = $course->id;
             $progress->save();
-            
-            $check_section_id->update(['status'=>true]);
+
         }
 
         $next = Topic::where('id', '>', $topic->id)->min("id");
