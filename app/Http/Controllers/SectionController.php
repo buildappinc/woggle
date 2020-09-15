@@ -19,26 +19,6 @@ class SectionController extends Controller
     {
         $this->middleware('auth:admin');
     }
-    // public function sectionForm(Section $section){
-
-    //     $topics = Topic::all();
-
-    //     return view("Section.sectionForm", compact('topics', 'section'));
-    // }
-
-    // public function store(Request $request){
-
-    //     $data = $request->validate([
-    //         'header' => '',
-    //         'content' => 'required',
-    //         'topic_id' => 'required'
-    //     ]);
-
-    //     Section::create($data);
-
-    //     return redirect('/admin/courses');
-
-    // }
 
     public function editSection(Section $section){
         $topics = Topic::all();

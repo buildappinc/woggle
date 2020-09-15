@@ -18,6 +18,7 @@ class CreateProgressesTable extends Migration
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('course_id');
             $table->unsignedInteger('section_id');
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }
