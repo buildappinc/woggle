@@ -187,7 +187,7 @@
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <div>
-                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" id="course_completion" style="font-size: 0.82rem; background-color: #f7b728">Take Quiz</p>
+                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" id="course_completion" style="font-size: 0.82rem; background-color: #f7b728; cursor: pointer">Take Quiz</p>
                                     </div>
                                 </div>
                             </div>    
@@ -213,8 +213,8 @@
         $("#course_completion").click(function(e){
             e.preventDefault()
             swal({
-                title: "Take note",
-                text: "Are you very certain you have completed and undderstood every aspect of this course. \n NB: confirming this would unlock the exam request section",
+                title: "Irreversible Action",
+                text: "Are you very certain you have completed and understood every aspect of this course. \n NB: This action cannot be reversed",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,
