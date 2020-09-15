@@ -45,12 +45,12 @@ class CourseController extends Controller
             $progress->course_id = $course->id;
 
             $progress->save();
+
+            if ($check_section_id->status == 0) {
+                $check_section_id->status = 1;
+            }
         }
 
-        if ($check_section_id->status == false) {
-            $check_section_id->status = true;
-        }
-        
         $next = Topic::where('id', '>', $topic->id)->min("id");
         $prev = Topic::where('id', '<', $topic->id)->max("id");        
         
