@@ -8,6 +8,6 @@ class Progress extends Model
 {
     //
 
-    protected $guarded = []
+    protected $guarded = [];
 
 }
