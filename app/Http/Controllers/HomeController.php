@@ -39,7 +39,6 @@ class HomeController extends Controller
         $courses = auth()->user()->courses->all();
 
         $progress = Progress::where('user_id', $authUser)->pluck('course_id')->all();
-        dd($progress);
 
         return view('mycourses', compact('progress', 'courses', 'payment_user'));
        

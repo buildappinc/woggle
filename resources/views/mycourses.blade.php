@@ -186,11 +186,8 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-center">
-                                    <div class="pr-2">
-                                        <p class="font text-center capitalize bg-blue-300 rounded p-2 text-white" id="course_completion" style="font-size: 0.82rem; background-color: #406AB4; cursor: pointer">course completion</p>
-                                    </div>
-                                    <div class="pl-2">
-                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background-color: #f7b728">Take Quiz</p>
+                                    <div>
+                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" id="course_completion" style="font-size: 0.82rem; background-color: #f7b728">Take Quiz</p>
                                     </div>
                                 </div>
                             </div>    
