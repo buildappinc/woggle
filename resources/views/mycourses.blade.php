@@ -190,7 +190,7 @@
                                         <p class="font text-center capitalize bg-blue-300 rounded p-2 text-white" id="course_completion" style="font-size: 0.82rem; background-color: #406AB4; cursor: pointer">course completion</p>
                                     </div>
                                     <div class="pl-2">
-                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background-color: #f7b728">Request for exam date</p>
+                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background-color: #f7b728">Take Quiz</p>
                                     </div>
                                 </div>
                             </div>    
@@ -217,7 +217,7 @@
             e.preventDefault()
             swal({
                 title: "Take note",
-                text: "Are you very certain you have completed every aspect of this course. \n NB: confirming this would unlock the exam request section",
+                text: "Are you very certain you have completed and undderstood every aspect of this course. \n NB: confirming this would unlock the exam request section",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,
