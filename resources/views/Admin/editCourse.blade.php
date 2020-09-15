@@ -272,7 +272,7 @@ h2 {
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <form action="{{route('answer.create', ['course'=>$course->id, 'question'=>$question->id])}}">
+                <form action="{{route('answer.create', ['course'=>$course->id, 'question'=>$question->id])}}" method="POST">
                   @csrf
                   <div class="modal-body">
                       <div class="w-full px-3 mb-6 md:mb-0">
