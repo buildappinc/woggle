@@ -43,7 +43,7 @@ class CourseController extends Controller
             $progress->section_id = $topic->id;
             $progress->user_id = auth()->user()->id;
             $progress->course_id = $course->id;
-
+            $progress->status = false;
             $progress->save();
 
             if ($check_section_id->status == 0) {
