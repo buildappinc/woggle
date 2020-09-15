@@ -236,6 +236,10 @@ h2 {
                                 <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->option  }}</a>
                               </div>
                           @endforeach
+                          {{-- correct soliution --}}
+                          <div class="flex flex-col p-2 ml-3">
+                            <a class="text-black"><span class="font-bold">Right solution: </span> {{$question->answer  }}</a>
+                          </div>
                         </label>
                         <div class="mt-6">
                           <a data-toggle="modal" data-target="#exampleModal" class="text-black">
