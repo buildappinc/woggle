@@ -218,6 +218,11 @@ h2 {
           <div>
               
               <div class="container">
+              @if (Session::has('answer'))
+                    <div class="alert alert-success">
+                      {{Session::get('answer')}}
+                    </div>
+              @endif
                 
              @foreach ($course->questions as $question)
 
@@ -226,11 +231,11 @@ h2 {
                       <div class="option">
                         <input type="radio" class="radio" id="automobiles" name="category"/>
                         <label for="automobiles">
-                          {{-- @foreach ($topic->sections as $section)
+                          @foreach ($question->answers as $answer)
                               <div class="flex flex-col p-2 ml-3">
-                                <a href="{{route('Topic.section.edit', ['topic'=>$topic->id, 'section'=>$section->id])}}" class="text-black"><span class="font-bold">Lesson: </span> {{$section->header}}</a>
+                                <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->option  }}</a>
                               </div>
-                          @endforeach --}}
+                          @endforeach
                         </label>
                         <div class="mt-6">
                           <a data-toggle="modal" data-target="#exampleModal" class="text-black">
@@ -277,47 +282,14 @@ h2 {
                   <div class="modal-body">
                       <div class="w-full px-3 mb-6 md:mb-0">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                            Option 1
+                            Option 
                         </label>
-                        <textarea name="option_1" id="option_1" cols="15" rows="2" class="form-control @error('option_1') is-invalid @enderror" required autocomplete="option_1" autofocus></textarea>
-                        @error('option_1')
+                        <textarea name="option" id="option" cols="15" rows="2" class="form-control @error('option') is-invalid @enderror" required autocomplete="option" autofocus></textarea>
+                        @error('option')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                         @enderror
-                    </div>
-                    <div class="w-full px-3 mb-6 md:mb-0">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                          Option 2
-                      </label>
-                      <textarea name="option_2" id="option_2" cols="15" rows="2" class="form-control @error('option_2') is-invalid @enderror" required autocomplete="option_2" autofocus></textarea>
-                      @error('option_2')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                      @enderror
-                    </div>
-                    <div class="w-full px-3 mb-6 md:mb-0">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                          Option 3
-                      </label>
-                      <textarea name="option_3" id="option_3" cols="15" rows="2" class="form-control @error('option_3') is-invalid @enderror" required autocomplete="option_3" autofocus></textarea>
-                      @error('option_3')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                      @enderror
-                    </div>
-                    <div class="w-full px-3 mb-6 md:mb-0">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                          Option 4
-                      </label>
-                      <textarea name="option_4" id="option_4" cols="15" rows="2" class="form-control @error('option_4') is-invalid @enderror" required autocomplete="option_4" autofocus></textarea>
-                      @error('option_4')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                      @enderror
                     </div>
                   </div>
                   <div class="modal-footer">
