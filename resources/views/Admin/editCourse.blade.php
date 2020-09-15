@@ -268,7 +268,7 @@ h2 {
 
            {{-- modal for answers --}}
            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">New message</h5>
@@ -276,22 +276,58 @@ h2 {
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="recipient-name" class="col-form-label">Recipient:</label>
-                      <input type="text" class="form-control" id="recipient-name">
+                <form>
+                  @csrf
+                  <div class="modal-body">
+                      <div class="w-full px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                            Question
+                        </label>
+                        <textarea name="name" id="name" cols="15" rows="3" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus></textarea>
+                        @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                        @enderror
                     </div>
-                    <div class="form-group">
-                      <label for="message-text" class="col-form-label">Message:</label>
-                      <textarea class="form-control" id="message-text"></textarea>
+                    <div class="w-full px-3 mb-6 md:mb-0">
+                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                          Question
+                      </label>
+                      <textarea name="name" id="name" cols="15" rows="3" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus></textarea>
+                      @error('name')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                      @enderror
                     </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Send message</button>
-                </div>
+                    <div class="w-full px-3 mb-6 md:mb-0">
+                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                          Question
+                      </label>
+                      <textarea name="name" id="name" cols="15" rows="3" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus></textarea>
+                      @error('name')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                      @enderror
+                    </div>
+                    <div class="w-full px-3 mb-6 md:mb-0">
+                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                          Question
+                      </label>
+                      <textarea name="name" id="name" cols="15" rows="3" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus></textarea>
+                      @error('name')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                      @enderror
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Send message</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
