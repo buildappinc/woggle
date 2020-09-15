@@ -44,15 +44,15 @@ class CourseController extends Controller
             $progress->user_id = auth()->user()->id;
             $progress->course_id = $course->id;
             $progress->save();
-
-            if ($check_section_id->status == false) {
-                $check_section_id->update(['status'=>true]);
-            }
         }
 
         $next = Topic::where('id', '>', $topic->id)->min("id");
         $prev = Topic::where('id', '<', $topic->id)->max("id");        
         
+        if ($check_section_id->status == false) {
+            $check_section_id->update(['status'=>true]);
+        }
+
         return view('lessons.showLessons', compact('course', 'topic', 'next', 'prev'));
 
     }
