@@ -110,28 +110,22 @@ h2 {
 @section('content')
 
 <div class="" style="margin-top: -23px;">
-
   <form action="{{route('course.edit.submit', ['course'=>$course->id])}}" method="post" enctype="multipart/form-data">
-      
       @method('PATCH')
       @include('Admin.include.form')
-
       <div  class="container w-11/12 mx-10 py-6 ">
           <button type="submit" class="btn btn-primary h-12  ml-3" style="width: 97%">Save Course</button>
       </div>
   </form> 
-    <div class="container">
-        <div class="text-2xl font-bold mx-3">
-            Course content
-        </div>
-
-        {{-- adding section and lessons for courses  --}}
-        <div>
-            {{-- sections display  --}}
-            <div>
-                
-                <div class="container">
-                  
+  <div class="container">
+    <div class="text-2xl font-bold mx-3">
+        Course content
+    </div>
+      {{-- adding section and lessons for courses  --}}
+      <div>
+        {{-- sections display  --}}
+        <div>    
+          <div class="container">       
               @if (Session::has('success'))
                     <div class="alert alert-success">
                       {{Session::get('success')}}
@@ -143,9 +137,8 @@ h2 {
                     </div>
               @endif
                 
-               @foreach ($course->topics as $topic)
-
-                    <div class="select-box mt-4">
+              @foreach ($course->topics as $topic)
+                <div class="select-box mt-4">
                       <div class="options-container -mt-3">  
                         <div class="option">
                           <input type="radio" class="radio" id="automobiles" name="category"/>
@@ -189,13 +182,13 @@ h2 {
                             </div>
                         </div>
                       </div>
-                    </div>
+                </div>
                @endforeach
-            </div>
-            </div>
+          </div>
+        </div>
 
-            {{-- section input  --}}
-            <div class="mt-6">
+        {{-- section input  --}}
+        <div class="mt-6">
                 <a class="text-black" href="{{ route('Course.topic', ['course' => $course->id])}}">
                     <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style=" background: #F7F7F7; width:97%; border:1px dashed #000000">
                         <div class="pl-2">
@@ -212,11 +205,10 @@ h2 {
           Course Exam Questions 
         </div>
 
-      {{-- adding section and lessons for courses  --}}
-      <div>
+        {{-- adding section and lessons for courses  --}}
+        <div>
           {{-- sections display  --}}
-          <div>
-              
+          <div> 
               <div class="container">
               @if (Session::has('answer'))
                     <div class="alert alert-success">
@@ -249,7 +241,7 @@ h2 {
                                           add
                                       </span>
                                   </div> 
-                                  <div class="pl-3">Add Options</div> 
+                                  <div class="pl-3">Add Answer Options</div> 
                               </div>
                           </a>
                       </div>
