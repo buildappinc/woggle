@@ -2,17 +2,9 @@
 
 @section('content')
     <div>
-        where the party dey today rock star erh  {{$course->name}}
-
-        <div>
-            @foreach ($course->questions as $item)
-                <li>
-                    {{$item->name}}
-                    @foreach ($item->answers as $items)
-                        <li>{{$items->option}}</li>
-                    @endforeach
-                </li>
-            @endforeach
-        </div>
+       <div class="grid grid-cols-3 gap-4">
+           <div class="col-span-1">dasdadasda</div>
+           <div class="col-span-2">sdasdadada</div>
+       </div>
     </div>
 @endsection
