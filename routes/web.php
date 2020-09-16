@@ -36,7 +36,7 @@ Route::get('/mycourses', 'HomeController@index')->name('home');
 Route::get('/mycourses/{user}/editProfile', 'HomeController@edit')->name('profile.edit');
 Route::patch('/mycourses/{user}', 'HomeController@updateCourse')->name('profile.submit');
 Route::delete('/mycourses', 'HomeController@deleteCourse')->name('user.course');
-Route::get('/mycourses/quiz', 'HomeController@QuizSection')->name('course.quiz');
+Route::get('/quiz', 'HomeController@QuizSection')->name('course.quiz');
 
 // admin section
 Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

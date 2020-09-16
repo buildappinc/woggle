@@ -225,8 +225,8 @@
                 })
                 .then((willDelete) => {
                 if (willDelete) {
-                    $.get('mycourses/quiz', function(data){
-                         location.href = data
+                    $.get('quiz', function(data){
+                         console.log(data)
                       })
                 } else {
                     swal("Phew you almost caused yourself a certificate. Prepare very hard");
