@@ -187,6 +187,7 @@
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <div>
+                                        <input type="hidden" id="course_id" value="{{$item->id}}">
                                         <a href="" id="course_completion">
                                             <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background-color: #f7b728; cursor: pointer">Take Quiz</p>
                                         </a>
@@ -213,9 +214,9 @@
         });
 
         $("#course_completion").click(function(e){
-            var course_id = $(this).attr();
+            var course_id = $(this).closes('div').find("#course_id");
             console.log(course_id);
-
+            
             e.preventDefault()
             swal({
                 title: "Irreversible Action",
