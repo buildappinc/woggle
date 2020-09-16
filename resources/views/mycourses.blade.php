@@ -187,7 +187,9 @@
                                 </div>
                                 <div class="flex items-center justify-center">
                                     <div>
-                                        <p class="font text-center capitalize bg-blue-300 rounded p-2" id="course_completion" style="font-size: 0.82rem; background-color: #f7b728; cursor: pointer">Take Quiz</p>
+                                        <a href="" id="course_completion">
+                                            <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background-color: #f7b728; cursor: pointer">Take Quiz</p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>    
@@ -211,6 +213,9 @@
         });
 
         $("#course_completion").click(function(e){
+            var course_id = $(this).attr();
+            console.log(course_id);
+
             e.preventDefault()
             swal({
                 title: "Irreversible Action",
@@ -225,7 +230,7 @@
                     icon: "success",
                     });
                 } else {
-                    swal("Your imaginary file is safe!");
+                    swal("Phew you almost caused yourself a certificate. Prepare very hard");
                 }
             });
         })

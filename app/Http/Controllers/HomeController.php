@@ -88,6 +88,10 @@ class HomeController extends Controller
         dd($user);
     }
 
+    public function QuizSection(Course $course){
+        return view('User_Dashboard.UserQuiz.courseQuiz');
+    }
+
 
 
     
