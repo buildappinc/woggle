@@ -90,7 +90,7 @@ class HomeController extends Controller
 
     public function QuizSection(Course $course){
         if (Request::ajax()) {
-            return "this is working";
+            return view('User_Dashboard.UserQuiz.courseQuiz');
         }
     }
 

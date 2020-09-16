@@ -215,7 +215,6 @@
 
         $("#course_completion").click(function(e){
             e.preventDefault()
-            var course_id = $(this).closest('div').find("#course_id").val();
             
             swal({
                 title: "Irreversible Action",
@@ -227,7 +226,7 @@
                 .then((willDelete) => {
                 if (willDelete) {
                     $.get('mycourses/' + course_id + '/quiz', function(data){
-                          console.log(data)
+                         
                       })
                 } else {
                     swal("Phew you almost caused yourself a certificate. Prepare very hard");
