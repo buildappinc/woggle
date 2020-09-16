@@ -89,7 +89,7 @@ class HomeController extends Controller
     }
 
     public function QuizSection(Course $course){
-        return view('User_Dashboard.UserQuiz.courseQuiz');
+        return view('User_Dashboard.UserQuiz.courseQuiz', compact('course'));
     }
 
 
