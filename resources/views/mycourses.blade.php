@@ -226,8 +226,8 @@
                 .then((willDelete) => {
                 if (willDelete) {
                     $.get('quiz', function(data){
-                         console.log(data)
-                      })
+                     console.log(data);   
+                    })
                 } else {
                     swal("Phew you almost caused yourself a certificate. Prepare very hard");
                 }
