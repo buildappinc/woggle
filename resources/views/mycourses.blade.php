@@ -214,10 +214,9 @@
         });
 
         $("#course_completion").click(function(e){
-            var course_id = $(this).closest('div').find("#course_id").val();
-            console.log(course_id);
-            
             e.preventDefault()
+            var course_id = $(this).closest('div').find("#course_id").val();
+
             swal({
                 title: "Irreversible Action",
                 text: "Are you very certain you have completed and understood every aspect of this course. \n NB: This action cannot be reversed",
@@ -227,9 +226,25 @@
                 })
                 .then((willDelete) => {
                 if (willDelete) {
-                    swal("Poof! Your imaginary file has been deleted!", {
-                    icon: "success",
-                    });
+                    var data = {
+                      "_token": $('input[name=_token').val(),
+                      "id": course_id,
+                      }
+
+                   $.ajax({
+                       type: "GET",
+                       url: "/mycourses/" + coure_id + "/quiz",
+                       data: data,
+                       success: function(response){
+                           swal({
+                               title: "All the best",
+                               icon: "success"
+                           })
+                       }
+                       .then((result) =>{
+                              location.reload()
+                          })
+                   })
                 } else {
                     swal("Phew you almost caused yourself a certificate. Prepare very hard");
                 }
