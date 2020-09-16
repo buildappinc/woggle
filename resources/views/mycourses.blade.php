@@ -226,7 +226,7 @@
                 .then((willDelete) => {
                 if (willDelete) {
                     $.get('quiz', function(data){
-                     console.log(data);   
+                        window.location.href = "http://www.wooglelearn.com/quiz"
                     })
                 } else {
                     swal("Phew you almost caused yourself a certificate. Prepare very hard");
