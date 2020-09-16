@@ -214,7 +214,7 @@
         });
 
         $("#course_completion").click(function(e){
-            var course_id = $(this).closes('div').find("#course_id");
+            var course_id = $(this).closest('div').find("#course_id");
             console.log(course_id);
             
             e.preventDefault()
