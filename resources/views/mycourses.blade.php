@@ -225,7 +225,7 @@
                 })
                 .then((willDelete) => {
                 if (willDelete) {
-                    $.get('mycourses/' + course_id + '/quiz', function(data){
+                    $.get('mycourses/quiz', function(data){
                          
                       })
                 } else {
