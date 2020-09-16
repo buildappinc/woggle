@@ -216,7 +216,7 @@
         $("#course_completion").click(function(e){
             e.preventDefault()
 
-            var course_id = $(this).closest('div').find('course_id').val();
+            var course_id = $(this).closest('div').find('#course_id').val();
             console.log(course_id)
             
             swal({
