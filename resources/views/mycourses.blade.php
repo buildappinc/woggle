@@ -215,6 +215,8 @@
 
         $("#course_completion").click(function(e){
             e.preventDefault()
+
+            var course_id = $(this).closest('div').find('course_id').val();
             
             swal({
                 title: "Irreversible Action",
@@ -225,8 +227,8 @@
                 })
                 .then((willDelete) => {
                 if (willDelete) {
-                    $.get('quiz', function(data){
-                        window.location.href = "http://www.wooglelearn.com/quiz"
+                    $.get('mycourses/'+ course_id +'/quiz', function(data){
+                        window.location.href = "http://www.wooglelearn.com/mycourses/" + course_id + "/quiz"
                     })
                 } else {
                     swal("Phew you almost caused yourself a certificate. Prepare very hard");
