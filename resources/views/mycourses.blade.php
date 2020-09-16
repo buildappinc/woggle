@@ -231,19 +231,10 @@
                       "id": course_id,
                       }
 
-                   $.ajax({
-                       type: "GET",
-                       url: "/mycourses/" + coure_id + "/quiz",
-                       data: data,
-                       success: function(response){
-                           swal({
-                               title: "All the best",
-                               icon: "success"
-                           })
-                       }
-                       .then((result) =>{
-                              location.reload()
-                          })
+                      $.get('mycourses/' + course_id + '/quiz', function(data){
+                          console.log(data);
+                      })
+                   
                    })
                 } else {
                     swal("Phew you almost caused yourself a certificate. Prepare very hard");
