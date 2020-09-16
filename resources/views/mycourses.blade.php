@@ -216,7 +216,7 @@
         $("#course_completion").click(function(e){
             e.preventDefault()
             var course_id = $(this).closest('div').find("#course_id").val();
-
+            
             swal({
                 title: "Irreversible Action",
                 text: "Are you very certain you have completed and understood every aspect of this course. \n NB: This action cannot be reversed",
@@ -226,16 +226,9 @@
                 })
                 .then((willDelete) => {
                 if (willDelete) {
-                    var data = {
-                      "_token": $('input[name=_token').val(),
-                      "id": course_id,
-                      }
-
-                      $.get('mycourses/' + course_id + '/quiz', function(data){
-                          console.log(data);
+                    $.get('mycourses/' + course_id + '/quiz', function(data){
+                          console.log(data)
                       })
-                   
-                   })
                 } else {
                     swal("Phew you almost caused yourself a certificate. Prepare very hard");
                 }
