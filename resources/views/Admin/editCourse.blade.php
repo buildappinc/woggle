@@ -233,7 +233,7 @@ h2 {
                         </div>
                       </label>
                       <div class="mt-6">
-                        <a data-toggle="modal" data-target="#exampleModal" class="text-black">
+                        <a href="{{route('answer.show')}}" class="text-black">
                             <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style="width: 97%; border:1px dashed #000000" >
                               <div class="pl-2">
                                 <span class="material-icons md-18">
@@ -260,7 +260,7 @@ h2 {
                 </div>
               </div>
                       {{-- modal for answers --}}
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              {{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -298,7 +298,7 @@ h2 {
                     </form>
                   </div>
                 </div>
-              </div>
+              </div> --}}
           @endforeach
         </div>
       </div>
