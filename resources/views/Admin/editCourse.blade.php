@@ -201,6 +201,7 @@ h2 {
                 </a>
             </div>
         </div>
+
         <div class="text-2xl font-bold mx-3 mt-10">
           Course Exam Questions 
         </div>
@@ -218,19 +219,19 @@ h2 {
                 
              @foreach ($course->questions as $question)
 
-                  <div class="select-box mt-4">
+            <div class="select-box mt-4">
                     <div class="options-container -mt-3">  
                       <div class="option">
                         <input type="radio" class="radio" id="automobiles" name="category"/>
                         <label for="automobiles">
                           @foreach ($question->answers as $answer)
                               <div class="flex flex-col p-2 ml-3">
-                                <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->option  }}</a>
+                                <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->option}}</a>
                               </div>
                           @endforeach
                           {{-- correct soliution --}}
                           <div class="flex flex-col p-2 ml-3">
-                            <a class="text-black"><span class="font-bold">Right solution: </span> {{$question->answer  }}</a>
+                            <a class="text-black"><span class="font-bold">Right solution: </span> {{$question->answer}}</a>
                           </div>
                         </label>
                         <div class="mt-6">
@@ -262,7 +263,7 @@ h2 {
                           </div>
                       </div>
                     </div>
-                  </div>
+          </div>
                    {{-- modal for answers --}}
            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -288,11 +289,11 @@ h2 {
                         @enderror
                       </div>
                       <div>
-                        <label for="topics" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">{{ __('Question Confirmation') }}</label>
+                        <label for="Questions" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">{{ __('Question Confirmation') }}</label>
 
                         <div class="col-md-12 input">
                             <select name="question_id" class="form-control" id="question_id">
-                                    <option value="{{ $question->id}} ">{{ $question->name}}</option>
+                                    <option value="{{$question->id}}">{{$question->name}}</option>
                             </select>
                         </div>
                       </div>
