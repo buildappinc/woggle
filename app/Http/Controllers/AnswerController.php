@@ -11,10 +11,10 @@ class AnswerController extends Controller
 {
     //
 
-    public function create(Request $request, Course $course, Question $question)
+    public function create(Request $request, Course $course)
     {
         $answer = new Answer();
-        $answer->question_id = $question->id;
+        $answer->question_id = $request->question_id;
         $answer->option = $request->option;
 
         $answer->save(); 

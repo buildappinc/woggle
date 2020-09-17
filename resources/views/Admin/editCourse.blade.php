@@ -273,7 +273,7 @@ h2 {
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <form action="{{route('answer.create', ['course'=>$course->id, 'question'=>$question->id])}}" method="POST">
+                <form action="{{route('answer.create', ['course'=>$course->id])}}" method="POST">
                   @csrf
                   <div class="modal-body">
                       <div class="w-full px-3 mb-6 md:mb-0">
@@ -286,7 +286,16 @@ h2 {
                                     <strong>{{ $message }}</strong>
                                 </span>
                         @enderror
-                    </div>
+                      </div>
+                      <div>
+                        <label for="topics" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">{{ __('Question Confirmation') }}</label>
+
+                        <div class="col-md-12 input">
+                            <select name="question_id" class="form-control" id="question_id">
+                                    <option value="{{ $question->id}} ">{{ $question->name}}</option>
+                            </select>
+                        </div>
+                      </div>
                   </div>
                   <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Send message</button>
