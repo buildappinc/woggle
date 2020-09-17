@@ -186,7 +186,6 @@ h2 {
                @endforeach
           </div>
         </div>
-
         {{-- section input  --}}
         <div class="mt-6">
                 <a class="text-black" href="{{ route('Course.topic', ['course' => $course->id])}}">
@@ -202,13 +201,13 @@ h2 {
             </div>
         </div>
 
+
+
         <div class="text-2xl font-bold mx-3 mt-10">
           Course Exam Questions 
         </div>
-
-        {{-- adding section and lessons for courses  --}}
         <div>
-          {{-- sections display  --}}
+          {{-- question display  --}}
           <div> 
               <div class="container">
               @if (Session::has('answer'))
@@ -217,99 +216,92 @@ h2 {
                     </div>
               @endif
                 
-             @foreach ($course->questions as $question)
-
-            <div class="select-box mt-4">
-                    <div class="options-container -mt-3">  
-                      <div class="option">
-                        <input type="radio" class="radio" id="automobiles" name="category"/>
-                        <label for="automobiles">
-                          @foreach ($question->answers as $answer)
-                              <div class="flex flex-col p-2 ml-3">
-                                <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->option}}</a>
-                              </div>
-                          @endforeach
-                          {{-- correct soliution --}}
+            @foreach ($course->questions as $question)
+                <div class="select-box mt-4">
+                  <div class="options-container -mt-3">  
+                    <div class="option">
+                      <input type="radio" class="radio" id="automobiles" name="category"/>
+                      <label for="automobiles">
+                        @foreach ($question->answers as $answer)
                           <div class="flex flex-col p-2 ml-3">
-                            <a class="text-black"><span class="font-bold">Right solution: </span> {{$question->answer}}</a>
+                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->option}}</a>
                           </div>
-                        </label>
-                        <div class="mt-6">
-                          <a data-toggle="modal" data-target="#exampleModal" class="text-black">
-                              <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style="width: 97%; border:1px dashed #000000" >
-                                  <div class="pl-2">
-                                      <span class="material-icons md-18">
-                                          add
-                                      </span>
-                                  </div> 
-                                  <div class="pl-3">Add Answer Options</div> 
-                              </div>
-                          </a>
-                      </div>
-                      </div>
-                    </div>
-                    <div class="selected bg-gray-200 flex flex-row justify-between">
-                      <div>
-                          Question: {{$question->name}}
-                      </div>
-                      <div class="mr-4 flex flex-row">
-                          <div>
-                            <a><img src="{{asset('images/edit.png')}}" alt=""></a>
-                          </div>
-                          <div class="px-4">
-                            <input type="hidden" class="delete_value">
-                           
-                            <button type="submit" class="text-white deleteSection"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
-                          </div>
-                      </div>
-                    </div>
-          </div>
-                   {{-- modal for answers --}}
-           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Answer</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <form action="{{route('answer.create', ['course'=>$course->id])}}" method="POST">
-                  @csrf
-                  <div class="modal-body">
-                      <div class="w-full px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                            Option 
-                        </label>
-                        <textarea name="option" id="option" cols="15" rows="2" class="form-control @error('option') is-invalid @enderror" required autocomplete="option" autofocus></textarea>
-                        @error('option')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                        @enderror
-                      </div>
-                      <div>
-                        <label for="Questions" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">{{ __('Question Confirmation') }}</label>
-
-                        <div class="col-md-12 input">
-                            <select name="question_id" class="form-control" id="question_id">
-                                    <option value="{{$question->id}}">
-                                      {{$question->name}}
-                                    </option>
-                            </select>
+                        @endforeach
+                        {{-- correct soliution --}}
+                        <div class="flex flex-col p-2 ml-3">
+                          <a class="text-black"><span class="font-bold">Right solution: </span> {{$question->answer}}</a>
                         </div>
+                      </label>
+                      <div class="mt-6">
+                        <a data-toggle="modal" data-target="#exampleModal" class="text-black">
+                            <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style="width: 97%; border:1px dashed #000000" >
+                              <div class="pl-2">
+                                <span class="material-icons md-18">
+                                    add
+                                </span>
+                              </div> 
+                              <div class="pl-3">Add Answer Options</div> 
+                            </div>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="selected bg-gray-200 flex flex-row justify-between">
+                  <div> Question: {{$question->name}}</div>
+                    <div class="mr-4 flex flex-row">
+                      <div>
+                        <a><img src="{{asset('images/edit.png')}}" alt=""></a>
                       </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Send message</button>
-                  </div>
-                </form>
+                      <div class="px-4">
+                        <input type="hidden" class="delete_value">       
+                        <button type="submit" class="text-white deleteSection"><img src="{{asset('images/bdelte.png')}}" alt=""></button>
+                      </div>
+                    </div>
+                </div>
               </div>
-            </div>
-          </div>
-             @endforeach
-          </div>
-          </div>
+                      {{-- modal for answers --}}
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Answer</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <form action="{{route('answer.create', ['course'=>$course->id])}}" method="POST">
+                      @csrf
+                      <div class="modal-body">
+                          <div class="w-full px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                                Option 
+                            </label>
+                            <textarea name="option" id="option" cols="15" rows="2" class="form-control @error('option') is-invalid @enderror" required autocomplete="option" autofocus></textarea>
+                            @error('option')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                          </div>
+                          <div>
+                            <label for="Questions" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">{{ __('Question Confirmation') }}</label>
+                            <div class="col-md-12 input">
+                                <select name="question_id" class="form-control" id="question_id">
+                                  <option value="{{$question->id}}">{{$question->name}}</option>
+                                </select>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Send message</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          @endforeach
+        </div>
+      </div>
            <!-- Modal -->
            <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
