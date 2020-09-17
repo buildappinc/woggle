@@ -233,7 +233,7 @@ h2 {
                         </div>
                       </label>
                       <div class="mt-6">
-                        <a href="{{route('answer.show')}}" class="text-black">
+                        <a href="{{route('answer.show', ['course'=>$course->id, 'question'=>$question->id])}}" class="text-black">
                             <div class=" h-10 mx-3 py-6 flex flex-row items-center rounded-md" style="width: 97%; border:1px dashed #000000" >
                               <div class="pl-2">
                                 <span class="material-icons md-18">
