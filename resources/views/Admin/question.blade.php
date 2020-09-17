@@ -24,10 +24,8 @@
                       </select>
                   </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary">Add Answer</button>
-            </div>
+            </div>            
+            <button type="submit" class="btn btn-primary btn-lg">Add Answer</button>
           </form>
     </div>
 @endsection

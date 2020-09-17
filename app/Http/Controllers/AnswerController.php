@@ -10,12 +10,17 @@ use App\Answer;
 class AnswerController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+
     public function show(Course $course, Question $question)
     {
         return view('Admin.question', compact('course', 'question'));
     }
 
-    public function create(Request $request, Course $course)
+    public function create(Request $request, Course $course, Question $question)
     {   
         $data = $request->validate([
             'options' => ['required'], 
