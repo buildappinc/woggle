@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container h-full px-64 py-40">   
-        <form action="{{route('answer.create', ['course'=>$course->id], 'question'=>$question->id)}}" method="POST">
+        <form action="{{route('answer.create', ['course'=>$course->id, 'question'=>$question->id])}}" method="POST">
             @csrf
             <div class="modal-body">
                 <div class="w-full px-3 mb-6 md:mb-0">
