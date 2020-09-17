@@ -9,8 +9,8 @@
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                       Option 
                   </label>
-                  <textarea name="option" id="option" cols="15" rows="2" class="form-control @error('option') is-invalid @enderror" required autocomplete="option" autofocus></textarea>
-                  @error('option')
+                  <textarea name="options" id="options" cols="15" rows="2" class="form-control @error('options') is-invalid @enderror" required autocomplete="options" autofocus></textarea>
+                  @error('options')
                           <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
                           </span>

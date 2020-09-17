@@ -18,7 +18,7 @@ class AnswerController extends Controller
     public function create(Request $request, Course $course)
     {   
         $data = $request->validate([
-            'option' => ['required'], 
+            'options' => ['required'], 
             'question_id' => ['required']
         ]);
 
