@@ -82,4 +82,4 @@ Route::post('/admin/{course}/question', 'QuestionController@create')->name('ques
 
 //answers
 Route::get('/admin/{course}/question/{question}/answer', 'AnswerController@show')->name('answer.show');
-Route::post('/admin/{course}/question/answer', 'AnswerController@create')->name('answer.create');
+Route::post('/admin/{course}/question/{question}/answer', 'AnswerController@create')->name('answer.create');
