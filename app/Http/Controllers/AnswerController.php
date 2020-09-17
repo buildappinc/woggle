@@ -29,6 +29,6 @@ class AnswerController extends Controller
 
         Answer::create($data);
 
-        return redirect('admin/courses/' + $course->id +  '/edit')->back()->with("answer", "Answer Added");
+        return redirect('admin/courses/'. $course->id .'/edit')->back()->with("answer", "Answer Added");
     }
 }
