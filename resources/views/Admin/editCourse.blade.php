@@ -265,7 +265,13 @@ h2 {
                     </div>
           </div>
                    {{-- modal for answers --}}
-           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+             @endforeach
+          </div>
+          </div>
+
+          {{-- modal for solu --}}
+          @foreach ($course->questions as $item)
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -293,7 +299,7 @@ h2 {
 
                         <div class="col-md-12 input">
                             <select name="question_id" class="form-control" id="question_id">
-                                    <option value="{{$question->id}}">{{$question->name}}</option>
+                                    <option value="{{$item->id}}">{{$item->name}}</option>
                             </select>
                         </div>
                       </div>
@@ -305,9 +311,8 @@ h2 {
               </div>
             </div>
           </div>
-             @endforeach
-          </div>
-          </div>
+          @endforeach
+
            <!-- Modal -->
            <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
