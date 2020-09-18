@@ -7,23 +7,21 @@
                 <div>sdasdasdasd</div>
            </div>
            <div class="col-span-4 p-10">
-               <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 my-6">
-                   <div>
-                        <div class="rounded shadow-md p-5">
-                            <div>Time</div>
-                            <div>3 Hrs</div>
-                        </div>
-                        <div class="rounded shadow-md p-5">
-                            <div>CountDown</div>
-                            <div>T - 3:00:00</div>
-                        </div>
-                        <div class="rounded shadow-md p-5">
-                            <div>Questions</div>
-                            <div>
-                                {{$course->questions->count()}}
-                            </div>
-                        </div>
+               <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 my-6 mx-4">
+                   <div class="rounded shadow-md p-5">
+                       <div>Time</div>
+                       <div>3 Hrs</div>
                    </div>
+                   <div class="rounded shadow-md p-5">
+                       <div>CountDown</div>
+                       <div>T - 3:00:00</div>
+                   </div>
+                   <div class="rounded shadow-md p-5">
+                       <div>Questions</div>
+                       <div>
+                           {{$course->questions->count()}}
+                       </div>
+                    </div>
                </div>
                {{-- questions --}}
                <div>
