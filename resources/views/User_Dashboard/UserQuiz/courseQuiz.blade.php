@@ -26,8 +26,19 @@
                     <div>Questions <em>all the best </em></div>
                     <div>
                         @foreach ($course->questions as $question)
-                            <div>
-                                {{$question->name}}
+                            <div class="shadow">
+                                {{-- question div --}}
+                                <div>
+                                    {{$question->name}}
+                                </div>
+                                {{-- possible solu div --}}
+                                <div>
+                                    @foreach ($question->answers as $answer)
+                                        <div>
+                                            {{$answer->options}}
+                                        </div>
+                                    @endforeach
+                                </div>
                             </div>
                         @endforeach
                     </div>  
