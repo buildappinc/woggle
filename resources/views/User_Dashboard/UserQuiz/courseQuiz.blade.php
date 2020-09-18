@@ -35,7 +35,7 @@
                                 <div class="px-2 my-4 ">
                                     @foreach ($question->answers as $answer)
                                         <div class="p-2">
-                                           {{$answer->options}}
+                                          <input type="radio">{{$answer->options}}
                                         </div>
                                     @endforeach
                                 </div>
