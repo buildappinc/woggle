@@ -7,16 +7,16 @@
                 <div>sdasdasdasd</div>
            </div>
            <div class="col-span-4 p-10">
-               <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 my-6 mx-4">
-                   <div class="rounded shadow-md p-5">
+               <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-6">
+                   <div class="rounded shadow-md p-5" style="background: #a8f7bf">
                        <div>Time</div>
                        <div>3 Hrs</div>
                    </div>
-                   <div class="rounded shadow-md p-5">
+                   <div class="rounded shadow-md p-5" style="background: #f2c5c4">
                        <div>CountDown</div>
                        <div>T - 3:00:00</div>
                    </div>
-                   <div class="rounded shadow-md p-5">
+                   <div class="rounded shadow-md p-5" style="background: #f2d99f">
                        <div>Questions</div>
                        <div>
                            {{$course->questions->count()}}
