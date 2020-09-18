@@ -6,9 +6,20 @@
            <div class="col-span-1 bg-red-400 w-full h-full hidden lg:block xl:block">dasdadasda</div>
            <div class="col-span-4">
                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 my-6">
-                   <div>dnkadnjasd</div>
-                   <div>sadadadada</div>
-                   <div>adsdadsdad</div>
+                   <div>
+                       <div>Time</div>
+                       <div>3 Hrs</div>
+                   </div>
+                   <div>
+                       <div>CountDown</div>
+                       <div>T - 3:00:00</div>
+                   </div>
+                   <div>
+                       <div>Questions</div>
+                       <div>
+                           {{$course->questions->count()}}
+                       </div>
+                    </div>
                </div>
                {{-- questions --}}
                <div>
