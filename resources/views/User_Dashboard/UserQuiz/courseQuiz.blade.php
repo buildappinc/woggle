@@ -3,7 +3,7 @@
 @section('content')
     <div>
        <div class="grid grid-cols-5 gap-4">
-           <div class="col-span-1 bg-red-400 w-full h-full hidden lg:block xl:block shadow-lg">dasdadasda</div>
+           <div class="col-span-1 w-full h-full hidden lg:block xl:block shadow-lg" style="background: #416bb4">dasdadasda</div>
            <div class="col-span-4 p-10">
                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 my-6">
                    <div>
@@ -26,7 +26,7 @@
                     <div>Questions <em>all the best </em></div>
                     <div class="px-4">
                         @foreach ($course->questions as $question)
-                            <div class="shadow my-10 p-4">
+                            <div class="shadow my-10 p-4 rounded">
                                 {{-- question div --}}
                                 <div>
                                   Question:  {{$question->name}}
