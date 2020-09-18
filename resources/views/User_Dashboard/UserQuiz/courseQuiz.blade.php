@@ -22,9 +22,9 @@
                     </div>
                </div>
                {{-- questions --}}
-               <div>
+               <div class="p-5">
                     <div>Questions <em>all the best </em></div>
-                    <div>
+                    <div class="px-4">
                         @foreach ($course->questions as $question)
                             <div class="shadow my-10 p-4">
                                 {{-- question div --}}
@@ -35,7 +35,7 @@
                                 <div class="px-2 my-4 ">
                                     @foreach ($question->answers as $answer)
                                         <div class="p-2">
-                                          <input type="radio">{{$answer->options}}
+                                          <input type="checkbox"> {{$answer->options}}
                                         </div>
                                     @endforeach
                                 </div>
