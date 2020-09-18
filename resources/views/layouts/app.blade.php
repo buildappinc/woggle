@@ -172,7 +172,7 @@
 <body>
     <div id="app">
         <div>
-            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-md">
+            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-md" style="position: relative; z-index: 1">
                 <a href="/" class="inline-flex flex-row items-center -ml-12 animated fadeIn slow-4s">
                         <div>
                             <img src="{{asset('svg/logo1.svg')}}">
