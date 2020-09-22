@@ -42,7 +42,7 @@
                             <div class="shadow my-10 p-4 rounded">
                                 {{-- question div --}}
                                 <div>
-                                  <span class="hello text-2xl">Question:</span> <span class="font font-light">{{$question->name}}</span> 
+                                  <span class="hello text-xl">Question:</span> <span class="font font-light">{{$question->name}}</span> 
                                 </div>
                                 {{-- possible solu div --}}
                                 <div class="px-2 my-4 ">
@@ -59,8 +59,7 @@
            </div>
        </div>
     </div>
-@endsection
-
+    
 <script type="text/javascript">
 	var interval;
 	function countdown() {
@@ -87,3 +86,6 @@
 	$('.js-timeout').text("02:00");
 	countdown();
 </script>
+@endsection
+
+
