@@ -1,3 +1,14 @@
+<style>
+    .hello{
+        font-family: 'Baloo Tamma 2', cursive;
+        font-family: 'Raleway', sans-serif;
+        font-family: 'Recursive', sans-serif;
+    }
+    .font{
+        font-family: 'Baloo Tamma 2', cursive; 
+        font-family: 'Recursive', sans-serif;
+    }
+</style>
 @extends('layouts.app')
 
 @section('content')
@@ -7,7 +18,7 @@
                 <div>sdasdasdasd</div>
            </div>
            <div class="col-span-4 p-10 h-screen" style="overflow: auto">
-               <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-6">
+               <div class="font grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-6">
                    <div class="rounded shadow-md p-5" style="background: #a8f7bf">
                        <div>Time</div>
                        <div>3 Hrs</div>
@@ -31,7 +42,7 @@
                             <div class="shadow my-10 p-4 rounded">
                                 {{-- question div --}}
                                 <div>
-                                  Question:  {{$question->name}}
+                                  <span style="hello">Question:</span> <span class="font font-light">{{$question->name}}</span> 
                                 </div>
                                 {{-- possible solu div --}}
                                 <div class="px-2 my-4 ">
