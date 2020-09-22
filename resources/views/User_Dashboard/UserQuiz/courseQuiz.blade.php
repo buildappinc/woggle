@@ -42,7 +42,7 @@
                             <div class="shadow my-10 p-4 rounded">
                                 {{-- question div --}}
                                 <div>
-                                  <span style="hello">Question:</span> <span class="font font-light">{{$question->name}}</span> 
+                                  <span class="hello text-2xl">Question:</span> <span class="font font-light">{{$question->name}}</span> 
                                 </div>
                                 {{-- possible solu div --}}
                                 <div class="px-2 my-4 ">
