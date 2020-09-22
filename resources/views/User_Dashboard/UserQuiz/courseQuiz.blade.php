@@ -81,7 +81,17 @@
 
 	      $('.js-timeout').html(minutes + ':' + seconds);
 
-	      if (minutes == 0 && seconds == 0) { clearInterval(interval); alert('time UP'); }
+	      if (minutes == 0 && seconds == 0) { 
+                clearInterval(interval); 
+                swal({
+                    text: "Oooopppsss!!!! Time is up. Answered questions would but submitted",
+                    icon: "danger",
+                    dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        swal("Don't worry too much, you can retake the quiz for the last time");
+                }); 
+              }
 	  }, 1000);
 	}
 
