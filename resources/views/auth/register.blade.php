@@ -1,8 +1,6 @@
     <style>
           .body{
-        margin-top: -23px;   
         padding: 0;
-        
         height: 800px;
         position: relative; 
     }

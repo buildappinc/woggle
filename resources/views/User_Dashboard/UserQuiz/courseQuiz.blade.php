@@ -3,10 +3,10 @@
 @section('content')
     <div>
        <div class="grid grid-cols-5 gap-4">
-           <div class="col-span-1 hidden lg:block xl:block shadow-lg" style="background: #416bb4">
+           <div class="col-span-1 hidden lg:block xl:block shadow-lg h-screen" style="background: #416bb4">
                 <div>sdasdasdasd</div>
            </div>
-           <div class="col-span-4 p-10">
+           <div class="col-span-4 p-10 h-screen" style="overflow: auto">
                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-6">
                    <div class="rounded shadow-md p-5" style="background: #a8f7bf">
                        <div>Time</div>
