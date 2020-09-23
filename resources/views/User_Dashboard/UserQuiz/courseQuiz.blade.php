@@ -61,6 +61,12 @@
                                                 <input type="radio" name="{{$answer->options4}}"> {{$answer->options4}}
                                             </div>
                                         @endforeach
+                                        <div class="p-2">
+                                            <input type="radio" name="hi"> try
+                                        </div>
+                                        <div class="p-2">
+                                            <input type="radio" name="hi"> try
+                                        </div>
                                     </div>
                                 </div>
                             @endforeach
