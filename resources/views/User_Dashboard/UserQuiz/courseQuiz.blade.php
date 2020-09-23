@@ -47,7 +47,8 @@
                                     </div>
                                     {{-- possible solu div --}}
                                     <div class="px-2 my-4 ">
-                                        @foreach ($question->answers as $answer)
+                                        <?php $options = json_decode($question->options, true) ?>
+                                        {{-- @foreach ($question->answers as $answer)
                                             <div class="p-2">
                                                 <input type="radio" name="{{$answer->options1}}"> {{$answer->options1}}
                                             </div>
@@ -66,6 +67,18 @@
                                         </div>
                                         <div class="p-2">
                                             <input type="radio" name="hi"> try
+                                        </div> --}}
+                                        <div class="p-2">
+                                            <input type="radio" name="hello"> {{$options['options1']}}
+                                        </div>
+                                        <div class="p-2">
+                                            <input type="radio" name="hello"> {{$options['options2']}}
+                                        </div>
+                                        <div class="p-2">
+                                            <input type="radio" name="hello"> {{$options['options3']}}
+                                        </div>
+                                        <div class="p-2">
+                                            <input type="radio" name="hello"> {{$options['options4']}}
                                         </div>
                                     </div>
                                 </div>
