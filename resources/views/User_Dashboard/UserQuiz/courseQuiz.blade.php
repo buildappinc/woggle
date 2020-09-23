@@ -90,7 +90,17 @@
                     dangerMode: true,
                     })
                     .then((willDelete) => {
-                        swal("Don't worry too much, you can retake the quiz for the last time");
+                        swal({
+                            text: "Don't worry too much, you can retake the quiz for the last time", 
+                            icon: "info"
+                        })
+                        .then((okay)=>{
+                            if (okay) {
+                                $.get("mycourses", function(){
+                                    window.location.href = "http://www.wooglelearn.com/mycourses"
+                                })
+                            }
+                        })
                 }); 
               }
 	  }, 1000);
