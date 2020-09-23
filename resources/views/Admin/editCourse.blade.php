@@ -222,7 +222,7 @@ h2 {
                     <div class="option">
                       <input type="radio" class="radio" id="automobiles" name="category"/>
                       <label for="automobiles">
-                        <?php $options = json_decode(json_encode(json_decode($question->options)), true) ?>
+                        <?php $options = json_decode($question->options, true) ?>
                         <div class="flex flex-col p-2 ml-3">
                           <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['option1']}}</a>
                         </div>
