@@ -224,7 +224,16 @@ h2 {
                       <label for="automobiles">
                         @foreach ($question->answers as $answer)
                           <div class="flex flex-col p-2 ml-3">
-                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options}}</a>
+                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options1}}</a>
+                          </div>
+                          <div class="flex flex-col p-2 ml-3">
+                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options2}}</a>
+                          </div>
+                          <div class="flex flex-col p-2 ml-3">
+                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options3}}</a>
+                          </div>
+                          <div class="flex flex-col p-2 ml-3">
+                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options4}}</a>
                           </div>
                         @endforeach
                         {{-- correct soliution --}}
