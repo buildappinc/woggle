@@ -39,19 +39,17 @@
                     <div>Questions <em>all the best </em></div>
                     <form action="#" method="post">
                         <div class="px-4">
-                            @foreach ($course->questions as $question)
+                            @foreach ($course->questions as $key => $question)
                                 <div class="shadow my-10 p-4 rounded">
                                     {{-- question div --}}
                                     <div>
-                                      <span class="hello text-xl">Question:</span> <span class="font font-light">{{$question->name}}</span> 
+                                      <span class="hello text-xl">{{$key + 1}} Question:</span> <span class="font font-light">{{$question->name}}</span> 
                                     </div>
                                     {{-- possible solu div --}}
                                     <div class="px-2 my-4 ">
                                         @foreach ($question->answers as $answer)
                                             <div class="p-2">
-                                                <ul>
-                                                    <li><input type="radio" name="{{$answer->options}}"> {{$answer->options}}</li>
-                                                </ul>
+                                                <input type="radio" name="{{$answer->options}}"> {{$answer->options}}
                                             </div>
                                         @endforeach
                                     </div>
