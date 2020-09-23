@@ -86,7 +86,7 @@
                 clearInterval(interval); 
                 swal({
                     text: "Oooopppsss!!!! Time is up. Answered questions would but submitted",
-                    icon: "danger",
+                    icon: "error",
                     dangerMode: true,
                     })
                     .then((willDelete) => {
