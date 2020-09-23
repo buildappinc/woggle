@@ -95,8 +95,10 @@
                             icon: "info"
                         })
                         .then((okay)=>{
+                            console.log(okay)
                             if (okay) {
-                                $.get("mycourses", function(){
+                                $.get("mycourses", function(data){
+                                    console.log(data)
                                     window.location.href = "http://www.wooglelearn.com/mycourses"
                                 })
                             }
