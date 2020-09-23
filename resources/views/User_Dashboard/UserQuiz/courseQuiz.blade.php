@@ -49,7 +49,16 @@
                                     <div class="px-2 my-4 ">
                                         @foreach ($question->answers as $answer)
                                             <div class="p-2">
-                                                <input type="radio" name="{{$answer->options}}"> {{$answer->options}}
+                                                <input type="radio" name="{{$answer->options1}}"> {{$answer->options1}}
+                                            </div>
+                                            <div class="p-2">
+                                                <input type="radio" name="{{$answer->options2}}"> {{$answer->options2}}
+                                            </div>
+                                            <div class="p-2">
+                                                <input type="radio" name="{{$answer->options3}}"> {{$answer->options3}}
+                                            </div>
+                                            <div class="p-2">
+                                                <input type="radio" name="{{$answer->options4}}"> {{$answer->options4}}
                                             </div>
                                         @endforeach
                                     </div>
