@@ -222,9 +222,22 @@ h2 {
                     <div class="option">
                       <input type="radio" class="radio" id="automobiles" name="category"/>
                       <label for="automobiles">
-                        @foreach ($question->answers as $answer)
+                        <?php $options = json_decode(json_encode(json_decode($question->options)), true) ?>
+                        <div class="flex flex-col p-2 ml-3">
+                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['option1']}}</a>
+                        </div>
+                        <div class="flex flex-col p-2 ml-3">
+                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['option2']}}</a>
+                        </div>
+                        <div class="flex flex-col p-2 ml-3">
+                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['option3']}}</a>
+                        </div>
+                        <div class="flex flex-col p-2 ml-3">
+                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['option4']}}</a>
+                        </div>
+                        {{-- @foreach ($question->answers as $answer)
                           <div class="flex flex-col p-2 ml-3">
-                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options1}}</a>
+                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$option}}</a>
                           </div>
                           <div class="flex flex-col p-2 ml-3">
                             <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options2}}</a>
@@ -235,7 +248,7 @@ h2 {
                           <div class="flex flex-col p-2 ml-3">
                             <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options4}}</a>
                           </div>
-                        @endforeach
+                        @endforeach --}}
                         {{-- correct soliution --}}
                         <div class="flex flex-col p-2 ml-3">
                           <a class="text-black"><span class="font-bold">Right solution: </span> {{$question->answer}}</a>
