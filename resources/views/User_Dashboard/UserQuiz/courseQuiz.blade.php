@@ -20,16 +20,16 @@
            <div class="col-span-4 p-10 h-screen" style="overflow: auto">
                <div class="font grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-6">
                    <div class="rounded shadow-md p-5" style="background: #a8f7bf">
-                       <div>Time</div>
-                       <div>3 Hrs</div>
+                       <div class="text-2xl">Time</div>
+                       <div class="text-xl">3 Hrs</div>
                    </div>
                    <div class="rounded shadow-md p-5" style="background: #f2c5c4">
-                       <div>CountDown</div>
-                       <div>T - <span class="js-timeout">2:00</span></div>
+                       <div class="text-2xl">CountDown</div>
+                       <div class="text-xl">T - <span class="js-timeout">60:00</span></div>
                    </div>
                    <div class="rounded shadow-md p-5" style="background: #f2d99f">
-                       <div>Questions</div>
-                       <div>
+                       <div class="text-2xl">Questions</div>
+                       <div class="text-xl">
                            {{$course->questions->count()}}
                        </div>
                     </div>
@@ -37,24 +37,30 @@
                {{-- questions --}}
                <div>
                     <div>Questions <em>all the best </em></div>
-                    <div class="px-4">
-                        @foreach ($course->questions as $question)
-                            <div class="shadow my-10 p-4 rounded">
-                                {{-- question div --}}
-                                <div>
-                                  <span class="hello text-xl">Question:</span> <span class="font font-light">{{$question->name}}</span> 
+                    <form action="#" method="post">
+                        <div class="px-4">
+                            @foreach ($course->questions as $question)
+                                <div class="shadow my-10 p-4 rounded">
+                                    {{-- question div --}}
+                                    <div>
+                                      <span class="hello text-xl">Question:</span> <span class="font font-light">{{$question->name}}</span> 
+                                    </div>
+                                    {{-- possible solu div --}}
+                                    <div class="px-2 my-4 ">
+                                        @foreach ($question->answers as $answer)
+                                            <div class="p-2">
+                                                <input type="radio" name="{{$answer->options}}"> {{$answer->options}}
+                                            </div>
+                                        @endforeach
+                                    </div>
                                 </div>
-                                {{-- possible solu div --}}
-                                <div class="px-2 my-4 ">
-                                    @foreach ($question->answers as $answer)
-                                        <div class="p-2">
-                                            <input type="radio" name="{{$answer->options}}"> {{$answer->options}}
-                                        </div>
-                                    @endforeach
-                                </div>
+                            @endforeach
+                            {{-- btn --}}
+                            <div>
+                                <button class="btn btn-primary btn-lg" type="submit">Submit Quiz</button>
                             </div>
-                        @endforeach
-                    </div>  
+                        </div>    
+                    </form>
                </div>
            </div>
        </div>
@@ -97,7 +103,7 @@
                         .then((okay)=>{
                             if (okay) {
                                 $.get('mycourses', function(data){
-                                    window.location.href = "http://www.wooglelearn.com/mycourses"
+                                    window.location.href = "http://www.wooglelearn.com/mycourses/"
                                 })
                             }
                         })
@@ -106,7 +112,7 @@
 	  }, 1000);
 	}
 
-	$('.js-timeout').text("02:00");
+	$('.js-timeout').text("60:00");
 	countdown();
 </script>
 @endsection
