@@ -390,6 +390,7 @@ h2 {
                                 </span>
                         @enderror
                     </div>
+                    
                     </div>    
                     <div class="modal-footer">
                       <button type="submit" class="btn btn-primary">Save changes</button>

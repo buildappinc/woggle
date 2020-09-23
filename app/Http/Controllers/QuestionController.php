@@ -21,20 +21,14 @@ class QuestionController extends Controller
             'answer' => ['required']
         ]);
 
-        if ($validator->passes()) {
+        $question = new Question(); 
+        $question->course_id = $course->id;
+        $question->name = $request->name;
+        $question->answer = $request->answer;
+        $question->options = json_encode(array('options1'=>$request->options1, 'options2'=>$request->options2, 'options3'=>$request->options3, 'options4'=>$request->options4));
+        $question->save();   
 
-            $question = new Question(); 
-            $question->course_id = $course->id;
-            $question->name = $request->name;
-            $question->answer = $request->answer;
-            $question->options = json_encode(array('options1'=>$request->options1, 'options2'=>$request->options2, 'options3'=>$request->options3, 'options4'=>$request->options4));
-            $question->save();   
-
-            return redirect('/admin/courses/'. $course->id .'/edit')->with("answer", "Question Added");
-
-        } else {
-            return redirect('/admin/courses/'. $course->id .'/edit')->with("error", "Problem  Encounted");
-        }
+        return redirect('/admin/courses/'. $course->id .'/edit')->with("answer", "Question Added");
 
     }
 }
