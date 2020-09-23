@@ -97,8 +97,7 @@
                         .then((okay)=>{
                             console.log(okay)
                             if (okay) {
-                                $.get("mycourses", function(data){
-                                    console.log(data)
+                                $.get('mycourses', function(data){
                                     window.location.href = "http://www.wooglelearn.com/mycourses"
                                 })
                             }
