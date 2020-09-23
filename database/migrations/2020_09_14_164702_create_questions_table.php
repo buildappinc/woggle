@@ -17,7 +17,9 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->unsignedInteger('course_id');
             $table->string('name');
+            $table->string('options');
             $table->string('answer');
+            $table->string('status')->default('false');
             $table->timestamps();
         });
     }
