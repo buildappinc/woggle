@@ -9,8 +9,8 @@
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                       Option 
                   </label>
-                  <textarea name="option1" id="option1" cols="15" rows="2" class="form-control @error('option1') is-invalid @enderror" required autocomplete="option1" autofocus></textarea>
-                  @error('option1')
+                  <textarea name="options1" id="options1" cols="15" rows="2" class="form-control @error('options1') is-invalid @enderror" required autocomplete="options1" autofocus></textarea>
+                  @error('options1')
                           <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
                           </span>
@@ -20,8 +20,8 @@
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                       Option 
                   </label>
-                  <textarea name="option2" id="option2" cols="15" rows="2" class="form-control @error('option2') is-invalid @enderror" required autocomplete="option2" autofocus></textarea>
-                  @error('option2')
+                  <textarea name="options2" id="options2" cols="15" rows="2" class="form-control @error('options2') is-invalid @enderror" required autocomplete="options2" autofocus></textarea>
+                  @error('options2')
                           <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
                           </span>
@@ -31,8 +31,8 @@
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                       Option 
                   </label>
-                  <textarea name="option3" id="option3" cols="15" rows="2" class="form-control @error('option3') is-invalid @enderror" required autocomplete="option3" autofocus></textarea>
-                  @error('option3')
+                  <textarea name="options3" id="options3" cols="15" rows="2" class="form-control @error('options3') is-invalid @enderror" required autocomplete="options3" autofocus></textarea>
+                  @error('options3')
                           <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
                           </span>
@@ -42,8 +42,8 @@
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                       Option 
                   </label>
-                  <textarea name="option4" id="option4" cols="15" rows="2" class="form-control @error('option4') is-invalid @enderror" required autocomplete="option4" autofocus></textarea>
-                  @error('option4')
+                  <textarea name="options4" id="options4" cols="15" rows="2" class="form-control @error('options4') is-invalid @enderror" required autocomplete="options4" autofocus></textarea>
+                  @error('options4')
                           <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
                           </span>
