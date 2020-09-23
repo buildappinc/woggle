@@ -224,16 +224,16 @@ h2 {
                       <label for="automobiles">
                         <?php $options = json_decode($question->options, true) ?>
                         <div class="flex flex-col p-2 ml-3">
-                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['option1']}}</a>
+                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['options1']}}</a>
                         </div>
                         <div class="flex flex-col p-2 ml-3">
-                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['option2']}}</a>
+                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['options2']}}</a>
                         </div>
                         <div class="flex flex-col p-2 ml-3">
-                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['option3']}}</a>
+                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['options3']}}</a>
                         </div>
                         <div class="flex flex-col p-2 ml-3">
-                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['option4']}}</a>
+                          <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['options4']}}</a>
                         </div>
                         {{-- @foreach ($question->answers as $answer)
                           <div class="flex flex-col p-2 ml-3">
