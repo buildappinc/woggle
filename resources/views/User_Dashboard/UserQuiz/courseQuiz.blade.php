@@ -21,7 +21,7 @@
                <div class="font grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-6">
                    <div class="rounded shadow-md p-5" style="background: #a8f7bf">
                        <div class="text-2xl">Time</div>
-                       <div class="text-xl">3 Hrs</div>
+                       <div class="text-xl">1 Hour</div>
                    </div>
                    <div class="rounded shadow-md p-5" style="background: #f2c5c4">
                        <div class="text-2xl">CountDown</div>
@@ -49,7 +49,9 @@
                                     <div class="px-2 my-4 ">
                                         @foreach ($question->answers as $answer)
                                             <div class="p-2">
-                                                <input type="radio" name="{{$answer->options}}"> {{$answer->options}}
+                                                <ul>
+                                                    <li><input type="radio" name="{{$answer->options}}"> {{$answer->options}}</li>
+                                                </ul>
                                             </div>
                                         @endforeach
                                     </div>
