@@ -34,6 +34,6 @@ class QuestionController extends Controller
 
     public function submit(Request $request){
         $data = $request->all();
-        
+        dd($data);
     }
 }
