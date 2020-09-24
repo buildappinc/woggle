@@ -15,7 +15,7 @@ class CreateUserresultsTable extends Migration
     {
         Schema::create('userresults', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInterger('user_id');
+            $table->unsignedInteger('user_id');
             $table->string('course');
             $table->string('yes_ans');
             $table->string('no_ans'); 
