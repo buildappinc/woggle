@@ -20,7 +20,6 @@ class CreateUserresultsTable extends Migration
             $table->string('yes_ans');
             $table->string('no_ans'); 
             $table->string('result');
-            $table->boolean('status')->default("true");
             $table->timestamps();
         });
     }
