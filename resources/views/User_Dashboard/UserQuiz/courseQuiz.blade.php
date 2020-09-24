@@ -70,7 +70,7 @@
                             @endforeach
                             {{-- btn --}}
                             <div>
-                                <input type="hidden" name="index" value="{{$key}}">
+                                <input type="hidden" name="index" value="{{$key + 1}}">
                                 <button class="btn btn-primary btn-lg" type="submit">Submit Quiz</button>
                             </div>
                         </div>    
