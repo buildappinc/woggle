@@ -33,6 +33,7 @@ class QuestionController extends Controller
     }
 
     public function submit(Request $request){
-        dd($request->all());
+        $data = $request->all();
+        
     }
 }
