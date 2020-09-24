@@ -37,7 +37,7 @@ class QuestionController extends Controller
         $result = array();
         for ($i=1; $i <= $request->index ; $i++) { 
             if (isset($data['question'.$i])) {
-                $question = Question::where('id', $data['quesiton'.$i])->get()->first();
+                $question = Question::where('id', $data['question'.$i])->get()->first();
                 if ($question->answer == $data['ans'.$i]) {
                     $result[$data['question'.$i]] = "YES";
                 } else {
