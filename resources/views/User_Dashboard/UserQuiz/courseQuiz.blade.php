@@ -37,7 +37,7 @@
                {{-- questions --}}
                <div>
                     <div>Questions <em>all the best </em></div>
-                    <form action="#" method="post">
+                    <form action="{{route('solutions')}}" method="post">
                         <div class="px-4">
                             @foreach ($course->questions as $key => $question)
                                 <div class="shadow my-10 p-4 rounded">
@@ -48,21 +48,21 @@
                                     {{-- possible solu div --}}
                                     <div class="px-2 my-4 ">
                                         <?php $options = json_decode($question->options, true) ?>
-                                        <input type="hidden" name="question" value="{{$question->name}}">
+                                        <input type="hidden" name="question{{$key + 1}}" value="{{$question->name}}">
                                         <div class="p-2">
-                                            <input type="radio" name="ans{{$key + 1}}"> {{$options['options1']}}
+                                            <input type="radio" name="ans{{$key + 1}}" value="{{$options['options1']}}"> {{$options['options1']}}
                                         </div>
                                         <div class="p-2">
-                                            <input type="radio" name="ans{{$key + 1}}"> {{$options['options2']}}
+                                            <input type="radio" name="ans{{$key + 1}}" value="{{$options['options2']}}"> {{$options['options2']}}
                                         </div>
                                         <div class="p-2">
-                                            <input type="radio" name="ans{{$key + 1}}"> {{$options['options3']}}
+                                            <input type="radio" name="ans{{$key + 1}}" value="{{$options['options3']}}"> {{$options['options3']}}
                                         </div>
                                         <div class="p-2">
-                                            <input type="radio" name="ans{{$key + 1}}"> {{$options['options4']}}
+                                            <input type="radio" name="ans{{$key + 1}}" value="{{$options['options4']}}"> {{$options['options4']}}
                                         </div>
                                         <div class="p-2 hidden">
-                                            <input type="radio" value="0" checked="checked" name="hello"> {{$options['options4']}}
+                                            <input type="radio" value="0" checked="checked" name="ans{{$key + 1}}"> {{$options['options4']}}
                                         </div>
                                     </div>
                                 </div>

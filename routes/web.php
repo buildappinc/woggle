@@ -79,6 +79,7 @@ Route::get('/payment/callback/{course}', 'PaymentController@handleGatewayCallbac
 
 // questions
 Route::post('/admin/{course}/question', 'QuestionController@create')->name('question.create');
+Route::post('/admin/{course}/question/submit', 'QuestionController@submit')->name('solutions');
 
 //answers
 Route::get('/admin/{course}/question/{question}/answer', 'AnswerController@show')->name('answer.show');

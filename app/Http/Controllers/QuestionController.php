@@ -31,4 +31,8 @@ class QuestionController extends Controller
         return redirect('/admin/courses/'. $course->id .'/edit')->with("answer", "Question Added");
 
     }
+
+    public function submit(Request $request){
+        dd($request->all());
+    }
 }
