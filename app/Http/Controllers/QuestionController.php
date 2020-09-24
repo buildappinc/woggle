@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Question; 
 use App\Course;
+use App\Result;
 
 class QuestionController extends Controller
 {
@@ -32,19 +33,33 @@ class QuestionController extends Controller
 
     }
 
-    public function submit(Request $request){
+    public function submit(Request $request, Course $course){
         $data = $request->all();
+        $yes_ans = 0;
+        $no_ans = 0;
         $result = array();
         for ($i=1; $i <= $request->index ; $i++) { 
             if (isset($data['question'.$i])) {
                 $question = Question::where('id', $data['question'.$i])->get()->first();
                 if ($question->answer == $data['ans'.$i]) {
-                    $result[$data['question'.$i]] = "YES";
+                    $result[$data['question'.$i]] = "1";
+                    $yes_ans++;
                 } else {
-                    $result[$data['question'.$i]] = "NO";
+                    $result[$data['question'.$i]] = "0";
+                    $no_ans++
                 }
             }
         }
-        dd($result);
+        
+        $result = new Result();
+        $result->user_id = \Auth::user->id;
+        $result->course_id = $course->id; 
+        $result->yes_ans = $yes_ans;
+        $result->no_ans = $no_ans;
+        $result->result = json_encode($result);
+        $result->save();
+
+        return redirect('/mycourses');
+        
     }
 }
