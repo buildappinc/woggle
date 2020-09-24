@@ -46,7 +46,7 @@ class QuestionController extends Controller
                     $yes_ans++;
                 } else {
                     $result[$data['question'.$i]] = "0";
-                    $no_ans++
+                    $no_ans++;
                 }
             }
         }
