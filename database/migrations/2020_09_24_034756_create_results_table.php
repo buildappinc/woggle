@@ -15,12 +15,12 @@ class CreateResultsTable extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger("user_id");
-            $table->string("course_id");
-            $table->string("yes_ans");
-            $table->string("no_ans");
-            $table->string("results");
-            $table->boolean("status")->default("true");
+            $table->unsignedInterger('user_id');
+            $table->string('course');
+            $table->string('yes_ans');
+            $table->string('no_ans'); 
+            $table->string('result');
+            $table->boolean('status')->default("true");
             $table->timestamps();
         });
     }
