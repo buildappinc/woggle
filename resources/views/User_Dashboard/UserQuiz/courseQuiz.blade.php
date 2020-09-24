@@ -38,6 +38,7 @@
                <div>
                     <div>Questions <em>all the best </em></div>
                     <form action="{{route('solutions', ['course'=>$course->id])}}" method="post">
+                        @csrf
                         <div class="px-4">
                             @foreach ($course->questions as $key => $question)
                                 <div class="shadow my-10 p-4 rounded">
