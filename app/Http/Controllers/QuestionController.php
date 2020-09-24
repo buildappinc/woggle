@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Question; 
 use App\Course;
-use App\Result;
+use App\Userresult;
 
 class QuestionController extends Controller
 {
@@ -51,7 +51,7 @@ class QuestionController extends Controller
             }
         }
         
-        $result = new Result();
+        $result = new Userresult();
         $result->user_id = auth()->user()->id;
         $result->course = $course->name; 
         $result->yes_ans = $yes_ans;
