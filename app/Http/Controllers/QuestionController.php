@@ -52,7 +52,7 @@ class QuestionController extends Controller
         }
         
         $result = new Result();
-        $result->user_id = \Auth::user->id;
+        $result->user_id = auth()->user()->id;
         $result->course_id = $course->id; 
         $result->yes_ans = $yes_ans;
         $result->no_ans = $no_ans;
