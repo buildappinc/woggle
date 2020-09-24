@@ -49,7 +49,7 @@
                                     {{-- possible solu div --}}
                                     <div class="px-2 my-4 ">
                                         <?php $options = json_decode($question->options, true) ?>
-                                        <input type="hidden" name="question{{$key + 1}}" value="{{$question->name}}">
+                                        <input type="hidden" name="question{{$key + 1}}" value="{{$question->id}}">
                                         <div class="p-2">
                                             <input type="radio" name="ans{{$key + 1}}" value="{{$options['options1']}}"> {{$options['options1']}}
                                         </div>

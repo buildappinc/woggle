@@ -34,6 +34,17 @@ class QuestionController extends Controller
 
     public function submit(Request $request){
         $data = $request->all();
-        dd($data);
+        $result = array();
+        for ($i=1; $i <= $request->index ; $i++) { 
+            if (isset($data['question'.$i])) {
+                $question = Question::where('id', $data['quesiton'.$i])->get()->first();
+                if ($question->answer == $data['ans'.$i]) {
+                    $result[$data['question'.$i]] = "YES";
+                } else {
+                    $result[$data['question'.$i]] = "NO";
+                }
+            }
+        }
+        dd($result);
     }
 }
