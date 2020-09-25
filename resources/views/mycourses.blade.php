@@ -189,7 +189,7 @@
                                     <div>
                                         <input type="hidden" id="course_id" value="{{$item->id}}">
                                         <a href="" id="course_completion">
-                                            <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background-color: #f7b728; cursor: pointer">Take Quiz</p>
+                                            <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#000; background-color: #f7b728; cursor: pointer">Take Quiz</p>
                                         </a>
                                     </div>
                                 </div>
@@ -222,10 +222,12 @@
                                         <div class="font">Passed: Woogle Assessment</div>
                                         <div class="font">Score: {{$item->mark}}%</div>
                                     </div>
-                                    <div class="col-span-1">
-                                        <div class="items-end">
-                                            Certificate
-                                        </div>
+                                    <div class="col-span-1 mt-5">
+                                        <a href="">
+                                            <div class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background: #406AB4; cursor: pointer">
+                                                Certificate
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
