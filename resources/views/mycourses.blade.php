@@ -31,7 +31,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container my-4">
     <div class="row">
         <div>
             @if (session('success'))
@@ -211,13 +211,17 @@
                                       </div>
                                     </div>
                                     <div class="col-span-3">
-                                        <div>badge of Honour</div>
-                                        <div>nice work {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }}, Congrates for a score above the 80% mark</div>
+                                        <div class="text-2xl hello uppercase">badge of Honour</div>
+                                        <div class="text-xs font">Nice work {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }}, Scored above the 80% pass mark</div>
                                     </div>
                                 </div>
                                 {{-- course --}}
-                                <div class="grid grid-cols-4">
-                                    <div class="col-span-3">sdnndasda</div>
+                                <div class="grid grid-cols-4 flex justify-center">
+                                    <div class="col-span-3">
+                                        <div class="text-xl hello">{{$item->course}}</div>
+                                        <div>Passed: Woogle Assessment</div>
+                                        <div>Score: {{$item->course}}%</div>
+                                    </div>
                                     <div class="col-span-1">button</div>
                                 </div>
                             </div>
