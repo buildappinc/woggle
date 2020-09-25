@@ -205,8 +205,10 @@
                             <div class="grid grid-rows-2 grid-flow-col">
                                 {{-- badge header --}}
                                 <div class="grid grid-cols-4">
-                                    <div class="col-span-1">
-                                      <img src="{{asset('svg/logo1.svg')}}" style="height: 8rem; width: 9rem" alt="">
+                                    <div class="col-span-1 justify-center">
+                                      <div style="height: 6rem; width: 6rem; border-raduis:50px; border-color: red">
+                                        <img src="{{asset('svg/logo1.svg')}}" style="height: 4rem; width: 4rem" alt="">
+                                      </div>
                                     </div>
                                     <div class="col-span-3">asdasdas</div>
                                 </div>
