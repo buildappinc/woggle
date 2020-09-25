@@ -37,6 +37,7 @@ class QuestionController extends Controller
         $data = $request->all();
         $yes_ans = 0;
         $no_ans = 0;
+        $PERCENTAGE = 100;
         $result = array();
         for ($i=1; $i <= $request->index ; $i++) { 
             if (isset($data['question'.$i])) {
@@ -50,6 +51,12 @@ class QuestionController extends Controller
                 }
             }
         }
+
+        $total_marks = $yes_ans + $no_ans;
+
+        // calculating for the percentage
+        $mark_percentage =  $yes_ans * (PERCENTAGE/$total_marks);
+        $score = round($mark_percentage);
         
         $result = new Userresult();
         $result->user_id = auth()->user()->id;
@@ -57,6 +64,7 @@ class QuestionController extends Controller
         $result->yes_ans = $yes_ans;
         $result->no_ans = $no_ans;
         $result->result = json_encode($result);
+        $result->mark = $score;
         $result->save();
 
         return redirect('/mycourses');
