@@ -220,11 +220,11 @@
                                     <div class="col-span-3 pl-4 md:pl-2">
                                         <div class="text-xl hello">{{$item->course}}</div>
                                         <div class="font">Passed: Woogle Assessment</div>
-                                        <div class="font">Score: {{$item->mark}}%</div>
+                                        <div class="font text-green-700">Score: {{$item->mark}}%</div>
                                     </div>
                                     <div class="col-span-1 mt-5">
                                         <a href="">
-                                            <div class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; background: #406AB4; cursor: pointer">
+                                            <div class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #406AB4; cursor: pointer">
                                                 Certificate
                                             </div>
                                         </a>
