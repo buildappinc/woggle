@@ -206,11 +206,14 @@
                                 {{-- badge header --}}
                                 <div class="grid grid-cols-4">
                                     <div class="col-span-1 flex justify-center">
-                                      <div class="flex justify-center" style="height: 4rem; width: 4rem; border-radius:50px; background: #000">
+                                      <div class="flex justify-center items-center" style="height: 4rem; width: 4rem; border-radius:50px; background: #000">
                                         <img src="{{asset('svg/logo1.svg')}}" style="height: 3rem; width: 3rem" alt="">
                                       </div>
                                     </div>
-                                    <div class="col-span-3">asdasdas</div>
+                                    <div class="col-span-3">
+                                        <div>badge of Honour</div>
+                                        <div>nice work {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }}, Congrates for a score above the 80% mark</div>
+                                    </div>
                                 </div>
                                 {{-- course --}}
                                 <div class="grid grid-cols-4">
