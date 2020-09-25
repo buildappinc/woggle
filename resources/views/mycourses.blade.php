@@ -197,6 +197,14 @@
                      @endforeach
                 </div>
             </div>
+            <div class="mt-4">
+                <p class="italic hello">Quiz/Exam Badges</p>
+                <div>
+                    @foreach (Auth::user->results as $item)
+                        {{$item->mark}}
+                    @endforeach
+                </div>
+            </div>
         </div>
     </div>
 </div>
