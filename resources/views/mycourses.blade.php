@@ -202,12 +202,12 @@
                 <div>
                     @foreach (Auth::user()->results as $item)
                         <div class="box">
-                            <div class="grid grid-rows-2 grid-flow-col">
+                            <div class="grid grid-rows-2 grid-flow-col p-3">
                                 {{-- badge header --}}
                                 <div class="grid grid-cols-4">
-                                    <div class="col-span-1 justify-center">
-                                      <div style="height: 6rem; width: 6rem; border-raduis:50px; border-color: red">
-                                        <img src="{{asset('svg/logo1.svg')}}" style="height: 4rem; width: 4rem" alt="">
+                                    <div class="col-span-1 flex justify-center">
+                                      <div class="flex justify-center" style="height: 4rem; width: 4rem; border-radius:50px; background: #000">
+                                        <img src="{{asset('svg/logo1.svg')}}" style="height: 3rem; width: 3rem" alt="">
                                       </div>
                                     </div>
                                     <div class="col-span-3">asdasdas</div>
