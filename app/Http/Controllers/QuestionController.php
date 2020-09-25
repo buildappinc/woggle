@@ -55,7 +55,7 @@ class QuestionController extends Controller
         $total_marks = $yes_ans + $no_ans;
 
         // calculating for the percentage
-        $mark_percentage =  $yes_ans * (PERCENTAGE/$total_marks);
+        $mark_percentage =  $yes_ans * ($PERCENTAGE/$total_marks);
         $score = round($mark_percentage);
         
         $result = new Userresult();
