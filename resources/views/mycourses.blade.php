@@ -205,7 +205,9 @@
                             <div class="grid grid-rows-2 grid-flow-col">
                                 {{-- badge header --}}
                                 <div class="grid grid-cols-4">
-                                    <div class="col-span-1">image</div>
+                                    <div class="col-span-1">
+                                      <img src="{{asset('svg/logo1.svg')}}" style="height: 8rem; width: 9rem" alt="">
+                                    </div>
                                     <div class="col-span-3">asdasdas</div>
                                 </div>
                                 {{-- course --}}
