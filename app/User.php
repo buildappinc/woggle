@@ -52,6 +52,6 @@ class User extends Authenticatable
     }
 
     public function results(){
-        return $this->hasMany(Result::class);
+        return $this->hasMany(Userresult::class);
     } 
 }
