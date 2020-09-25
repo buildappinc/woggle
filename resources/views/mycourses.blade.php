@@ -168,7 +168,7 @@
             </div>
             <div class="mt-4">
                 <p class="italic hello">Course details</p>
-                <div class="grid grid-rows-2 gap-6">
+                <div class="grid grid-rows-1 gap-6">
                     @foreach ($courses as $item)        
                             <div class=" box hover:shadow-lg"> 
                                 <div class="p-3">
@@ -201,7 +201,20 @@
                 <p class="italic hello">Quiz/Exam Badges</p>
                 <div>
                     @foreach (Auth::user()->results as $item)
-                        {{$item->mark}}
+                        <div class="box">
+                            <div class="grid grid-rows-2 grid-flow-col">
+                                {{-- badge header --}}
+                                <div class="grid grid-cols-4">
+                                    <div class="col-span-1">image</div>
+                                    <div class="col-span-3">asdasdas</div>
+                                </div>
+                                {{-- course --}}
+                                <div class="grid grid-cols-4">
+                                    <div class="col-span-3">sdnndasda</div>
+                                    <div class="col-span-1">button</div>
+                                </div>
+                            </div>
+                        </div>
                     @endforeach
                 </div>
             </div>
