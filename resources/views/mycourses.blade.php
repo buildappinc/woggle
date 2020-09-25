@@ -217,10 +217,10 @@
                                 </div>
                                 {{-- course --}}
                                 <div class="grid grid-cols-4 flex justify-center">
-                                    <div class="col-span-3 pl-5 md:pl-2">
+                                    <div class="col-span-3 pl-4 md:pl-2">
                                         <div class="text-xl hello">{{$item->course}}</div>
-                                        <div>Passed: Woogle Assessment</div>
-                                        <div>Score: {{$item->score}}%</div>
+                                        <div class="font">Passed: Woogle Assessment</div>
+                                        <div class="font">Score: {{$item->mark}}%</div>
                                     </div>
                                     <div class="col-span-1">
                                         <div class="items-end">
