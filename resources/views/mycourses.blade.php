@@ -202,7 +202,33 @@
                 <div>
                     @foreach (Auth::user()->results as $item)
                         @if ($item->mark < 80 )
-                            <div>worked<div
+                            <div class="box mb-4">
+                                <div class="grid grid-rows-2 grid-flow-col p-3">
+                                    {{-- badge header --}}
+                                    <div class="grid grid-cols-4">
+                                        <div class="col-span-1 flex justify-center">
+                                        <div class="flex justify-center items-center" style="height: 4rem; width: 4rem; border-radius:50px; background: #000">
+                                            <img src="{{asset('svg/logo1.svg')}}" style="height: 3rem; width: 3rem" alt="">
+                                        </div>
+                                        </div>
+                                        <div class="col-span-3">
+                                            <div class="text-2xl hello uppercase">Oooopssss</div>
+                                            <div class="text-xs font">Nice try!! {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }}, Scored <span style="color: red">below</span> the <span style="color: red">80% </span>pass mark,</div>
+                                        </div>
+                                    </div>
+                                    {{-- course --}}
+                                    <div class="grid grid-cols-4 flex justify-center">
+                                        <div class="col-span-3 pl-4 md:pl-2">
+                                            <div class="text-xl hello">{{$item->course}}</div>
+                                            <div class="font">Can do better. Try again</div>
+                                            <div class="font text-red-700">Score: {{$item->mark}}%</div>
+                                        </div>
+                                        <div class="col-span-1 mt-5">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         @else
                             <div class="box mb-4">
                                 <div class="grid grid-rows-2 grid-flow-col p-3">
