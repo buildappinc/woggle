@@ -213,7 +213,7 @@
                                         </div>
                                         <div class="col-span-3">
                                             <div class="text-2xl hello uppercase">Oooopssss</div>
-                                            <div class="text-xs font">Nice try!! {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }}, Scored <span style="color: red">below</span> the <span style="color: red">80% </span>pass mark,</div>
+                                            <div class="text-xs font">Nice try!! {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }}, Scored <span style="color: red">below</span> the <span style="color: red">80% </span>pass mark unfortunately</div>
                                         </div>
                                     </div>
                                     {{-- course --}}
