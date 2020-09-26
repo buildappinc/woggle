@@ -188,7 +188,7 @@
                                 <div class="flex items-center justify-center">
                                     <div>
                                         <input type="hidden" id="course_id" value="{{$item->id}}">
-                                        <a href="" id="course_completion">
+                                        <a class="course_completion">
                                             <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#000; background-color: #f7b728; cursor: pointer">Take Quiz</p>
                                         </a>
                                     </div>
@@ -227,6 +227,7 @@
                                             <div class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #406AB4; cursor: pointer">
                                                 Certificate
                                             </div>
+                                            
                                         </a>
                                     </div>
                                 </div>
@@ -251,7 +252,7 @@
             }
         });
 
-        $("#course_completion").click(function(e){
+        $(".course_completion").click(function(e){
             e.preventDefault()
 
             var course_id = $(this).closest('div').find('#course_id').val();
