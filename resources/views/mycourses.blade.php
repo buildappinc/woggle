@@ -201,38 +201,42 @@
                 <p class="italic hello">Quiz/Exam Badges</p>
                 <div>
                     @foreach (Auth::user()->results as $item)
-                        <div class="box">
-                            <div class="grid grid-rows-2 grid-flow-col p-3">
-                                {{-- badge header --}}
-                                <div class="grid grid-cols-4">
-                                    <div class="col-span-1 flex justify-center">
-                                      <div class="flex justify-center items-center" style="height: 4rem; width: 4rem; border-radius:50px; background: #000">
-                                        <img src="{{asset('svg/logo1.svg')}}" style="height: 3rem; width: 3rem" alt="">
-                                      </div>
+                        @if ($item->mark < 80 )
+                            <div>worked<div
+                        @else
+                            <div class="box mb-4">
+                                <div class="grid grid-rows-2 grid-flow-col p-3">
+                                    {{-- badge header --}}
+                                    <div class="grid grid-cols-4">
+                                        <div class="col-span-1 flex justify-center">
+                                        <div class="flex justify-center items-center" style="height: 4rem; width: 4rem; border-radius:50px; background: #000">
+                                            <img src="{{asset('svg/logo1.svg')}}" style="height: 3rem; width: 3rem" alt="">
+                                        </div>
+                                        </div>
+                                        <div class="col-span-3">
+                                            <div class="text-2xl hello uppercase">badge of Honour</div>
+                                            <div class="text-xs font">Nice work {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }}, Scored above the 80% pass mark</div>
+                                        </div>
                                     </div>
-                                    <div class="col-span-3">
-                                        <div class="text-2xl hello uppercase">badge of Honour</div>
-                                        <div class="text-xs font">Nice work {{Auth::user()->gender === "male" ? "Mr.": "Miss"}} {{ Auth::user()->lname }}, Scored above the 80% pass mark</div>
-                                    </div>
-                                </div>
-                                {{-- course --}}
-                                <div class="grid grid-cols-4 flex justify-center">
-                                    <div class="col-span-3 pl-4 md:pl-2">
-                                        <div class="text-xl hello">{{$item->course}}</div>
-                                        <div class="font">Passed: Woogle Assessment</div>
-                                        <div class="font text-green-700">Score: {{$item->mark}}%</div>
-                                    </div>
-                                    <div class="col-span-1 mt-5">
-                                        <a href="">
-                                            <div class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #406AB4; cursor: pointer">
-                                                Certificate
-                                            </div>
-                                            
-                                        </a>
+                                    {{-- course --}}
+                                    <div class="grid grid-cols-4 flex justify-center">
+                                        <div class="col-span-3 pl-4 md:pl-2">
+                                            <div class="text-xl hello">{{$item->course}}</div>
+                                            <div class="font">Passed: Woogle Assessment</div>
+                                            <div class="font text-green-700">Score: {{$item->mark}}%</div>
+                                        </div>
+                                        <div class="col-span-1 mt-5">
+                                            <a href="">
+                                                <div class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #406AB4; cursor: pointer">
+                                                    Certificate
+                                                </div>
+                                                
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
                     @endforeach
                 </div>
             </div>
