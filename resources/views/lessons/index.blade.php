@@ -59,7 +59,7 @@
                 <div class="p-5">
                     <input type="hidden" id="course_value" value="{{$course->id}}">
                     <a href="" id="userCourseDeletion" class="text-white">
-                        <div class="w-full flex justify-center h-10 items-center rounded hover:shadow" class="delete_value" style="background: #ef4538; cursor: pointer">
+                        <div class="w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
                         Delete Course from this account
                         </div>
                     </a>
@@ -80,8 +80,8 @@
                     $('#userCourseDeletion').click(function(e){
                         e.preventDefault()
 
-                        var delete_val = $(this).closest("div").find(".delete_value").val();
-                        console.log(delete_val)
+                        var course_value = $(this).closest("div").find(".course_value").val();
+                        console.log(course_value)
 
                         swal({
                         title: "Delete!!!",
@@ -95,12 +95,12 @@
 
                             var data = {
                                 "_token": $('input[name=_token').val(),
-                                "id": delete_val,
+                                "id": course_value,
                             }
 
                             $.ajax({
                                 type: "DELETE",
-                                url: "/study/lesson/" + delete_val, 
+                                url: "/study/lesson/" + course_value, 
                                 data: data, 
                                 success: function(response){
                                     swal(response.status, {
