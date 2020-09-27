@@ -115,7 +115,7 @@
                         <img src="{{asset('/images/reset.png')}}" alt="">
                     </div>
                     <div class="mx-2">
-                        {{ __('Password reset') }}
+                        {{ __('Delete Account') }}
                     </div>
                 </div>
             </button>

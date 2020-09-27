@@ -54,6 +54,13 @@
                         </div>
                     @endforeach
                 </div>
+
+                {{-- deleting course from user profile --}}
+                <div>
+                    <div class="w-full bg-red-400">
+                        <a href="">Delete Course from this account</a>
+                    </div>
+                </div>
             </div>
         </div>
 @endsection

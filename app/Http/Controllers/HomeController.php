@@ -84,8 +84,22 @@ class HomeController extends Controller
         return redirect('/mycourses/');
     }
 
-    public function deleteCourse(User $user){
-        dd($user);
+    public function deleteUser(User $user){
+
+        // deleting the user and all the relationships
+        //course progress deletion
+        $user_course_deletion = Progress::where("user_id", $user->id)->get()->first();
+        if ($user_course_deletion) {
+            $user_course_deletion->delete();
+        } else {
+            $user_payment_deletion = Payment::where("user_id", $user->id)->get()->first();
+            if ($user_payment_deletion) {
+                $user_payment_deletion->delete();
+            }
+            $user->delete();
+            return response()->json(['status' => $user->name . "'s account has successfully been deleted"]);
+        }
+
     }
 
     public function QuizSection(Course $course){
