@@ -57,8 +57,8 @@
 
                 {{-- deleting course from user profile --}}
                 <div class="p-5">
-                    
-                    <a href="" class="text-white">
+                    <input type="hidden" id="course_value" value="{{$course->id}}">
+                    <a href="" id="userCourseDeletion" class="text-white">
                         <div class="w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538">
                         Delete Course from this account
                         </div>
@@ -66,4 +66,16 @@
                 </div>
             </div>
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('#userCourseDeletion').click(function(){
+                    console.log("hello");
+                })
+            })
+        </script>
 @endsection
+
