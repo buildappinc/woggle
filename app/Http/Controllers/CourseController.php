@@ -56,10 +56,9 @@ class CourseController extends Controller
 
     public function User_course_deletion(Course $course){
         //user authentication
-        $authUser = auth()->user();
-        dd($authUser);
+        $authUser = auth()->user();    
         // checking if the payment has already been made for the course
-        $user_payment = Payment::where('user_id', $authUser->id)->where('course', $course->name)->first()->delete();
+        // $user_payment = Payment::where('user_id', $authUser->id)->where('course', $course->name)->first()->delete();
         // deleting from the many to many relationship
         $user_courses = $authUser->courses->where('course_id', $course->id)->first();
         $user_courses->delete();
