@@ -72,9 +72,50 @@
 
         <script>
             $(document).ready(function(){
-                $('#userCourseDeletion').click(function(){
-                    console.log("hello");
-                })
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+                    $('#userCourseDeletion').click(function(e){
+                        e.preventDefault()
+
+                        var delete_val = $(this).closest("div").find(".delete_value").val();
+                        console.log(delete_val)
+
+                        swal({
+                        title: "Delete!!!",
+                        text: "Do you really want to delete this course? \n Note: This action deletes this course and all it's data. It cannot be reversed",
+                        icon: "warning",
+                        buttons: ["Cancel", "Delete Anyway"],
+                        dangerMode: true,
+                        })
+                        .then((willDelete) => {
+                        if (willDelete) {
+
+                            var data = {
+                                "_token": $('input[name=_token').val(),
+                                "id": delete_val,
+                            }
+
+                            $.ajax({
+                                type: "DELETE",
+                                url: "/mycourses/" + delete_val, 
+                                data: data, 
+                                success: function(response){
+                                    swal(response.status, {
+                                        icon: "success",
+                                    })
+                                    .then((result) =>{
+                                    window.location.href = "http://www.wooglelearn.com"
+                                    })
+                                }
+                            })
+                        } else {
+                            swal("Course deletion aborted");
+                        }
+                        });
+                    })
             })
         </script>
 @endsection
