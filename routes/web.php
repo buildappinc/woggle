@@ -35,7 +35,7 @@ Auth::routes();
 Route::get('/mycourses', 'HomeController@index')->name('home');
 Route::get('/mycourses/{user}/editProfile', 'HomeController@edit')->name('profile.edit');
 Route::patch('/mycourses/{user}', 'HomeController@updateCourse')->name('profile.submit');
-Route::delete('/mycourses', 'HomeController@deleteCourse')->name('user.course');
+Route::delete('/mycourses/{user}', 'HomeController@deleteUser')->name('user.course');
 Route::get('/mycourses/{course}/quiz', 'HomeController@QuizSection')->name('course.quiz');
 
 // admin section

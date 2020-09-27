@@ -59,7 +59,7 @@
                 <div class="p-5">
                     <input type="hidden" id="course_value" value="{{$course->id}}">
                     <a href="" id="userCourseDeletion" class="text-white">
-                        <div class="w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538">
+                        <div class="w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
                         Delete Course from this account
                         </div>
                     </a>

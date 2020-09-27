@@ -110,7 +110,7 @@
     <div class="mb-4 mt-12 ml-0 mr-0">
         <div class="flex justify-center">
             <input type="hidden" class="delete_value" value="{{Auth::user()->id}}">
-            <a href="" class="deleteSection h-12 rounded flex justify-center text-white" style="background: linear-gradient(190.3deg, #666666 0%, #151522 100%); width: 37%; cursor: pointed" >
+            <a class="deleteSection h-12 rounded flex justify-center text-white" style="background: linear-gradient(190.3deg, #666666 0%, #151522 100%); width: 37%; cursor: pointer" >
                 <div class="flex flex-row justify-center items-center">
                     <div class="mx-2">
                         <img src="{{asset('/images/reset.png')}}" alt="">
@@ -166,8 +166,8 @@
 
             swal({
             title: "Delete!!!",
-            text: "Note: This action cannot be reversed",
-            // icon: "warning",
+            text: "Do you really want to delete this account? Note: \n This action deletes this account and all it's data. It cannot be reversed",
+            icon: "warning",
             buttons: ["Cancel", "Delete Anyway"],
             dangerMode: true,
             })
@@ -181,19 +181,19 @@
 
                 $.ajax({
                     type: "DELETE",
-                    url: "/admin/topic/" + delete_val, 
+                    url: "/mycourses/" + delete_val, 
                     data: data, 
                     success: function(response){
                         swal(response.status, {
                             icon: "success",
                         })
                         .then((result) =>{
-                            location.reload()
+                           window.location.href = "http://www.wooglelearn.com"
                         })
                     }
                 })
             } else {
-                swal("Section Deletion aborted");
+                swal("Almost Lost a Woogle Account Phew. Account deletion aborted");
             }
             });
         })
