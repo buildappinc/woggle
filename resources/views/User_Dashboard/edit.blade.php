@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container my-5">
 
     <form action="{{route('profile.submit', [Auth::user()->id])}}" method="post" enctype="multipart/form-data">
         @csrf
@@ -107,7 +107,7 @@
 
     {{-- button  --}}
     
-    <div class="mb-0 mt-20 ml-0 mr-0">
+    <div class="mb-0 mt-16 ml-0 mr-0">
         <div class="flex justify-center">
             <button type="submit" style="background: linear-gradient(190.3deg, #666666 0%, #151522 100%); width: 37%" class="btn btn-primary h-12">
                 <div class="flex flex-row justify-center">

@@ -57,7 +57,7 @@
 
                 {{-- deleting course from user profile --}}
                 <div class="p-5">
-                    <a href="" class="text-black">
+                    <a href="" class="text-white">
                         <div class="w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538">
                         Delete Course from this account
                         </div>
