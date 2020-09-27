@@ -28,7 +28,7 @@ Route::post('/study/{course}', 'CourseController@addCourse')->name('course.get')
 // Route::get('/study/lesson/{course}', 'CourseController@showIndividualCourse');
 Route::get('/study/lesson/{course}', 'CourseController@Topics')->name('course.content');
 Route::get('/study/lesson/content/{course}/{topic}', 'CourseController@LessonContent')->name('lesson.content');
-
+Route::delete('/study/lesson/{course}', 'CourseController@User_course_deletion');
 
 Auth::routes();
 

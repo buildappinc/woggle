@@ -59,7 +59,7 @@
                 <div class="p-5">
                     <input type="hidden" id="course_value" value="{{$course->id}}">
                     <a href="" id="userCourseDeletion" class="text-white">
-                        <div class="w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
+                        <div class="w-full flex justify-center h-10 items-center rounded hover:shadow" class="delete_value" style="background: #ef4538; cursor: pointer">
                         Delete Course from this account
                         </div>
                     </a>
@@ -100,14 +100,14 @@
 
                             $.ajax({
                                 type: "DELETE",
-                                url: "/mycourses/" + delete_val, 
+                                url: "/study/lesson/" + delete_val, 
                                 data: data, 
                                 success: function(response){
                                     swal(response.status, {
                                         icon: "success",
                                     })
                                     .then((result) =>{
-                                    window.location.href = "http://www.wooglelearn.com"
+                                     window.location.href = "http://www.wooglelearn.com/mycourses"
                                     })
                                 }
                             })

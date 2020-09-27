@@ -6,6 +6,7 @@ use App\Course;
 use App\Topic;
 use App\User;
 use App\Progress;
+use App\Payment;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -17,9 +18,8 @@ class CourseController extends Controller
 
     public function addCourse(Course $course, Topic $topic)
     {
-        $user = \Auth::user();
-        
-        $user->courses()->attach($course);
+        // $user = \Auth::user();
+        // $user->courses()->attach($course);
 
         return redirect('/study/lesson/'. $course->id);
     }
@@ -52,6 +52,22 @@ class CourseController extends Controller
 
         return view('lessons.showLessons', compact('course', 'topic', 'next', 'prev'));
 
+    }
+
+    public function User_course_deletion(Course $course){
+        //user authentication
+        $authUser = auth()->user();
+
+        // checking if the payment has already been made for the course
+        $user_payment = Payment::where('user_id', $authUser->id)->where('course', $course->name)->first();
+        if ($user_payment) {
+            $user_payment->delete();
+        } 
+        // deleting from the many to many relationship
+        $user_courses = $authUser->courses->where('course_id', $course->id)->first();
+        $user_courses->delete();
+
+        return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);
     }
 
 }
