@@ -155,51 +155,50 @@
     })
 
     $(document).ready(function(){
-
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-    $('.deleteSection').click(function(e){
-        e.preventDefault()
-
-        var delete_val = $(this).closest("div").find(".delete_value").val();
-        console.log(delete_val)
-
-        swal({
-        title: "Delete!!!",
-        text: "Note: This action cannot be reversed",
-        // icon: "warning",
-        buttons: ["Cancel", "Delete Anyway"],
-        dangerMode: true,
-        })
-        .then((willDelete) => {
-        if (willDelete) {
-
-            var data = {
-                "_token": $('input[name=_token').val(),
-                "id": delete_val,
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
+        });
+        $('.deleteSection').click(function(e){
+            e.preventDefault()
 
-        //     $.ajax({
-        //         type: "DELETE",
-        //         url: "/admin/topic/" + delete_val, 
-        //         data: data, 
-        //         success: function(response){
-        //             swal(response.status, {
-        //                 icon: "success",
-        //             })
-        //             .then((result) =>{
-        //                 location.reload()
-        //             })
-        //         }
-        //     })
-        // } else {
-        //     swal("Section Deletion aborted");
-        // }
-        // });
-    })
+            var delete_val = $(this).closest("div").find(".delete_value").val();
+            console.log(delete_val)
+
+            swal({
+            title: "Delete!!!",
+            text: "Note: This action cannot be reversed",
+            // icon: "warning",
+            buttons: ["Cancel", "Delete Anyway"],
+            dangerMode: true,
+            })
+            .then((willDelete) => {
+            if (willDelete) {
+
+                var data = {
+                    "_token": $('input[name=_token').val(),
+                    "id": delete_val,
+                }
+
+                $.ajax({
+                    type: "DELETE",
+                    url: "/admin/topic/" + delete_val, 
+                    data: data, 
+                    success: function(response){
+                        swal(response.status, {
+                            icon: "success",
+                        })
+                        .then((result) =>{
+                            location.reload()
+                        })
+                    }
+                })
+            } else {
+                swal("Section Deletion aborted");
+            }
+            });
+        })
 })
 
 </script>
