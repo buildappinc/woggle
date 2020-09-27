@@ -107,10 +107,11 @@
 
     {{-- button  --}}
     
-    <div class="mb-0 mt-16 ml-0 mr-0">
+    <div class="mb-4 mt-12 ml-0 mr-0">
         <div class="flex justify-center">
-            <button type="submit" style="background: linear-gradient(190.3deg, #666666 0%, #151522 100%); width: 37%" class="btn btn-primary h-12">
-                <div class="flex flex-row justify-center">
+            <input type="hidden" class="delete_value" value="{{Auth::user()->id}}">
+            <a class="deleteSection" style="background: linear-gradient(190.3deg, #666666 0%, #151522 100%); width: 37%" class="btn btn-primary h-12">
+                <div class="flex flex-row justify-center items-center">
                     <div class="mx-2">
                         <img src="{{asset('/images/reset.png')}}" alt="">
                     </div>
@@ -118,7 +119,7 @@
                         {{ __('Delete Account') }}
                     </div>
                 </div>
-            </button>
+            </a>
         </div>
     </div>
 
@@ -162,7 +163,7 @@
               e.preventDefault()
 
               var delete_val = $(this).closest("div").find(".delete_value").val();
-              // console.log(delete_val)
+              console.log(delete_val)
 
               swal({
               title: "Delete!!!",
