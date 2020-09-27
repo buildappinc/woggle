@@ -235,21 +235,7 @@ h2 {
                         <div class="flex flex-col p-2 ml-3">
                           <a class="text-black"><span class="font-bold">Solutions: </span> {{$options['options4']}}</a>
                         </div>
-                        {{-- @foreach ($question->answers as $answer)
-                          <div class="flex flex-col p-2 ml-3">
-                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$option}}</a>
-                          </div>
-                          <div class="flex flex-col p-2 ml-3">
-                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options2}}</a>
-                          </div>
-                          <div class="flex flex-col p-2 ml-3">
-                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options3}}</a>
-                          </div>
-                          <div class="flex flex-col p-2 ml-3">
-                            <a class="text-black"><span class="font-bold">Solutions: </span> {{$answer->options4}}</a>
-                          </div>
-                        @endforeach --}}
-                        {{-- correct soliution --}}
+                        
                         <div class="flex flex-col p-2 ml-3">
                           <a class="text-black"><span class="font-bold">Right solution: </span> {{$question->answer}}</a>
                         </div>

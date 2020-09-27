@@ -95,7 +95,7 @@
           </div>
       </div>
              {{-- button  --}}
-        <div class="mb-0 ml-0 mr-0 mt-10">
+        <div class="mb-4 ml-0 mr-0 mt-10">
             <div class="flex justify-center">
                 <button type="submit" style="background: linear-gradient(190.57deg, #96FFC6 3.26%, #21A659 100%);" class="btn btn-primary h-12 w-1/2">
                     {{ __('Update profile') }}
@@ -109,6 +109,7 @@
     
     <div class="mb-0 mt-16 ml-0 mr-0">
         <div class="flex justify-center">
+            <input type="hidden" class="delete_value" value="{{Auth::user()->id}}">
             <button type="submit" style="background: linear-gradient(190.3deg, #666666 0%, #151522 100%); width: 37%" class="btn btn-primary h-12">
                 <div class="flex flex-row justify-center">
                     <div class="mx-2">
@@ -125,6 +126,9 @@
 </div>
     
 @endsection
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
     function triggerImage(){
@@ -149,5 +153,50 @@
             reader.readAsDataURL(file);
         }
     })
+
+    $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+          });
+          $('.deleteSection').click(function(e){
+              e.preventDefault()
+
+              var delete_val = $(this).closest("div").find(".delete_value").val();
+              console.log(delete_val)
+
+              swal({
+              title: "Delete!!!",
+              text: "Note: This action cannot be reversed",
+              // icon: "warning",
+              buttons: ["Cancel", "Delete Anyway"],
+              dangerMode: true,
+              })
+              .then((willDelete) => {
+              if (willDelete) {
+
+                //   var data = {
+                //       "_token": $('input[name=_token').val(),
+                //       "id": delete_val,
+                //   }
+
+                //   $.ajax({
+                //       type: "DELETE",
+                //       url: "/admin/topic/" + delete_val, 
+                //       data: data, 
+                //       success: function(response){
+                //           swal(response.status, {
+                //                 icon: "success",
+                //           })
+                //           .then((result) =>{
+                //               location.reload()
+                //           })
+                //       }
+                //   })
+              } else {
+                  swal("Section Deletion aborted");
+              }
+              });
+          })
 
 </script>
