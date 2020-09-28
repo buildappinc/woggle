@@ -103,7 +103,6 @@
                                 url: "/study/lesson/" + course_value, 
                                 data: data, 
                                 success: function(response){
-                                    console.log("dtrisdsjdn")
                                     console.log(response)
                                     swal(response.status, {
                                         icon: "success",
