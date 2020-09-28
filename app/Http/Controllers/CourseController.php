@@ -54,7 +54,7 @@ class CourseController extends Controller
 
     }
 
-    public function User_course_deletion(Course $course){
+    public function destroy(Course $course){
         //user authentication
         $authUser = auth()->user();    
         // checking if the payment has already been made for the course
@@ -63,7 +63,7 @@ class CourseController extends Controller
         // $user_courses = $authUser->courses->where('course_id', $course->id)->first();
         // $user_courses->delete();
 
-        return \response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
+        return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
     }
 
 }
