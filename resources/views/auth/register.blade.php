@@ -146,7 +146,7 @@
 
 
                                 <div class="col-md-12 input">
-                                    <input id="email" type="email" placeholder="xxxx@gmail.com" class="form-control @error('email') is-invalid @enderror" name="p_email" value="{{ old('p_email') }}"  autocomplete="p_email">
+                                    <input id="p_email" type="email" placeholder="xxxx@gmail.com" class="form-control @error('p_email') is-invalid @enderror" name="p_email" value="{{ old('p_email') }}"  autocomplete="p_email">
 
                                     @error('p_email')
                                         <span class="invalid-feedback" role="alert">
@@ -163,7 +163,7 @@
 
 
                         <div class="col-md-12 input">
-                            <input id="email" type="text" placeholder="020*******" class="form-control @error('email') is-invalid @enderror" name="phone" value="{{ old('phone') }}"  autocomplete="phone">
+                            <input id="phone" type="text" placeholder="020*******" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
 
                             @error('phone')
                                 <span class="invalid-feedback" role="alert">
