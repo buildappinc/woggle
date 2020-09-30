@@ -69,6 +69,7 @@ class CourseController extends Controller
             $user_payment->update([
                 'status_delete' => $user_payment->status_delete
             ]);
+            dd($authUser->courses());
             $authUser->courses()->update([
                 'status' => $user_course->status
             ]);
@@ -80,6 +81,7 @@ class CourseController extends Controller
             $user_payment->update([
                 'status_delete' => $user_payment->status_delete
             ]);
+            dd($authUser->courses());
             $authUser->courses()->update([
                 'status' => $user_course->status
             ]);
