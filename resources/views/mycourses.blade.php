@@ -95,7 +95,7 @@
                     @else
                     <div class="flex flex-no-wrap flex-col lg:flex-wrap lg:flex-row md:flex-wrap md:flex-row mt-4 pt-3">
                         @foreach (Auth::user()->courses as $course)
-                            @if ($course->status == false)
+                            @if ($course->status == true)
                                 <div class="w-2/5 pl-4 pt-4">
                                     <div class="h-48 w-48 shadow-md">
                                         <img class="rounded-lg h-48 max-w-full shadow-inner object-cover" src="images/courses/{{$course->image}}" alt="">
@@ -121,7 +121,7 @@
                 <p class="italic hello">Payment History</p>
                 <div class="flex flex-wrap gap-4">
                     @foreach ($payment_user as $item)
-                       @if ($item->status_delete == true)
+                       @if ($item->status_delete == false)
                             <div class="box2 p-4 grid grid-row-2 grid-flow-row">
                                 <div>
                                     <div class="flex justify-between items-baseline">
