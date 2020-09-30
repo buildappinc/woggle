@@ -80,7 +80,7 @@ class CourseController extends Controller
             $user_payment->update([
                 'status_delete' => $user_payment->status_delete
             ]);
-            $authUser->courses->update([
+            $authUser->courses()->update([
                 'status' => $user_course->status
             ]);
             return redirect('/mycourses');
