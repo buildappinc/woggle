@@ -62,7 +62,7 @@ class CourseController extends Controller
         $user_course = $authUser->courses->first();
 
         // updating courses and payment instead of deleting them
-        if ($user_course->status == false || $user_payment->status_delete == false) {
+        if ($user_course->status == true || $user_payment->status_delete == false) {
             //updating the user course section
             $user_course->status = true;
             $user_payment->status_delete = true;
