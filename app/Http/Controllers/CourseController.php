@@ -68,15 +68,14 @@ class CourseController extends Controller
             $user_payment->status_delete = true;
             $user_payment->update([
                 'status_delete' => $user_payment->status_delete
-            ]);
-            dd($user_course->status);
+            ]);    
             $user_course->update([
                 'status' => $user_course->status
             ]);
             return redirect('/mycourses');
             // return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
         } else {
-            $user_course->status = false;
+            $user_course->status = true;
             $user_payment->status_delete = false;
             $user_payment->update([
                 'status_delete' => $user_payment->status_delete
