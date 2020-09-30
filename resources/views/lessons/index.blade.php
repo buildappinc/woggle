@@ -56,14 +56,19 @@
                 </div>
 
                 {{-- deleting course from user profile --}}
-                <div class="p-5">
-                    <input type="hidden" class="course_value" value="{{$course->id}}">
-                    <a href="" id="userCourseDeletion" class="text-white">
-                        <div class="font w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
-                        Delete Course from this account
-                        </div>
-                    </a>
-                </div>
+                <form action="{{route('update', ['course'=>$course->id])}}" method="post">
+                    @method('PATCH')
+                    <div class="p-5">
+                        {{-- <input type="hidden" class="course_value" value="{{$course->id}}"> --}}
+                        {{-- <a href="" id="userCourseDeletion" class="text-white"> --}}
+                        <button type="submit">
+                            <div class="font w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
+                             Delete Course from this account
+                            </div>
+                        </button>
+                        {{-- </a> --}}
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -81,7 +86,7 @@
                         e.preventDefault()
 
                         var course_value = $(this).closest("div").find(".course_value").val();
-                        console.log(course_value)
+                        console.log(course_value) 
 
                         swal({
                         title: "Delete!!!",

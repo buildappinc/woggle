@@ -72,7 +72,8 @@ class CourseController extends Controller
             $authUser->courses()->update([
                 'status' => $user_course->status
             ]);
-            return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
+            return redirect('/mycourses');
+            // return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
         } else {
             $user_course->status = false;
             $user_payment->status_delete = false;
@@ -82,7 +83,8 @@ class CourseController extends Controller
             $authUser->courses->update([
                 'status' => $user_course->status
             ]);
-            return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
+            return redirect('/mycourses');
+            // return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
         }
     }
 
