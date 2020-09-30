@@ -174,6 +174,7 @@
                     @endforeach
                 </div>
             </div>
+            
             <div class="mt-4">
                 <p class="italic hello">Course details</p>
                 <div class="grid grid-rows-1 gap-6">
