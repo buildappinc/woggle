@@ -57,6 +57,7 @@
 
                 {{-- deleting course from user profile --}}
                 <form action="{{route('update', ['course'=>$course->id])}}" method="post">
+                    @csrf
                     @method('PATCH')
                     <div class="p-5">
                         {{-- <input type="hidden" class="course_value" value="{{$course->id}}"> --}}
