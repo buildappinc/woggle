@@ -121,7 +121,7 @@
                 <p class="italic hello">Payment History</p>
                 <div class="flex flex-wrap gap-4">
                     @foreach ($payment_user as $item)
-                       @if ($item->status_delete == false)
+                       @if ($item->status_delete == true)
                             <div class="box2 p-4 grid grid-row-2 grid-flow-row">
                                 <div>
                                     <div class="flex justify-between items-baseline">
@@ -179,7 +179,7 @@
                 <p class="italic hello">Course details</p>
                 <div class="grid grid-rows-1 gap-6">
                     @foreach ($courses as $item)        
-                            @if ($item->status == false)
+                            @if ($item->status == true)
                                 <div class=" box hover:shadow-lg"> 
                                     <div class="p-3">
                                         <div class="hello text-xl">

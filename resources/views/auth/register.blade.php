@@ -142,7 +142,7 @@
             <div class="row">
                 <div class="col-6">
                             <div class="form-group">
-                                <label for="p_email">{{ __('Parent/Guardian\'s E-Mail Address(optional)') }}</label>  
+                                <label for="p_email">{{ __('Parent/Guardian\'s E-Mail Address') }}</label>  
 
 
                                 <div class="col-md-12 input">
