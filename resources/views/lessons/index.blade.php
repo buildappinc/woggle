@@ -59,7 +59,7 @@
                 <div class="p-5">
                     <input type="hidden" class="course_value" value="{{$course->id}}">
                     <a href="" id="userCourseDeletion" class="text-white">
-                        <div class="w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
+                        <div class="font w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
                         Delete Course from this account
                         </div>
                     </a>
@@ -99,7 +99,7 @@
                             }
 
                             $.ajax({
-                                type: "DELETE",
+                                type: "POST",
                                 url: "/study/lesson/" + course_value, 
                                 data: data, 
                                 success: function(response){

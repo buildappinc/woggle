@@ -18,6 +18,7 @@ class CreateSectionsTable extends Migration
             $table->unsignedInteger('topic_id');
             $table->string('header');
             $table->string('content', 5000);
+            $table->string('status')->default(false);
             $table->timestamps();
         });
     }

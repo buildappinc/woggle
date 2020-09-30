@@ -25,6 +25,7 @@ class CreatePaymentsTable extends Migration
             $table->string('email');
             $table->string('course');
             $table->string('customer_code');
+            $table->boolean('status_delete')->default(false);
             $table->timestamps();
         });
     }

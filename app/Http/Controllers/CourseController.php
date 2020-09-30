@@ -55,15 +55,35 @@ class CourseController extends Controller
     }
 
     public function destroy(Course $course){
-        //user authentication
-        $authUser = auth()->user();    
-        // checking if the payment has already been made for the course
-        $user_payment = Payment::where('user_id', $authUser->id)->where('course', $course->name)->first()->delete();
-        // deleting from the many to many relationship
-        // $user_courses = $authUser->courses->where('course_id', $course->id)->first();
-        // $user_courses->delete();
+        //dealing with status and updating it 
+        //auth user
+        $authUser = auth()->user();
+        $user_payment = Payment::where('user_id', $authUser->id)->where('course', $course->name)->first();
+        $user_course = $authUser->courses->first();
 
-        return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
+        // updating courses and payment instead of deleting them
+        if ($user_course->status == false || $user_payment->status_delete == false) {
+            //updating the user course section
+            $user_course->status = true;
+            $user_payment->status_delete = true;
+            $user_payment->update([
+                'status_delete' => $user_payment->status_delete
+            ]);
+            $authUser->courses()->update([
+                'status' => $user_course->status
+            ]);
+            return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
+        } else {
+            $user_course->status = false;
+            $user_payment->status_delete = false;
+            $user_payment->update([
+                'status_delete' => $user_payment->status_delete
+            ]);
+            $authUser->courses->update([
+                'status' => $user_course->status
+            ]);
+            return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
+        }
     }
 
 }

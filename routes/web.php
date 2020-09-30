@@ -27,7 +27,8 @@ Route::get('/study/{course}', 'StudyController@show');
 Route::post('/study/{course}', 'CourseController@addCourse')->name('course.get');
 // Route::get('/study/lesson/{course}', 'CourseController@showIndividualCourse');
 Route::get('/study/lesson/{course}', 'CourseController@Topics')->name('course.content');
-Route::delete('/study/lesson/{course}', 'CourseController@destroy');
+// Route::delete('/study/lesson/{course}', 'CourseController@destroy');
+Route::post('/study/lesson/{course}', 'CourseController@destroy');
 Route::get('/study/lesson/content/{course}/{topic}', 'CourseController@LessonContent')->name('lesson.content');
 
 

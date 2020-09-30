@@ -17,7 +17,7 @@ class CreateTopicsTable extends Migration
             $table->id();
             $table->unsignedInteger('course_id');
             $table->string('name');
-            $table->integer('is_complete')->default("0");
+            $table->integer('is_complete')->default(false);
             $table->timestamps();
         });
     }

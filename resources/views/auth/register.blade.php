@@ -139,6 +139,42 @@
                             </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-6">
+                            <div class="form-group">
+                                <label for="p_email">{{ __('Parent/Guardian\'s E-Mail Address(optional)') }}</label>  
+
+
+                                <div class="col-md-12 input">
+                                    <input id="email" type="email" placeholder="xxxx@gmail.com" class="form-control @error('email') is-invalid @enderror" name="p_email" value="{{ old('p_email') }}"  autocomplete="p_email">
+
+                                    @error('p_email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                
+                            </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="phone">{{ __('Parent/Guardian\'s contact') }}</label>  
+
+
+                        <div class="col-md-12 input">
+                            <input id="email" type="email" placeholder="xxxx@gmail.com" class="form-control @error('email') is-invalid @enderror" name="phone" value="{{ old('phone') }}"  autocomplete="phone">
+
+                            @error('phone')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">

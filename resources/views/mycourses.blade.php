@@ -95,14 +95,18 @@
                     @else
                     <div class="flex flex-no-wrap flex-col lg:flex-wrap lg:flex-row md:flex-wrap md:flex-row mt-4 pt-3">
                         @foreach (Auth::user()->courses as $course)
-                            <div class="w-2/5 pl-4 pt-4">
-                                <div class="h-48 w-48 shadow-md">
-                                    <img class="rounded-lg h-48 max-w-full shadow-inner object-cover" src="images/courses/{{$course->image}}" alt="">
+                            @if ($course->status == false)
+                                <div class="w-2/5 pl-4 pt-4">
+                                    <div class="h-48 w-48 shadow-md">
+                                        <img class="rounded-lg h-48 max-w-full shadow-inner object-cover" src="images/courses/{{$course->image}}" alt="">
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="/study/lesson/{{$course->id}}" class="hello text-3xl text-black">{{$course->name}}</a> 
+                                    </div>
                                 </div>
-                                <div class="text-center">
-                                    <a href="/study/lesson/{{$course->id}}" class="hello text-3xl text-black">{{$course->name}}</a> 
-                                </div>
-                            </div>
+                            @else
+                                <div>deleted</div>
+                            @endif
                        @endforeach
                      </div>
                 @endif
@@ -117,52 +121,56 @@
                 <p class="italic hello">Payment History</p>
                 <div class="flex flex-wrap gap-4">
                     @foreach ($payment_user as $item)
-                       <div class="box2 p-4 grid grid-row-2 grid-flow-row">
-                            <div>
-                                <div class="flex justify-between items-baseline">
-                                    <div class="font font-extrabold text-2xl">
-                                        {{$item->currency}}
-                                        {{$item->amount *.01 }}
-                                    </div>
-                                    <div class="font-semibold">
-                                        {{$item->created_at->diffForHumans()}}
+                       @if ($item->status_delete == false)
+                            <div class="box2 p-4 grid grid-row-2 grid-flow-row">
+                                <div>
+                                    <div class="flex justify-between items-baseline">
+                                        <div class="font font-extrabold text-2xl">
+                                            {{$item->currency}}
+                                            {{$item->amount *.01 }}
+                                        </div>
+                                        <div class="font-semibold">
+                                            {{$item->created_at->diffForHumans()}}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <hr>
-                            <div>
-                                <div class="text-xs text-center bg-blue-100 p-1 shadow-sm" style="border-radius: 10px 30px;">
-                                    <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
-                                        Ref Id: 
-                                    </div>
-                                    <div class="font-bold">
-                                        {{$item->reference}}
-                                    </div>
-                                </div><br>
-                                <div class="flex justify-between">
-                                    <div class="text-xs">
+                                <hr>
+                                <div>
+                                    <div class="text-xs text-center bg-blue-100 p-1 shadow-sm" style="border-radius: 10px 30px;">
                                         <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
-                                            Status
+                                            Ref Id: 
                                         </div>
-                                        <div class="hello text-green-700 uppercase">{{$item->status}}</div> 
-                                    </div>
-                                    <div class="text-xs">
-                                        <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
-                                            Type 
+                                        <div class="font-bold">
+                                            {{$item->reference}}
                                         </div>
-                                        <div class="hello uppercase">{{$item->channel}}</div> 
-                                    </div>
-                                    <div class="text-xs">
-                                        <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
-                                            Course 
+                                    </div><br>
+                                    <div class="flex justify-between">
+                                        <div class="text-xs">
+                                            <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
+                                                Status
+                                            </div>
+                                            <div class="hello text-green-700 uppercase">{{$item->status}}</div> 
                                         </div>
-                                        <div class="hello uppercase font-bold">
-                                           {{$item->course}}
-                                        </div> 
+                                        <div class="text-xs">
+                                            <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
+                                                Type 
+                                            </div>
+                                            <div class="hello uppercase">{{$item->channel}}</div> 
+                                        </div>
+                                        <div class="text-xs">
+                                            <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
+                                                Course 
+                                            </div>
+                                            <div class="hello uppercase font-bold">
+                                            {{$item->course}}
+                                            </div> 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                       </div>
+                        </div>
+                       @else
+                           <div>deleted</div>
+                       @endif
                     @endforeach
                 </div>
             </div>
@@ -170,30 +178,34 @@
                 <p class="italic hello">Course details</p>
                 <div class="grid grid-rows-1 gap-6">
                     @foreach ($courses as $item)        
-                            <div class=" box hover:shadow-lg"> 
-                                <div class="p-3">
-                                    <div class="hello text-xl">
-                                        {{$item->name}}
+                            @if ($item->status == false)
+                                <div class=" box hover:shadow-lg"> 
+                                    <div class="p-3">
+                                        <div class="hello text-xl">
+                                            {{$item->name}}
+                                        </div>
+                                        <div class="flex flex-wrap">
+                                            @foreach ($item->topics as $items)                                             
+                                                <div class="pl-1 pt-3" style="width: 24%">
+                                                    <a href="{{ route('lesson.content', ['course'=>$item->id, 'topic'=>$items->id]) }}" class="text-black">
+                                                        <div class="font text-center text-xs bg-blue-100 p-1 shadow-sm capitalize" style="border-radius: 10px 30px;">{{$items->name}}</div>
+                                                    </a>                                                                   
+                                                </div>     
+                                            @endforeach
+                                        </div>
                                     </div>
-                                    <div class="flex flex-wrap">
-                                        @foreach ($item->topics as $items)                                             
-                                            <div class="pl-1 pt-3" style="width: 24%">
-                                                <a href="{{ route('lesson.content', ['course'=>$item->id, 'topic'=>$items->id]) }}" class="text-black">
-                                                    <div class="font text-center text-xs bg-blue-100 p-1 shadow-sm capitalize" style="border-radius: 10px 30px;">{{$items->name}}</div>
-                                                </a>                                                                   
-                                            </div>     
-                                        @endforeach
+                                    <div class="flex items-center justify-center">
+                                        <div>
+                                            <input type="hidden" id="course_id" value="{{$item->id}}">
+                                            <a class="course_completion">
+                                                <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#000; background-color: #f7b728; cursor: pointer">Take Quiz</p>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flex items-center justify-center">
-                                    <div>
-                                        <input type="hidden" id="course_id" value="{{$item->id}}">
-                                        <a class="course_completion">
-                                            <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#000; background-color: #f7b728; cursor: pointer">Take Quiz</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>    
+                                </div>    
+                            @else
+                                <div>ddeleted</div>
+                            @endif
                      @endforeach
                 </div>
             </div>

@@ -21,6 +21,7 @@ class CreateUserresultsTable extends Migration
             $table->string('no_ans'); 
             $table->string('result');
             $table->string('mark');
+            $table->string('status')->default(false);
             $table->timestamps();
         });
     }
