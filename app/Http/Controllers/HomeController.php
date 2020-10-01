@@ -10,6 +10,7 @@ use App\Payment;
 use App\Progress;
 use App\User;
 use App\Course;
+use App\CourseUser;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -33,10 +34,16 @@ class HomeController extends Controller
     public function index()
     {
         $authUser = auth()->user()->id;    
-       
-        $payment_user = Payment::where('user_id', $authUser)->get()->all();
+        $payment_user = Payment::where('user_id', $authUser)->get()->all();        
 
         $courses = auth()->user()->courses->all();
+
+        // looping through
+        foreach ($courses as $key => $value) {
+            dd($value);
+            $user_course = CourseUser::where('user_id', $authUser)->where('course_id', $value->id)->first();
+        }
+
 
         $progress = Progress::where('user_id', $authUser)->pluck('course_id')->all();
 
