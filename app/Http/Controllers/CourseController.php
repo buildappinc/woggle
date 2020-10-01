@@ -7,6 +7,7 @@ use App\Topic;
 use App\User;
 use App\Progress;
 use App\Payment;
+use App\CourseUser;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -57,14 +58,14 @@ class CourseController extends Controller
     public function destroy(Course $course){
         //dealing with status and updating it 
         //auth user
-        $authUser = auth()->user();
+        $authUser = auth()->user()->id;
         $user_payment = Payment::where('user_id', $authUser->id)->where('course', $course->name)->first();
-        $user_course = $authUser->courses->first();
+        $user_course = CourseUser::where('user_id', $authUser->id)->where('course_id', $course->id)->first();
         
         // updating courses and payment instead of deleting them
-        if ($user_course->status == true || $user_payment->status_delete == false) {
+        if ($user_course->status == false || $user_payment->status_delete == false) {
             //updating the user course section
-            $user_course->status = false;
+            $user_course->status = true;
             $user_payment->status_delete = true;
             $user_payment->update([
                 'status_delete' => $user_payment->status_delete
@@ -72,10 +73,9 @@ class CourseController extends Controller
             $user_course->update([
                 'status' => $user_course->status
             ]);
-            return redirect('/mycourses');
-            // return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
+            return redirect('/mycourses');                    
         } else {
-            $user_course->status = true;
+            $user_course->status = false;
             $user_payment->status_delete = false;
             $user_payment->update([
                 'status_delete' => $user_payment->status_delete
@@ -84,8 +84,7 @@ class CourseController extends Controller
             $user_course->update([
                 'status' => $user_course->status
             ]);
-            return redirect('/mycourses');
-            // return response()->json(['status', "Course has been deleted from your account successfully \n Note: to retake the course payment has to be made again"]);        
+            return redirect('/mycourses');            
         }
     }
 
