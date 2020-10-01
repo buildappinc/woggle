@@ -56,20 +56,20 @@
                 </div>
 
                 {{-- deleting course from user profile --}}
-                <form action="{{route('update', ['course'=>$course->id])}}" method="post">
+                {{-- <form action="{{route('update', ['course'=>$course->id])}}" method="post">
                     @csrf
                     @method('PATCH')
-                    <div class="p-5">
+                    <div class="p-5"> --}}
                         {{-- <input type="hidden" class="course_value" value="{{$course->id}}"> --}}
                         {{-- <a href="" id="userCourseDeletion" class="text-white"> --}}
-                        <button type="submit" class="font w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
+                        {{-- <button type="submit" class="font w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
                             <div>
                              Delete Course from this account
                             </div>
-                        </button>
+                        </button> --}}
                         {{-- </a> --}}
-                    </div>
-                </form>
+                    {{-- </div>
+                </form> --}}
             </div>
         </div>
 
