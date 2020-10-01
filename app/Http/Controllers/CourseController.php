@@ -60,7 +60,6 @@ class CourseController extends Controller
         $authUser = auth()->user();
         $user_payment = Payment::where('user_id', $authUser->id)->where('course', $course->name)->first();
         $user_course = $authUser->courses->first();
-        dd($user_course);
         
         // updating courses and payment instead of deleting them
         if ($user_course->status == true || $user_payment->status_delete == false) {
