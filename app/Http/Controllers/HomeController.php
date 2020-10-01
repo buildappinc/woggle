@@ -41,6 +41,7 @@ class HomeController extends Controller
         // looping through
         foreach ($courses as $key => $value) {
             $user_course = CourseUser::where('user_id', $authUser)->where('course_id', $value->id)->first();
+            dd($user_course);
         }
 
 
