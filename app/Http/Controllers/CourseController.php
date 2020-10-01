@@ -58,7 +58,7 @@ class CourseController extends Controller
     public function destroy(Course $course){
         //dealing with status and updating it 
         //auth user
-        $authUser = auth()->user()->id;
+        $authUser = auth()->user();
         $user_payment = Payment::where('user_id', $authUser->id)->where('course', $course->name)->first();
         $user_course = CourseUser::where('user_id', $authUser->id)->where('course_id', $course->id)->first();
         
