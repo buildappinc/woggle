@@ -179,7 +179,7 @@
                 <p class="italic hello">Course details</p>
                 <div class="grid grid-rows-1 gap-6">
                     @foreach ($courses as $item)        
-                            @if ($item->status == false)
+                            @if ($user_course->status == false)
                                 <div class=" box hover:shadow-lg"> 
                                     <div class="p-3">
                                         <div class="hello text-xl">
