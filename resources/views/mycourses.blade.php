@@ -95,7 +95,7 @@
                     @else
                     <div class="flex flex-no-wrap flex-col lg:flex-wrap lg:flex-row md:flex-wrap md:flex-row mt-4 pt-3">
                         @foreach (Auth::user()->courses as $course)
-                            @if ($course->status == true)
+                            @if ($user_course->status == false)
                                 <div class="w-2/5 pl-4 pt-4">
                                     <div class="h-48 w-48 shadow-md">
                                         <img class="rounded-lg h-48 max-w-full shadow-inner object-cover" src="images/courses/{{$course->image}}" alt="">
@@ -179,7 +179,7 @@
                 <p class="italic hello">Course details</p>
                 <div class="grid grid-rows-1 gap-6">
                     @foreach ($courses as $item)        
-                            @if ($item->status == true)
+                            @if ($item->status == false)
                                 <div class=" box hover:shadow-lg"> 
                                     <div class="p-3">
                                         <div class="hello text-xl">

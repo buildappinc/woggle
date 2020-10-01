@@ -62,8 +62,8 @@
                     <div class="p-5">
                         {{-- <input type="hidden" class="course_value" value="{{$course->id}}"> --}}
                         {{-- <a href="" id="userCourseDeletion" class="text-white"> --}}
-                        <button type="submit">
-                            <div class="font w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
+                        <button type="submit" class="font w-full flex justify-center h-10 items-center rounded hover:shadow" style="background: #ef4538; cursor: pointer">
+                            <div>
                              Delete Course from this account
                             </div>
                         </button>

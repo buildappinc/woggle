@@ -40,14 +40,12 @@ class HomeController extends Controller
 
         // looping through
         foreach ($courses as $key => $value) {
-            $user_course = CourseUser::where('user_id', $authUser)->where('course_id', $value->id)->first();
-            dd($user_course);
+            $user_course = CourseUser::where('user_id', $authUser)->where('course_id', $value->id)->first();            
         }
-
 
         $progress = Progress::where('user_id', $authUser)->pluck('course_id')->all();
 
-        return view('mycourses', compact('progress', 'courses', 'payment_user'));
+        return view('mycourses', compact('progress', 'courses', 'payment_user', 'user_course'));
        
     }
 
