@@ -40,7 +40,7 @@ class HomeController extends Controller
 
         $user = auth()->user();
 
-        $user->notify(new UserStatus(User::findOrFail($authUser)));
+        $user->notify(new App\Notifications\UserStatus(User::findOrFail($authUser)));
 
         // looping through
         foreach ($courses as $key => $value) {
