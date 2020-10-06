@@ -38,6 +38,10 @@ class HomeController extends Controller
 
         $courses = auth()->user()->courses->all();
 
+        $user = auth()->user();
+
+        $user->notify(new UserStatus(User::findOrFail($authUser)));
+
         // looping through
         foreach ($courses as $key => $value) {
             $user_course = CourseUser::where('user_id', $authUser)->where('course_id', $value->id)->first();            
