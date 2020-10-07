@@ -114,6 +114,7 @@
                             </div>
                         </a>  
                     </div>
+                    <div class="p-4 flex md:flex-wrap lg:flex-wrap xl:flex-wrap ">
                     @foreach ($courses as $item)
                         {{-- <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
                             <a class="text-black" href="/admin/courses/{{$item->id}}/edit">
@@ -123,13 +124,13 @@
                                 </div>
                             </a>
                         </div> --}}
-                        <div class="p-4 flex md:flex-wrap lg:flex-wrap xl:flex-wrap ">
+                        
                             <div class="w-2/4 bg-red-400">
                                 dsakldmsadd
                             </div>
-                        </div>
+                        
                     @endforeach
-                    
+                </div>
                 </div>
                 <div class="h-auto shadow-md rounded-lg border border-grap-100">
                     <div class="p-4 text-2xl font-bold">
