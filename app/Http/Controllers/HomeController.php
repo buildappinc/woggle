@@ -13,6 +13,7 @@ use App\Course;
 use App\CourseUser;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use App\Notifications\UserStatus;
 
 class HomeController extends Controller
 {
@@ -40,7 +41,7 @@ class HomeController extends Controller
 
         $user = auth()->user();
 
-        $user->notify(new App\Notifications\UserStatus(User::findOrFail($authUser)));
+        $user->notify(new UserStatus(User::findOrFail($authUser)));
 
         // looping through
         foreach ($courses as $key => $value) {
