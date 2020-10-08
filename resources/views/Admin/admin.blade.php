@@ -125,7 +125,7 @@
                                 </a>
                             </div> --}}
                             <a class="text-black" href="/admin/courses/{{$item->id}}/edit">
-                                <div class="w-full h-64 bg-gray-200 relative" style=" -webkit-box-shadow: -1px -1px 56px -28px rgba(61,10,10,1);-moz-box-shadow: -1px -1px 56px -28px rgba(61,10,10,1);box-shadow: -1px -1px 56px -28px rgba(61,10,10,1);">
+                                <div class="w-full h-64 bg-gray-200 relative" style=" -webkit-box-shadow: -1px 7px 56px -28px rgba(61,10,10,1); -moz-box-shadow: -1px 7px 56px -28px rgba(61,10,10,1); box-shadow: -1px 7px 56px -28px rgba(61,10,10,1);">
                                     <div class="h-full">
                                         <img src="{{asset('images/courses/'.$item->image)}}"  class="lg:h-full md:h-full md:object-cover sm:w-full sm:object-cover lg:object-cover" alt="">
                                     </div>
