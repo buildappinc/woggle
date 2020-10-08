@@ -125,13 +125,19 @@
                                 </a>
                             </div> --}}
                             <div class="w-full h-64 bg-gray-200 shadow-md" style=" border-button: 2px solid rgb(24, 3, 141)">
-                                <div class="h-40">
-                                    <img src="{{asset('images/courses/'.$item->image)}}"  class="lg:h-full md:h-full md:object-cover sm:w-full sm:object-cover rounded-lg lg:object-cover"  alt="">
+                                <div class="h-48">
+                                    <img src="{{asset('images/courses/'.$item->image)}}"  class="lg:h-full md:h-full md:object-cover sm:w-full sm:object-cover lg:object-cover" style="border-bottom-left-radius: 20px; border-bottom-right-raduis: 20px"  alt="">
                                 </div>
-                                <div>{{$item->name}}</div>
-                                <div>{{$item->price}}</div>
+                                <div>
+                                    <div class="text-3xl font-bold">{{$item->name}}</div>
+                                </div>
                             </div>
                         @endforeach
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <a href="">
+                            <div>see all</div>
+                        </a>
                     </div>
                 </div>
                 <div class="h-auto shadow-md rounded-lg border border-grap-100">
