@@ -114,7 +114,7 @@
                             </div>
                         </a>  
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 p-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 p-3">
                         @foreach ($courses as $item)
                             {{-- <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
                                 <a class="text-black" href="/admin/courses/{{$item->id}}/edit">
@@ -124,7 +124,10 @@
                                     </div>
                                 </a>
                             </div> --}}
-                            <div class="w-full h-64 bg-gray-200 shadow-md" style=" border-left: 2px solid rgb(24, 3, 141)">
+                            <div class="w-full h-64 bg-gray-200 shadow-md" style=" border-button: 2px solid rgb(24, 3, 141)">
+                                <div style="clip-path: circle(50.0% at 50% 0);" class="h-40 bg-blue-400">
+
+                                </div>
                                 <div>{{$item->name}}</div>
                                 <div>{{$item->price}}</div>
                             </div>
