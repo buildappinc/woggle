@@ -124,7 +124,7 @@
                                     </div>
                                 </a>
                             </div> --}}
-                            <div class="w-full h-64 bg-gray-200 shadow-lg" style=" border-left: 2px solid rgb(24, 3, 141)">
+                            <div class="w-full h-64 bg-gray-200 shadow-md" style=" border-left: 2px solid rgb(24, 3, 141)">
                                 <div>{{$item->name}}</div>
                                 <div>{{$item->price}}</div>
                             </div>
