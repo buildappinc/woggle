@@ -114,17 +114,19 @@
                             </div>
                         </a>  
                     </div>
-                    @foreach ($courses as $item)
-                        <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
-                            <a class="text-black" href="/admin/courses/{{$item->id}}/edit">
-                                <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-between px-4 p-4 hover:shadow-lg">
-                                    <div>{{$item->name}}</div>
-                                    <div>{{$item->price}}</div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                        @foreach ($courses as $item)
+                            {{-- <div class="w-full p-4 flex flex-col justify-around col-gap-6 ">
+                                <a class="text-black" href="/admin/courses/{{$item->id}}/edit">
+                                    <div class="w-11/12 h-16 bg-gray-200 rounded-lg flex flex-row justify-between px-4 p-4 hover:shadow-lg">
+                                        <div>{{$item->name}}</div>
+                                        <div>{{$item->price}}</div>
+                                    </div>
+                                </a>
+                            </div> --}}
+                            <div>sdfksdfl</div>
+                        @endforeach
+                    </div>
                 </div>
                 <div class="h-auto shadow-md rounded-lg border border-grap-100">
                     <div class="p-4 text-2xl font-bold">
