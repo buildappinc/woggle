@@ -125,10 +125,10 @@
                                 </a>
                             </div> --}}
                             <div class="w-full h-64 bg-gray-200 shadow-md" style=" border-button: 2px solid rgb(24, 3, 141)">
-                                <div class="h-48">
+                                <div class="h-full">
                                     <img src="{{asset('images/courses/'.$item->image)}}"  class="lg:h-full md:h-full md:object-cover sm:w-full sm:object-cover lg:object-cover" style="border-bottom-left-radius: 20px; border-bottom-right-raduis: 20px"  alt="">
                                 </div>
-                                <div>
+                                <div style="position: absolute; top: 20px">
                                     <div class="text-3xl font-bold">{{$item->name}}</div>
                                 </div>
                             </div>
