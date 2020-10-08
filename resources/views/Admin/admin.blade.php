@@ -125,7 +125,7 @@
                                 </a>
                             </div> --}}
                             <a class="text-black" href="/admin/courses/{{$item->id}}/edit">
-                                <div class="w-full h-64 bg-gray-200 shadow-md relative" style=" border-button: 2px solid rgb(24, 3, 141)">
+                                <div class="w-full h-64 bg-gray-200 relative" style=" -webkit-box-shadow: -1px -2px 41px -14px rgba(77,23,23,1); -moz-box-shadow: -1px -2px 41px -14px rgba(77,23,23,1); box-shadow: -1px -2px 41px -14px rgba(77,23,23,1); border-button: 2px solid rgb(24, 3, 141)">
                                     <div class="h-full">
                                         <img src="{{asset('images/courses/'.$item->image)}}"  class="lg:h-full md:h-full md:object-cover sm:w-full sm:object-cover lg:object-cover" alt="">
                                     </div>
