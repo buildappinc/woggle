@@ -126,7 +126,7 @@
                             </div> --}}
                             <div class="w-full h-64 bg-gray-200 shadow-md" style=" border-button: 2px solid rgb(24, 3, 141)">
                                 <div style="clip-path: ellipse(50% 90% at 50% 1%);" class="h-40">
-                                    <img src="{{asset('images/courses/'.$item->image)}}" style="clip-path: ellipse(50% 90% at 50% 1%);" class="lg:h-full md:h-full md:w-11/12 md:object-cover sm:w-full sm:object-cover rounded-lg lg:w-11/12 lg:object-cover"  alt="">
+                                    <img src="{{asset('images/courses/'.$item->image)}}" style="clip-path: ellipse(50% 90% at 50% 1%);" class="lg:h-full md:h-full md:object-cover sm:w-full sm:object-cover rounded-lg lg:object-cover"  alt="">
                                 </div>
                                 <div>{{$item->name}}</div>
                                 <div>{{$item->price}}</div>
