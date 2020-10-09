@@ -61,7 +61,7 @@ class PaymentController extends Controller
 
         $authUser = auth()->user()->id;    
         
-        $DATADECLARATION = $authUser->lname." ".$authUser->fname." ". " just made payment and has successfully enrolled for the course ".$course->name;
+        $DATADECLARATION = auth()->user()->lname." ".auth()->user()->fname." ". " just made payment and has successfully enrolled for the course ".$course->name;
         $adminNotice = new AdminNotification(); 
         $adminNotice->data = $DATADECLARATION; 
         $adminNotice->save();
