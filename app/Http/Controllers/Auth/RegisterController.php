@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\AdminNotification;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -70,7 +71,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
+        $DATADECLARATION = $data['lname'] + $data['fname'] + "just joined the Woogle Family( New Account created )";
+        $adminNotice = new AdminNotification(); 
+        $adminNotice->data = $DATADECLARATION; 
+        $adminNotice->save();
+
         return User::create([
             'fname' => $data['fname'],
             'lname' => $data['lname'],
@@ -78,7 +83,7 @@ class RegisterController extends Controller
             'phone' => $data['phone'], 
             'p_email' => $data['p_email'],
             'gender' => $data['gender'],
-            'email' => $data['email'],
+        'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
     }

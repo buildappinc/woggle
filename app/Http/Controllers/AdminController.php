@@ -7,6 +7,7 @@ use App\User;
 use App\Course;
 use App\Topic;
 use App\Section;
+use App\AdminNotification;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -31,8 +32,9 @@ class AdminController extends Controller
     public function viewAdmin(Course $course)
     {
         $Admin = Admin::all()->take(1);
-        $courses = Course::all()->take(3);
-        return view('Admin.admin', compact('Admin', 'course', 'courses'));
+        $courses = Course::all()->take(2);
+        $activeNotification = AdminNotification::where('status', true)->all();
+        return view('Admin.admin', compact('Admin', 'course', 'courses', 'activeNotification'));
     }
 
     public function index(){
