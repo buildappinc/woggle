@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Paystack;
 use App\Payment;
 use App\Course;
+use App\AdminNotification;
 
 class PaymentController extends Controller
 {
@@ -58,7 +59,12 @@ class PaymentController extends Controller
          // get course based on the id 
         $course = Course::findOrFail($database_details['metadata']['course_user']);
 
-        $authUser = auth()->user()->id;        
+        $authUser = auth()->user()->id;    
+        
+        $DATADECLARATION = $authUser->lname." ".$authUser->fname." ". " just made payment and has successfully enrolled for the course ".$course->name;
+        $adminNotice = new AdminNotification(); 
+        $adminNotice->data = $DATADECLARATION; 
+        $adminNotice->save();
 
         $userData = new Payment();
         $userData->user_id = $authUser;
@@ -84,10 +90,6 @@ class PaymentController extends Controller
             return redirect("/mycourses")->with('success', $paymentDetails['message'] . " You have successfully enrolled for a course ");
         }
 
-        // dd($paymentDetails);
-        // Now you have the payment details,
-        // you can store the authorization_code in your db to allow for recurrent subscriptions
-        // you can then redirect or do whatever you want
     }
     
 }

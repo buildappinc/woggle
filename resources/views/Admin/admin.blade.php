@@ -57,7 +57,9 @@
                 </div>
                 <div class="modal-body">
                    @foreach ($activeNotification as $item)
-                       {{$item->data}}
+                       <a href="">
+                           <div class="w-full h-20 bg-gray-400 rounded">{{$item->data}}</div>
+                       </a>
                    @endforeach
                 </div>
             </div>
