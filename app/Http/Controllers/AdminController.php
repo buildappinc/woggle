@@ -33,7 +33,7 @@ class AdminController extends Controller
     {
         $Admin = Admin::all()->take(1);
         $courses = Course::all()->take(2);
-        $activeNotification = AdminNotification::where('status', true)->orderBy('created_at', 'asc')->get()->all();
+        $activeNotification = AdminNotification::where('status', true)->orderBy('created_at', 'desc')->get()->all();
         return view('Admin.admin', compact('Admin', 'course', 'courses', 'activeNotification'));
     }
 
