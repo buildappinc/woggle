@@ -71,7 +71,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $DATADECLARATION = $data['lname'] + $data['fname'] + "just joined the Woogle Family( New Account created )";
+        $DATADECLARATION = $data['lname']." ".$data['fname']." "."just joined the Woogle Family( New Account created )";
         $adminNotice = new AdminNotification(); 
         $adminNotice->data = $DATADECLARATION; 
         $adminNotice->save();
