@@ -41,16 +41,16 @@ class HomeController extends Controller
 
         $user = auth()->user();
 
-        $user->notify(new UserStatus(User::findOrFail($authUser)));
+        // $user->notify(new UserStatus(User::findOrFail($authUser)));
 
         // looping through
-        foreach ($courses as $key => $value) {
-            $user_course = CourseUser::where('user_id', $authUser)->where('course_id', $value->id)->first();            
-        }
+        // foreach ($courses as $key => $value) {
+        //     $user_course = CourseUser::where('user_id', $authUser)->where('course_id', $value->id)->first();            
+        // }
 
         $progress = Progress::where('user_id', $authUser)->pluck('course_id')->all();
 
-        return view('mycourses', compact('progress', 'courses', 'payment_user', 'user_course'));
+        return view('mycourses', compact('progress', 'courses', 'payment_user'));
        
     }
 
