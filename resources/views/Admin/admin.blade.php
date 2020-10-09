@@ -57,9 +57,10 @@
                 </div>
                 <div class="modal-body">
                    @foreach ($activeNotification as $item)
-                       <a href="" class="text-black">
-                           <div class="w-full h-12 bg-gray-200 rounded flex justify-center items-center my-3 p-2">{{$item->data}}</div>
-                       </a>
+                        <div class="w-full h-12 bg-gray-200 rounded flex justify-between items-center my-3 p-2">
+                            <div>{{$item->data}}</div>
+                            <div class="text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #406AB4; cursor: pointer">Mark as read</div>
+                        </div>                       
                    @endforeach
                 </div>
             </div>
