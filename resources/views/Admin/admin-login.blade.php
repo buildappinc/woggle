@@ -35,7 +35,7 @@
 @section('title', 'Login')
 
 @section('content')
-<div class="body">
+<div class="body pt-4">
     <div class="box flex justify-center">
         <div class="text-white text-3xl italic mt-20 font-extrabold">Welcome to Woggle Africa</div>
     </div>
