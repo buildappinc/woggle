@@ -76,10 +76,10 @@
                        Old Notifications
                    </div>
                    @foreach ($inactiveNotification as $item)
-                    <div class="w-full h-12 bg-gray-200 rounded flex justify-between items-center my-3 p-2">
+                    <div class="w-full h-12 bg-gray-800 rounded flex justify-between items-center my-3 p-2 text-white">
                         <div>{{$item->data}}</div>
                         <a href="" class="text-black">
-                            <div class="text-center capitalize bg-gray-400 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #f7b728; cursor: pointer">Mark as unread</div>
+                            <div class="text-center capitalize rounded p-2" style="font-size: 0.82rem; color:#fff; background: #f7b728; cursor: pointer">Mark as unread</div>
                         </a>
                     </div> 
                    @endforeach
