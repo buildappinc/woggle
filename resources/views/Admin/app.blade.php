@@ -219,9 +219,16 @@
                     class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center "
                     data-toggle="modal" data-target="#exampleModalCenter"
                 >
-                    <span>
-                        <img src="{{asset('/images/Vector (Stroke).png')}}" class="h-4 w-4" alt="">
-                    </span>
+                   <div class="relative">
+                       <div> 
+                           <span>
+                                <img src="{{asset('/images/Vector (Stroke).png')}}" class="h-4 w-4" alt="">
+                            </span>
+                        </div>
+                       <div class="absolute" style="width: 1px; height: 1px; background: red">
+
+                       </div>
+                   </div>
                 </a>
                 @guest
                     <a class="nav-link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black-800 items-center justify-center " href="{{ route('login') }}">{{ __('Login') }}</a>
