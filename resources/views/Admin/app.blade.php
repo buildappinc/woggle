@@ -226,7 +226,9 @@
                             </span>
                         </div>
                        <div class="absolute" style="width: 7px; height: 7px; background: red; border-radius: 50px; top: 0px; left: 10px">
-                            {{$activeNotification->count()}}
+                            @foreach ($activeNotification as $item)
+                                {{$item->count()}}
+                            @endforeach
                        </div>
                    </div>
                 </a>
