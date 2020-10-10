@@ -62,12 +62,12 @@
                    @foreach ($activeNotification as $item)
                      <div class="w-full h-12 bg-gray-200 rounded flex justify-between items-center my-3 p-2">
                         <div>{{$item->data}}</div>
-                        <a href="{{$item->id}}" class="text-black">
+                        <a href="{{route('notification', ['notification'=>$item->id])}}" class="text-black">
                             <div class="text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #406AB4; cursor: pointer">Mark as read</div>
                         </a> 
                      </div>                       
                    @endforeach
-                   <br>
+                   <hr>
                    <div>
                        Old Notifications
                    </div>

@@ -66,6 +66,7 @@ Route::get('/admin/courses/{course}/edit', 'AdminController@editCourse')->name('
 Route::patch('/admin/courses/{course}', 'AdminController@updateCourse')->name('course.edit.submit');
 Route::delete('/admin/courses/{course}', 'AdminController@destroyCourse');
 Route::patch('/admin/c/{course}', 'AdminController@changeStatus')->name('course.status');
+Route::patch('/admin/c/{notification}', 'AdminController@changeNotification')->name('notification');
 
 Route::get('/admin/course/{course}/topic/{topic}/section', 'SectionController@GetLesson')->name('Topic.section');
 Route::post('/admin/course/{course}/topic/{topic}/section', 'SectionController@PostLesson')->name('Topic.section.submit');

@@ -163,7 +163,9 @@ class AdminController extends Controller
        
     }
 
-    
+    public function changeNotification(AdminNotification $notification){
+        dd($notification);
+    }
 
 
    
