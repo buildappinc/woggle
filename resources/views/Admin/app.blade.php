@@ -225,7 +225,7 @@
                                 <img src="{{asset('/images/Vector (Stroke).png')}}" class="h-4 w-4" alt="">
                             </span>
                         </div>
-                       <div class="absolute" style="width: 1px; height: 1px; background: red">
+                       <div class="absolute" style="width: 7px; height: 7px; background: red; border-radius: 50px; top: 0px; left: 10px">
 
                        </div>
                    </div>
