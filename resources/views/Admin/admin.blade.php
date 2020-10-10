@@ -45,27 +45,6 @@
 @section('content')
 <div>
     <div class="container-fluid">
-         <!-- Modal -->
-         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                 <h5 class="modal-title" id="exampleModalLongTitle">Notifications</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                   @foreach ($activeNotification as $item)
-                        <div class="w-full h-12 bg-gray-200 rounded flex justify-between items-center my-3 p-2">
-                            <div>{{$item->data}}</div>
-                            <div class="text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #406AB4; cursor: pointer">Mark as read</div>
-                        </div>                       
-                   @endforeach
-                </div>
-            </div>
-            </div>
-        </div>
 
        <div class="mx-12">
             @foreach($Admin as $admins)
