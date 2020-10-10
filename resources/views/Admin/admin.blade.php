@@ -65,7 +65,9 @@
                         <form action="{{route('notification', ['notification'=>$item->id])}}" method="post">
                             @csrf
                             @method('PATCH')
-                            <div class="text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #406AB4; cursor: pointer">Mark as read</div>
+                            <div class="text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#fff; background: #406AB4; cursor: pointer">
+                                <button type="submit">Mark as read</button>
+                            </div>
                         </form>
                      </div>                       
                    @endforeach
