@@ -164,7 +164,19 @@ class AdminController extends Controller
     }
 
     public function changeNotification(AdminNotification $notification){
-        dd($notification);
+        if ($notification->status == true) {
+
+            $notification->status = false;
+            $notification->update(['status'=> $notification->status]);
+
+            return redirect()->back();
+        } else {
+
+            $notification->status = true;
+            $notification->update(['status'=> $notification->status]);
+
+            return redirect()->back();
+        }
     }
 
 
