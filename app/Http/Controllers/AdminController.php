@@ -34,7 +34,8 @@ class AdminController extends Controller
         $Admin = Admin::all()->take(1);
         $courses = Course::all()->take(2);
         $activeNotification = AdminNotification::where('status', true)->orderBy('created_at', 'desc')->get()->all();
-        return view('Admin.admin', compact('Admin', 'course', 'courses', 'activeNotification'));
+        $inactiveNotification = AdminNotification::where('status', false)->orderBy('created_at', 'desc')->get()->all();
+        return view('Admin.admin', compact('Admin', 'course', 'courses', 'activeNotification', 'inactiveNotification'));
     }
 
     public function index(){
@@ -161,6 +162,8 @@ class AdminController extends Controller
         }
        
     }
+
+    
 
 
    
