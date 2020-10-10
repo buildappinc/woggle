@@ -226,7 +226,7 @@
                             </span>
                         </div>
                        <div class="absolute" style="width: 7px; height: 7px; background: red; border-radius: 50px; top: 0px; left: 10px">
-                            {{activeNotification->count()}}
+                            {{$activeNotification->count()}}
                        </div>
                    </div>
                 </a>
