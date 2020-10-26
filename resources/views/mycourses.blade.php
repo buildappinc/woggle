@@ -88,7 +88,7 @@
                     @if (Auth::user()->courses->count() <= 0 )
                         <div class="md:mt-8 lg:mt-8 xl:mt-8">
                             <div class="text-center flex justify-center items-center h-32 w-11/12 rounded hello" style="border:1px dashed #000000">
-                                Opps No Subscribed Course!!! <a href="/study" style="color: #f7b728">Check Out Available Courses</a> 
+                                Opps No Subscribed Course!!! <a href="/study" style="color: #f7b728"> Check Out Available Courses</a> 
                             </div>
                         </div>
                     @else
@@ -114,56 +114,64 @@
             </div>
             <div>
                 <p class="italic hello">Payment History</p>
-                <div class="flex flex-wrap gap-4">
-                    @foreach ($payment_user as $item)                       
-                            <div class="box2 p-4 grid grid-row-2 grid-flow-row">
-                                <div>
-                                    <div class="flex justify-between items-baseline">
-                                        <div class="font font-extrabold text-2xl">
-                                            {{$item->currency}}
-                                            {{$item->amount *.01 }}
-                                        </div>
-                                        <div class="font-semibold">
-                                            {{$item->created_at->diffForHumans()}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div>
-                                    <div class="text-xs text-center bg-blue-100 p-1 shadow-sm" style="border-radius: 10px 30px;">
-                                        <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
-                                            Ref Id: 
-                                        </div>
-                                        <div class="font-bold">
-                                            {{$item->reference}}
-                                        </div>
-                                    </div><br>
-                                    <div class="flex justify-between">
-                                        <div class="text-xs">
-                                            <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
-                                                Status
-                                            </div>
-                                            <div class="hello text-green-700 uppercase">{{$item->status}}</div> 
-                                        </div>
-                                        <div class="text-xs">
-                                            <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
-                                                Type 
-                                            </div>
-                                            <div class="hello uppercase">{{$item->channel}}</div> 
-                                        </div>
-                                        <div class="text-xs">
-                                            <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
-                                                Course 
-                                            </div>
-                                            <div class="hello uppercase font-bold">
-                                            {{$item->course}}
-                                            </div> 
-                                        </div>
-                                    </div>
-                                </div>
+                @if ($payment_user->count() <= 0 )
+                    <div class="md:mt-8 lg:mt-8 xl:mt-8">
+                        <div class="text-center flex justify-center items-center h-32 w-11/12 rounded hello" style="border:1px dashed #000000">
+                            Opps No Subscribed Course!!! <a href="/study" style="color: #f7b728"> Check Out Available Courses</a> 
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                @else
+                    <div class="flex flex-wrap gap-4">
+                        @foreach ($payment_user as $item)                       
+                                <div class="box2 p-4 grid grid-row-2 grid-flow-row">
+                                    <div>
+                                        <div class="flex justify-between items-baseline">
+                                            <div class="font font-extrabold text-2xl">
+                                                {{$item->currency}}
+                                                {{$item->amount *.01 }}
+                                            </div>
+                                            <div class="font-semibold">
+                                                {{$item->created_at->diffForHumans()}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <div class="text-xs text-center bg-blue-100 p-1 shadow-sm" style="border-radius: 10px 30px;">
+                                            <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
+                                                Ref Id: 
+                                            </div>
+                                            <div class="font-bold">
+                                                {{$item->reference}}
+                                            </div>
+                                        </div><br>
+                                        <div class="flex justify-between">
+                                            <div class="text-xs">
+                                                <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
+                                                    Status
+                                                </div>
+                                                <div class="hello text-green-700 uppercase">{{$item->status}}</div> 
+                                            </div>
+                                            <div class="text-xs">
+                                                <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
+                                                    Type 
+                                                </div>
+                                                <div class="hello uppercase">{{$item->channel}}</div> 
+                                            </div>
+                                            <div class="text-xs">
+                                                <div style="font-family: 'Baloo Tamma 2', cursive; font-family: 'Recursive', sans-serif;">
+                                                    Course 
+                                                </div>
+                                                <div class="hello uppercase font-bold">
+                                                {{$item->course}}
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
             </div>
             
             <div class="mt-4">
