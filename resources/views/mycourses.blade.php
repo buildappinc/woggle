@@ -87,10 +87,9 @@
 
                     @if (Auth::user()->courses->count() <= 0 )
                         <div>
-                            <div class="mt-12 flex justify-center">
-                                <img src="{{asset('images/undraw_online_learning_ao11.svg')}}" class="h-48 w-48" alt="">
+                            <div class="text-center text-xl h-40 w-full rounded" style="border:1px dashed #000000">
+                                Opps No Subscribed Course!!! <a href="/study" style="color: #f7b728">Check Out Available Courses</a> 
                             </div>
-                            <div class="text-center text-xl">Opps No Subscribed Course!!! <a href="/study" style="color: #f7b728">Check Out Available Courses</a> </div>
                         </div>
                     @else
                     <div class="flex flex-no-wrap flex-col lg:flex-wrap lg:flex-row md:flex-wrap md:flex-row mt-4 pt-3">
