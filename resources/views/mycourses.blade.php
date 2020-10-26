@@ -86,8 +86,8 @@
                     </div>
 
                     @if (Auth::user()->courses->count() <= 0 )
-                        <div>
-                            <div class="text-center text-xl h-40 w-full rounded" style="border:1px dashed #000000">
+                        <div class="md:mt-8 lg:mt-8 xl:mt-8">
+                            <div class="text-center flex justify-center items-center text-md h-40 w-full rounded" style="border:1px dashed #000000">
                                 Opps No Subscribed Course!!! <a href="/study" style="color: #f7b728">Check Out Available Courses</a> 
                             </div>
                         </div>
