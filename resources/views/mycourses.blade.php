@@ -116,7 +116,7 @@
                 <p class="italic hello">Payment History</p>
                 @if (Auth::user()->payments->count() <= 0)
                     <div class="md:mt-8 lg:mt-8 xl:mt-8">
-                        <div class="text-center flex justify-center items-center h-32 w-11/12 rounded hello" style="border:1px dashed #000000">
+                        <div class="text-center flex justify-center items-center h-32 w-full rounded hello" style="border:1px dashed #000000">
                             No payments made yet 
                         </div>
                     </div>
@@ -176,35 +176,43 @@
             
             <div class="mt-4">
                 <p class="italic hello">Course details</p>
-                <div class="grid grid-rows-1 gap-6">
-                    @foreach ($courses as $item)        
-                                <div class=" box hover:shadow-lg"> 
-                                    <div class="p-3">
-                                        <div class="hello text-xl">
-                                            {{$item->name}}
+                @if (Auth::user()->courses->count() <= 0 )
+                    <div class="md:mt-8 lg:mt-8 xl:mt-8">
+                        <div class="text-center flex justify-center items-center h-32 w-full rounded hello" style="border:1px dashed #000000">
+                            No courses yet
+                        </div>
+                    </div>
+                @else
+                    <div class="grid grid-rows-1 gap-6">
+                        @foreach ($courses as $item)        
+                                    <div class=" box hover:shadow-lg"> 
+                                        <div class="p-3">
+                                            <div class="hello text-xl">
+                                                {{$item->name}}
+                                            </div>
+                                            <div class="flex flex-wrap">
+                                                @foreach ($item->topics as $items)                                             
+                                                    <div class="pl-1 pt-3" style="width: 24%">
+                                                        <a href="{{ route('lesson.content', ['course'=>$item->id, 'topic'=>$items->id]) }}" class="text-black">
+                                                            <div class="font text-center text-xs bg-blue-100 p-1 shadow-sm capitalize" style="border-radius: 10px 30px;">{{$items->name}}</div>
+                                                        </a>                                                                   
+                                                    </div>     
+                                                @endforeach
+                                            </div>
                                         </div>
-                                        <div class="flex flex-wrap">
-                                            @foreach ($item->topics as $items)                                             
-                                                <div class="pl-1 pt-3" style="width: 24%">
-                                                    <a href="{{ route('lesson.content', ['course'=>$item->id, 'topic'=>$items->id]) }}" class="text-black">
-                                                        <div class="font text-center text-xs bg-blue-100 p-1 shadow-sm capitalize" style="border-radius: 10px 30px;">{{$items->name}}</div>
-                                                    </a>                                                                   
-                                                </div>     
-                                            @endforeach
+                                        <div class="flex items-center justify-center">
+                                            <div>
+                                                <input type="hidden" id="course_id" value="{{$item->id}}">
+                                                <a class="course_completion">
+                                                    <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#000; background-color: #f7b728; cursor: pointer">Take Quiz</p>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="flex items-center justify-center">
-                                        <div>
-                                            <input type="hidden" id="course_id" value="{{$item->id}}">
-                                            <a class="course_completion">
-                                                <p class="font text-center capitalize bg-blue-300 rounded p-2" style="font-size: 0.82rem; color:#000; background-color: #f7b728; cursor: pointer">Take Quiz</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>    
-                           
-                     @endforeach
-                </div>
+                                    </div>    
+                            
+                        @endforeach
+                    </div>
+                @endif
             </div>
             <div class="mt-4">
                 <p class="italic hello">Quiz/Exam Badges</p>
