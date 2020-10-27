@@ -216,6 +216,13 @@
             </div>
             <div class="mt-4">
                 <p class="italic hello">Quiz/Exam Badges</p>
+                @if (Auth::user()->results->count() <= 0)
+                    <div class="md:mt-8 lg:mt-8 xl:mt-8">
+                        <div class="text-center flex justify-center items-center h-32 w-full rounded hello" style="border:1px dashed #000000">
+                            No courses yet
+                        </div>
+                    </div>
+                @else
                 <div>
                     @foreach (Auth::user()->results as $item)
                         @if ($item->mark < 80 )
@@ -282,6 +289,7 @@
                         @endif
                     @endforeach
                 </div>
+                @endif
             </div>
         </div>
     </div>
