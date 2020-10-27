@@ -114,7 +114,7 @@
             </div>
             <div>
                 <p class="italic hello">Payment History</p>
-                @if (Auth::user()->count() <= 0)
+                @if (Auth::user()->payments->count() <= 0)
                     <div class="md:mt-8 lg:mt-8 xl:mt-8">
                         <div class="text-center flex justify-center items-center h-32 w-11/12 rounded hello" style="border:1px dashed #000000">
                             No payments made yet 
