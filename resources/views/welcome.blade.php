@@ -186,7 +186,7 @@
         background-attachment: fixed;
         background-image: url('{{asset('images/subimage2.jpg')}}');
         background-size: cover;
-
+        z-index: 1;
     }
 
     .subimagecover{
@@ -195,6 +195,12 @@
         height: 100%;
         background: #f9b629;
         opacity: .7;
+        z-index: 2;
+    }
+
+    .subtext{
+        position: absolute;
+        z-index: 3;
     }
 
     @keyframes animate{
@@ -377,8 +383,8 @@
 
             {{-- second section --}}
             <div class="subimage w-full my-8" style="height: 24rem">
-                <div class="subimagecover z-0"></div>
-                <div class="z-10">fbfmklmbgdllll Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere molestiae asperiores quibusdam soluta, necessitatibus dolorem a accusantium est, aperiam maiores nobis maxime vitae sint nulla at tenetur velit minus.</div>
+                <div class="subtext">fbfmklmbgdllll Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere molestiae asperiores quibusdam soluta, necessitatibus dolorem a accusantium est, aperiam maiores nobis maxime vitae sint nulla at tenetur velit minus.</div>
+                <div class="subimagecover"></div>
             </div>
             
         
