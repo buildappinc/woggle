@@ -358,6 +358,11 @@
                 </div>
             </div>
 
+
+            {{-- second section --}}
+            <div class="h-64 w-full" style="background: #416bb5">
+
+            </div>
             
         
         </main>
