@@ -270,7 +270,9 @@
         </nav>
            
             <div class="homeImage animate__fadeInLeft">
-                <div class="color_overlay"></div>
+                <div class="color_overlay">
+                    <div class="text-3xl">this is what is going to happen</div>
+                </div>
                 <div class="wavy"></div>
             </div>
            

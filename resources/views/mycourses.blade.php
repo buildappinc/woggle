@@ -219,7 +219,7 @@
                 @if (Auth::user()->results->count() <= 0)
                     <div class="md:mt-8 lg:mt-8 xl:mt-8">
                         <div class="text-center flex justify-center items-center h-32 w-full rounded hello" style="border:1px dashed #000000">
-                            No courses yet
+                            No Badge yet
                         </div>
                     </div>
                 @else
