@@ -377,7 +377,8 @@
 
             {{-- second section --}}
             <div class="subimage w-full my-8" style="height: 24rem">
-                <div class="subimagecover"></div>
+                <div class="subimagecover z-0"></div>
+                <div class="z-10">fbfmklmbgdllll Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere molestiae asperiores quibusdam soluta, necessitatibus dolorem a accusantium est, aperiam maiores nobis maxime vitae sint nulla at tenetur velit minus.</div>
             </div>
             
         
