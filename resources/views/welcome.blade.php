@@ -271,7 +271,10 @@
            
             <div class="homeImage animate__fadeInLeft">
                 <div class="color_overlay">
-                    <div class="text-3xl">this is what is going to happen</div>
+                    <div class="font hidden md:block lg:block xl:block text-3xl flex justify-center" style="height: 100%">
+                        <p class="text-md uppercase text-black">the best online education in the world</p>
+                        <p class="text-5xl uppercase text-black">one set ahead this season</p>
+                    </div>
                 </div>
                 <div class="wavy"></div>
             </div>
