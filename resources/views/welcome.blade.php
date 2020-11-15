@@ -184,7 +184,7 @@
     .subimage {
         position: relative;
         background-attachment: fixed;
-        background-image: url('{{asset('images/subimage.jpg')}}');
+        background-image: url('{{asset('images/subimage2.jpg')}}');
         background-size: cover;
 
     }
@@ -376,8 +376,8 @@
 
 
             {{-- second section --}}
-            <div class="subimage w-full my-8" style="background: #f9b629; height: 24rem">
-                <div class="subimagecover`"></div>
+            <div class="subimage w-full my-8" style="height: 24rem">
+                <div class="subimagecover"></div>
             </div>
             
         
