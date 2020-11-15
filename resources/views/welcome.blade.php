@@ -271,9 +271,9 @@
            
             <div class="homeImage animate__fadeInLeft">
                 <div class="color_overlay z-0"></div>
-                <div class="font hidden md:block lg:block xl:block text-3xl z-10" style="height: 70%">
-                    <div class="text-md uppercase text-black flex justify-center items-center">the best online education in the world</div>
-                    <div class="text-5xl uppercase text-black flex justify-center items-center">one step ahead this season</div>
+                <div class="font hidden md:block lg:block xl:block text-3xl z-10 py-56" style="height: 70%">
+                    <div class="text-md uppercase text-black flex justify-center items-center" style="color: #fff">the best online education in the world</div>
+                    <div class="text-5xl uppercase text-black flex justify-center items-center" style="color: #f9b629">one step ahead this season</div>
                 </div>
                 <div class="wavy"></div>
             </div>
