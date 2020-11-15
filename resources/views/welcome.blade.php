@@ -181,6 +181,22 @@
         animation: animate 70s linear infinite;
     }
 
+    .subimage {
+        position: relative;
+        background-attachment: fixed;
+        background-image: url('{{asset('images/subimage.jpg')}}');
+        background-size: cover;
+
+    }
+
+    .subimagecover{
+        position: absolute;
+        width: 100%; 
+        height: 100%;
+        background: #f9b629;
+        opacity: .7;
+    }
+
     @keyframes animate{
         0%{
             background-position: 0;
@@ -360,8 +376,8 @@
 
 
             {{-- second section --}}
-            <div class="w-full my-8" style="background: #f9b629; height: 24rem">
-                a
+            <div class="subimage w-full my-8" style="background: #f9b629; height: 24rem">
+                <div class="subimagecover`"></div>
             </div>
             
         
