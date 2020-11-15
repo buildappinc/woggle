@@ -270,10 +270,10 @@
         </nav>
            
             <div class="homeImage animate__fadeInLeft">
-                <div class="color_overlay">
-                    <div class="font hidden md:block lg:block xl:block text-3xl flex justify-center" style="height: 100%">
-                        <p class="text-md uppercase text-black">the best online education in the world</p>
-                        <p class="text-5xl uppercase text-black">one set ahead this season</p>
+                <div class="color_overlay z-0">
+                    <div class="font hidden md:block lg:block xl:block text-3xl z-10" style="height: 70%">
+                        <p class="text-sm uppercase text-black flex justify-center items-center">the best online education in the world</p>
+                        <p class="text-5xl uppercase text-black flex justify-center items-center">one step ahead this season</p>
                     </div>
                 </div>
                 <div class="wavy"></div>
@@ -324,7 +324,7 @@
             <div class="pb-3">
                 <div class="container">
                     <div class="sec_section">
-                        <div class="font text-5xl">
+                        <div class="font lg:text-5xl xl:text-5xl md:text-4xl text-2xl ">
                             Our Featured Courses
                         </div>
                         <div>
