@@ -155,6 +155,7 @@
         background-attachment: fixed;
         background-image: url('{{asset('images/man-in-yellow-crew-neck-t-shirt-while-using-tablet-4144096.jpg')}}');
         background-size: cover;
+        z-index: 1
     }
 
     .color_overlay{
@@ -163,6 +164,12 @@
         height: 100%;
         background: linear-gradient(to right top, #595b06, #573d0d, #452515, #281514, #000000);
         opacity: .1;
+        z-index: 2;
+    }
+
+    .colortext {
+        position: absolute;
+        z-index: 3
     }
 
     .font{
@@ -292,8 +299,7 @@
         </nav>
            
             <div class="homeImage animate__fadeInLeft">
-                <div class="color_overlay"></div>
-                <div class="font hidden md:block lg:block xl:block text-3xl z-10 py-64" style="height: 70%">
+                <div class="colortext font hidden md:block lg:block xl:block text-3xl py-64" style="height: 70%">
                     <div class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
                     <div class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                     <div class="flex justify-center mt-8">
@@ -301,6 +307,7 @@
                         <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; color: #f9b629">Contact Us</div>
                     </div>
                 </div>
+                <div class="color_overlay"></div>
                 <div class="wavy"></div>
             </div>
            
