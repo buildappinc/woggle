@@ -273,8 +273,8 @@
                 <div class="z-0"></div>
                 <div class="font hidden md:block lg:block xl:block text-3xl z-10 py-64" style="height: 70%">
                     <div class="text-2xl uppercase text-black flex justify-center items-center " style="color: #000"><span style="color: #f9b629" class="mx-3"> the </span> <span style="color: #fff">best online</span> <span style="color: #f9b629" class="mx-3"> education </span> in the world</div>
-                    <div class="text-5xl uppercase text-black flex justify-center items-center font-bold " style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
-                    <div class="flex justify-center row mt-6">
+                    <div class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
+                    <div class="flex justify-center row mt-8">
                         <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
                         <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; color: #f9b629">Contact Us</div>
                     </div>
