@@ -360,7 +360,7 @@
 
 
             {{-- second section --}}
-            <div class="w-full" style="background: #416bb5; height: 24rem">
+            <div class="w-full my-8" style="background: #f9b629; height: 24rem">
                 a
             </div>
             
