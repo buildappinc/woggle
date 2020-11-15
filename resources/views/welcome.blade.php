@@ -272,7 +272,7 @@
             <div class="homeImage animate__fadeInLeft">
                 <div class="z-0"></div>
                 <div class="font hidden md:block lg:block xl:block text-3xl z-10 py-64" style="height: 70%">
-                    <div class="text-xl uppercase text-black flex justify-center items-center mt-2 lg:mt-10 xl:mt-10" style="color: #000">the best online education in the world</div>
+                    <div class="text-xl uppercase text-black flex justify-center items-center mt-2 lg:mt-10 xl:mt-10" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
                     <div class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                     <div class="flex justify-center mt-8">
                         <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
