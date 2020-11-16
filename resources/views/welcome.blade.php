@@ -302,8 +302,8 @@
                     <div class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
                     <div class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                     <div class="flex justify-center mt-8">
-                        <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629"><a href="/study" class="no-underline">see course</a></div>
-                        <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; color: #f9b629"><a href="/contact" class="no-underline">Contact Us</a></div>
+                        <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629"><a href="/study" style="color: #000; text-decoration: none">see course</a></div>
+                        <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; "><a href="/contact" style="color: #f9b629; text-decoration: none">Contact Us</a></div>
                     </div>
                 </div>
                 <div class="color_overlay"></div>
@@ -399,7 +399,7 @@
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quam fugiat velit ex magnam mollitia iusto ratione id facilis hic deserunt eos corporis asperiores, sapiente a quaerat perferendis sunt repellendus!
                         </div>
                     </div>
-                    <div class="font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000; color: #f9b629"><a href="{{ route('register') }}" class="no-underline">create an account</a></div>
+                    <div class="font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000"><a href="{{ route('register') }}" style="color: #f9b629; text-decoration: none">create an account</a></div>
                 </div>
                 <div class="subimagecover"></div>
             </div>
