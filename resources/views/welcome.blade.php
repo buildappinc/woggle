@@ -389,7 +389,13 @@
 
             {{-- second section --}}
             <div class="subimage w-full my-8" style="height: 24rem">
-                <div class="subtext">fbfmklmbgdllll Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere molestiae asperiores quibusdam soluta, necessitatibus dolorem a accusantium est, aperiam maiores nobis maxime vitae sint nulla at tenetur velit minus.</div>
+                <div class="subtext flex justify-center items-center w-1/2 h-64">
+                    <div class="font text-5xl font-bold text-white">
+                        <div>Education is the foundation upon </div> 
+                        <div>which we build our future</div> 
+                    </div>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti inventore aliquid sed exercitationem unde delectus in. Vel reiciendis iusto fuga mollitia consectetur aliquam eos enim! Adipisci laborum harum quis aspernatur.</div>
+                </div>
                 <div class="subimagecover"></div>
             </div>
             
