@@ -389,12 +389,11 @@
 
             {{-- second section --}}
             <div class="subimage w-full my-8" style="height: 24rem">
-                <div class="subtext flex justify-center items-center w-1/2 h-64">
-                    <div class="font text-5xl font-bold text-white">
-                        <div>Education is the foundation upon </div> 
-                        <div>which we build our future</div> 
+                <div class="subtext w-full h-full flex justify-center">
+                    <div class="font text-4xl font-bold text-white">
+                        <div>Education is the foundation upon which we build our future</div> 
                     </div>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti inventore aliquid sed exercitationem unde delectus in. Vel reiciendis iusto fuga mollitia consectetur aliquam eos enim! Adipisci laborum harum quis aspernatur.</div>
+                    <div>Register now to get full experience</div>
                 </div>
                 <div class="subimagecover"></div>
             </div>
