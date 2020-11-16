@@ -190,7 +190,7 @@
     .subimage {
         position: relative;
         background-attachment: fixed;
-        background-image: url('{{asset('images/sub.jpeg')}}');
+        background-image: url('{{asset('images/sub.jpg')}}');
         background-size: cover;
         z-index: 1;
     }
