@@ -315,6 +315,10 @@
 
             <!-- quick review -->
             <div class="container quick py-6">
+                <div class="my-8 text-center">
+                    <h1 class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam, suscipit provident corporis nulla iure amet ducimus?</div>
+                </div>
                 <div class="grid grid-cols-3 gap-4 ">
                     <div>
                         <div class="grid grid-cols-3 gap-4 flex flex-row sm:flex-col">
