@@ -389,17 +389,17 @@
 
             {{-- second section --}}
             <div class="subimage w-full my-8" style="height: 27rem">
-                <div class="subtext w-full h-full flex justify-center p-32 ">
-                    <div class="font text-4xl font-bold text-white">
-                        <div class="leading-tight">
-                            <div>Education is the foundation</div>
-                            <div>upon which we build our future</div> 
+                <div class="subtext w-full h-full flex justify-center p-32">
+                    <div class="font">
+                        <div class="leading-tight text-4xl font-bold text-white w-1/2">
+                            <div>Education is the foundation upon</div>
+                            <div>which we build our future</div> 
                         </div>
-                        <div>
+                        <div class="text-sm w-1/2 py-6">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quam fugiat velit ex magnam mollitia iusto ratione id facilis hic deserunt eos corporis asperiores, sapiente a quaerat perferendis sunt repellendus!
                         </div>
                     </div>
-                    <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; color: #f9b629">Register now to get full experience</div>
+                    <div class="font text-base uppercase mx-10 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000; color: #f9b629">create an account</div>
                 </div>
                 <div class="subimagecover"></div>
             </div>
