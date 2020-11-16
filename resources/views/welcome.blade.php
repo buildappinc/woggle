@@ -390,16 +390,16 @@
             {{-- second section --}}
             <div class="subimage w-full my-8" style="height: 27rem">
                 <div class="subtext w-full h-full flex justify-center p-32">
-                    <div class="font">
-                        <div class="leading-tight text-4xl font-bold text-white w-1/2">
+                    <div class="font w-1/2">
+                        <div class="leading-tight text-4xl font-bold text-white">
                             <div>Education is the foundation upon</div>
                             <div>which we build our future</div> 
                         </div>
-                        <div class="text-sm w-1/2 py-6">
+                        <div class="text-sm py-6 text-white">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quam fugiat velit ex magnam mollitia iusto ratione id facilis hic deserunt eos corporis asperiores, sapiente a quaerat perferendis sunt repellendus!
                         </div>
                     </div>
-                    <div class="font text-base uppercase mx-10 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000; color: #f9b629">create an account</div>
+                    <div class="font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000; color: #f9b629">create an account</div>
                 </div>
                 <div class="subimagecover"></div>
             </div>
