@@ -159,9 +159,8 @@
     }
 
     .color_overlay{
-        position: absolute;
         width: 100%;
-        height: 100%;
+        height: 90%;
         background: linear-gradient(to right top, #595b06, #573d0d, #452515, #281514, #000000);
         opacity: .2;
         z-index: 2;
