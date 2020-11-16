@@ -41,7 +41,7 @@
         font-weight: 600px;
         line-height: 25px;
         font-style: normal;
-        color: #000 !important;
+        color: #fff !important;
     }
     .nav-link.nav-text-color{
         color: #000 !important;
@@ -160,7 +160,7 @@
 
     .color_overlay{
         width: 100%;
-        height: 90%;
+        height: 100%;
         background: linear-gradient(to right top, #595b06, #573d0d, #452515, #281514, #000000);
         opacity: .2;
         z-index: 2;
