@@ -51,6 +51,14 @@
     
 </style> --}}
 
+<style>
+    .font{
+        font-family: 'Baloo Tamma 2', cursive;
+        font-family: 'Raleway', sans-serif;
+        font-family: 'Recursive', sans-serif;
+    }
+</style>
+
 @extends('layouts.app')
 
 
@@ -73,16 +81,16 @@
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-3 mt-3">
                                 <div>
-                                    <div class="font-bold">Geo Address</div>
-                                    <div class="text-indigo-500">addreess</div>
+                                    <div class="font font-bold">Geo Address</div>
+                                    <div class="font text-indigo-500">addreess</div>
                                 </div>
                                 <div>
-                                    <div class="font-bold">Postal GPS</div>
-                                    <div class="text-indigo-500">addreess</div>
+                                    <div class="font font-bold">Postal GPS</div>
+                                    <div class="font text-indigo-500">addreess</div>
                                 </div>
                                 <div>
-                                    <div class="font-bold">Post Office</div>
-                                    <div class="text-indigo-500">addreess</div>
+                                    <div class="font font-bold">Post Office</div>
+                                    <div class="font text-indigo-500">addreess</div>
                                 </div>
                             </div>
                         </div>
@@ -90,9 +98,9 @@
                     <div>
                         <div class="grid grid-cols-11">
                             <div class="hidden md:block lg:block xl:block lg:col-span-1 ...">
-                                <img src="{{asset("/images/line1.png")}}" style="height: 24rem" class="bg-gray-300" alt="">
+                                <img src="{{asset("/images/line1.png")}}" style="height: 24rem" class="w-1 bg-gray-400" alt="">
                             </div>
-                            <div class="p-3 lg:col-span-10 ...">
+                            <div class="font p-3 lg:col-span-10 ...">
                                 <div class="text-5xl font-bold italic py-2">
                                     Contact Us
                                 </div>
@@ -113,161 +121,9 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="flex flex-col justify-between">
-                    <div class="md:w-1/2 lg:w-1/2 md:h-64">
-                        
-                    </div>
-                    <div>
-                        hello
-                    </div>
-                </div>
-                <div class="p-4 md:w-1/2 flex flex-col justify-between">
-                    <div class="text-4xl">
-                        dsadas
-                    </div>
-                    <div class="text-justify">
-                        sadasd
-                    </div>
-                    <div class="flex justify-between">
-                        bkjnn --}}
-                        {{-- <div>
-                         <a href="/study/{{$courses->id}}" style="text-decoration: none; color: #000">
-                             <div style="background-color: #f7b728; height: 40px; width: 150px; border-radius: 3px;">
-                                   <p style="text-align: center; padding-top: 6%; text-transform: uppercase">Details</p> 
-                             </div>
-                           </a>
-                        </div>
-                        <div class="px-4 py-2 m-2">
-                            Learners: 
-                         </div>
-                     </div> --}}
                 </div>
             </div>
     </div> 
 </div>
-{{-- <div class="container-fluid header">
-    
-</div>
-
-<div class="container">
-    <div class="header_text">
-        <div style="font-size: 30px;">Get In <span class="explore">TOUCH</span> With Us. We've Got Your Back </div> 
-    </div>
-
-    <form action="/contact" method="post">
-
-    @csrf
-        <div class="row contact justify-content-center">
-    
-            <div class="col-8">
-                <div class="row">
-                            <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="First_Name">{{ __('First Name') }}</label>  
-
-
-                                            <div class="col-md-12 input">
-                                                <input id="First_Name" type="text" placeholder="Kenneth" class="form-control  @error('First_Name') is-invalid @enderror" name="First_Name" value="{{ old('First_Name') }}"  autocomplete="First_Name">
-                                                
-                                                @error('First_Name')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                            
-                                        </div>
-                            </div>
-                            <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="Last_name">{{ __('Last Name') }}</label>  
-
-                                            <div class="col-md-12 input">
-                                            <input id="Last_name" type="text" placeholder="Lartey" class="form-control @error('Last_name') is-invalid @enderror" name="Last_name" value="{{ old('Last_name') }}"  autocomplete="Last_name">
-                                            
-                                                @error('Last_name')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                            
-                                        </div>
-                            </div>
-                </div>
-                <div class="row">
-                            <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="email">{{ __('Email') }}</label>  
-
-
-                                            <div class="col-md-12 input">
-                                                <input id="email" type="email" placeholder="xxx@gmail.com" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"  autocomplete="email">
-
-                                                @error('email')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                            
-                                        </div>
-                            </div>
-                </div>
-                <div class="row">
-                            <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="msg">{{ __('Messages') }}</label>  
-
-
-                                            <div class="col-md-12 input">
-                                            <textarea name="msg" id="message" placeholder="Type your message here...." cols="30" rows="10" class="form-control @error('msg') is-invalid @enderror" ></textarea>
-
-                                            @error('msg')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                            
-                                        </div>
-                            </div>
-                </div>
-                <div class="row" style="margin-left: 2%">
-                    <button type="submit" class="btn btn-primary btn-md">Send Message</button>
-                </div>
-            </div>
-
-            <div class="col-3">
-                <div class="address">
-                    <div class="row subAddress">
-                       <p class="right_side_contact_info">Contact Info</p> 
-                    </div>
-                    <div>
-                        <div class="row subAddress">
-                            Addresss: <br>
-                        </div>
-                        <div>Lorem ipsum dolor sit amet,scsdsdvadfsv adsvasfv</div>
-                    </div>
-                    <div>
-                        <div class="row subAddress">
-                            Phone: <br>
-                        </div>
-                        +233 *** *** ***
-                    </div>
-                    <div>
-                        <div class="row subAddress">
-                            Email: <br>
-                        </div>
-                        test@test.com
-                    </div>
-                </div>
-            </div>
-        
-        </div>
-        </form>
-    </div>
-</div> --}}
-
 
 @endsection
