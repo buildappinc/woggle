@@ -314,7 +314,7 @@
             
 
             <!-- quick review -->
-            <div class="container quick">
+            <div class="container quick py-6">
                 <div class="grid grid-cols-3 gap-4 ">
                     <div>
                         <div class="grid grid-cols-3 gap-4 flex flex-row sm:flex-col">
@@ -354,7 +354,7 @@
 
             <div class="pb-3">
                 <div class="container">
-                    <div class="sec_section">
+                    <div class="sec_section py-16">
                         <div class="font lg:text-5xl xl:text-5xl md:text-4xl text-2xl ">
                             Our Featured Courses
                         </div>
@@ -364,7 +364,7 @@
                     </div>
                     
                     {{-- course display --}}
-                    <div class="m-5">
+                    <div class="m-5 pb-10">
                         <div class="flex flex-no-wrap flex-col sm:flex-no-wrap sm:flex-col md:flex-wrap md:flex-row lg:flex-wrap lg:flex-row Xl:flex-wrap xl:flex-row">
                             @foreach ($courses as $course)
                                 @if ($course->status == 1 )
