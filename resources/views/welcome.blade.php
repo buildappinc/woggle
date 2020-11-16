@@ -321,7 +321,7 @@
                             <div class="">
                                 <img src="{{ asset('images/book.svg') }}" class="h-full w-full"  alt="">
                             </div>
-                            <div class="status_text">
+                            <div class="font status_text">
                                     Study Online
                             </div>
                         </div>
@@ -331,7 +331,7 @@
                             <div class="">
                                 <img src="{{ asset('images/exam.svg') }}" class="h-full w-full" style="width: 18h " alt="">
                             </div>
-                            <div class="status_text">
+                            <div class="font status_text">
                                 Take Quizes 
                             </div>
                          </div>
@@ -341,7 +341,7 @@
                             <div class="">
                                 <img src="{{ asset('images/goal.svg') }}" class="h-full w-full" style="width: 16vh" alt="">
                             </div>
-                            <div class="status_text">
+                            <div class="font status_text">
                                 Check Progress
                             </div>
                         </div>
