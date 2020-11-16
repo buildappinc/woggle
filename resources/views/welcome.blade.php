@@ -200,7 +200,7 @@
         width: 100%; 
         height: 100%;
         background: #f9b629;
-        opacity: .4;
+        opacity: .3;
         z-index: 2;
     }
 
