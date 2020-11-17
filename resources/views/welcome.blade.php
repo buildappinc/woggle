@@ -418,7 +418,7 @@
                         </div>
                     </div>
                     <a href="{{ route('register') }}" style="color: #f9b629; text-decoration: none">
-                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000">create an account</div>
+                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1500" class="hover:shadow-2xl transition duration-700 ease-in-out font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000">create an account</div>
                     </a>
                 </div>
                 <div class="subimagecover"></div>
