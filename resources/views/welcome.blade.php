@@ -413,7 +413,7 @@
                 </div>
             </div>
             {{-- second section --}}
-            <div class="subimage w-full my-8" style="height: 27rem">
+            <div class="subimage hidden lg:block xl:block w-full my-8" style="height: 27rem">
                 <div class="subtext w-full h-full flex justify-center p-32">
                     <div class="font w-1/2">
                         <div data-aos="fade-up" data-aos-duration="800" class="leading-tight text-4xl font-bold text-white">
