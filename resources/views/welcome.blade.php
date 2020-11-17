@@ -209,7 +209,7 @@
         z-index: 3;
     }
 
-    .btn:hover{
+    .btnText:hover{
         -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
@@ -311,8 +311,12 @@
                     <div class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
                     <div class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                     <div class="flex justify-center mt-8">
-                        <div class="btn text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629"><a href="/study" style="color: #000; text-decoration: none">see course</a></div>
-                        <div class="btn text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; "><a href="/contact" style="color: #f9b629; text-decoration: none">Contact Us</a></div>
+                        <a href="/study" style="color: #000; text-decoration: none">
+                            <div class="btnText text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
+                        </a>
+                        <a href="/contact" style="color: #f9b629; text-decoration: none">
+                            <div class="btnText text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
+                        </a>
                     </div>
                 </div>
                 <div class="color_overlay"></div>
@@ -413,7 +417,7 @@
                         </div>
                     </div>
                     <a href="{{ route('register') }}" style="color: #f9b629; text-decoration: none">
-                        <div class="btn font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000">create an account</div>
+                        <div class="btnText font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000">create an account</div>
                     </a>
                 </div>
                 <div class="subimagecover"></div>
