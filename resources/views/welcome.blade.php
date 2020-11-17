@@ -306,27 +306,25 @@
                     </div>
                 </div>
         </nav>
-           
-            <div class="homeImage animate__fadeInLeft">
-                <div class="colortext font hidden md:block lg:block xl:block text-3xl py-64 w-full" style="height: 70%">
-                    <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
-                    <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
-                    <div class="flex justify-center mt-8">
-                        <a href="/study" style="color: #000; text-decoration: none">
-                            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
-                        </a>
-                        <a href="/contact" style="color: #f9b629; text-decoration: none">
-                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
-                        </a>
-                    </div>
+        {{-- desktop view --}}
+        <div class="homeImage hidden lg:block xl:block animate__fadeInLeft">
+            <div class="colortext font text-3xl py-64 w-full" style="height: 70%">
+                <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
+                <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
+                <div class="flex justify-center mt-8">
+                    <a href="/study" style="color: #000; text-decoration: none">
+                        <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
+                    </a>
+                    <a href="/contact" style="color: #f9b629; text-decoration: none">
+                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
+                    </a>
                 </div>
-                <div class="color_overlay"></div>
-                <div class="wavy"></div>
             </div>
-           
-        <main class="py-4">
-            
+            <div class="color_overlay"></div>
+            <div class="wavy"></div>
+        </div>
 
+        <main class="py-4">
             <!-- quick review -->
             <div class="my-8 text-center">
                 <h1 data-aos="fade-up" data-aos-duration="800" class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
@@ -366,10 +364,8 @@
                     </div>
                 </div>
             </div>
-
             <!-- popular courses -->
             <br>
-
             <div class="pb-3">
                 <div class="container">
                     <div class="sec_section py-16">
@@ -403,8 +399,6 @@
                    
                 </div>
             </div>
-
-
             {{-- second section --}}
             <div class="subimage w-full my-8" style="height: 27rem">
                 <div class="subtext w-full h-full flex justify-center p-32">
@@ -423,40 +417,7 @@
                 </div>
                 <div class="subimagecover"></div>
             </div>
-            
-        
         </main>
-
-        <!-- pre footer -->
-        {{-- <div class="main_section">
-                <div class="about">
-                    <div class="container">
-                        <div class="row">
-                           <div class="col-3"></div>
-                           <div class="col-6"><p class="text_header">WHY WOGGLE?</p></div>
-                           <div class="col-3"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="text_1">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quam eius ratione excepturi. Quis quia ipsum vitae unde ad illum, sunt, placeat esse laboriosam harum a. Harum nemo iusto commodi?
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, modi molestiae similique veritatis incidunt placeat praesentium enim ad omnis. Non sapiente tempora mollitia, voluptatibus consequatur dolorum quam voluptatem sit vitae.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In debitis recusandae sint aperiam dolore nostrum hic necessitatibus, quidem ex odio, eaque qui incidunt doloribus cumque aliquam laboriosam blanditiis atque distinctio.lorem
-                                </p>
-                            </div>
-                            <div class="col-3 svg_image">
-                                <img src="{{ asset('images/question4.svg') }}" style="width: 350px; background-size: cover" class="image" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-        <!-- footer -->
         <div class="footer ">
             <div class="container-fluid footer-content">
                 <div class="grid grid-cols-3 gap-4">
