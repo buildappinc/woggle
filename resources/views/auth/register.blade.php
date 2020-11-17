@@ -16,11 +16,17 @@
 
     .box-2{
         width: 70vw;
-        height: 75vh;  
+        height: 79vh;  
         background: #F5F5F5;
         position: absolute;
         top: 20vh;
         left: 15vw;
+    }
+
+    .font{
+        font-family: 'Baloo Tamma 2', cursive;
+        font-family: 'Raleway', sans-serif;
+        font-family: 'Recursive', sans-serif;
     }
 
     .btn-primary{
@@ -36,13 +42,13 @@
 @section('content')
 <div class="body">
     <div class="box flex justify-center">
-        <div class="text-white text-3xl italic mt-20 font-extrabold">Welcome to Woggle Africa</div>
+        <div class="font text-white text-3xl italic mt-20 font-extrabold">Welcome to Woggle Africa</div>
     </div>
 
     <div class="box-2 rounded-md shadow-sm p-16">
         {{-- sign up name --}}
         <div class="flex justify-center">
-            <div class="text-2xl text-black font-bold">
+            <div class="font text-2xl text-black font-bold">
                 Sign Up
             </div>
         </div>
@@ -53,7 +59,7 @@
                 <div class="row">
                     <div class="col-4">
                             <div class="form-group">
-                                    <label  for="fname">{{ __('First Name') }}</label>    
+                                    <label class="font"  for="fname">{{ __('First Name') }}</label>    
 
                                     <div class="col-md-12 input">
                                         <input id="fname" type="text" placeholder="Kenneth" class="form-control @error('name') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
@@ -69,7 +75,7 @@
                     </div>
                     <div class="col-4">
                             <div class="form-group">
-                                    <label for="lname">{{ __('Last Name') }}</label>      
+                                    <label class="font" for="lname">{{ __('Last Name') }}</label>      
                             
                                     <div class="col-md-12 input">
                                         <input id="lname" type="text" placeholder="Lartey" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus>
@@ -85,7 +91,7 @@
                     </div>
                     <div class="col-4">
                             <div class="form-group">
-                                    <label for="oname">{{ __('Other Name') }}</label>
+                                    <label class="font" for="oname">{{ __('Other Name') }}</label>
 
                                     <div class="col-md-12 input">
                                         <input id="oname" type="text" placeholder="Abrahams" class="form-control @error('oname') is-invalid @enderror" name="oname" value="{{ old('oname') }}" required autocomplete="oname" autofocus>
@@ -103,7 +109,7 @@
             <div class="row">
                 <div class="col-6">
                             <div class="form-group">
-                                <label for="email">{{ __('E-Mail Address') }}</label>  
+                                <label class="font" for="email">{{ __('E-Mail Address') }}</label>  
 
 
                                 <div class="col-md-12 input">
@@ -120,7 +126,7 @@
                 </div>
                 <div class="col-6">
                             <div class="form-group">
-                                <label for="gender">{{ __('Gender') }}</label>  
+                                <label class="font" for="gender">{{ __('Gender') }}</label>  
 
                                 <div class="col-md-12 input">
                                   <select name="gender" id="gender" class="form-control" required autocomplete="gender">
@@ -142,7 +148,7 @@
             <div class="row">
                 <div class="col-6">
                             <div class="form-group">
-                                <label for="p_email">{{ __('Parent/Guardian\'s E-Mail Address') }}</label>  
+                                <label class="font" for="p_email">{{ __('Parent/Guardian\'s E-Mail Address') }}</label>  
 
 
                                 <div class="col-md-12 input">
@@ -159,7 +165,7 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="phone">{{ __('Parent/Guardian\'s contact') }}</label>  
+                        <label class="font" for="phone">{{ __('Parent/Guardian\'s contact') }}</label>  
 
 
                         <div class="col-md-12 input">
@@ -178,7 +184,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                                        <label for="password">{{ __('Password') }}</label>
+                                        <label class="font" for="password">{{ __('Password') }}</label>
 
                                         <div class="col-md-12 input">
                                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -193,7 +199,7 @@
                         </div>
                         <div class="col-6">
                                 <div class="form-group">
-                                        <label for="password-confirm">{{ __('Confirm Password') }}</label>
+                                        <label class="font" for="password-confirm">{{ __('Confirm Password') }}</label>
 
                                         <div class="col-md-12 input">
                                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -204,7 +210,7 @@
                 <div class="row flex justify-center">
                     <div class="form-group row mb-0 ml-3 mr-0 mt-8">
                                 <div class="col-md-12 ">
-                                    <button type="submit" class="btn btn-primary h-12 w-56">
+                                    <button type="submit" class="font btn btn-primary h-12 w-56">
                                         {{ __('Sign Up') }}
                                     </button>
                                 </div>
