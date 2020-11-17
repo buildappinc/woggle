@@ -334,7 +334,7 @@
                 </div>
         </nav>
         {{-- desktop view --}}
-        <div class="hidden lg:block xl:block homeImage animate__fadeInLeft">
+        <div class="hidden xl:block homeImage animate__fadeInLeft">
             <div class="colortext font text-3xl py-56 w-full" style="height: 70%">
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
@@ -351,7 +351,7 @@
             <div class="wavy"></div>
         </div>
 
-        <div class="hidden md:block middleHomeImage animate_fadeInLeft">
+        <div class="hidden md:block lg:block middleHomeImage animate_fadeInLeft">
 
         </div>
 
