@@ -209,6 +209,15 @@
         z-index: 3;
     }
 
+    .btn:hover{
+        -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        transition: .4s ease-in-out ;
+    }
+
     @keyframes animate{
         0%{
             background-position: 0;
@@ -302,8 +311,8 @@
                     <div class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
                     <div class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                     <div class="flex justify-center mt-8">
-                        <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629"><a href="/study" style="color: #000; text-decoration: none">see course</a></div>
-                        <div class="text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; "><a href="/contact" style="color: #f9b629; text-decoration: none">Contact Us</a></div>
+                        <div class="btn text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629"><a href="/study" style="color: #000; text-decoration: none">see course</a></div>
+                        <div class="btn text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; "><a href="/contact" style="color: #f9b629; text-decoration: none">Contact Us</a></div>
                     </div>
                 </div>
                 <div class="color_overlay"></div>
@@ -316,7 +325,7 @@
             <!-- quick review -->
             <div class="my-8 text-center">
                 <h1 class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
-                <div style="margin-left: 26rem; margin-right: 26rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
+                <div class="font" style="margin-left: 26rem; margin-right: 26rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
             </div>
             <div class="container quick py-6">
                 <div class="grid grid-cols-3 gap-4 ">
@@ -403,7 +412,7 @@
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quam fugiat velit ex magnam mollitia iusto ratione id facilis hic deserunt eos corporis asperiores, sapiente a quaerat perferendis sunt repellendus!
                         </div>
                     </div>
-                    <div class="font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000"><a href="{{ route('register') }}" style="color: #f9b629; text-decoration: none">create an account</a></div>
+                    <div class="btn font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000"><a href="{{ route('register') }}" style="color: #f9b629; text-decoration: none">create an account</a></div>
                 </div>
                 <div class="subimagecover"></div>
             </div>
