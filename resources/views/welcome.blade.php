@@ -309,14 +309,14 @@
            
             <div class="homeImage animate__fadeInLeft">
                 <div class="colortext font hidden md:block lg:block xl:block text-3xl py-64 w-full" style="height: 70%">
-                    <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
-                    <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-anchor-placement="center-center" class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
+                    <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"> class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
+                    <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000"> class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                     <div class="flex justify-center mt-8">
                         <a href="/study" style="color: #000; text-decoration: none">
-                            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
+                            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1500"> class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
                         </a>
                         <a href="/contact" style="color: #f9b629; text-decoration: none">
-                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
+                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1500"> class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
                         </a>
                     </div>
                 </div>
