@@ -186,6 +186,20 @@
         }
     }
 
+     /* laptop mode */
+     @media screen and (max-width: 1024px) {
+        .middleHomeImage{
+            position: relative;
+            max-width: 100%;
+            height: 100vh;
+            background: #fb0040;
+            /* background-attachment: fixed;
+            background-image: url('{{asset('images/boy-in-yellow-crew-neck-t-shirt-while-holding-tablet-4144103.jpg')}}'); */
+            /* background-size: cover; */
+            z-index: 1
+        }
+    }
+
     .color_overlay{
         width: 100%;
         height: 100%;
