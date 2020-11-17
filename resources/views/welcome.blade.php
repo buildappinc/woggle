@@ -163,7 +163,6 @@
     @media screen and (max-width: 380px) {
         .homeImage{
             position: relative;
-            max-width: 100%;
             height: 100vh;
             background-attachment: fixed;
             background-image: url('{{asset('images/man-in-yellow-crew-neck-t-shirt-while-using-tablet-4144096.jpg')}}');
