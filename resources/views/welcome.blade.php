@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdn.boomcdn.com/libs/animate-css/3.7.0/animate.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -308,8 +309,8 @@
            
             <div class="homeImage animate__fadeInLeft">
                 <div class="colortext font hidden md:block lg:block xl:block text-3xl py-64 w-full" style="height: 70%">
-                    <div class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
-                    <div class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
+                    <div data-aos="fade-up" data-aos-anchor-placement="center-center" class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
+                    <div data-aos="fade-up" data-aos-anchor-placement="center-center" class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                     <div class="flex justify-center mt-8">
                         <a href="/study" style="color: #000; text-decoration: none">
                             <div class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
@@ -328,8 +329,8 @@
 
             <!-- quick review -->
             <div class="my-8 text-center">
-                <h1 class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
-                <div class="font" style="margin-left: 26rem; margin-right: 26rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
+                <h1 data-aos="fade-up" data-aos-anchor-placement="center-center" class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
+                <div data-aos="fade-up" data-aos-anchor-placement="center-center" class="font" style="margin-left: 26rem; margin-right: 26rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
             </div>
             <div class="container quick py-6">
                 <div class="grid grid-cols-3 gap-4 ">
@@ -500,6 +501,10 @@
 
     {{----------------------------- script ---------------------------------------------------}}
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         $(window).scroll(function(){
             $('nav').toggleClass('scrolled', $(this).scrollTop() > 500)
