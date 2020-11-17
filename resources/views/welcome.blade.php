@@ -174,25 +174,10 @@
 
     /* tablet mode */
     @media screen and (max-width: 768px) {
-        .middleHomeImage{
+        .homeImage{
             position: relative;
             max-width: 100%;
             height: 100vh;
-            background: #fb0040;
-            background-attachment: fixed;
-            background-image: url('{{asset('images/boy-in-yellow-crew-neck-t-shirt-while-holding-tablet-4144103.jpg')}}');
-            background-size: cover;
-            z-index: 1
-        }
-    }
-
-     /* laptop mode */
-     @media screen and (max-width: 1024px) {
-        .middleHomeImage{
-            position: relative;
-            max-width: 100%;
-            height: 100vh;
-            background: #fb0040;
             background-attachment: fixed;
             background-image: url('{{asset('images/boy-in-yellow-crew-neck-t-shirt-while-holding-tablet-4144103.jpg')}}');
             background-size: cover;
@@ -348,8 +333,8 @@
                 </div>
         </nav>
         {{-- desktop view --}}
-        <div class="hidden xl:block homeImage animate__fadeInLeft">
-            <div class="colortext font text-3xl py-56 w-full" style="height: 70%">
+        <div class="homeImage animate__fadeInLeft">
+            <div class="colortext hidden md:block lg:block xl:block font text-3xl py-56 w-full" style="height: 70%">
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                 <div class="flex justify-center mt-8">
@@ -363,10 +348,6 @@
             </div>
             <div class="color_overlay"></div>
             <div class="wavy"></div>
-        </div>
-
-        <div class="hidden md:block lg:block middleHomeImage animate_fadeInLeft">
-            dsfsdfsdfdsf
         </div>
 
         <main class="py-4">
