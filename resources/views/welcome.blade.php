@@ -309,14 +309,14 @@
            
             <div class="homeImage animate__fadeInLeft">
                 <div class="colortext font hidden md:block lg:block xl:block text-3xl py-64 w-full" style="height: 70%">
-                    <div data-aos="fade-up" data-aos-duration="800"> class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
-                    <div data-aos="fade-up" data-aos-duration="800"> class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
+                    <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
+                    <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                     <div class="flex justify-center mt-8">
                         <a href="/study" style="color: #000; text-decoration: none">
-                            <div data-aos="fade-right" data-aos-duration="1500"> class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
+                            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
                         </a>
                         <a href="/contact" style="color: #f9b629; text-decoration: none">
-                            <div data-aos="fade-left" data-aos-duration="1500"> class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
+                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
                         </a>
                     </div>
                 </div>
@@ -329,8 +329,8 @@
 
             <!-- quick review -->
             <div class="my-8 text-center">
-                <h1 data-aos="fade-up" data-aos-anchor-placement="center-center" class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
-                <div data-aos="fade-up" data-aos-anchor-placement="center-center" class="font" style="margin-left: 26rem; margin-right: 26rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
+                <h1 data-aos="fade-up" data-aos-duration="800" class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
+                <div data-aos="fade-up" data-aos-duration="900" class="font" style="margin-left: 26rem; margin-right: 26rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
             </div>
             <div class="container quick py-6">
                 <div class="grid grid-cols-3 gap-4 ">
@@ -373,11 +373,11 @@
             <div class="pb-3">
                 <div class="container">
                     <div class="sec_section py-16">
-                        <div class="font lg:text-5xl xl:text-5xl md:text-4xl text-2xl ">
+                        <div data-aos="fade-up" data-aos-duration="800" class="font lg:text-5xl xl:text-5xl md:text-4xl text-2xl ">
                             Our Featured Courses
                         </div>
                         <div>
-                            <p class="font">Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</p>
+                            <p data-aos="fade-up" data-aos-duration="900" class="font">Our Featured Courses are selected through a rigorous process and uniquely created for each semester.</p>
                         </div>
                     </div>
                     
@@ -386,7 +386,7 @@
                         <div class="flex flex-no-wrap flex-col sm:flex-no-wrap sm:flex-col md:flex-wrap md:flex-row lg:flex-wrap lg:flex-row Xl:flex-wrap xl:flex-row">
                             @foreach ($courses as $course)
                                 @if ($course->status == 1 )
-                                    <div class="w-full sm:w-full md:w-2/6 lg:w-2/6 xl:w-2/6 p-2 mt-3">
+                                    <div data-aos="fade-up" data-aos-duration="800" class="w-full sm:w-full md:w-2/6 lg:w-2/6 xl:w-2/6 p-2 mt-3">
                                         <div class="ind_courses">
                                             <div class="h-full w-full">
                                                 <img src="{{asset('images/courses/'.$course->image)}}" class="course max-h-full w-full max-w-full object-cover" style="height:20rem" alt="">
@@ -409,16 +409,16 @@
             <div class="subimage w-full my-8" style="height: 27rem">
                 <div class="subtext w-full h-full flex justify-center p-32">
                     <div class="font w-1/2">
-                        <div class="leading-tight text-4xl font-bold text-white">
+                        <div data-aos="fade-up" data-aos-duration="800" class="leading-tight text-4xl font-bold text-white">
                             <div>Education is the foundation upon</div>
                             <div>which we build our future</div> 
                         </div>
-                        <div class="text-sm py-6 text-white">
+                        <div data-aos="fade-up" data-aos-duration="800" class="text-sm py-6 text-white">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quam fugiat velit ex magnam mollitia iusto ratione id facilis hic deserunt eos corporis asperiores, sapiente a quaerat perferendis sunt repellendus!
                         </div>
                     </div>
                     <a href="{{ route('register') }}" style="color: #f9b629; text-decoration: none">
-                        <div class="hover:shadow-2xl transition duration-700 ease-in-out font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000">create an account</div>
+                        <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000">create an account</div>
                     </a>
                 </div>
                 <div class="subimagecover"></div>
