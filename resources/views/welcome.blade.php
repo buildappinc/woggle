@@ -85,7 +85,7 @@
         -webkit-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         -moz-box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
         box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
-        margin-top: 3.5%;
+        margin-top: 5%;
         padding: 4%;
         padding-left: 10%;
     }
@@ -316,7 +316,7 @@
             <!-- quick review -->
             <div class="my-8 text-center">
                 <h1 class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam, suscipit provident corporis nulla iure amet ducimus?</div>
+                <div style="margin-left: 26rem; margin-right: 26rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
             </div>
             <div class="container quick py-6">
                 <div class="grid grid-cols-3 gap-4 ">
