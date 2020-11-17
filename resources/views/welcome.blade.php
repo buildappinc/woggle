@@ -412,7 +412,9 @@
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quam fugiat velit ex magnam mollitia iusto ratione id facilis hic deserunt eos corporis asperiores, sapiente a quaerat perferendis sunt repellendus!
                         </div>
                     </div>
-                    <div class="btn font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000"><a href="{{ route('register') }}" style="color: #f9b629; text-decoration: none">create an account</a></div>
+                    <a href="{{ route('register') }}" style="color: #f9b629; text-decoration: none">
+                        <div class="btn font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000">create an account</div>
+                    </a>
                 </div>
                 <div class="subimagecover"></div>
             </div>
