@@ -159,6 +159,19 @@
         z-index: 1
     }
 
+    /* phone/mobile mode */
+    @media screen and (max-width: 380px) {
+        .homeImage{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-attachment: fixed;
+            background-image: url('{{asset('images/man-in-yellow-crew-neck-t-shirt-while-using-tablet-4144096.jpg')}}');
+            background-size: cover;
+            z-index: 1
+        }
+    }
+
     .color_overlay{
         width: 100%;
         height: 100%;
