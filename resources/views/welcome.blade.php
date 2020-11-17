@@ -166,7 +166,7 @@
             max-width: 100%;
             height: 100vh;
             background-attachment: fixed;
-            background-image: url('{{asset('pexels-julia-m-cameron-4144226.jpg')}}');
+            background-image: url('{{asset('pexels-julia-m-cameron-4144174.jpg')}}');
             background-size: cover;
             z-index: 1
         }
@@ -333,7 +333,7 @@
                 </div>
         </nav>
         {{-- desktop view --}}
-        <div class="homeImage animate__fadeInLeft">
+        <div class="homeImage object-cover animate__fadeInLeft">
             <div class="colortext hidden md:block lg:block xl:block font text-3xl py-56 w-full" style="height: 70%">
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
