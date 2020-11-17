@@ -312,10 +312,10 @@
                     <div class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                     <div class="flex justify-center mt-8">
                         <a href="/study" style="color: #000; text-decoration: none">
-                            <div class="btnText text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
+                            <div class="hover:shadow-lg text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
                         </a>
                         <a href="/contact" style="color: #f9b629; text-decoration: none">
-                            <div class="btnText text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
+                            <div class="hover:shadow-lg text-base uppercase mx-2 h-12 w-40 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
                         </a>
                     </div>
                 </div>
@@ -417,7 +417,7 @@
                         </div>
                     </div>
                     <a href="{{ route('register') }}" style="color: #f9b629; text-decoration: none">
-                        <div class="btnText font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000">create an account</div>
+                        <div class="hover:shadow-lg font text-base uppercase mx-20 my-16 h-12 w-64 flex justify-center items-center rounded" style="background: #000">create an account</div>
                     </a>
                 </div>
                 <div class="subimagecover"></div>
