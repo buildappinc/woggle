@@ -352,7 +352,7 @@
         </div>
 
         <div class="hidden md:block lg:block middleHomeImage animate_fadeInLeft">
-
+            dsfsdfsdfdsf
         </div>
 
         <main class="py-4">
