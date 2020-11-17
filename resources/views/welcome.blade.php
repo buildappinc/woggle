@@ -181,7 +181,7 @@
             background: #fb0040;
             background-attachment: fixed;
             background-image: url('{{asset('images/boy-in-yellow-crew-neck-t-shirt-while-holding-tablet-4144103.jpg')}}');
-            /* background-size: cover; */
+            background-size: cover;
             z-index: 1
         }
     }
@@ -193,9 +193,9 @@
             max-width: 100%;
             height: 100vh;
             background: #fb0040;
-            /* background-attachment: fixed;
-            background-image: url('{{asset('images/boy-in-yellow-crew-neck-t-shirt-while-holding-tablet-4144103.jpg')}}'); */
-            /* background-size: cover; */
+            background-attachment: fixed;
+            background-image: url('{{asset('images/boy-in-yellow-crew-neck-t-shirt-while-holding-tablet-4144103.jpg')}}');
+            background-size: cover;
             z-index: 1
         }
     }
