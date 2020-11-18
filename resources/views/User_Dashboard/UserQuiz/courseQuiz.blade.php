@@ -13,9 +13,18 @@
 
 @section('content')
     <div>
-       <div class="grid grid-cols-5 gap-4">
+       <div class="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-5 gap-4">
            <div class="col-span-1 hidden lg:block xl:block shadow-lg h-screen" style="background: #416bb4">
-                <div>sdasdasdasd</div>
+                <div class="font flex jusitfy-center items-center">
+                    <h2>
+                        topics treated
+                    </h2>
+                    <div>
+                        @foreach ($course as $item)
+                            <li>{{$course->name}}</li>
+                        @endforeach
+                    </div>
+                </div>
            </div>
            <div class="col-span-4 p-10 h-screen" style="overflow: auto">
                <div class="font grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 my-6">
