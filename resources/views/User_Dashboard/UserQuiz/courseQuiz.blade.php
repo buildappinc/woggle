@@ -15,10 +15,10 @@
     <div>
        <div class="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-5 gap-4">
            <div class="col-span-1 hidden lg:block xl:block shadow-lg h-screen" style="background: #416bb4">
-                <div class="font text-white p-10 mt-56">
-                    <h2>
+                <div class="font text-white p-6 mt-40">
+                    <h4 class="uppercase">
                         {{$course->name}} topics treated
-                    </h2>
+                    </h4>
                     <div>
                         @foreach ($course->topics as $item)
                             <div>{{$item->name}}</div>
