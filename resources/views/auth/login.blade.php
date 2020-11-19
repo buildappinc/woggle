@@ -25,12 +25,12 @@
 
     @media screen and (max-width: 425px){
         .box-2{
-            width: 70vw;
+            width: 75vw;
             height: 75vh;  
             background: #F5F5F5;
             position: absolute;
             top: 22vh;
-            left: 32vw;
+            left: 13vw;
         }
     }
 
@@ -74,7 +74,7 @@
                             <div class="form-group">
                                 <label class="font" for="email">{{ __('E-Mail Address') }}</label>
 
-                                <div class="col-md-12 input">
+                                <div class="w-full">
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                     @error('email')
@@ -92,7 +92,7 @@
                         <div class="form-group">
                             <label class="font" for="password" >{{ __('Password') }}</label>
 
-                            <div class="col-md-12 input">
+                            <div class="w-full">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -210,7 +210,7 @@
                     </div>
                 </div> 
                 {{-- sign up --}}
-                <div class="font mt-32 flex justify-center">
+                <div class="font mt-12 flex justify-center">
                     <div>Don't have an account? <a href="#">Sign Up</a></div>
                 </div>
             </div>
