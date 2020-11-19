@@ -23,7 +23,7 @@
         left: 32vw;
     }
 
-    @media screen and (max-width: 425px){
+    @media screen and (max-width: 430px){
         .box-2{
             width: 75vw;
             height: 75vh;  
@@ -58,7 +58,7 @@
         <div class="font text-white text-3xl italic mt-20 font-extrabold">Welcome to Woggle Africa</div>
     </div>
 
-    <div class="box-2 rounded-md shadow-sm p-10">
+    <div class="box-2 rounded-md shadow-sm p-16">
         {{-- sign in name --}}
         <div class="flex justify-center">
             <div class="font text-2xl text-black font-bold">
@@ -141,7 +141,7 @@
         <div class="font text-white text-2xl italic mt-20 font-extrabold">Welcome to Woggle Africa</div>
     </div>
 
-    <div class="box-2 rounded-md shadow-sm p-16">
+    <div class="box-2 rounded-md shadow-sm p-10">
         {{-- sign in name --}}
         <div class="flex justify-center">
             <div class="font text-2xl text-black font-bold">
