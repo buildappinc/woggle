@@ -25,7 +25,7 @@
 
     @media screen and (max-width: 425px){
         .box-2{
-            width: 40vw;
+            width: 70vw;
             height: 75vh;  
             background: #F5F5F5;
             position: absolute;
@@ -138,7 +138,7 @@
 {{-- mobile section --}}
 <div class="body md:hidden lg:hidden xl:hidden">
     <div class="box flex justify-center">
-        <div class="font text-white text-xl italic mt-20 font-extrabold">Welcome to Woggle Africa</div>
+        <div class="font text-white text-2xl italic mt-20 font-extrabold">Welcome to Woggle Africa</div>
     </div>
 
     <div class="box-2 rounded-md shadow-sm p-16">
