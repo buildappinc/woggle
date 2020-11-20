@@ -199,7 +199,7 @@
                             </div>
                         </div>
                                                 
-                        <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0 flex-none lg:flex lg:items-baseline xl:flex xl:items-baseline">
+                        <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0 flex-none lg:flex lg:items-end xl:flex xl:items-end">
                             <button type="submit" class="btn btn-primary h-12 lg:h-16 xl:h-16 w-full">
                                 {{ __('Check Payment') }}
                             </button>
