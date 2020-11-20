@@ -45,7 +45,7 @@
                </div>
                {{-- questions --}}
                <div>
-                    <div>{{$course->name}} Questions </div>
+                    <div class="hello text-xl">{{$course->name}} Questions </div>
                     <form action="{{route('solutions', ['course'=>$course->id])}}" method="post">
                         @csrf
                         <div class="px-4">
