@@ -78,9 +78,9 @@
                                 </div>
                             @endforeach
                             {{-- btn --}}
-                            <div>
+                            <div class="w-full">
                                 <input type="hidden" name="index" value="{{$key + 1}}">
-                                <button class="btn btn-primary btn-lg" type="submit">Submit Quiz</button>
+                                <button class="hello btn w-full btn-primary btn-lg" type="submit">Submit Quiz</button>
                             </div>
                         </div>    
                     </form>
