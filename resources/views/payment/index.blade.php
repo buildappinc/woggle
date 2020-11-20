@@ -8,7 +8,7 @@
     @media screen and (max-width: 430px){
         .body{  
             padding: 0;
-            height: 210vh;
+            height: 220vh;
             position: relative; 
         }   
     }
