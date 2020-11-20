@@ -8,7 +8,7 @@
     @media screen and (max-width: 430px){
         .body{  
             padding: 0;
-            height: 201vh;
+            height: 210vh;
             position: relative; 
         }   
     }
@@ -22,8 +22,6 @@
         background-image: url('{{asset('images/person-writing-on-notepad-3803962.jpg')}}');
     }
 
-
-
     .box-2{
         width: 70vw;
         height: 90vh;  
@@ -31,6 +29,17 @@
         position: absolute;
         top: 20vh;
         left: 14vw;
+    }
+
+    @media screen and (max-width: 430px){
+        .box-2{
+            width: 70vw;
+            height: 150vh;  
+            background: #F5F5F5;
+            position: absolute;
+            top: 20vh;
+            left: 14vw;
+        }   
     }
 
     .btn-primary{
