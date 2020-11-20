@@ -128,7 +128,7 @@
                         </div>
                     @endif
                     
-                      <div class="flex flex-wrap -mx-3 mb-6">
+                      <div class="flex flex-wrap -mx-6 mb-6">
                             <div class="w-full md:w-1/5 lg:px-3 xl:px-3 mb-6 md:mb-0 lg:px-3 xl:px-3">
                                 <label class="font block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                     User ID
@@ -163,7 +163,7 @@
                                 @enderror
                             </div>
                       </div>
-                      <div class="flex flex-wrap -mx-3 mb-2">
+                      <div class="flex flex-wrap -mx-6 mb-2">
                             <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0">
                                 <label class="font block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                                     Email Address
@@ -192,7 +192,7 @@
                             <input type="hidden" name="metadata" value="{{ json_encode($array = ['course_user' => $course->id]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
                             <input type="hidden" name="currency" type="text" value="GHS">
                       </div>
-                      <div class="flex flex-wrap -mx-3 mb-2 py-16">
+                      <div class="flex flex-wrap -mx-6 mb-2 py-16">
                         <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0">
                             <div class="font text-lg font-bold">
                                 Amount: <span class="text-xl font-bolder">GHC</span><input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  name="amount" type="text">
@@ -204,9 +204,8 @@
                                 {{ __('Check Payment') }}
                             </button>
                         </div>
-                        <div class="font text-center flex justify-center w-full text-2xl md:text-3xl lg:text-3xl xl:text-3xl py-8 md:py-12 xl:py-12 lg:py-12 gap-2">
-                            {{$course->name}} costs  GHC
-                             <span class="font-bold"> {{$course->price}}</span>
+                        <div class="font font-bold text-center flex justify-center w-full text-2xl md:text-3xl lg:text-3xl xl:text-3xl py-8 md:py-12 xl:py-12 lg:py-12 gap-2">
+                            {{$course->name}} costs  GHC {{$course->price}}
                         </div>      
                   </div>
                 </form>
