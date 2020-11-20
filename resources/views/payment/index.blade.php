@@ -8,7 +8,7 @@
     @media screen and (max-width: 430px){
         .body{  
             padding: 0;
-            height: 220vh;
+            height: 225vh;
             position: relative; 
         }   
     }
@@ -34,7 +34,7 @@
     @media screen and (max-width: 430px){
         .box-2{
             width: 70vw;
-            height: 150vh;  
+            height: 180vh;  
             background: #F5F5F5;
             position: absolute;
             top: 20vh;
