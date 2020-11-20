@@ -45,7 +45,7 @@
                </div>
                {{-- questions --}}
                <div>
-                    <div>Questions <em>all the best </em></div>
+                    <div>{{$course->name}} Questions </div>
                     <form action="{{route('solutions', ['course'=>$course->id])}}" method="post">
                         @csrf
                         <div class="px-4">
