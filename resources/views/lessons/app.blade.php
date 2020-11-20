@@ -36,8 +36,7 @@
         background:  #3f3f3f;
         width: 100%;
         height: 60px;
-        color: white;
-        /* position: fixed; */
+        color: white;        
         bottom: 0px;
         left: 0px;
         padding-top: 20px;
@@ -179,7 +178,7 @@
 <body>
     <div id="app">
         <div>
-            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-lg" style="position: relative; z-index: 1">
+            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-lg" ]\>
               <a href="/" class="inline-flex flex-row items-center -ml-12">
                     <div>
                         <img src="{{asset('svg/logo1.svg')}}">

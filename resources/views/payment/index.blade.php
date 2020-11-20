@@ -5,6 +5,14 @@
         position: relative; 
     }
 
+    @media screen and (max-width: 430px){
+        .body{  
+            padding: 0;
+            height: 201vh;
+            position: relative; 
+        }   
+    }
+
     .box{
         height:  264px;
         background-size: cover;
@@ -13,6 +21,8 @@
         background-repeat: no-repeat;
         background-image: url('{{asset('images/person-writing-on-notepad-3803962.jpg')}}');
     }
+
+
 
     .box-2{
         width: 70vw;
@@ -87,7 +97,7 @@
     <div class="box-2 rounded-md shadow-sm p-3">
         <div class="tabContainer">
             <div class="buttonContainer">
-                <div class="text-3xl flex justify-center items-center">Credit & Debit Cards</div> 
+                <div class="text-3xl flex justify-center text-center items-center">Credit & Debit Cards</div> 
             </div>
             <div class="tabPanel">
                 <form class="w-full max-w-6xl mt-16 px-12" method="POST" action="{{route('pay', ['course'=>$course->id])}}">
@@ -192,36 +202,6 @@
     </div>
 
 </div>
-{{-- script --}}
-{{-- <script>
-    var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
-    var tabPanels=document.querySelectorAll(".tabContainer  .tabPanel");
-
-    var imageButtons=document.querySelectorAll(".ImageContainer .ImageSelect button");
-    var imgDisplay=document.querySelectorAll(".ImageContainer  .imgDisplay");
-
-    function showText(panelIndex,colorCode) {
-        imgDisplay.forEach(function(node){
-            node.style.display="none";
-        });
-        imgDisplay[panelIndex].style.display="block";
-    }
-    showText(0, "#e6e6e6");
-
-    function showPanel(panelIndex,colorCode) {
-        tabButtons.forEach(function(node){
-            node.style.backgroundColor="";
-            node.style.color="";
-        });
-        tabButtons[panelIndex].style.backgroundColor=colorCode;
-        tabButtons[panelIndex].style.color="#000";
-        tabPanels.forEach(function(node){
-            node.style.display="none";
-        });
-        tabPanels[panelIndex].style.display="block";
-    }
-    showPanel(0, "#e6e6e6");
-</script> --}}
 @endsection
 
 
