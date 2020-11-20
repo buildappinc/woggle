@@ -90,6 +90,12 @@
         border-radius: 5px;
     }
 
+    .font{
+        font-family: 'Baloo Tamma 2', cursive;
+        font-family: 'Raleway', sans-serif;
+        font-family: 'Recursive', sans-serif;
+    }
+
 </style>
 
 @extends('lessons.app')
@@ -100,13 +106,13 @@
 
 <div class="body">
     <div class="box flex justify-center">
-        <div class="text-white text-3xl italic mt-20 font-extrabold">Payment and Billing </div>
+        <div class="font text-white text-3xl italic mt-20 font-extrabold">Payment and Billing </div>
     </div>
 
     <div class="box-2 rounded-md shadow-sm p-3">
         <div class="tabContainer">
             <div class="buttonContainer">
-                <div class="text-3xl flex justify-center text-center items-center">Credit & Debit Cards</div> 
+                <div class="font text-3xl flex justify-center text-center items-center">Credit & Debit Cards</div> 
             </div>
             <div class="tabPanel">
                 <form class="w-full max-w-6xl mt-16 px-12" method="POST" action="{{route('pay', ['course'=>$course->id])}}">
@@ -124,7 +130,7 @@
                     
                       <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full md:w-1/5 lg:px-3 xl:px-3 mb-6 md:mb-0 lg:px-3 xl:px-3">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                                <label class="font block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                     User ID
                                 </label>
                                 <input name="id" value="{{Auth::user()->id}}" class="@error('id') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-id" type="text" placeholder="Jason Statham">
@@ -135,7 +141,7 @@
                                 @enderror
                             </div>
                             <div class="w-full md:w-2/5 lg:px-3 xl:px-3 mb-6 md:mb-0 lg:px-3 xl:px-3">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                                <label class="font block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                     First Name
                                 </label>
                                 <input name="first_name" value="{{Auth::user()->fname}}" class="@error('first_name') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first_name" type="text" placeholder="Jason Statham">
@@ -146,7 +152,7 @@
                                 @enderror
                             </div>
                             <div class="w-full md:w-2/5 lg:px-3 xl:px-3 mb-6 md:mb-0 lg:px-3 xl:px-3">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                                <label class="font block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                     Last Name
                                 </label>
                                 <input name="last_name" value="{{Auth::user()->lname}}" class="@error('last_name') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last_name" type="text" placeholder="Jason Statham">
@@ -159,7 +165,7 @@
                       </div>
                       <div class="flex flex-wrap -mx-3 mb-2">
                             <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                                <label class="font block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                                     Email Address
                                 </label>
                                 <input name="email" value="{{Auth::user()->email}}" class="@error('email') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="email" placeholder="Albuquerque">
@@ -170,7 +176,7 @@
                                 @enderror
                             </div>
                             <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0">
-                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                                <label class="font block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                                     Phone Number
                                 </label>
                                 <input name="phone" class="@error('phone') is-invalid @enderror appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="0234*****">
@@ -188,8 +194,8 @@
                       </div>
                       <div class="flex flex-wrap -mx-3 mb-2 py-16">
                         <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0">
-                            <div class="text-lg font-bold">
-                                Amount: <span class="text-xl font-bolder">GHC</span> <input class="border pl-2" name="amount" type="text">
+                            <div class="font text-lg font-bold">
+                                Amount: <span class="text-xl font-bolder">GHC</span><input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  name="amount" type="text">
                             </div>
                         </div>
                                                 
@@ -198,7 +204,7 @@
                                 {{ __('Check Payment') }}
                             </button>
                         </div>
-                        <div class="flex justify-center w-full text-xl md:text-3xl lg:text-3xl xl:text-3xl py-8 md:py-12 xl:py-12 lg:py-12 gap-2">
+                        <div class="font text-center flex justify-center w-full text-2xl md:text-3xl lg:text-3xl xl:text-3xl py-8 md:py-12 xl:py-12 lg:py-12 gap-2">
                             {{$course->name}} costs  GHC
                              <span class="font-bold"> {{$course->price}}</span>
                         </div>      
