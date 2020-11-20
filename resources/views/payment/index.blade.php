@@ -8,7 +8,7 @@
     @media screen and (max-width: 430px){
         .body{  
             padding: 0;
-            height: 225vh;
+            height: 230vh;
             position: relative; 
         }   
     }
@@ -123,7 +123,7 @@
                     @endif
                     
                       <div class="flex flex-wrap -mx-3 mb-6">
-                            <div class="w-full md:w-1/5 px-3 mb-6 md:mb-0 px-3">
+                            <div class="w-full md:w-1/5 lg:px-3 xl:px-3 mb-6 md:mb-0 lg:px-3 xl:px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                     User ID
                                 </label>
@@ -134,7 +134,7 @@
                                         </span>
                                 @enderror
                             </div>
-                            <div class="w-full md:w-2/5 px-3 mb-6 md:mb-0 px-3">
+                            <div class="w-full md:w-2/5 lg:px-3 xl:px-3 mb-6 md:mb-0 lg:px-3 xl:px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                     First Name
                                 </label>
@@ -145,7 +145,7 @@
                                         </span>
                                 @enderror
                             </div>
-                            <div class="w-full md:w-2/5 px-3 mb-6 md:mb-0 px-3">
+                            <div class="w-full md:w-2/5 lg:px-3 xl:px-3 mb-6 md:mb-0 lg:px-3 xl:px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                     Last Name
                                 </label>
@@ -158,7 +158,7 @@
                             </div>
                       </div>
                       <div class="flex flex-wrap -mx-3 mb-2">
-                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                                     Email Address
                                 </label>
@@ -169,7 +169,7 @@
                                         </span>
                                 @enderror
                             </div>
-                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                                     Phone Number
                                 </label>
@@ -187,29 +187,26 @@
                             <input type="hidden" name="currency" type="text" value="GHS">
                       </div>
                       <div class="flex flex-wrap -mx-3 mb-2 py-16">
-                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0">
                             <div class="text-lg font-bold">
                                 Amount: <span class="text-xl font-bolder">GHC</span> <input class="border pl-2" name="amount" type="text">
                             </div>
                         </div>
                                                 
-                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0 ">
+                        <div class="w-full md:w-1/2 lg:px-3 xl:px-3 mb-6 md:mb-0 ">
                             <button type="submit" class="btn btn-primary h-12 w-full">
                                 {{ __('Check Payment') }}
                             </button>
                         </div>
-                        <div class="flex justify-center w-full text-3xl py-12 gap-2">
+                        <div class="flex justify-center w-full text-xl md:text-3xl lg:text-3xl xl:text-3xl py-8 md:py-12 xl:py-12 lg:py-12 gap-2">
                             {{$course->name}} costs  GHC
                              <span class="font-bold"> {{$course->price}}</span>
-                        </div>
-                        
+                        </div>      
                   </div>
                 </form>
             </div>
-          
         </div>
     </div>
-
 </div>
 @endsection
 
