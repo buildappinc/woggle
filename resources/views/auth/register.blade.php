@@ -8,7 +8,7 @@
     @media screen and (max-width: 430px){
        .body {
             padding: 0;
-            height: 250vh;
+            height: 200vh;
             position: relative; 
        }
     }
@@ -33,7 +33,7 @@
     @media screen and (max-width: 430px){
         .box-2{
             width: 70vw;
-            height: 200vh;  
+            height: 160vh;  
             background: #F5F5F5;
             position: absolute;
             top: 20vh;
@@ -265,7 +265,7 @@
                         <div class="form-group">
                                 <label class="font"  for="fname">{{ __('First Name') }}</label>    
 
-                                <div class="col-md-12 input">
+                                <div class="w-full">
                                     <input id="fname" type="text" placeholder="Kenneth" class="form-control @error('name') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
                                 
                                     @error('fname')
@@ -284,7 +284,7 @@
                         <div class="form-group">
                                 <label class="font" for="lname">{{ __('Last Name') }}</label>      
                         
-                                <div class="col-md-12 input">
+                                <div class="w-full">
                                     <input id="lname" type="text" placeholder="Lartey" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus>
 
                                     @error('lname')
@@ -303,7 +303,7 @@
                         <div class="form-group">
                                 <label class="font" for="oname">{{ __('Other Name') }}</label>
 
-                                <div class="col-md-12 input">
+                                <div class="w-full">
                                     <input id="oname" type="text" placeholder="Abrahams" class="form-control @error('oname') is-invalid @enderror" name="oname" value="{{ old('oname') }}" required autocomplete="oname" autofocus>
 
                                     @error('oname')
@@ -323,7 +323,7 @@
                         <label class="font" for="email">{{ __('E-Mail Address') }}</label>  
 
 
-                        <div class="col-md-12 input">
+                        <div class="w-full">
                             <input id="email" type="email" placeholder="xxxx@gmail.com" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                             @error('email')
@@ -342,7 +342,7 @@
                     <div class="form-group">
                         <label class="font" for="gender">{{ __('Gender') }}</label>  
 
-                        <div class="col-md-12 input">
+                        <div class="w-full">
                             <select name="gender" id="gender" class="form-control" required autocomplete="gender">
                                 <option value="" disabled>Select Gender</option>\
                                 <option value="male">Male</option>
@@ -365,7 +365,7 @@
                                 <label class="font" for="p_email">{{ __('Parent/Guardian\'s E-Mail Address') }}</label>  
 
 
-                                <div class="col-md-12 input">
+                                <div class="w-full">
                                     <input id="p_email" type="email" placeholder="xxxx@gmail.com" class="form-control @error('p_email') is-invalid @enderror" name="p_email" value="{{ old('p_email') }}"  autocomplete="p_email">
 
                                     @error('p_email')
@@ -384,7 +384,7 @@
                         <label class="font" for="phone">{{ __('Parent/Guardian\'s contact') }}</label>  
 
 
-                        <div class="col-md-12 input">
+                        <div class="w-full">
                             <input id="phone" type="text" placeholder="020*******" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
 
                             @error('phone')
@@ -402,7 +402,7 @@
                         <div class="form-group">
                                         <label class="font" for="password">{{ __('Password') }}</label>
 
-                                        <div class="col-md-12 input">
+                                        <div class="w-full">
                                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                             @error('password')
@@ -419,7 +419,7 @@
                                 <div class="form-group">
                                         <label class="font" for="password-confirm">{{ __('Confirm Password') }}</label>
 
-                                        <div class="col-md-12 input">
+                                        <div class="w-full">
                                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                         </div>
                                 </div>
