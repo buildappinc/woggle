@@ -211,7 +211,7 @@
                 </div> 
                 {{-- sign up --}}
                 <div class="font mt-12 flex justify-center">
-                    <div>Don't have an account? <a href="{{route('register')}}">Sign Up</a></div>
+                    <div>Don't have an account? <a href="{{ route('register') }}">Sign Up</a></div>
                 </div>
             </div>
         </form>
