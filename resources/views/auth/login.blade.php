@@ -26,7 +26,7 @@
     @media screen and (max-width: 430px){
         .box-2{
             width: 75vw;
-            height: 75vh;  
+            height: 80vh;  
             background: #F5F5F5;
             position: absolute;
             top: 22vh;
