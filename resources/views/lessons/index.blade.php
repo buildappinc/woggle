@@ -13,6 +13,19 @@
         font-family: 'Raleway', sans-serif;
         font-family: 'Recursive', sans-serif;
     }
+
+    .boxSize{
+        width: 31%; 
+        background: #E1E1E1
+    }
+
+    @media screen and (max-width: 430px){
+        .boxSize{
+            width: 100%; 
+            background: #E1E1E1
+        }
+    }
+    
 </style> 
 @extends('lessons.app')
 
@@ -28,7 +41,7 @@
                 <div class="p-5 flex flex-no-wrap flex-col sm:flex-no-wrap sm:flex-row md:flex-wrap md:flex-row lg:flex-wrap lg:flex-row xl:flex-wrap xl:flex-row">
                    
                     @foreach ($course->topics as $topic)
-                        <div class="h-48 shadow-md rounded-lg m-2 border border-gray-200 p-3 flex flex-col justify-between" style="width: 31%; background: #E1E1E1">
+                        <div class="boxSize h-48 shadow-md rounded-lg m-2 border border-gray-200 p-3 flex flex-col justify-between">
                             <div class="flex flex-row justify-between">
                                 <div class="font ">
                                     {{$topic->name}}
