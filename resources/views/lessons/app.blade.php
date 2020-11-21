@@ -178,7 +178,7 @@
 <body>
     <div id="app">
         <div>
-            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-lg" ]\>
+            <nav class="flex items-center bg-gray-800 p-3 flex-wrap bg-light shadow-lg z-10" ]\>
               <a href="/" class="inline-flex flex-row items-center -ml-12">
                     <div>
                         <img src="{{asset('svg/logo1.svg')}}">
@@ -252,7 +252,7 @@
     </nav>
 
    
-        <main>
+        <main class="z-0">
             @yield('content')
         </main>
 
