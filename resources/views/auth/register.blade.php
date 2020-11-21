@@ -1,8 +1,16 @@
     <style>
-          .body{
+     .body{
         padding: 0;
         height: 800px;
         position: relative; 
+    }
+
+    @media screen and (max-width: 430px){
+       .body {
+            padding: 0;
+            height: 250px;
+            position: relative; 
+       }
     }
 
     .box{
