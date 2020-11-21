@@ -141,7 +141,7 @@
         <div class="font text-white text-2xl italic mt-20 font-extrabold">Welcome to Woggle Africa</div>
     </div>
 
-    <div class="box-2 rounded-md shadow-sm p-10">
+    <div class="box-2 rounded-md shadow-sm p-8">
         {{-- sign in name --}}
         <div class="flex justify-center">
             <div class="font text-2xl text-black font-bold">

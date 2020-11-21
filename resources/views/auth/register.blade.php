@@ -8,7 +8,7 @@
     @media screen and (max-width: 430px){
        .body {
             padding: 0;
-            height: 200vh;
+            height: 220vh;
             position: relative; 
        }
     }
@@ -33,7 +33,7 @@
     @media screen and (max-width: 430px){
         .box-2{
             width: 70vw;
-            height: 160vh;  
+            height: 180vh;  
             background: #F5F5F5;
             position: absolute;
             top: 20vh;
@@ -249,7 +249,7 @@
         <div class="font text-white text-2xl italic mt-20 font-extrabold">Welcome to Woggle Africa</div>
     </div>
 
-    <div class="box-2 rounded-md shadow-sm p-16">
+    <div class="box-2 rounded-md shadow-sm p-8">
         {{-- sign up name --}}
         <div class="flex justify-center">
             <div class="font text-2xl text-black font-bold">
