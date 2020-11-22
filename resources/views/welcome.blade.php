@@ -168,7 +168,7 @@
     }
 
     /* phone/mobile mode */
-    @media screen and (max-width: 380px) {
+    @media screen and (max-width:430px) {
         .homeImage{
             position: relative;
             max-width: 100%;
@@ -352,8 +352,8 @@
         </nav>
         {{-- desktop view --}}
         <div class="homeImage object-cover animate__fadeInLeft">
-            <div class="colortext hidden md:block lg:block xl:block font text-3xl py-56 w-full" style="height: 70%">
-                <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-xl uppercase text-black flex justify-center items-center lg:mt-12 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
+            <div class="colortext hidden md:block lg:block xl:block font text-2xl xl:text-3xl py-56 w-full" style="height: 70%">
+                <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-xl uppercase text-black flex justify-center items-center lg:mt-8 xl:mt-12" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-5xl uppercase text-black flex justify-center items-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                 <div class="flex justify-center mt-8">
                     <a href="/study" style="color: #000; text-decoration: none">
