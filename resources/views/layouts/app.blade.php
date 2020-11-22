@@ -30,7 +30,7 @@
 
     .footer{
         background: #3f3f3f;
-        height: 40vh;
+        /* height: 40vh; */
         position: relative;
     }       
 
