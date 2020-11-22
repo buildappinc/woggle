@@ -55,6 +55,14 @@
         padding-left: 14%;
     }
 
+    @media screen and (max-width: 430px){
+        .footer-content{
+            padding: 3%;    
+            padding-left: 8%;
+            padding-right: 8%;
+        }   
+    }
+
     .nav{
         height: 9%;
         width: 100%;
@@ -253,14 +261,14 @@
         <div class="footer ">
             <div class="container-fluid footer-content">
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
-                    <div style="margin-top: -6px">
+                    <div class="flex justify-center items-center" style="margin-top: -6px">
                         <img src="{{asset('svg/logo1.svg')}}" class="" style="height: 11rem; width: 10rem">
                         <img src="{{asset('svg/logo2.svg')}}" class="" style="height: 2.2rem; width: 10rem">
                     </div>
                     
-                    <div class="leading-2 flex items-baseline mt-4">
+                    <div class="leading-2 flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
                         <div class="">
-                            <div class="border-b text-lg text-white font-bold">
+                            <div class="border-b text-3xl text-white font-bold">
                                 Related Links
                             </div>
                             <div>
@@ -270,9 +278,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="leading-2 flex items-baseline mt-4">
+                    <div class="leading-2 flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
                         <div>
-                            <div class="border-b text-lg text-white font-bold">
+                            <div class="border-b text-3xl text-white font-bold">
                                 Contact
                             </div>
                             <div>
