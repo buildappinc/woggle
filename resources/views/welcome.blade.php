@@ -467,7 +467,7 @@
                         <img src="{{asset('svg/logo1.svg')}}" class="" style="height: 11rem; width: 10rem">
                         <img src="{{asset('svg/logo2.svg')}}" class="" style="height: 2.2rem; width: 10rem">
                     </div>
-                    <div class="leading-2 flex flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
+                    <div class="font leading-2 flex flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
                         <div class="">
                             <div class="border-b text-3xl text-white font-bold">
                                 Related Links
@@ -479,7 +479,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="leading-2 flex flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
+                    <div class="font leading-2 flex flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
                         <div>
                             <div class="border-b text-3xl text-white font-bold">
                                 Contact
