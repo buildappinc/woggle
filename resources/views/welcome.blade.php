@@ -197,7 +197,7 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(to right top, #595b06, #573d0d, #452515, #281514, #000000);
-        opacity: .2;
+        opacity: .3;
         z-index: 2;
     }
 
