@@ -252,38 +252,38 @@
     </nav>
 
    
-        <main class="z-0">
-            @yield('content')
-        </main>
+    <main>
+        @yield('content')
+    </main>
 
-        <!-- footer -->
-        <div class="footer ">
-                <div class="footer-bottom px-8 flex flex-row justify-between ">
-                    <div class="flex flex-row">
-                        <div class="flex items-center">
-                            <div>
-                                <img src="{{asset('svg/logo2.svg')}}" class="h-12 w-12 -mt-4">
-                            </div>
-                            <div>
-                                <img src="{{asset('svg/logo1.svg')}}" class="-mt-3 -ml-10 h-12">
-                            </div>
+    <!-- footer -->
+    <div class="footer ">
+            <div class="footer-bottom px-8 flex flex-row justify-between ">
+                <div class="flex flex-row">
+                    <div class="flex items-center">
+                        <div>
+                            <img src="{{asset('svg/logo2.svg')}}" class="h-12 w-12 -mt-4">
                         </div>
-                        <div class="items-center -ml-12">
-                            <div>
-                                Help & Feedback
-                            </div>
+                        <div>
+                            <img src="{{asset('svg/logo1.svg')}}" class="-mt-3 -ml-10 h-12">
                         </div>
                     </div>
-                    <div>
-                        <div class="flex flex-row">
-                            <div><img class="h-5 w-5 mx-2" src="{{asset('images/linkedIn.png')}}" alt=""></div>
-                            <div><img class="h-5 w-5 mx-2" src="{{asset('images/instagram.png')}}" alt=""></div>
-                            <div><img class="h-5 w-5 mx-2" src="{{asset('images/twitter.png')}}" alt=""></div>
-                            <div><img class="h-5 w-5 mx-2" src="{{asset('images/facebook.png')}}" alt=""></div>
+                    <div class="items-center -ml-12">
+                        <div>
+                            Help & Feedback
                         </div>
                     </div>
                 </div>
-        </div>
+                <div>
+                    <div class="flex flex-row">
+                        <div><img class="h-5 w-5 mx-2" src="{{asset('images/linkedIn.png')}}" alt=""></div>
+                        <div><img class="h-5 w-5 mx-2" src="{{asset('images/instagram.png')}}" alt=""></div>
+                        <div><img class="h-5 w-5 mx-2" src="{{asset('images/twitter.png')}}" alt=""></div>
+                        <div><img class="h-5 w-5 mx-2" src="{{asset('images/facebook.png')}}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+    </div>
 
     </div>
 
