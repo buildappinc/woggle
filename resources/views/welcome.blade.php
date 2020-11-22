@@ -366,7 +366,7 @@
             </div>
             <div class="colortext md:hidden lg:hidden xl:hidden font py-40 w-full" style="height: 70%">
                 <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="uppercase text-black flex justify-center items-center text-center" style="color: #fff">the best online education <span style="color: #000" class="mx-3">in the world</span></div>
-                <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-2xl uppercase text-black flex justify-center items-center text-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
+                <div data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800" class="text-2xl uppercase tracking-tighter text-black flex justify-center items-center text-center font-bold mt-3" style="color: #000">one <span style="color: #000" class="mx-3"> steps </span> ahead this season</div>
                 <div class="grid justify-content-center">
                     <div class="mt-8">
                         <a href="/study" style="color: #000; text-decoration: none">
@@ -386,7 +386,7 @@
 
         <main class="py-4">
             <!-- quick review -->
-            <div class="my-8 hidden lg:block xl:block text-center">
+            <div class="md:my-8 lg:my-8 xl:my-8 my-2 text-center">
                 <h1 data-aos="fade-up" data-aos-duration="800" class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
                 <div data-aos="fade-up" data-aos-duration="900" class="font" style="margin-left: 26rem; margin-right: 26rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
             </div>
