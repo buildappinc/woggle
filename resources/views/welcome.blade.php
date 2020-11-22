@@ -201,7 +201,16 @@
         z-index: 2;
     }
 
-
+     /* phone/mobile mode */
+     @media screen and (max-width:430px) {
+        .color_overlay{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right top, #595b06, #573d0d, #452515, #281514, #000000);
+            opacity: .4;
+            z-index: 2;
+        }
+    }
 
     .colortext {
         position: absolute;
@@ -499,7 +508,7 @@
                     </div>
                     <div class="font leading-2 flex flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
                         <div class="">
-                            <div class="border-b text-3xl text-white font-bold">
+                            <div class="border-b text-2xl text-white font-bold">
                                 Related Links
                             </div>
                             <div>
@@ -511,7 +520,7 @@
                     </div>
                     <div class="font leading-2 flex flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
                         <div>
-                            <div class="border-b text-3xl text-white font-bold">
+                            <div class="border-b text-2xl text-white font-bold">
                                 Contact
                             </div>
                             <div>
