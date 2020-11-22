@@ -110,7 +110,7 @@
 <div class="container-fluid  md-hidden lg:hidden xl:hidden">
     <div class="px-8 py-10">
         <div class="grid grid-cols-1">
-            <div class="grid grid-rows-3 grid-flow-col gap-4">
+            <div class="grid grid-rows-2 grid-flow-col gap-4">
                 <div class="row-span-1 col-span-2 ...">
                     {{-- top-left section --}}
                     <div class="shadow-md rounded-md p-4 animated fadeInLeft slower-4s">
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row-span-2 col-span-2 ...">
+                <div class="row-span-1 col-span-2 ...">
                     {{-- buttom right section --}}
                     <div class="shadow-md rounded-md p-4 animated fadeInUp">
                         <div class="flex justify-between">
