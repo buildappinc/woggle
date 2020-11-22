@@ -174,7 +174,7 @@
             max-width: 100%;
             height: 100vh;
             background-attachment: fixed;
-            background-image: url('{{asset('pexels-julia-m-cameron-4144174.jpg')}}');
+            background-image: url('{{asset('images/pexels-julia-m-cameron-4144174.jpg')}}');
             background-size: cover;
             z-index: 1
         }
@@ -187,7 +187,7 @@
             max-width: 100%;
             height: 100vh;
             background-attachment: fixed;
-            background-image: url('{{asset('images/boy-in-yellow-crew-neck-t-shirt-while-holding-tablet-4144103.jpg')}}');
+            background-image: url('{{asset('images/pexels-julia-m-cameron-4144174.jpg')}}');
             background-size: cover;
             z-index: 1
         }
@@ -200,6 +200,8 @@
         opacity: .2;
         z-index: 2;
     }
+
+
 
     .colortext {
         position: absolute;
