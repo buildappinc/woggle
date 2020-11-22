@@ -28,7 +28,7 @@
 
     .footer{
         background: #3f3f3f;
-        height: 40vh;
+        /* height: 40vh; */
         position: relative;
     }       
 
@@ -192,7 +192,7 @@
         opacity: .2;
         z-index: 2;
     }
-
+,
     .colortext {
         position: absolute;
         z-index: 3
@@ -444,9 +444,9 @@
                 <div class="subimagecover"></div>
             </div>
         </main>
-        <div class="footer ">
+        <div class="footer">
             <div class="container-fluid footer-content">
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
                     <div style="margin-top: -6px">
                         <img src="{{asset('svg/logo1.svg')}}" class="" style="height: 11rem; width: 10rem">
                         <img src="{{asset('svg/logo2.svg')}}" class="" style="height: 2.2rem; width: 10rem">
