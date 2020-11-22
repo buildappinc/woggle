@@ -382,12 +382,12 @@
                 <div class="grid justify-content-center">
                     <div class="mt-8">
                         <a href="/study" style="color: #000; text-decoration: none">
-                            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out text-sm uppercase mx-2 h-10 w-32 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
+                            <div class="hover:shadow-2xl transition duration-700 ease-in-out text-sm uppercase mx-2 h-10 w-32 flex justify-center items-center rounded" style="background: #f9b629">see course</div>
                         </a>
                     </div>
                     <div class="my-3">
                         <a href="/contact" style="color: #f9b629; text-decoration: none">
-                            <div data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000" class="hover:shadow-2xl transition duration-700 ease-in-out text-sm uppercase mx-2 h-10 w-32 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
+                            <div class="hover:shadow-2xl transition duration-700 ease-in-out text-sm uppercase mx-2 h-10 w-32 flex justify-center items-center rounded" style="background: #000; ">Contact Us</div>
                         </a>
                     </div>
                 </div>
