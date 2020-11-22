@@ -173,6 +173,14 @@
         box-shadow: 0px 12px 49px -10px rgba(41, 44, 61, 0.15);
     }
 
+    @media screen and (max-width: 430px){
+        .items{
+            display: flex; 
+            justify-content: center; 
+            align-items: center
+        }
+    }
+
 
 
     </style>
@@ -261,12 +269,12 @@
         <div class="footer ">
             <div class="container-fluid footer-content">
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
-                    <div class="flex justify-center items-center" style="margin-top: -6px">
+                    <div class="items" style="margin-top: -6px">
                         <img src="{{asset('svg/logo1.svg')}}" class="" style="height: 11rem; width: 10rem">
                         <img src="{{asset('svg/logo2.svg')}}" class="" style="height: 2.2rem; width: 10rem">
                     </div>
                     
-                    <div class="leading-2 flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
+                    <div class="font leading-2 flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
                         <div class="">
                             <div class="border-b text-3xl text-white font-bold">
                                 Related Links
@@ -278,7 +286,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="leading-2 flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
+                    <div class="font leading-2 flex items-baseline mx-8 md:mx-0 lg:mx-0 xl:mx-0 mt-4">
                         <div>
                             <div class="border-b text-3xl text-white font-bold">
                                 Contact
