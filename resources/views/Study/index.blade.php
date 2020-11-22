@@ -114,11 +114,11 @@
 
 
 @section('content')
-<div class="container-fluid header">
-    <div class="font flex justify-center text-4xl tracking-wider" >
+<div class="container-fluid header mt-5">
+    <div class="font flex text-center justify-center text-4xl tracking-wider" >
         Courses
     </div>
-    <div class="font flex justify-center">
+    <div class="font flex text-center justify-center">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto delectus perspiciatis voluptatum similique
     </div>
 </div>

@@ -129,13 +129,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <div>
-                                <div>
-                                    <h2 class="font">
-                                        {{$course->name}}
-                                    </h2>
-                                    <div> <p style="line-height: 30px;" class="tect_font text-justify">{{$course->description}}</p></div>
-                                </div>
+                            <div class="pt-4">
+                                <h2 class="font">
+                                    {{$course->name}}
+                                </h2>
+                                <div> <p style="line-height: 30px;" class="tect_font text-justify">{{$course->description}}</p></div>
                             </div>
                         </div>
                     </div>
