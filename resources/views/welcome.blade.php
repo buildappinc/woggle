@@ -272,6 +272,18 @@
             align-items: center
         }
     }
+
+    .aboutText{
+        margin-left: 26rem; 
+        margin-right: 26rem
+    }
+
+    @media screen and (max-width: 430px){
+        .aboutText{
+            margin-left: 1rem; 
+            margin-right: 1rem
+        }   
+    }
    
     </style>
 </head>
@@ -386,9 +398,9 @@
 
         <main class="py-4">
             <!-- quick review -->
-            <div class="md:my-8 lg:my-8 xl:my-8 my-2 text-center">
+            <div class="my-8 text-center">
                 <h1 data-aos="fade-up" data-aos-duration="800" class="font lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
-                <div data-aos="fade-up" data-aos-duration="900" class="font" style="margin-left: 26rem; margin-right: 26rem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
+                <div data-aos="fade-up" data-aos-duration="900" class="font aboutText" style="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
             </div>
             <div class="container quick py-6">
                 <div class="grid grid-cols-3 gap-4 ">
