@@ -399,8 +399,8 @@
         <main class="py-4">
             <!-- quick review -->
             <div class="my-8 text-center">
-                <h1 data-aos="fade-up" data-aos-duration="800" class="font md:text-4xl text-2xl lg:text-5xl xl:text-5xl">Welcome to woogle e-Learning</h1>
-                <div data-aos="fade-up" data-aos-duration="900" class="font aboutText" style="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
+                <h1 data-aos="fade-up" data-aos-duration="800" class="font md:text-4xl text-2xl lg:text-5xl xl:text-5xl mx-6 md:mx-0 lg:mx-0 xl:mx-0">Welcome to woogle e-Learning</h1>
+                <div data-aos="fade-up" data-aos-duration="900" class="font pb-8 md:pb-0 lg:pb-0 xl:pb-0 aboutText" style="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni impedit voluptas soluta autem molestiae inventore, ea, incidunt ipsum sequi iusto quis! Totam veniam</div>
             </div>
             <div class="container quick py-6">
                 <div class="grid grid-cols-3 gap-4 ">
