@@ -141,7 +141,7 @@
                     <div class="flex justify-between items-center">
                         <div>
                             <a href="/study/{{$courses->id}}" style="text-decoration: none; color: #000">
-                                <div>
+                                <div class="btnflex">
                                     <p style="text-align: center; padding-top: 6%; text-transform: uppercase" class="font">Details</p> 
                                 </div>
                             </a>
