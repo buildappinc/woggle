@@ -67,7 +67,7 @@
 <div class="lg:p-16 md:p-16 xl:p-16">
     <div>
        
-            <div class="m-5 rounded-lg shadow-md border p-4" style="border-color: #3f3f3f">
+            <div class="m-5 rounded-lg shadow-md  p-4" style="border: 1px solid #3f3f3f">
                 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                     <div>
                         <div class="flex flex-col">
