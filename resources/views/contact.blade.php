@@ -98,7 +98,7 @@
                     <div>
                         <div class="grid grid-cols-11">
                             <div class="hidden md:block lg:block xl:block lg:col-span-1 ...">
-                                <img src="{{asset("/images/line1.png")}}" style="height: 24rem" class="w-1 bg-gray-400" alt="">
+                                <img src="{{asset("/images/line1.png")}}" style="height: 24rem; background-color: #3f3f3f" class="w-1" alt="">
                             </div>
                             <div class="font p-3 lg:col-span-10 ...">
                                 <div class="text-5xl font-bold italic py-2">
