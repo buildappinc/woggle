@@ -1,56 +1,3 @@
-{{-- <style>
-    .header{
-        
-    }
-
-    .text{
-        color: white;
-        padding:  7%
-    }   
-
-    .header_text{
-        text-align: center;
-        margin-top: 3%;
-
-    }
-
-    .explore{
-        letter-spacing: 3px;
-        color: blue
-    }
-
-    .contact{
-        margin-top: 4%;
-        
-    }
-
-    .address{
-        padding-top: 15%;
-        height: 89%;
-        background: #fff;
-        border: 1px solid #d8f5ff;
-        padding-left: 25%;
-    }
-
-    .subAddress {
-        padding-top: 10%;
-        display: flex;
-        justify-content: space-between;
-    }
-   
-    .input input, .input textarea{
-        border-radius: 0%;
-        border-color: #d8f5ff;
-    }
-
-    .right_side_contact_info{
-        font-size: 25px;
-      
-    }
-
-    
-</style> --}}
-
 <style>
     .font{
         font-family: 'Baloo Tamma 2', cursive;
@@ -66,7 +13,6 @@
 
 <div class="lg:p-16 md:p-16 xl:p-16">
     <div>
-       
             <div class="m-5 rounded-lg shadow-md  p-4" style="border: 1px solid #3f3f3f">
                 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                     <div>
@@ -76,7 +22,11 @@
                             </div>
                             <div class="flex justify-center">
                                 <div class="md:hidden lg:hidden xl:hidden">
-                                    <a href="https://goo.gl/maps/AiNVc2BUR2hAtiS17">View Location</a>
+                                    <a class="font" href="https://goo.gl/maps/AiNVc2BUR2hAtiS17">
+                                        <div class="w-full h-10" style="border: 1px solid #3f3f3f">
+                                            View Location
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-3 mt-3">
@@ -96,12 +46,12 @@
                         </div>
                     </div>
                     <div>
-                        <div class="grid grid-cols-11">
+                        <div class="grid grid-cols-1 md:grid-cols-11 lg:grid-cols-11 xl:grid-cols-11">
                             <div class="hidden md:block lg:block xl:block lg:col-span-1 ...">
                                 <img src="{{asset("/images/line1.png")}}" style="height: 24rem; background-color: #3f3f3f" class="w-1" alt="">
                             </div>
                             <div class="font p-3 lg:col-span-10 ...">
-                                <div class="text-5xl font-bold italic py-2">
+                                <div class="text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold italic py-2">
                                     Contact Us
                                 </div>
                                 <div class="py-2 font-bold italic">
