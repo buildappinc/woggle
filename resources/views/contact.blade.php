@@ -22,14 +22,14 @@
                             </div>
                             <div class="flex justify-center">
                                 <div class="md:hidden lg:hidden xl:hidden">
-                                    <a class="font" href="https://goo.gl/maps/AiNVc2BUR2hAtiS17">
-                                        <div class="w-full h-10" style="border: 1px solid #3f3f3f">
+                                    <a class="font text-black" href="https://goo.gl/maps/AiNVc2BUR2hAtiS17">
+                                        <div class="w-full px-10 flex items-center justify-center h-10" style="border: 1px solid #3f3f3f">
                                             View Location
                                         </div>
                                     </a>
                                 </div>
                             </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-3 mt-3">
+                            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-3 mt-3">
                                 <div>
                                     <div class="font font-bold">Geo Address</div>
                                     <div class="font text-indigo-500">addreess</div>
